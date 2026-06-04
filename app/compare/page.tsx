@@ -8,7 +8,7 @@ interface Props {
 export default async function ComparePage({ searchParams }: Props) {
   const params = await searchParams
   const position = params.position ?? 'product_manager'
-  const locationSlugs = (params.countries ?? '').split(',').filter(Boolean).slice(0, 3)
+  const locationSlugs = (params.countries ?? '').split(',').filter(Boolean).slice(0, 4)
 
   const positionMeta = getPositionMeta(position)
   const allData = locationSlugs.map((slug) => ({
