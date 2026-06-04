@@ -1,30 +1,185 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Salary Research — production design system
+   IBM Plex Sans (UI) + IBM Plex Mono (figures)
+   ============================================================ */
+
 :root {
-  --bg:      #0f1117;
-  --card:    #1a1d27;
-  --card2:   #22263a;
-  --border:  #2d3148;
-  --text:    #e8eaf0;
-  --muted:   #8b90a8;
-  --accent:  #6c63ff;
-  --accent2: #00d4aa;
-  --accent3: #ff6b6b;
-  --accent4: #ffd166;
-  --jun:  #74c7ec;
-  --midc: #89dceb;
-  --sen:  #cba6f7;
-  --lead: #f38ba8;
-  --head: #fab387;
+  --font-ui: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --accent: #4a52c4;
+  --accent-press: #3a41a8;
+  --accent-soft: rgba(74, 82, 196, 0.10);
+  --accent-ring: rgba(74, 82, 196, 0.30);
+
+  --s1: #4a52c4;
+  --s2: #0e8d7e;
+  --s3: #c2710c;
+  --s4: #b23a5e;
+
+  --r-sm: 6px;
+  --r-md: 9px;
+  --r-lg: 13px;
+  --shadow-1: 0 1px 2px rgba(16,22,38,.05), 0 1px 3px rgba(16,22,38,.04);
+  --shadow-2: 0 2px 6px rgba(16,22,38,.06), 0 6px 18px rgba(16,22,38,.06);
+
+  --maxw: 1240px;
+  --row-pad: 11px;
+  --cell-pad: 12px;
 }
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---------- LIGHT (default) ---------- */
+:root, [data-theme='light'] {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #f3f5f7;
+  --surface-3: #eceff2;
+  --border: #e4e7ec;
+  --border-strong: #d4d9e0;
+  --text: #171b23;
+  --text-2: #4c5360;
+  --muted: #717886;
+  --muted-2: #9aa0ac;
+  --grid: #edf0f3;
+  --tooltip-bg: #ffffff;
+
+  --grade-jun: #6b8fd6;
+  --grade-mid: #4e6fc4;
+  --grade-sen: #4a52c4;
+  --grade-lead: #6a45b0;
+  --grade-head: #8a3a86;
+
+  --pos: #1f8a52;  --pos-bg: rgba(31,138,82,.10);
+  --warn: #b46512; --warn-bg: rgba(180,101,18,.10);
+  --neutral: #6b7280; --neutral-bg: rgba(107,114,128,.10);
 }
+
+/* ---------- DARK ---------- */
+[data-theme='dark'] {
+  --bg: #0d1017;
+  --surface: #151a23;
+  --surface-2: #1a2030;
+  --surface-3: #212838;
+  --border: #28303f;
+  --border-strong: #36404f;
+  --text: #e8ebf1;
+  --text-2: #aab2c0;
+  --muted: #8b93a3;
+  --muted-2: #6a7281;
+  --grid: #222a38;
+  --tooltip-bg: #1a2030;
+
+  --accent: #7780ee;
+  --accent-press: #6068dc;
+  --accent-soft: rgba(119,128,238,.14);
+  --accent-ring: rgba(119,128,238,.35);
+
+  --s1: #818cf8;
+  --s2: #2dd4bf;
+  --s3: #f0a73e;
+  --s4: #f2789c;
+
+  --grade-jun: #8aa6e6;
+  --grade-mid: #7e8ff0;
+  --grade-sen: #818cf8;
+  --grade-lead: #a98bea;
+  --grade-head: #d68bd0;
+
+  --pos: #43c98a;  --pos-bg: rgba(67,201,138,.14);
+  --warn: #e2a44e; --warn-bg: rgba(226,164,78,.14);
+  --neutral: #8b93a3; --neutral-bg: rgba(139,147,163,.14);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,.30);
+  --shadow-2: 0 4px 16px rgba(0,0,0,.40);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+.mono { font-family: var(--font-mono); font-feature-settings: 'tnum' 1; letter-spacing: -0.01em; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+@media (max-width: 640px) { .wrap { padding: 0 16px; } .hide-sm { display: none !important; } }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-1);
+}
+
+.eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* ---------- tables ---------- */
+table.data { width: 100%; border-collapse: collapse; }
+table.data th {
+  font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--muted); text-align: left; padding: 0 var(--cell-pad) 9px;
+  border-bottom: 1px solid var(--border); white-space: nowrap;
+}
+table.data td {
+  padding: var(--row-pad) var(--cell-pad);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+table.data tbody tr:last-child td { border-bottom: none; }
+table.data tbody tr { transition: background .12s; }
+table.data tbody tr:hover { background: var(--surface-2); }
+
+/* segmented control */
+.seg {
+  display: inline-flex; background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--r-md); padding: 3px; gap: 2px;
+}
+.seg button {
+  font-family: var(--font-ui); font-size: 13px; font-weight: 500;
+  border: none; background: transparent; color: var(--muted);
+  padding: 6px 13px; border-radius: 6px; cursor: pointer;
+  transition: background .14s, color .14s; white-space: nowrap;
+}
+.seg button:hover { color: var(--text); }
+.seg button[aria-pressed='true'] {
+  background: var(--surface); color: var(--text); box-shadow: var(--shadow-1);
+}
+[data-theme='dark'] .seg button[aria-pressed='true'] { background: var(--surface-3); }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600;
+  padding: 2px 9px; border-radius: 999px; white-space: nowrap;
+}
+.dot { width: 6px; height: 6px; border-radius: 999px; flex: none; }
+
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px; font-weight: 600;
+  letter-spacing: .04em; padding: 2px 7px; border-radius: 5px; text-transform: uppercase;
+}
+
+.track {
+  position: relative; height: 6px; border-radius: 999px;
+  background: var(--surface-3); overflow: hidden;
+}
+.track > span { position: absolute; top: 0; height: 100%; border-radius: 999px; }
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent-ring); outline-offset: 2px;
+}
+a { color: inherit; text-decoration: none; }
+
+::-webkit-scrollbar { height: 10px; width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }

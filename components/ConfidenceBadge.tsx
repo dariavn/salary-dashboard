@@ -1,19 +1,30 @@
 import type { Confidence } from '@/lib/types'
+import type { Lang } from '@/lib/i18n'
+import { t } from '@/lib/i18n'
 
-const cfg: Record<Confidence, { text: string; bg: string; label: string }> = {
-  high:   { text: '#00d4aa', bg: 'rgba(0,212,170,0.15)',   label: '▲ high' },
-  medium: { text: '#ffd166', bg: 'rgba(255,209,102,0.15)', label: '◆ medium' },
-  low:    { text: '#8b90a8', bg: 'rgba(139,144,168,0.12)', label: '▽ low' },
+const CFG: Record<Confidence, { color: string; bg: string; key: 'confHigh' | 'confMedium' | 'confLow' }> = {
+  high:   { color: 'var(--pos)',     bg: 'var(--pos-bg)',     key: 'confHigh' },
+  medium: { color: 'var(--warn)',    bg: 'var(--warn-bg)',    key: 'confMedium' },
+  low:    { color: 'var(--neutral)', bg: 'var(--neutral-bg)', key: 'confLow' },
 }
 
-export default function ConfidenceBadge({ value }: { value: Confidence }) {
-  const { text, bg, label } = cfg[value] ?? cfg.low
+interface Props { value: Confidence; lang?: Lang; compact?: boolean }
+
+export default function ConfidenceBadge({ value, lang = 'en', compact }: Props) {
+  const { color, bg, key } = CFG[value] ?? CFG.low
+  if (compact) {
+    return (
+      <span
+        className="dot inline-block"
+        title={t(lang, key)}
+        style={{ background: color, width: 9, height: 9 }}
+      />
+    )
+  }
   return (
-    <span
-      className="inline-block px-2 py-0.5 rounded-full text-xs font-medium whitespace-nowrap"
-      style={{ color: text, background: bg }}
-    >
-      {label}
+    <span className="pill" style={{ color, background: bg }}>
+      <span className="dot" style={{ background: color }} />
+      {t(lang, key)}
     </span>
   )
 }

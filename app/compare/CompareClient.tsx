@@ -1,273 +1,288 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import type { PositionMeta, LocationMeta, CountryData, GradeRow } from '@/lib/types'
+import type { PositionMeta, LocationMeta, CountryData } from '@/lib/types'
 import type { Segment } from '@/lib/types'
 import { useLang } from '@/context/LangContext'
-import { t, GRADE_ORDER, GRADE_STYLES } from '@/lib/i18n'
+import { t, SERIES, GRADE_VAR, GRADE_KEY, GRADE_ORDER, fmtK } from '@/lib/i18n'
 import LanguageToggle from '@/components/LanguageToggle'
-import GradesChart from '@/components/GradesChart'
+import RangeChart from '@/components/RangeChart'
+import SummaryCards from '@/components/SummaryCards'
 import GradesTable from '@/components/GradesTable'
 import DomainsGrid from '@/components/DomainsGrid'
 import SourcesList from '@/components/SourcesList'
 
-const COUNTRY_COLORS = ['#6c63ff', '#ffd166', '#00d4aa', '#f38ba8']
-
 interface Entry { meta: LocationMeta; data: CountryData }
 interface Props { positionMeta: PositionMeta; allData: Entry[] }
-type Tab = 'grades' | 'domains' | 'sources'
+type Tab = 'overview' | 'grades' | 'domains' | 'sources'
 
-function fmtShort(n: number, currency: string) {
-  if (currency === 'RUB') return `${Math.round(n / 1000)}K ₽`
-  return `€${Math.round(n / 1000)}K`
-}
-
-function KPICards({ rows, segment, period, currency }: { rows: GradeRow[]; segment: Segment | 'all'; period: 'annual' | 'monthly'; currency: string }) {
+function Toggle({ options, value, onChange }: { options: { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
   return (
-    <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${GRADE_ORDER.length}, 1fr)` }}>
-      {GRADE_ORDER.map((grade) => {
-        const gradeRows = rows.filter(r => r.grade === grade && (segment === 'all' || r.segment === segment))
-        const row = gradeRows.find(r => r.segment === 'mid_market') ?? gradeRows[0]
-        if (!row) return (
-          <div key={grade} className="rounded-xl p-3 opacity-30" style={{ border: '1px solid var(--border)', background: 'var(--card)' }}>
-            <div className="text-xs uppercase" style={{ color: 'var(--muted)' }}>{grade}</div>
-            <div className="text-sm mt-1" style={{ color: 'var(--muted)' }}>—</div>
-          </div>
-        )
-        const min = period === 'annual' ? row.annual_gross_min : row.monthly_gross_min
-        const max = period === 'annual' ? row.annual_gross_max : row.monthly_gross_max
-        const style = GRADE_STYLES[grade] ?? GRADE_STYLES['Head']
-        return (
-          <div
-            key={grade}
-            className="rounded-xl p-3 relative overflow-hidden"
-            style={{ border: '1px solid var(--border)', background: 'var(--card)', borderTop: `3px solid ${style.text}` }}
-          >
-            <div className="text-xs uppercase tracking-wide mb-1" style={{ color: 'var(--muted)' }}>{grade}</div>
-            <div className="text-sm font-bold whitespace-nowrap" style={{ color: style.text }}>
-              {fmtShort(min, currency)}
-            </div>
-            <div className="text-xs" style={{ color: 'var(--muted)' }}>– {fmtShort(max, currency)}</div>
-          </div>
-        )
-      })}
+    <div className="seg">
+      {options.map(o => (
+        <button key={o.v} aria-pressed={value === o.v} onClick={() => onChange(o.v)}>{o.label}</button>
+      ))}
     </div>
   )
 }
 
+function CurrencyNote({ allData, lang }: { allData: Entry[]; lang: string }) {
+  const mixed = new Set(allData.map(e => e.data.currency)).size > 1
+  if (!mixed) return null
+  return (
+    <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', padding: '11px 14px', borderRadius: 'var(--r-md)', background: 'var(--warn-bg)', border: '1px solid color-mix(in srgb, var(--warn) 28%, transparent)', marginBottom: 18, fontSize: 13, color: 'var(--text-2)' }}>
+      <span style={{ color: 'var(--warn)', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>!</span>
+      <span>{t(lang as any, 'currencyWarning')}</span>
+    </div>
+  )
+}
+
+function GradeMatrix({ allData, segment, period, lang }: { allData: Entry[]; segment: Segment | 'all'; period: 'annual' | 'monthly'; lang: any }) {
+  const lo = (r: any) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min
+  const hi = (r: any) => period === 'annual' ? r.annual_gross_max : r.monthly_gross_max
+  function rng(en: CountryData, g: string) {
+    const f = en.grades.filter(r => r.grade === g && (segment === 'all' || r.segment === segment))
+    if (!f.length) return null
+    if (segment === 'all') return { min: Math.min(...f.map(lo)), max: Math.max(...f.map(hi)) }
+    const row = f.find(r => r.segment === 'mid_market') || f[0]
+    return { min: lo(row), max: hi(row) }
+  }
+  return (
+    <div className="card" style={{ overflowX: 'auto', padding: '4px 4px' }}>
+      <table className="data">
+        <thead>
+          <tr>
+            <th style={{ paddingLeft: 16 }}>{t(lang, 'grade')}</th>
+            {allData.map((en, i) => (
+              <th key={en.meta.slug} style={{ textAlign: 'right' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                  <span className="dot" style={{ background: SERIES[i], width: 7, height: 7 }} />
+                  {en.meta.flag + ' ' + en.meta.name[lang as 'en' | 'ru']}
+                </span>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {GRADE_ORDER.map(g => (
+            <tr key={g}>
+              <td style={{ paddingLeft: 16, whiteSpace: 'nowrap' }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                  <span className="dot" style={{ background: GRADE_VAR[g], width: 8, height: 8 }} />
+                  <span style={{ fontWeight: 600, fontSize: 13.5 }}>{t(lang, GRADE_KEY[g]!)}</span>
+                </span>
+              </td>
+              {allData.map(en => {
+                const r = rng(en.data, g)
+                return (
+                  <td key={en.meta.slug} className="mono" style={{ textAlign: 'right', fontSize: 13, whiteSpace: 'nowrap', color: r ? 'var(--text)' : 'var(--muted-2)' }}>
+                    {r ? fmtK(r.min, en.data.currency) + ' – ' + fmtK(r.max, en.data.currency) : '—'}
+                  </td>
+                )
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+function gridCols(n: number) {
+  if (n <= 1) return '1fr'
+  if (n === 2) return 'repeat(2, 1fr)'
+  if (n === 3) return 'repeat(3, 1fr)'
+  return 'repeat(2, 1fr)'
+}
+
 export default function CompareClient({ positionMeta, allData }: Props) {
   const { lang } = useLang()
-  const [tab, setTab] = useState<Tab>('grades')
+  const [tab, setTab] = useState<Tab>('overview')
   const [segment, setSegment] = useState<Segment | 'all'>('mid_market')
   const [period, setPeriod] = useState<'annual' | 'monthly'>('annual')
+  const [detail, setDetail] = useState<'columns' | 'matrix'>('columns')
 
-  const hasMixedCurrencies = new Set(allData.map((e) => e.data.currency)).size > 1
-
-  const chartSeries = allData.map((e, i) => ({
-    location: e.meta.slug,
-    label: e.meta.name[lang],
-    rows: e.data.grades,
-    color: COUNTRY_COLORS[i],
-    currency: e.data.currency,
+  const cols = gridCols(allData.length)
+  const series = allData.map((en, i) => ({
+    slug: en.meta.slug, label: en.meta.name[lang],
+    rows: en.data.grades, color: SERIES[i], currency: en.data.currency,
   }))
 
   const tabs: { key: Tab; label: string }[] = [
-    { key: 'grades',  label: t(lang, 'grades') },
-    { key: 'domains', label: t(lang, 'domains') },
-    { key: 'sources', label: t(lang, 'sources') },
+    { key: 'overview', label: t(lang, 'overview') },
+    { key: 'grades',   label: t(lang, 'grades') },
+    { key: 'domains',  label: t(lang, 'domains') },
+    { key: 'sources',  label: t(lang, 'sources') },
   ]
 
-  const segments: { key: Segment | 'all'; label: string }[] = [
-    { key: 'all',        label: t(lang, 'allSegments') },
-    { key: 'local_sme',  label: t(lang, 'local_sme') },
-    { key: 'mid_market', label: t(lang, 'mid_market') },
-    { key: 'premium',    label: t(lang, 'premium') },
+  const segOpts = [
+    { v: 'mid_market', label: t(lang, 'mid_market') },
+    { v: 'all',        label: t(lang, 'allSegments') },
+    { v: 'local_sme',  label: t(lang, 'local_sme') },
+    { v: 'premium',    label: t(lang, 'premium') },
   ]
-
-  const gridCls = allData.length === 1 ? 'grid-cols-1' : allData.length === 2 ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 lg:grid-cols-3'
+  const periodOpts = [
+    { v: 'annual',  label: t(lang, 'annual') },
+    { v: 'monthly', label: t(lang, 'monthly') },
+  ]
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       {/* Header */}
-      <header style={{ borderBottom: '1px solid var(--border)', background: 'rgba(26,29,39,0.9)', backdropFilter: 'blur(8px)' }} className="sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 min-w-0">
-            <Link href="/" className="text-sm transition-colors" style={{ color: 'var(--muted)' }}>
-              {t(lang, 'backHome')}
-            </Link>
-            <span style={{ color: 'var(--border)' }}>/</span>
-            <span className="font-semibold truncate" style={{ color: 'var(--text)' }}>{positionMeta.name[lang]}</span>
-            {allData.map((e) => (
-              <span key={e.meta.slug} className="flex items-center gap-1 text-sm shrink-0" style={{ color: 'var(--muted)' }}>
-                <span style={{ color: 'var(--border)' }}>·</span>
-                <span>{e.meta.flag}</span>
-                <span className="hidden sm:inline">{e.meta.name[lang]}</span>
+      <header style={{ position: 'sticky', top: 0, zIndex: 30, background: 'color-mix(in srgb, var(--surface) 88%, transparent)', backdropFilter: 'blur(10px)', borderBottom: '1px solid var(--border)' }}>
+        <div className="wrap" style={{ height: 58, display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 9, border: 'none', background: 'transparent', cursor: 'pointer', padding: 0, color: 'var(--text)', textDecoration: 'none' }}>
+            <span style={{ width: 26, height: 26, borderRadius: 7, background: 'var(--accent)', display: 'grid', placeItems: 'center', color: '#fff' }}>
+              <svg width={15} height={15} viewBox="0 0 24 24" fill="currentColor">
+                <rect x={3} y={13} width={4.5} height={8} rx={1} />
+                <rect x={9.75} y={8} width={4.5} height={13} rx={1} opacity={0.8} />
+                <rect x={16.5} y={3} width={4.5} height={18} rx={1} opacity={0.62} />
+              </svg>
+            </span>
+            <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: '-0.01em' }}>{t(lang, 'appTitle')}</span>
+          </Link>
+          {/* Breadcrumb */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, minWidth: 0, color: 'var(--muted)', fontSize: 13 }}>
+            <span style={{ color: 'var(--border-strong)' }}>/</span>
+            <span style={{ color: 'var(--text-2)', fontWeight: 500 }}>{positionMeta.name[lang]}</span>
+            <span style={{ color: 'var(--border-strong)' }}>·</span>
+            {allData.map((en, i) => (
+              <span key={en.meta.slug} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                <span className="dot" style={{ background: SERIES[i], width: 7, height: 7 }} />
+                <span>{en.meta.flag}</span>
+                <span className="hide-sm">{en.meta.name[lang]}</span>
               </span>
             ))}
           </div>
-          <LanguageToggle />
+          <div style={{ marginLeft: 'auto' }}><LanguageToggle /></div>
         </div>
-        {/* Tabs */}
-        <div className="max-w-7xl mx-auto px-4 flex gap-1">
-          {tabs.map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setTab(key)}
-              className="px-4 py-2 text-sm font-medium border-b-2 transition-colors"
-              style={
-                tab === key
-                  ? { borderColor: 'var(--accent)', color: 'var(--accent)' }
-                  : { borderColor: 'transparent', color: 'var(--muted)' }
-              }
-            >
-              {label}
-            </button>
-          ))}
+
+        {/* Tab bar */}
+        <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--surface)', position: 'sticky', top: 58, zIndex: 20 }}>
+          <div className="wrap" style={{ display: 'flex', gap: 4 }}>
+            {tabs.map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => setTab(key)}
+                style={{
+                  border: 'none', background: 'transparent', cursor: 'pointer',
+                  padding: '14px 4px', marginRight: 18,
+                  fontSize: 14, fontWeight: 600, fontFamily: 'var(--font-ui)',
+                  color: tab === key ? 'var(--text)' : 'var(--muted)',
+                  borderBottom: '2px solid ' + (tab === key ? 'var(--accent)' : 'transparent'),
+                  marginBottom: -1, transition: 'color .14s, border-color .14s',
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
-      {/* Currency warning */}
-      {hasMixedCurrencies && (
-        <div className="max-w-7xl mx-auto px-4 pt-4">
-          <div className="rounded-lg px-4 py-2 text-sm" style={{ background: 'rgba(255,209,102,0.08)', border: '1px solid rgba(255,209,102,0.2)', color: '#ffd166' }}>
-            ⚠️ {t(lang, 'currencyWarning')}
+      <div className="wrap" style={{ padding: '26px 28px 60px' }}>
+        <CurrencyNote allData={allData} lang={lang} />
+
+        {/* OVERVIEW */}
+        {tab === 'overview' && (
+          <div>
+            <SummaryCards allData={allData} period={period} lang={lang} />
+            <div className="card" style={{ padding: '20px 22px' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap', rowGap: 10, marginBottom: 18 }}>
+                <h3 style={{ fontSize: 14, fontWeight: 600, margin: 0, whiteSpace: 'nowrap' }}>{t(lang, 'salaryRange')}</h3>
+                <span style={{ fontSize: 12.5, color: 'var(--muted)', whiteSpace: 'nowrap' }}>{t(lang, 'allSizesNote')}</span>
+                <div style={{ marginLeft: 'auto' }}>
+                  <Toggle options={periodOpts} value={period} onChange={v => setPeriod(v as 'annual' | 'monthly')} />
+                </div>
+              </div>
+              <RangeChart series={series} period={period} lang={lang} />
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <main className="max-w-7xl mx-auto px-4 py-6">
-
-        {/* GRADES TAB */}
+        {/* BY GRADE */}
         {tab === 'grades' && (
           <div>
-            {/* Controls */}
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <div className="flex flex-wrap gap-1">
-                {segments.map(({ key, label }) => (
-                  <button
-                    key={key}
-                    onClick={() => setSegment(key)}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
-                    style={
-                      segment === key
-                        ? { background: 'var(--accent)', color: '#fff' }
-                        : { background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--muted)' }
-                    }
-                  >
-                    {label}
-                  </button>
-                ))}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 18 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span className="eyebrow">{t(lang, 'segment')}</span>
+                <Toggle options={segOpts} value={segment} onChange={v => setSegment(v as Segment | 'all')} />
               </div>
-              <div className="flex gap-1 ml-auto">
-                {(['annual', 'monthly'] as const).map((p) => (
-                  <button
-                    key={p}
-                    onClick={() => setPeriod(p)}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
-                    style={
-                      period === p
-                        ? { background: 'var(--card2)', color: 'var(--text)', border: '1px solid var(--border)' }
-                        : { background: 'transparent', color: 'var(--muted)', border: '1px solid transparent' }
-                    }
-                  >
-                    {t(lang, p)}
-                  </button>
-                ))}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
+                {allData.length > 1 && (
+                  <Toggle
+                    options={[{ v: 'columns', label: lang === 'ru' ? 'Колонки' : 'Columns' }, { v: 'matrix', label: lang === 'ru' ? 'Матрица' : 'Matrix' }]}
+                    value={detail}
+                    onChange={v => setDetail(v as 'columns' | 'matrix')}
+                  />
+                )}
+                <Toggle options={periodOpts} value={period} onChange={v => setPeriod(v as 'annual' | 'monthly')} />
               </div>
             </div>
 
-            {/* Chart */}
-            <div className="rounded-2xl p-5 mb-6" style={{ background: 'var(--card)', border: '1px solid var(--border)' }}>
-              <h3 className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>
-                {t(lang, 'salaryRange')} — {t(lang, period)}
-              </h3>
-              <GradesChart series={chartSeries} segment={segment} period={period} />
-            </div>
-
-            {/* KPI cards + tables per country */}
-            <div className={`grid gap-6 ${gridCls}`}>
-              {allData.map((entry, i) => (
-                <div key={entry.meta.slug}>
-                  {/* Country header */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="w-2.5 h-2.5 rounded-sm flex-shrink-0" style={{ background: COUNTRY_COLORS[i] }} />
-                    <span className="font-bold text-base" style={{ color: 'var(--text)' }}>
-                      {entry.meta.flag} {entry.meta.name[lang]}
-                    </span>
-                    <span className="ml-auto text-xs" style={{ color: 'var(--muted)' }}>{entry.data.currency}</span>
-                  </div>
-
-                  {/* KPI cards */}
-                  <div className="mb-4">
-                    <KPICards rows={entry.data.grades} segment={segment} period={period} currency={entry.data.currency} />
-                  </div>
-
-                  {/* Grade table */}
-                  <div className="rounded-xl p-4" style={{ background: 'var(--card)', border: '1px solid var(--border)' }}>
-                    <GradesTable rows={entry.data.grades} segment={segment} period={period} />
-                  </div>
-
-                  {/* Range note */}
-                  {segment === 'all' && (
-                    <div className="mt-2 px-3 py-2 rounded-lg text-xs" style={{ background: 'var(--card2)', color: 'var(--muted)', border: '1px solid var(--border)' }}>
-                      ⚡ <span style={{ color: '#ffd166' }}>Note:</span> {t(lang, 'midMarketNote')}
+            {detail === 'matrix' ? (
+              <GradeMatrix allData={allData} segment={segment} period={period} lang={lang} />
+            ) : (
+              <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 18 }}>
+                {allData.map((en, i) => (
+                  <div key={en.meta.slug} className="card" style={{ padding: '4px 4px 0', overflow: 'hidden' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 14px 10px' }}>
+                      <span className="dot" style={{ background: SERIES[i], width: 8, height: 8 }} />
+                      <span style={{ fontSize: 16 }}>{en.meta.flag}</span>
+                      <span style={{ fontWeight: 600 }}>{en.meta.name[lang]}</span>
+                      <span style={{ marginLeft: 'auto', fontSize: 11, fontWeight: 600, color: 'var(--muted-2)' }}>{en.data.currency}</span>
                     </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                    <GradesTable rows={en.data.grades} segment={segment} period={period} lang={lang} />
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {segment === 'all' && (
+              <p style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 16, maxWidth: 760 }}>
+                {t(lang, 'midMarketNote')}
+              </p>
+            )}
           </div>
         )}
 
-        {/* DOMAINS TAB */}
+        {/* BY DOMAIN */}
         {tab === 'domains' && (
           <div>
-            <div className="flex justify-end mb-5">
-              <div className="flex gap-1">
-                {(['annual', 'monthly'] as const).map((p) => (
-                  <button
-                    key={p}
-                    onClick={() => setPeriod(p)}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
-                    style={
-                      period === p
-                        ? { background: 'var(--card2)', color: 'var(--text)', border: '1px solid var(--border)' }
-                        : { background: 'transparent', color: 'var(--muted)', border: '1px solid transparent' }
-                    }
-                  >
-                    {t(lang, p)}
-                  </button>
-                ))}
-              </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 18 }}>
+              <Toggle options={periodOpts} value={period} onChange={v => setPeriod(v as 'annual' | 'monthly')} />
             </div>
-            <div className={`grid gap-8 ${gridCls}`}>
-              {allData.map((entry) => (
-                <div key={entry.meta.slug}>
-                  <h3 className="flex items-center gap-2 font-bold mb-4" style={{ color: 'var(--text)' }}>
-                    <span>{entry.meta.flag}</span>
-                    <span>{entry.meta.name[lang]}</span>
-                    <span className="text-xs font-normal ml-1" style={{ color: 'var(--muted)' }}>{entry.data.currency}</span>
-                  </h3>
-                  <DomainsGrid domains={entry.data.domains} currency={entry.data.currency} period={period} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+              {allData.map(en => (
+                <div key={en.meta.slug}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+                    <span style={{ fontSize: 16 }}>{en.meta.flag}</span>
+                    <span style={{ fontWeight: 600 }}>{en.meta.name[lang]}</span>
+                    <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--muted-2)' }}>{en.data.currency}</span>
+                  </div>
+                  <DomainsGrid domains={en.data.domains} currency={en.data.currency} period={period} lang={lang} />
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        {/* SOURCES TAB */}
+        {/* SOURCES */}
         {tab === 'sources' && (
-          <div className="flex flex-col gap-4">
-            {allData.map((entry) => (
-              <SourcesList
-                key={entry.meta.slug}
-                sources={entry.data.sources}
-                countryLabel={`${entry.meta.flag} ${entry.meta.name[lang]}`}
-              />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {allData.map(en => (
+              <SourcesList key={en.meta.slug} sources={en.data.sources} countryLabel={`${en.meta.flag} ${en.meta.name[lang]}`} lang={lang} />
             ))}
           </div>
         )}
-      </main>
+      </div>
+
+      {/* Footer */}
+      <div style={{ borderTop: '1px solid var(--border)' }}>
+        <div className="wrap" style={{ padding: '20px 28px', fontSize: 12, color: 'var(--muted-2)' }}>
+          {t(lang, 'footer')}
+        </div>
+      </div>
     </div>
   )
 }

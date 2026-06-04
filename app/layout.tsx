@@ -1,20 +1,30 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
-import { LangProvider } from '@/context/LangContext'
+import { AppProvider } from '@/context/LangContext'
 
-const geist = Geist({ subsets: ['latin'] })
+const plexSans = IBM_Plex_Sans({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--loaded-plex-sans',
+})
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--loaded-plex-mono',
+})
 
 export const metadata: Metadata = {
-  title: 'Salary Research',
+  title: 'Salary Research — PM compensation benchmarks',
   description: 'IT salary benchmarks by role, location and seniority',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geist.className} bg-gray-50 min-h-screen`}>
-        <LangProvider>{children}</LangProvider>
+      <body className={`${plexSans.variable} ${plexMono.variable} min-h-screen`}
+        style={{ fontFamily: 'var(--font-ui)' }}>
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   )

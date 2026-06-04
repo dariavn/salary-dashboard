@@ -15,119 +15,139 @@ export default function HomeClient({ positions, locationsByPosition }: Props) {
   const { lang } = useLang()
   const router = useRouter()
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([])
+  const [selected, setSelected] = useState<string[]>([])
 
   const locations = locationsByPosition[selectedPosition] ?? []
 
-  function toggleLocation(slug: string) {
-    setSelectedLocations((prev) => {
-      if (prev.includes(slug)) return prev.filter((s) => s !== slug)
-      if (prev.length >= 3) return prev
-      return [...prev, slug]
-    })
+  function toggle(slug: string) {
+    setSelected(prev => prev.includes(slug) ? prev.filter(s => s !== slug) : prev.length >= 4 ? prev : [...prev, slug])
   }
 
   function handleCompare() {
-    if (!selectedLocations.length) return
-    router.push(`/compare?position=${selectedPosition}&countries=${selectedLocations.join(',')}`)
+    if (!selected.length) return
+    router.push(`/compare?position=${selectedPosition}&countries=${selected.join(',')}`)
   }
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       {/* Header */}
-      <header style={{ borderBottom: '1px solid var(--border)', background: 'rgba(26,29,39,0.8)', backdropFilter: 'blur(8px)' }} className="sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div>
-            <h1
-              className="text-xl font-bold"
-              style={{ background: 'linear-gradient(90deg, #6c63ff, #00d4aa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
-            >
-              {t(lang, 'appTitle')}
-            </h1>
-            <p className="text-xs" style={{ color: 'var(--muted)' }}>{t(lang, 'appSubtitle')}</p>
+      <header style={{ position: 'sticky', top: 0, zIndex: 30, borderBottom: '1px solid var(--border)', background: 'color-mix(in srgb, var(--surface) 88%, transparent)', backdropFilter: 'blur(10px)' }}>
+        <div className="wrap" style={{ height: 58, display: 'flex', alignItems: 'center', gap: 14 }}>
+          {/* Logo */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+            <span style={{ width: 26, height: 26, borderRadius: 7, background: 'var(--accent)', display: 'grid', placeItems: 'center', color: '#fff' }}>
+              <svg width={15} height={15} viewBox="0 0 24 24" fill="currentColor">
+                <rect x={3} y={13} width={4.5} height={8} rx={1} />
+                <rect x={9.75} y={8} width={4.5} height={13} rx={1} opacity={0.8} />
+                <rect x={16.5} y={3} width={4.5} height={18} rx={1} opacity={0.62} />
+              </svg>
+            </span>
+            <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: '-0.01em' }}>{t(lang, 'appTitle')}</span>
           </div>
-          <LanguageToggle />
+          <div style={{ marginLeft: 'auto' }}><LanguageToggle /></div>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 py-10">
-        {/* Step 1 */}
-        <section className="mb-10">
-          <h2 className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>
-            1 — {t(lang, 'selectPosition')}
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {positions.map((p) => (
+      {/* Body */}
+      <div style={{ maxWidth: 920, margin: '0 auto', padding: '48px 28px 80px' }}>
+        <div style={{ marginBottom: 40 }}>
+          <h1 style={{ fontSize: 30, fontWeight: 600, letterSpacing: '-0.02em', margin: '0 0 8px' }}>
+            {t(lang, 'appTitle')}
+          </h1>
+          <p style={{ color: 'var(--muted)', margin: 0, fontSize: 15 }}>{t(lang, 'appSubtitle')}</p>
+        </div>
+
+        {/* Step 1: Role */}
+        <div style={{ marginBottom: 34 }}>
+          <div className="eyebrow" style={{ marginBottom: 12 }}>{t(lang, 'selectPosition')}</div>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            {positions.map(p => (
               <button
                 key={p.slug}
-                onClick={() => { setSelectedPosition(p.slug); setSelectedLocations([]) }}
-                className="px-5 py-2.5 rounded-xl font-medium transition-all text-sm"
-                style={
-                  selectedPosition === p.slug
-                    ? { border: '1px solid var(--accent)', background: 'rgba(108,99,255,0.12)', color: '#e8eaf0' }
-                    : { border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--muted)' }
-                }
+                onClick={() => { setSelectedPosition(p.slug); setSelected([]) }}
+                style={{
+                  fontFamily: 'var(--font-ui)', fontSize: 14, fontWeight: selectedPosition === p.slug ? 600 : 500,
+                  padding: '9px 16px', borderRadius: 'var(--r-md)', cursor: 'pointer',
+                  borderColor: selectedPosition === p.slug ? 'var(--accent)' : 'var(--border-strong)',
+                  background: selectedPosition === p.slug ? 'var(--accent-soft)' : 'var(--surface)',
+                  color: selectedPosition === p.slug ? 'var(--text)' : 'var(--text-2)',
+                  border: '1px solid',
+                  transition: 'all .14s',
+                }}
               >
                 {p.name[lang]}
               </button>
             ))}
           </div>
-        </section>
+        </div>
 
-        {/* Step 2 */}
+        {/* Step 2: Locations */}
         {selectedPosition && (
-          <section className="mb-10">
-            <h2 className="text-sm font-semibold uppercase tracking-widest mb-1" style={{ color: 'var(--muted)' }}>
-              2 — {t(lang, 'selectCountries')}
-            </h2>
-            {selectedLocations.length >= 3 && (
-              <p className="text-xs mb-3" style={{ color: 'var(--accent4)' }}>{t(lang, 'maxCountries')}</p>
-            )}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-3">
-              {locations.map((loc) => {
-                const selected = selectedLocations.includes(loc.slug)
-                const disabled = !selected && selectedLocations.length >= 3
+          <div style={{ marginBottom: 28 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 12 }}>
+              <div className="eyebrow">{t(lang, 'selectCountries')}</div>
+              <span style={{ fontSize: 12, color: 'var(--muted-2)' }}>{t(lang, 'selectCountriesHint')}</span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 10 }}>
+              {locations.map(loc => {
+                const on = selected.includes(loc.slug)
+                const dis = !on && selected.length >= 4
                 return (
                   <button
                     key={loc.slug}
-                    onClick={() => !disabled && toggleLocation(loc.slug)}
-                    disabled={disabled}
-                    className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all"
-                    style={
-                      selected
-                        ? { border: '1px solid var(--accent)', background: 'rgba(108,99,255,0.12)', color: '#e8eaf0' }
-                        : disabled
-                        ? { border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--border)', cursor: 'not-allowed' }
-                        : { border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--muted)' }
-                    }
+                    onClick={() => !dis && toggle(loc.slug)}
+                    disabled={dis}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: 10, padding: '12px 14px',
+                      textAlign: 'left', justifyContent: 'flex-start', fontFamily: 'var(--font-ui)',
+                      cursor: dis ? 'not-allowed' : 'pointer',
+                      fontWeight: on ? 600 : 500, fontSize: 14,
+                      borderRadius: 'var(--r-md)', border: '1px solid',
+                      borderColor: on ? 'var(--accent)' : 'var(--border-strong)',
+                      background: on ? 'var(--accent-soft)' : 'var(--surface)',
+                      color: on ? 'var(--text)' : 'var(--text-2)',
+                      opacity: dis ? 0.4 : 1,
+                      transition: 'all .14s',
+                    }}
                   >
-                    <span className="text-xl">{loc.flag}</span>
-                    <span>{loc.name[lang]}</span>
-                    {loc.currency === 'RUB' && (
-                      <span className="ml-auto text-xs" style={{ color: 'var(--muted)' }}>₽</span>
-                    )}
+                    <span style={{ fontSize: 20, lineHeight: 1 }}>{loc.flag}</span>
+                    <span style={{ marginRight: 'auto' }}>{loc.name[lang]}</span>
+                    {loc.currency === 'RUB' && <span style={{ fontSize: 11, color: 'var(--muted-2)' }}>₽</span>}
                   </button>
                 )
               })}
             </div>
-          </section>
+          </div>
         )}
 
-        <div className="flex justify-end">
-          <button
-            onClick={handleCompare}
-            disabled={!selectedLocations.length}
-            className="px-8 py-3 rounded-xl font-semibold text-base transition-all active:scale-95"
-            style={
-              selectedLocations.length
-                ? { background: 'var(--accent)', color: '#fff', boxShadow: '0 0 20px rgba(108,99,255,0.4)' }
-                : { background: 'var(--card2)', color: 'var(--border)', cursor: 'not-allowed' }
-            }
-          >
-            {t(lang, 'compareBtn')} {selectedLocations.length > 0 && `(${selectedLocations.length})`}
-          </button>
+        {/* Action bar */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 24 }}>
+          {selected.length > 0 && (
+            <button
+              onClick={() => setSelected([])}
+              style={{ fontFamily: 'var(--font-ui)', fontSize: 14, fontWeight: 500, border: 'none', background: 'transparent', color: 'var(--muted)', padding: '9px 4px', cursor: 'pointer' }}
+            >
+              {t(lang, 'clear')}
+            </button>
+          )}
+          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 14 }}>
+            <span style={{ fontSize: 13, color: 'var(--muted)' }}>{selected.length}/4 {t(lang, 'selected')}</span>
+            <button
+              disabled={!selected.length}
+              onClick={handleCompare}
+              style={{
+                fontFamily: 'var(--font-ui)', fontSize: 15, fontWeight: 600,
+                padding: '11px 26px', borderRadius: 'var(--r-md)', cursor: selected.length ? 'pointer' : 'not-allowed',
+                background: 'var(--accent)', border: '1px solid var(--accent)', color: '#fff',
+                opacity: selected.length ? 1 : 0.45,
+                transition: 'all .14s',
+              }}
+            >
+              {t(lang, 'compareBtn')}
+            </button>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
   )
 }
