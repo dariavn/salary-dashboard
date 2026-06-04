@@ -47,19 +47,20 @@ export default function SourcesList({ sources, countryLabel, lang: langProp }: P
               </tr>
             </thead>
             <tbody>
-              {sources.map((s, i) => {
+            {sources.map((s, i) => {
                 const c = STYPE_COLOR[s.source_type] || 'var(--neutral)'
+                const tdBase: React.CSSProperties = { paddingTop: 14, paddingBottom: 14 }
                 return (
                   <tr key={i}>
-                    <td style={{ paddingLeft: 16, fontWeight: 500, fontSize: 13.5, minWidth: 160 }}>{s.source_name}</td>
-                    <td>
+                    <td style={{ ...tdBase, paddingLeft: 16, fontWeight: 500, fontSize: 13.5, minWidth: 180 }}>{s.source_name}</td>
+                    <td style={{ ...tdBase, minWidth: 130, whiteSpace: 'nowrap' }}>
                       <span className="pill" style={{ color: c, background: `color-mix(in srgb, ${c} 13%, transparent)` }}>
                         {t(lang, s.source_type as 'aggregator' | 'salary_survey' | 'job_posting' | 'recruiter_report')}
                       </span>
                     </td>
-                    <td className="mono" style={{ fontSize: 12.5, color: 'var(--muted)', whiteSpace: 'nowrap' }}>{s.data_date}</td>
-                    <td><ConfidenceBadge value={s.confidence} lang={lang} /></td>
-                    <td style={{ fontSize: 12.5, color: 'var(--muted)', maxWidth: 320, paddingRight: 16 }}>{s.notes}</td>
+                    <td className="mono" style={{ ...tdBase, fontSize: 12.5, color: 'var(--muted)', whiteSpace: 'nowrap', minWidth: 90 }}>{s.data_date}</td>
+                    <td style={{ ...tdBase, minWidth: 90 }}><ConfidenceBadge value={s.confidence} lang={lang} /></td>
+                    <td style={{ ...tdBase, fontSize: 12.5, color: 'var(--muted)', minWidth: 200, paddingRight: 16 }}>{s.notes}</td>
                   </tr>
                 )
               })}
