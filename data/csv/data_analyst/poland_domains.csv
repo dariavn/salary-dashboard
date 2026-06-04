@@ -1,0 +1,6 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,38000,54000,52000,72000,68000,90000,85000,112000,100000,135000,3167,4500,4333,6000,5667,7500,7083,9333,8333,11250,EUR,high,"PKO BP Tech/Revolut/N26 PL; strong DA demand; +15-20% vs SaaS"
+Gaming,high,strong,34000,48000,46000,64000,60000,82000,75000,100000,,,,2833,4000,3833,5333,5000,6833,6250,8333,,,EUR,high,"CD Projekt RED/11 bit studios/Techland; game analytics/BI roles"
+SaaS_B2B,mid,strong,26000,38000,36000,52000,48000,66000,62000,82000,78000,105000,2167,3167,3000,4333,4000,5500,5167,6833,6500,8750,EUR,high,"Largest IT segment PL; many scaleups; at-market benchmark"
+iGaming,mid,moderate,32000,46000,44000,62000,58000,78000,75000,98000,,,,2667,3833,3667,5167,4833,6500,6250,8167,,,EUR,medium,"Several operators with PL offices; moderate presence"
+Outsourcing,base,strong,22000,32000,30000,44000,42000,58000,54000,72000,,,,1833,2667,2500,3667,3500,4833,4500,6000,,,EUR,high,"EPAM/Luxoft/Cognizant PL; strong demand for DA; below product-first"

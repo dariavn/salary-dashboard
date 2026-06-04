@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+PayScale Cyprus DA,aggregator,payscale.com/research/CY/Job=Data_Analyst/Salary,2026,yes,medium,"Avg €24,832; early career €17,687; broad sample"
+Glassdoor Cyprus DA,aggregator,glassdoor.com/Salaries/cyprus-data-analyst,2025,yes,medium,"2025 data; 25th-75th pct range; limited sample"
+Glassdoor Limassol DA,aggregator,glassdoor.com/Salaries/limassol-cyprus-data-analyst,2026,yes,high,"Limassol-specific; FinTech/iGaming weighted"
+WorldSalaries Cyprus DA,aggregator,worldsalaries.com/average-data-analyst-salary-in-cyprus/,2026,yes,medium,"Avg ~€22,400; range €10K–€39.6K"
+Levels.fyi Cyprus Senior DA,aggregator,levels.fyi/t/data-analyst/levels/senior/locations/cyprus,2026,yes,medium,"Senior range €67K–€80K; premium segment"
+Emerald Zebra CY,recruiter_report,emeraldzebra.cy/our-services/salary-survey/,2025,yes,medium,"700+ Cyprus employees surveyed; FinTech/iGaming/Finance"
+LinkedIn Jobs Cyprus DA,job_posting,linkedin.com/jobs: Data Analyst Cyprus 2026,2026-05,partial,medium,"Used for Lead/Head range estimation"

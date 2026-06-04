@@ -1,0 +1,5 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Tbilisi DA,aggregator,glassdoor.com/Salaries/tbilisi-georgia-data-analyst,2026,yes,medium,"GEL 3,408 avg/yr (likely monthly GEL 3,408); limited sample"
+SalaryExpert Tbilisi DA,aggregator,salaryexpert.com/salary/job/data-analyst/georgia/tbilisi,2026,yes,medium,"Avg GEL 117,934/yr; entry GEL 84,664; senior GEL 136,947"
+Levels.fyi Tbilisi DA,aggregator,levels.fyi/t/data-analyst/locations/tbilisi-geo,2026,yes,medium,"Range GEL 68,160–161,880; avg GEL 113,388"
+LinkedIn Jobs Tbilisi DA,job_posting,linkedin.com/jobs: Data Analyst Tbilisi 2026,2026-05,partial,low,"Limited postings; Lead/Head estimation"

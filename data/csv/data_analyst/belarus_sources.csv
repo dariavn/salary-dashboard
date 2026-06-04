@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Levels.fyi Belarus DA,aggregator,levels.fyi/t/data-analyst/locations/belarus,2026,yes,medium,"Avg BYN 39,053; range BYN 37,020–44,424; sparse data"
+rabota.by DA vacancies,job_posting,rabota.by/vacancies/data-analyst,2025,partial,medium,"203 vacancies Minsk; salary bands available on postings; 2025 data"
+Recruitment.by IT salaries,salary_survey,recruitment.by/rus/news/it-salary-developers-belarus/,2026,yes,medium,"IT salary overview BY 2026; DA included"
+LinkedIn Belarus DA,job_posting,linkedin.com/jobs: Data Analyst Belarus 2026,2026-05,partial,low,"Limited postings; premium band estimation"
+GородРабот.by DA,job_posting,belarus.gorodrabot.by/data_analyst,2026,partial,low,"251 vacancies BY; salary not always listed"

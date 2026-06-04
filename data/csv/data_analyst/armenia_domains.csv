@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+SaaS_B2B,mid,moderate,12000,20000,18000,28000,24000,38000,34000,52000,,,,1000,1667,1500,2333,2000,3167,2833,4333,,,EUR,medium,"Picsart/TeamViewer Yerevan; tech product companies; growing post-2022 relocation"
+FinTech,mid,moderate,14000,22000,20000,32000,28000,42000,38000,56000,,,,1167,1833,1667,2667,2333,3500,3167,4667,,,EUR,medium,"Several fintech/crypto cos relocated to Yerevan; DA demand growing"
+iGaming,mid,limited,12000,20000,18000,28000,26000,40000,,,,,,1000,1667,1500,2333,2167,3333,,,,,,EUR,low,"Some operators post-relocation; limited data"
+Outsourcing,base,moderate,10000,16000,14000,22000,20000,30000,,,,,,833,1333,1167,1833,1667,2500,,,,,,EUR,medium,"EPAM Armenia/Synopsys; established outsourcing; base tier"

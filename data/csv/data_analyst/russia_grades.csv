@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,600000,960000,50000,80000,RUB,high,"GetGrade 2026;Habr Career 2026","Regional companies; Moscow 81K-109K/mo median per hh.ru"
+Junior,0-3,mid_market,840000,1320000,70000,110000,RUB,high,"GetGrade 2026;hh.ru;Habr Career","Moscow median 81-109K/mo; mid-market IT"
+Middle,3-5,mid_market,1200000,1800000,100000,150000,RUB,high,"GetGrade 2026;hh.ru;Habr Career","Moscow 108K-125K/mo; mid-market range"
+Middle,3-5,premium,1680000,2400000,140000,200000,RUB,high,"GetGrade 2026;quick-offer.ru;appleinsider","FinTech/BigTech +15-25%; median 160K/mo per appleinsider"
+Senior,5+,mid_market,2400000,3600000,200000,300000,RUB,high,"GetGrade 2026;Habr Career;hh.ru","Moscow senior 243K-289K/mo; mid range"
+Senior,5+,premium,3600000,6000000,300000,500000,RUB,high,"Yandex Levels.fyi;GetGrade;appleinsider","Yandex G14 base; top BigTech/FinTech 300K-500K/mo"
+Lead,7+,mid_market,3600000,5400000,300000,450000,RUB,medium,"GetGrade 2026;hh.ru","Team/tech lead DA"
+Lead,7+,premium,5400000,8400000,450000,700000,RUB,medium,"Yandex Levels.fyi;GetGrade","BigTech/FinTech lead; Yandex G15-G16 range"
+Head,10+,premium,7200000,13200000,600000,1100000,RUB,medium,"Yandex Levels.fyi;GetGrade","Head of Analytics; Yandex G17-G18: 6.5M/yr top"

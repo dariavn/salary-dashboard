@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,13000,20000,1083,1667,EUR,medium,"WorldSalaries CY 2026;PayScale CY",Small local companies; PayScale avg €22,400 cross-market
+Junior,0-3,mid_market,20000,30000,1667,2500,EUR,high,"Glassdoor CY 2026;PayScale CY;WorldSalaries",Main IT market range
+Junior,0-3,premium,30000,42000,2500,3500,EUR,medium,"Glassdoor Limassol 2026;Emerald Zebra",FinTech/iGaming Limassol employers
+Middle,3-5,mid_market,28000,40000,2333,3333,EUR,high,"Glassdoor CY 2026;PayScale;WorldSalaries","PayScale: avg €24,959 early career"
+Middle,3-5,premium,40000,56000,3333,4667,EUR,medium,"Emerald Zebra CY;LinkedIn CY 2026",FinTech/iGaming premium; Limassol segment
+Senior,5+,mid_market,36000,50000,3000,4167,EUR,high,"Glassdoor CY 2026;PayScale;WorldSalaries","WorldSalaries avg €24,860 – refers mid-market"
+Senior,5+,premium,55000,75000,4583,6250,EUR,high,"Levels.fyi CY;Glassdoor;Emerald Zebra","Levels.fyi senior: €67K–€80K; FinTech/iGaming"
+Lead,7+,mid_market,52000,68000,4333,5667,EUR,medium,"LinkedIn CY 2026;Glassdoor",Limited postings data
+Lead,7+,premium,68000,90000,5667,7500,EUR,medium,"Levels.fyi CY;LinkedIn CY","FinTech/iGaming lead; Emerald Zebra survey"
+Head,10+,premium,80000,105000,6667,8750,EUR,low,"LinkedIn CY;Emerald Zebra","Very limited data; few Head of Data postings"

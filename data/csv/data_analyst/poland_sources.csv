@@ -1,0 +1,10 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Warsaw DA,aggregator,glassdoor.com/Salaries/warsaw-poland-data-analyst,2026,yes,high,"Warsaw avg with grade breakdown"
+Glassdoor Poland DA,aggregator,glassdoor.com/Salaries/poland-data-analyst,2026,yes,high,"Poland national avg"
+PayScale Poland DA,aggregator,payscale.com/research/PL/Job=Data_Analyst/Salary,2026,yes,medium,"Avg PLN 79,481"
+PayScale Poland Junior DA,aggregator,payscale.com/research/PL/Job=Junior_Data_Analyst/Salary,2026,yes,medium,"Junior avg PLN 52,549"
+PayScale Poland Senior DA,aggregator,payscale.com/research/PL/Job=Senior_Data_Analyst/Salary,2026,yes,medium,"Senior avg PLN 154,839"
+SalaryExpert Poland DA,aggregator,salaryexpert.com/salary/job/data-analyst/poland,2026,yes,high,"Entry PLN 132,638; Senior PLN 213,975; avg PLN 188,357"
+SalaryExpert Warsaw DA,aggregator,salaryexpert.com/salary/job/data-analyst/poland/warsaw,2026,yes,high,"Warsaw: entry PLN 147,232; senior PLN 237,518"
+Levels.fyi Poland DA,aggregator,levels.fyi/t/data-analyst/locations/poland,2026,yes,medium,"Range PLN 82,470–214,707; avg PLN 124,362 Warsaw"
+LinkedIn Jobs Poland DA,job_posting,linkedin.com/jobs: Data Analyst Poland 2026,2026-05,partial,medium,"Senior/Lead postings with salary bands"

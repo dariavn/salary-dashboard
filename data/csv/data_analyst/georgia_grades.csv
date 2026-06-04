@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,12000,18000,1000,1500,EUR,medium,"SalaryExpert Tbilisi 2026;Glassdoor Tbilisi","~GEL 34K–51K/yr; SalaryExpert entry €29,706"
+Junior,0-3,mid_market,18000,28000,1500,2333,EUR,medium,"Glassdoor Tbilisi 2026;Levels.fyi GEO","Mid-market IT; ~GEL 51K–80K/yr"
+Middle,3-5,local_sme,16000,24000,1333,2000,EUR,medium,"SalaryExpert GEO;WorldSalaries Tbilisi","~GEL 46K–68K/yr"
+Middle,3-5,mid_market,22000,34000,1833,2833,EUR,medium,"Glassdoor Tbilisi 2026;Levels.fyi","~GEL 63K–97K/yr; 1 EUR≈2.85 GEL"
+Senior,5+,mid_market,30000,44000,2500,3667,EUR,medium,"Levels.fyi Tbilisi 2026;SalaryExpert","SalaryExpert senior €48,052; Levels avg €39,784"
+Senior,5+,premium,42000,60000,3500,5000,EUR,low,"Levels.fyi GEO;LinkedIn Tbilisi","Intl companies; very limited data"
+Lead,7+,premium,52000,72000,4333,6000,EUR,low,"Levels.fyi GEO;LinkedIn","Few data points; 2025 data extrapolated"
+Head,10+,premium,68000,92000,5667,7667,EUR,low,"LinkedIn Tbilisi 2026","Very limited; 1-2 postings"

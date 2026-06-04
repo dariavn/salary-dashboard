@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,moderate,18000,28000,26000,40000,36000,54000,48000,68000,,,,1500,2333,2167,3333,3000,4500,4000,5667,,,EUR,medium,"TBC Bank/Bank of Georgia tech; crypto-friendly jurisdiction; strong DA demand"
+SaaS_B2B,base,moderate,12000,20000,18000,28000,26000,38000,36000,52000,,,,1000,1667,1500,2333,2167,3167,3000,4333,,,EUR,medium,"Growing tech scene; emerging startup ecosystem; at/below EUR market"
+iGaming,mid,limited,14000,22000,20000,32000,28000,44000,,,,,,1167,1833,1667,2667,2333,3667,,,,,,EUR,low,"Some operators relocated after 2022; limited DA-specific salary data"
+Outsourcing,base,limited,10000,16000,14000,22000,20000,32000,,,,,,833,1333,1167,1833,1667,2667,,,,,,EUR,low,"Limited nearshore; mainly domestic market"

@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Lisbon DA,aggregator,glassdoor.com/Salaries/lisbon-portugal-data-analyst,2026,yes,high,"Avg €32,021; 25pct €26,650; 75pct €38,565"
+Glassdoor Lisbon Junior DA,aggregator,glassdoor.com/Salaries/lisbon-portugal-junior-data-analyst,2026,yes,high,"Junior avg €35,994; range €28,170–€37,268"
+PayScale Lisbon DA,aggregator,payscale.com/research/PT/Job=Data_Analyst/Salary,2026,yes,medium,"Lisbon DA salary data"
+SalaryExpert Portugal DA,aggregator,salaryexpert.com/salary/job/data-analyst/portugal,2026,yes,high,"Avg €44,718; entry €31,571; senior €50,348"
+IE.edu Europe DA report,salary_survey,ie.edu/uncover-ie/data-analyst-salary-in-europe-mbds/,2026,yes,medium,"Portugal context in EU data analyst benchmark"
+LinkedIn Jobs Portugal DA,job_posting,linkedin.com/jobs: Data Analyst Portugal 2026,2026-05,partial,medium,"Lisbon postings; FinTech segment validated"

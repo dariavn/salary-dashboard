@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,26000,1500,2167,EUR,medium,"PayScale ES 2026;Glassdoor Madrid","Smaller Spanish companies"
+Junior,0-3,mid_market,24000,35000,2000,2917,EUR,high,"Glassdoor Madrid 2026;PayScale;SalaryExpert","Glassdoor Madrid junior avg €27K; range €23.5K-€31K"
+Junior,0-3,premium,34000,46000,2833,3833,EUR,medium,"SalaryExpert ES;LinkedIn Spain","FinTech/BigTech; Barcelona competitive"
+Middle,3-5,mid_market,32000,44000,2667,3667,EUR,high,"Glassdoor ES 2026;PayScale;SalaryExpert","PayScale mid-career avg €30,647"
+Middle,3-5,premium,44000,60000,3667,5000,EUR,medium,"SalaryExpert ES;LinkedIn Spain","Madrid/Barcelona tech cos"
+Senior,5+,mid_market,46000,62000,3833,5167,EUR,high,"PayScale ES;SalaryExpert;Glassdoor ES","PayScale senior avg €58K; SalaryExpert senior €71K"
+Senior,5+,premium,60000,82000,5000,6833,EUR,medium,"SalaryExpert ES 2026;LinkedIn Spain","FinTech/Cabify/Glovo tech"
+Lead,7+,mid_market,62000,82000,5167,6833,EUR,medium,"LinkedIn Spain;Glassdoor ES","Lead/Principal DA"
+Lead,7+,premium,82000,108000,6833,9000,EUR,medium,"LinkedIn Spain 2026;SalaryExpert","BigTech/FinTech lead"
+Head,10+,premium,95000,130000,7917,10833,EUR,low,"LinkedIn Spain;SalaryExpert","Head of Data/Analytics; limited data"

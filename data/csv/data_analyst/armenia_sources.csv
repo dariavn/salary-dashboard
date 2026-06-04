@@ -1,0 +1,4 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+WorldSalaries Armenia DA,aggregator,worldsalaries.com/average-data-analyst-salary-in-armenia/,2026,yes,medium,"Full range AMD 4.14M–13.92M; grade breakdown by years"
+Glassdoor Yerevan DA,aggregator,glassdoor.com/Salaries/yerevan-armenia-data-analyst,2026,yes,medium,"Avg AMD 579,167/mo; limited sample"
+LinkedIn Armenia DA,job_posting,linkedin.com/jobs: Data Analyst Yerevan 2026,2026-05,partial,low,"Premium segment estimation; sparse"

@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,5000,9000,417,750,EUR,medium,"rabota.by 2025;GородРабот.by","Local/non-IT market; ~1300-2500 BYN/mo; 2025 data"
+Junior,0-3,mid_market,10000,18000,833,1500,EUR,medium,"Levels.fyi BY;dev.by;LinkedIn BY","IT sector; ~2750-5000 BYN/mo; 1 EUR≈3.3 BYN"
+Middle,3-5,mid_market,18000,28000,1500,2333,EUR,medium,"Levels.fyi BY;rabota.by","IT mid-market; ~5000-7700 BYN/mo"
+Middle,3-5,premium,26000,38000,2167,3167,EUR,medium,"Levels.fyi BY;LinkedIn BY","Export/international companies $2000-3500/mo"
+Senior,5+,mid_market,32000,46000,2667,3833,EUR,medium,"Levels.fyi BY 2026;rabota.by","IT senior; ~8800-12650 BYN/mo"
+Senior,5+,premium,44000,60000,3667,5000,EUR,medium,"Levels.fyi BY;LinkedIn Belarus","Premium IT; Levels.fyi BY: BYN 37K-44K avg (sparse data)"
+Lead,7+,premium,52000,72000,4333,6000,EUR,low,"Levels.fyi BY;LinkedIn","~14300-19800 BYN/mo; limited data"
+Head,10+,premium,65000,88000,5417,7333,EUR,low,"LinkedIn Belarus;Levels.fyi","Very limited; Head of Data postings"

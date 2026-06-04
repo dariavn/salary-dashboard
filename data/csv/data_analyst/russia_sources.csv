@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+GetGrade Аналитики 2026,salary_survey,getgrade.ru/zarplaty-analytikov,2026,yes,high,"Anonymous survey; 800+ companies; grade breakdown"
+Habr Career DA Russia,aggregator,career.habr.com/salaries data_analyst,2026,yes,high,"Habr community self-reported; avg 170,833 RUB"
+hh.ru DA vacancies,job_posting,hh.ru: аналитик данных 2026,2026-05,partial,high,"Main RU job board; salary bands in vacancies"
+Quick-offer DA Russia,aggregator,quick-offer.ru/news/data-analysts-salary,2026,yes,medium,"Grade breakdown: junior 70-90K; middle 100-120K; senior 200-250K"
+Yandex Levels.fyi DA,aggregator,levels.fyi/companies/yandex/salaries/data-analyst,2026,yes,medium,"Yandex G14: RUB 1.95M; G18: 6.49M; median 2.55M"
+AppleInsider DA Russia,aggregator,appleinsider.ru/tips-tricks/zarplata-analitika,2026,yes,medium,"Median 160K RUB; market overview"

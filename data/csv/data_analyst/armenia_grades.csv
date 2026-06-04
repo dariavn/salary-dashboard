@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,9000,14000,750,1167,EUR,medium,"WorldSalaries AM 2026;Glassdoor Yerevan","~AMD 3.7M–5.7M/yr; WorldSalaries entry AMD 4.14M"
+Junior,0-3,mid_market,14000,20000,1167,1667,EUR,medium,"Glassdoor Yerevan 2026;LinkedIn AM","~AMD 5.7M–8.2M/yr; 1 EUR≈410 AMD"
+Middle,3-5,mid_market,16000,26000,1333,2167,EUR,medium,"WorldSalaries AM;Glassdoor Yerevan","WorldSalaries 2-5yrs: AMD 6.58M = €16K"
+Middle,3-5,premium,24000,36000,2000,3000,EUR,medium,"LinkedIn Armenia;Levels.fyi AM",Intl/relocated companies post-2022
+Senior,5+,mid_market,22000,34000,1833,2833,EUR,medium,"WorldSalaries AM 2026;Glassdoor","WorldSalaries 5-10yrs: AMD 9.36M = €22.8K"
+Senior,5+,premium,34000,50000,2833,4167,EUR,medium,"LinkedIn AM 2026;Levels.fyi","~AMD 14M–20.5M/yr; premium segment"
+Lead,7+,premium,42000,60000,3500,5000,EUR,low,"LinkedIn Armenia;Levels.fyi","Limited data; few lead DA roles"
+Head,10+,premium,56000,80000,4667,6667,EUR,low,"LinkedIn Armenia 2026","Very limited data; 1-2 sources"

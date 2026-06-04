@@ -1,0 +1,6 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,34000,48000,46000,64000,62000,84000,80000,108000,96000,130000,2833,4000,3833,5333,5167,7000,6667,9000,8000,10833,EUR,high,"Cabify/Glovo tech/Bankinter digital; Barcelona FinTech; +15-20% vs SaaS"
+SaaS_B2B,mid,strong,26000,38000,36000,52000,48000,66000,62000,84000,78000,108000,2167,3167,3000,4333,4000,5500,5167,7000,6500,9000,EUR,high,"Largest segment; many B2B scaleups Madrid/Barcelona; at-market"
+MarTech_AdTech,mid,strong,24000,36000,34000,50000,46000,64000,60000,82000,,,,2000,3000,2833,4167,3833,5333,5000,6833,,,EUR,medium,"Grupo Prisa/Mediaset/Telefónica Tech; Madrid strong for analytics"
+E_commerce,mid,moderate,24000,34000,32000,46000,44000,60000,56000,76000,,,,2000,2833,2667,3833,3667,5000,4667,6333,,,EUR,medium,"Inditex tech/Zara/El Corte Inglés digital; growing"
+iGaming,mid,limited,28000,40000,38000,54000,52000,72000,66000,90000,,,,2333,3333,3167,4500,4333,6000,5500,7500,,,EUR,low,"Some operators ES offices; limited DA-specific data"

@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+Outsourcing,mid,strong,14000,22000,22000,34000,32000,46000,44000,60000,,,,1167,1833,1833,2833,2667,3833,3667,5000,,,EUR,high,"Largest IT segment RS; EPAM/Levi9; main DA employer"
+SaaS_B2B,mid,moderate,16000,24000,24000,36000,34000,48000,45000,62000,,,,1333,2000,2000,3000,2833,4000,3750,5167,,,EUR,medium,"Growing B2B tech scene Belgrade; Nordeus/Levi9"
+FinTech,mid,moderate,18000,28000,26000,40000,38000,55000,50000,68000,,,,1500,2333,2167,3333,3167,4583,4167,5667,,,EUR,medium,"NBS-regulated fintech; moderate premium vs market"
+iGaming,mid,limited,18000,28000,26000,38000,36000,52000,,,,,,1500,2333,2167,3167,3000,4333,,,,,,EUR,low,"Some iGaming operators; limited local data; Lead/Head absent"

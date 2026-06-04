@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Spain DA,aggregator,glassdoor.com/Salaries/spain-data-analyst,2026,yes,high,"Spain national avg"
+Glassdoor Madrid Junior DA,aggregator,glassdoor.com/Salaries/madrid-spain-junior-data-analyst,2026,yes,high,"Madrid junior avg €27K; range €23.5K–€31K"
+PayScale Spain DA,aggregator,payscale.com/research/ES/Job=Data_Analyst/Salary,2026,yes,medium,"111 salaries; early career avg €30,647"
+PayScale Spain Senior DA,aggregator,payscale.com/research/ES/Job=Senior_Data_Analyst/Salary,2026,yes,medium,"Senior avg €58,183"
+SalaryExpert Spain DA,aggregator,salaryexpert.com/salary/job/data-analyst/spain,2026,yes,high,"Avg €57,434; entry €40,434; senior €71,097"
+IE.edu Europe DA report,salary_survey,ie.edu/uncover-ie/data-analyst-salary-in-europe-mbds/,2026,yes,medium,"Southern/Eastern EU €20K–€45K; international tech higher"
+LinkedIn Jobs Spain DA,job_posting,linkedin.com/jobs: Data Analyst Spain 2026,2026-05,partial,medium,"Senior/Lead postings Madrid/Barcelona"

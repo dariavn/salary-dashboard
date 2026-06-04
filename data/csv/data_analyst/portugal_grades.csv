@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,17000,25000,1417,2083,EUR,medium,"PayScale PT 2026;SalaryExpert PT","Smaller companies"
+Junior,0-3,mid_market,22000,32000,1833,2667,EUR,high,"Glassdoor Lisbon 2026;PayScale PT;SalaryExpert","Glassdoor Lisbon avg €32,021 (all levels); junior €28K-€37K"
+Junior,0-3,premium,30000,42000,2500,3500,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT","FinTech scaleups (Revolut/Feedzai etc)"
+Middle,3-5,mid_market,28000,40000,2333,3333,EUR,high,"Glassdoor PT 2026;PayScale;SalaryExpert","PayScale avg €25,590 (cross-market); SalaryExpert avg €44,718"
+Middle,3-5,premium,38000,52000,3167,4333,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT 2026","Lisbon FinTech/tech scaleup"
+Senior,5+,mid_market,38000,52000,3167,4333,EUR,high,"Glassdoor PT 2026;PayScale;SalaryExpert","SalaryExpert senior €50,348; PayScale avg €44,718"
+Senior,5+,premium,50000,68000,4167,5667,EUR,high,"Levels.fyi Lisbon 2026;LinkedIn PT","Revolut/NOS digital/FinTech cluster"
+Lead,7+,mid_market,55000,72000,4583,6000,EUR,medium,"LinkedIn PT;Glassdoor Lisbon","Principal DA / Analytics Lead"
+Lead,7+,premium,70000,92000,5833,7667,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT 2026","FinTech lead roles"
+Head,10+,premium,82000,110000,6833,9167,EUR,low,"LinkedIn Portugal;Levels.fyi","Head of Analytics; limited data"

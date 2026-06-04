@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,26000,1500,2167,EUR,medium,"PayScale PL 2026;SalaryExpert PL",Smaller Polish companies; ~PLN 76K–110K
+Junior,0-3,mid_market,26000,36000,2167,3000,EUR,high,"Glassdoor Warsaw 2026;SalaryExpert PL;PayScale","~PLN 110K–153K; PayScale junior avg PLN 52,549"
+Junior,0-3,premium,38000,52000,3167,4333,EUR,medium,"Levels.fyi PL 2026;LinkedIn Jobs PL",Big tech/FinTech; ~PLN 162K–221K
+Middle,3-5,mid_market,30000,42000,2500,3500,EUR,high,"Glassdoor PL 2026;SalaryExpert;PayScale","~PLN 128K–179K; PayScale avg PLN 79,481"
+Middle,3-5,premium,44000,60000,3667,5000,EUR,medium,"Levels.fyi PL;LinkedIn PL 2026",International/product companies
+Senior,5+,mid_market,40000,55000,3333,4583,EUR,high,"Glassdoor PL;SalaryExpert;PayScale","PayScale senior avg PLN 154,839; SalaryExpert PLN 213,975"
+Senior,5+,premium,58000,78000,4833,6500,EUR,medium,"Levels.fyi PL 2026;LinkedIn Poland","Levels.fyi Warsaw avg PLN 124,362; top range"
+Lead,7+,mid_market,58000,75000,4833,6250,EUR,medium,"Glassdoor PL;LinkedIn Jobs Poland",~PLN 247K–319K
+Lead,7+,premium,75000,98000,6250,8167,EUR,low,"Levels.fyi PL;LinkedIn 2026",Large tech/consulting companies
+Head,10+,premium,90000,120000,7500,10000,EUR,low,"LinkedIn Jobs PL;Levels.fyi","Head of Analytics/Data; limited data; 1 EUR≈4.25 PLN"

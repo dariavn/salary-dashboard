@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,12000,18000,1000,1500,EUR,medium,"InfoPlate.rs 2025;Glassdoor Belgrade","~RSD 1.4M–2.1M/yr gross; InfoPlate net 95K RSD/mo"
+Junior,0-3,mid_market,18000,26000,1500,2167,EUR,medium,"Glassdoor Belgrade 2026;LinkedIn Serbia","~RSD 2.1M–3.0M/yr; 2025 data"
+Middle,3-5,mid_market,22000,34000,1833,2833,EUR,medium,"Glassdoor Belgrade 2026;InfoPlate.rs","~RSD 2.6M–4.0M/yr; InfoPlate 80th pct 256K RSD/mo net"
+Middle,3-5,premium,32000,46000,2667,3833,EUR,medium,"LinkedIn Serbia;Glassdoor 2026",Product-first tech companies; Belgrade premium
+Senior,5+,mid_market,30000,44000,2500,3667,EUR,medium,"Glassdoor Belgrade;InfoPlate.rs","~RSD 3.5M–5.1M/yr; 1 EUR≈117 RSD"
+Senior,5+,premium,42000,60000,3500,5000,EUR,medium,"LinkedIn Serbia 2026;Glassdoor",Premium segment Belgrade
+Lead,7+,premium,55000,75000,4583,6250,EUR,low,"LinkedIn Jobs RS 2026","Limited data; few lead DA postings found"
+Head,10+,premium,68000,90000,5667,7500,EUR,low,"LinkedIn Jobs Serbia","Very limited; Head of Data extrapolated"

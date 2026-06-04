@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+SaaS_B2B,mid,strong,10000,18000,18000,28000,32000,46000,44000,62000,58000,80000,833,1500,1500,2333,2667,3833,3667,5167,4833,6667,EUR,medium,"Dominant IT segment BY HTP park; Wargaming/EPAM product teams"
+Outsourcing,mid,strong,9000,16000,16000,26000,28000,42000,38000,56000,,,,750,1333,1333,2167,2333,3500,3167,4667,,,EUR,medium,"EPAM Belarus/IBA; strong DA outsourcing demand; below product cos"
+iGaming,mid,moderate,10000,18000,18000,28000,30000,44000,42000,62000,,,,833,1500,1500,2333,2500,3667,3500,5167,,,EUR,low,"Several iGaming operators in BY HTP; limited DA-specific data"
+FinTech,mid,moderate,12000,20000,20000,30000,34000,50000,46000,66000,,,,1000,1667,1667,2500,2833,4167,3833,5500,,,EUR,low,"Some fintech in HTP; limited DA salary data; estimate based on SaaS +10-15%"
