@@ -41,7 +41,7 @@ export default function DomainsGrid({ domains, currency, period, lang: langProp 
 
   return (
     <div className="card" style={{ overflowX: 'auto' }}>
-      <table className="data" style={{ minWidth: 640 }}>
+      <table className="data" style={{ minWidth: 700 }}>
         <thead>
           <tr>
             <th style={{ paddingLeft: 16 }}>{t(lang, 'domain')}</th>
@@ -54,7 +54,7 @@ export default function DomainsGrid({ domains, currency, period, lang: langProp 
         <tbody>
           {sorted.map((d, i) => (
             <tr key={i}>
-              <td style={{ paddingLeft: 16 }}>
+              <td style={{ paddingLeft: 16, minWidth: 160 }}>
                 <div style={{ fontWeight: 600, fontSize: 13.5 }}>{d.domain.replace(/_/g, ' ')}</div>
                 <div style={{ fontSize: 11, color: 'var(--muted)' }}>
                   {t(lang, PRESENCE_LABELS[d.presence_in_region] ?? 'moderate')}

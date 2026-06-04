@@ -25,7 +25,7 @@ export default function SourcesList({ sources, countryLabel, lang: langProp }: P
   const [open, setOpen] = useState(true)
 
   return (
-    <div className="card" style={{ overflow: 'hidden' }}>
+    <div className="card" style={{ overflow: 'clip' }}>
       <button
         onClick={() => setOpen(o => !o)}
         style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 10, padding: '14px 16px', background: 'var(--surface-2)', border: 'none', borderBottom: open ? '1px solid var(--border)' : 'none', cursor: 'pointer', color: 'var(--text)', fontFamily: 'var(--font-ui)' }}
@@ -51,7 +51,7 @@ export default function SourcesList({ sources, countryLabel, lang: langProp }: P
                 const c = STYPE_COLOR[s.source_type] || 'var(--neutral)'
                 return (
                   <tr key={i}>
-                    <td style={{ paddingLeft: 16, fontWeight: 500, fontSize: 13.5 }}>{s.source_name}</td>
+                    <td style={{ paddingLeft: 16, fontWeight: 500, fontSize: 13.5, minWidth: 160 }}>{s.source_name}</td>
                     <td>
                       <span className="pill" style={{ color: c, background: `color-mix(in srgb, ${c} 13%, transparent)` }}>
                         {t(lang, s.source_type as 'aggregator' | 'salary_survey' | 'job_posting' | 'recruiter_report')}
