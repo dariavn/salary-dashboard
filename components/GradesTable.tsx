@@ -19,21 +19,39 @@ interface Props {
   lang?: Lang
 }
 
+const CONF_RANK = { high: 3, medium: 2, low: 1 } as const
+
 export default function GradesTable({ rows, segment, period, lang: langProp }: Props) {
   const ctx = useLang()
   const lang = langProp ?? ctx.lang
 
-  const filtered = rows
-    .filter(r => segment === 'all' || r.segment === segment)
-    .sort((a, b) => {
-      const gi = GRADE_ORDER.indexOf(a.grade) - GRADE_ORDER.indexOf(b.grade)
-      return gi !== 0 ? gi : SEGMENT_ORDER.indexOf(a.segment) - SEGMENT_ORDER.indexOf(b.segment)
-    })
-
-  if (!filtered.length) return <p style={{ color: 'var(--muted)', padding: 16, fontSize: 14 }}>{t(lang, 'noData')}</p>
-
   const lo = (r: GradeRow) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min
   const hi = (r: GradeRow) => period === 'annual' ? r.annual_gross_max : r.monthly_gross_max
+
+  // When "all sizes": collapse to one row per grade (full-market range, no segment column)
+  type DisplayRow = { grade: string; exp_years: string; currency: string; min: number; max: number; confidence: GradeRow['confidence'] }
+
+  let displayRows: DisplayRow[]
+
+  if (segment === 'all') {
+    displayRows = GRADE_ORDER.flatMap(grade => {
+      const gradeRows = rows.filter(r => r.grade === grade)
+      if (!gradeRows.length) return []
+      const currency = gradeRows[0].currency
+      const min = Math.min(...gradeRows.map(lo))
+      const max = Math.max(...gradeRows.map(hi))
+      const avgRank = gradeRows.reduce((s, r) => s + (CONF_RANK[r.confidence] ?? 1), 0) / gradeRows.length
+      const confidence: GradeRow['confidence'] = avgRank >= 2.5 ? 'high' : avgRank >= 1.7 ? 'medium' : 'low'
+      return [{ grade, exp_years: gradeRows[0].exp_years, currency, min, max, confidence }]
+    })
+  } else {
+    const filtered = rows
+      .filter(r => r.segment === segment)
+      .sort((a, b) => GRADE_ORDER.indexOf(a.grade) - GRADE_ORDER.indexOf(b.grade))
+    displayRows = filtered.map(r => ({ grade: r.grade, exp_years: r.exp_years, currency: r.currency, min: lo(r), max: hi(r), confidence: r.confidence }))
+  }
+
+  if (!displayRows.length) return <p style={{ color: 'var(--muted)', padding: 16, fontSize: 14 }}>{t(lang, 'noData')}</p>
 
   return (
     <div style={{ overflowX: 'auto' }}>
@@ -41,13 +59,12 @@ export default function GradesTable({ rows, segment, period, lang: langProp }: P
         <thead>
           <tr>
             <th>{t(lang, 'grade')}</th>
-            {segment === 'all' && <th>{t(lang, 'segment')}</th>}
             <th style={{ textAlign: 'right' }}>{t(lang, period === 'annual' ? 'annual' : 'monthly')}</th>
             <th style={{ textAlign: 'right', width: 1 }}></th>
           </tr>
         </thead>
         <tbody>
-          {filtered.map((r, i) => (
+          {displayRows.map((r, i) => (
             <tr key={i}>
               <td style={{ whiteSpace: 'nowrap' }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
@@ -56,11 +73,8 @@ export default function GradesTable({ rows, segment, period, lang: langProp }: P
                   <span style={{ fontSize: 11, color: 'var(--muted-2)' }}>{r.exp_years} {t(lang, 'years')}</span>
                 </span>
               </td>
-              {segment === 'all' && (
-                <td><span style={{ fontSize: 12, color: 'var(--text-2)' }}>{t(lang, r.segment as 'local_sme' | 'mid_market' | 'premium')}</span></td>
-              )}
               <td className="mono" style={{ textAlign: 'right', fontSize: 14, fontWeight: 600, whiteSpace: 'nowrap', letterSpacing: '-0.01em' }}>
-                {fmtVal(lo(r), r.currency, period)} – {fmtVal(hi(r), r.currency, period)}
+                {fmtVal(r.min, r.currency, period)} – {fmtVal(r.max, r.currency, period)}
               </td>
               <td style={{ textAlign: 'right', width: 1, paddingLeft: 6 }}>
                 <ConfidenceBadge value={r.confidence} lang={lang} compact />
