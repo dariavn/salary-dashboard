@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,24000,32000,2000,2667,EUR,medium,"PayScale PT 2026;SalaryExpert PT",Smaller companies
+Junior,0-3,mid_market,32000,42000,2667,3500,EUR,high,"Glassdoor Lisbon 2026;Jobicy PT 2026;PayScale","Main market; €37,240 avg per SalaryExpert"
+Junior,0-3,premium,42000,56000,3500,4667,EUR,medium,"Levels.fyi Lisbon;LinkedIn Jobs PT",FinTech/Scaleup
+Middle,3-5,mid_market,40000,52000,3333,4333,EUR,high,"Glassdoor PT 2026;Jobicy PT 2026;SalaryExpert",
+Middle,3-5,premium,52000,68000,4333,5667,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT 2026",
+Senior,5+,mid_market,52000,67000,4333,5583,EUR,high,"Glassdoor PT 2026;PayScale;SalaryExpert","~€58K-€62K avg senior"
+Senior,5+,premium,68000,90000,5667,7500,EUR,high,"Levels.fyi Lisbon 2026;Jobicy FinTech PT","FinTech PM PT: ~$70K avg; Lisbon Levels.fyi €66K-€91K"
+Lead,7+,mid_market,64000,82000,5333,6833,EUR,medium,"LinkedIn Jobs PT;Glassdoor Lisbon",
+Lead,7+,premium,84000,108000,7000,9000,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT 2026",
+Head,10+,premium,98000,130000,8167,10833,EUR,low,"LinkedIn Portugal;Levels.fyi","Limited data"

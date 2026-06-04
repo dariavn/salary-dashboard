@@ -1,0 +1,13 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Lisbon PM,aggregator,glassdoor.com/Salaries/lisbon-portugal-product-manager,2026,yes,high,"Avg €48,000; range €32,650–€58,250"
+Glassdoor Portugal PM,aggregator,glassdoor.com/Salaries/portugal-product-managers,2025,yes,high,"Portugal national avg"
+SalaryExpert Portugal PM,aggregator,salaryexpert.com/salary/job/product-manager/portugal,2026,yes,high,"Entry €37,240; senior €58,752; avg €52,422"
+PayScale Portugal Senior PM,aggregator,payscale.com/research/PT/Job=Senior_Product_Manager/Salary,2026,yes,medium,"Senior PM Portugal"
+PayScale Lisbon PM Software,aggregator,payscale.com/research/PT/Job=Product_Manager%2C_Software/Salary,2026,yes,medium,"Lisbon-specific"
+Levels.fyi Portugal PM,aggregator,levels.fyi/t/product-manager/locations/portugal,2026,yes,high,"Portugal PM total comp data"
+Levels.fyi Lisbon PM,aggregator,levels.fyi/t/product-manager/locations/lisbon-prt,2026,yes,high,"Lisbon range €66,557–€90,882"
+Levels.fyi Lisbon Senior PM,aggregator,levels.fyi/t/product-manager/levels/senior/locations/lisbon-prt,2026,yes,high,"Senior PM Lisbon: €68,871–€91,711"
+Jobicy Portugal PM,aggregator,jobicy.com/salaries/pt/product-manager,2026,yes,high,"Portugal PM 2026"
+Jobicy FinTech PM Portugal,aggregator,jobicy.com/salaries/pt/fintech-product-manager,2025,yes,medium,"FinTech PM avg $70,100; jun $42,060-$56,080; sen $84,120-$126,180; 2025 data"
+Plane.com Portugal PM,aggregator,plane.com/salaries/product-manager/portugal,2026,yes,medium,"Portugal PM salary data"
+LinkedIn Jobs Portugal,job_posting,linkedin.com/jobs: Product Manager Portugal 2026,2026-05,partial,medium,"Lisbon postings with salary; validates Levels.fyi premium band"

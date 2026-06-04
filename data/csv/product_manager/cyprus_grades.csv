@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,20000,28000,1667,2333,EUR,medium,"WorldSalaries 2026;Glassdoor CY 2026",Small local/regional companies; lower band
+Junior,0-3,mid_market,28000,38000,2333,3167,EUR,high,"Glassdoor CY 2026;Jobicy CY 2026;Plane 2026",Main IT market
+Junior,0-3,premium,40000,55000,3333,4583,EUR,medium,"Jobicy FinTech CY 2026;Levels.fyi",FinTech/iGaming employers
+Middle,3-5,mid_market,42000,58000,3500,4833,EUR,high,"Glassdoor CY 2026;Jobicy CY 2026;WorldSalaries",
+Middle,3-5,premium,60000,78000,5000,6500,EUR,medium,"Levels.fyi CY;Glassdoor Limassol 2026",FinTech/iGaming
+Senior,5+,mid_market,58000,75000,4833,6250,EUR,high,"Glassdoor CY 2026;Jobicy CY 2026;Plane",
+Senior,5+,premium,80000,105000,6667,8750,EUR,high,"Levels.fyi CY;Jobicy FinTech CY;Glassdoor 2026",FinTech/iGaming premium
+Lead,7+,mid_market,72000,90000,6000,7500,EUR,medium,"LinkedIn Jobs CY;Glassdoor CY 2026",Limited postings data
+Lead,7+,premium,95000,125000,7917,10417,EUR,medium,"Levels.fyi CY;LinkedIn CY 2026",Senior FinTech/iGaming leads
+Head,10+,premium,110000,145000,9167,12083,EUR,low,"LinkedIn Jobs CY 2026","Very limited data; 2-3 postings found"

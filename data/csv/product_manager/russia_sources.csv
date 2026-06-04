@@ -1,0 +1,10 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+GetGrade PM Russia,salary_survey,getgrade.ru/zarplaty-prodakt-menedzherov,2026,yes,high,"Anonymous survey data: jun 110-185K; mid 247-357K; sen 340-500K; lead 900K+"
+Yandex Praktikum PM,aggregator,practicum.yandex.ru/blog/skolko-zarabatyvayut-product-menedzhery/,2026,yes,high,"Comprehensive grade breakdown; widely cited Russian source"
+Kariernik PM Russia,aggregator,kariernik.ru/blog/zarplata-produkt-menedzhera-2026,2026,yes,high,"2026 PM salary guide with grade breakdown"
+ProductLab PM Russia,aggregator,productlab.ru/blog/product-manager-salary-russia-2026,2026,yes,high,"2026 salary data for Russian PM market"
+Habr Career PM,aggregator,habr.com/ru/articles/1020324/,2026,yes,high,"Habr community PM salary article 2026"
+vc.ru CPO FinTech,salary_survey,vc.ru/id5399800/2756588-zarplaty-cpo-v-rossijskom-fintehe-analiz,2025-2026,yes,medium,"CPO in Russian FinTech; T-Bank CPO 500K-800K; senior fintech 350-500K/mo"
+ProductDo.it PM Russia,aggregator,productdo.it/produkt-menedzher-zarplata,2026,yes,medium,"Detailed grade guide; consistent with GetGrade"
+hh.ru PM vacancies,job_posting,hh.ru: продакт-менеджер 2026,2026-05,partial,high,"Main RU job board; salary bands in vacancies"
+Habr Career salary stats,aggregator,career.habr.com/salaries product_manager,2026,yes,high,"Habr Career salary statistics; community self-reported"

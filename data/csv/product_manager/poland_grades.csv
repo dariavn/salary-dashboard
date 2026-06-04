@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,26000,34000,2167,2833,EUR,medium,"PayScale PL 2026;SalaryExpert PL",Smaller Polish cos; ~PLN 110K-145K
+Junior,0-3,mid_market,34000,44000,2833,3667,EUR,high,"Glassdoor Warsaw 2026;SalaryExpert PL;Jobicy PL 2026",~PLN 145K-187K
+Junior,0-3,premium,46000,60000,3833,5000,EUR,medium,"Levels.fyi Poland 2026;LinkedIn Jobs PL",Big tech/FinTech; ~PLN 196K-255K
+Middle,3-5,mid_market,44000,58000,3667,4833,EUR,high,"Glassdoor PL 2026;Jobicy PL 2026;PayScale",~PLN 187K-247K
+Middle,3-5,premium,60000,78000,5000,6500,EUR,medium,"Levels.fyi PL;LinkedIn Jobs Poland",Big tech/FinTech; ~PLN 255K-332K
+Senior,5+,mid_market,58000,75000,4833,6250,EUR,high,"Glassdoor PL;SalaryExpert;Jobicy PL 2026",~PLN 247K-319K
+Senior,5+,premium,78000,100000,6500,8333,EUR,medium,"Levels.fyi PL;LinkedIn Poland 2026",Top IT employers; ~PLN 332K-425K
+Lead,7+,mid_market,75000,95000,6250,7917,EUR,medium,"Glassdoor PL;LinkedIn Jobs Poland",~PLN 319K-404K
+Lead,7+,premium,100000,130000,8333,10833,EUR,low,"Levels.fyi;LinkedIn PL 2026",International tech companies
+Head,10+,premium,120000,160000,10000,13333,EUR,low,"LinkedIn Jobs PL;Levels.fyi","Limited data; CPO/Director level; EUR/PLN rate: 1 EUR≈4.25 PLN"

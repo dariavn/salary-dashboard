@@ -1,0 +1,11 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Cyprus PM,aggregator,glassdoor.com/Salaries/cyprus-product-manager,2026-03,yes,high,"€57,523–€76,968 avg range; 82+ salaries submitted"
+Glassdoor Limassol PM,aggregator,glassdoor.com/Salaries/limassol-cyprus-product-manager,2026-03,yes,high,"Avg €44,300; range €23,520–€66,940"
+Jobicy Cyprus PM,aggregator,jobicy.com/salaries/cy/product-manager,2026,yes,high,"Avg $64K; min $55K max $72K"
+Jobicy FinTech PM Cyprus,aggregator,jobicy.com/salaries/cy/fintech-product-manager,2026,yes,medium,"FinTech PM avg $79,475; jun $47,685-$63,580; sen $95,370-$143,055"
+Levels.fyi Cyprus PM,aggregator,levels.fyi/t/product-manager/locations/cyprus,2026,yes,high,"Range €57,523–€76,968; avg total comp €60,743"
+WorldSalaries Limassol PM,aggregator,worldsalaries.com/average-product-manager-salary-in-limassol/cyprus/,2026,yes,medium,"Avg €44,300; lower €23,520; upper €66,940"
+Plane.com Cyprus PM,aggregator,plane.com/salaries/product-manager/cyprus,2026,yes,medium,"Median ~$71,185 remote"
+beincrypto.com Cyprus PM,aggregator,beincrypto.com/jobs/salary/product-manager+cyprus/,2026-03,yes,medium,Crypto/iGaming focused; figures consistent with Glassdoor
+LinkedIn Jobs Cyprus,job_posting,linkedin.com/jobs search: Product Manager Cyprus,2026-05,partial,medium,"Few postings with salary; used for Lead/Head range estimation"
+Emerald Zebra Cyprus,recruiter_report,emeraldzebra.cy,2025-2026,yes,medium,"CY recruitment agency specialising in FinTech/iGaming; salary bands cross-checked"

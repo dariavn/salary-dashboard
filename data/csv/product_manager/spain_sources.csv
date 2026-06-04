@@ -1,0 +1,12 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Spain PM,aggregator,glassdoor.com/Salaries/spain-product-manager,2026,yes,high,"Avg €54,500; range €38,000–€67,050"
+Glassdoor Madrid PM,aggregator,glassdoor.com/Salaries/madrid-spain-product-manager,2026,yes,high,"Avg €50,000; range €39,300–€62,125"
+Glassdoor Barcelona PM,aggregator,glassdoor.com/Salaries/barcelona-spain-product-manager,2026,yes,high,"Avg €55,000; range €38,000–€67,300"
+SalaryExpert Spain PM,aggregator,salaryexpert.com/salary/job/digital-product-manager/spain,2026,yes,high,"Digital PM: entry €48,409; senior €86,485; range €50,509–€89,315"
+PayScale Spain PM Software,aggregator,payscale.com/research/ES/Job=Product_Manager%2C_Software/Salary,2026,yes,medium,"Barcelona-specific; limited sample"
+PayScale Spain Senior PM,aggregator,payscale.com/research/ES/Job=Senior_Product_Manager/Salary,2026,yes,medium,"Senior PM Spain average"
+Levels.fyi Spain PM,aggregator,levels.fyi/t/product-manager/locations/spain,2026,yes,high,"Range €50,509–€89,315; avg total comp €65,265"
+Levels.fyi Madrid PM,aggregator,levels.fyi/t/product-manager/locations/madrid-esp,2026,yes,medium,"Madrid-specific total comp"
+ravio.com EU PM trends,salary_survey,ravio.com/blog/product-manager-salary-trends,2026,yes,high,"Spain senior PM avg €78.9K (from £68.7K); strong data set; annual survey"
+Jobicy Spain PM,aggregator,jobicy.com/salaries/es/product-manager,2026,yes,high,"Spain PM 2026 salary data"
+LinkedIn Jobs Spain,job_posting,linkedin.com/jobs: Product Manager Spain 2026,2026-05,partial,medium,"Senior/Lead salary bands validated"

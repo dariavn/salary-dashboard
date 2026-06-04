@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,4500,8000,375,667,EUR,medium,"rabota.by 2025;Paylab BY",Local/non-IT companies; ~1300-2200 BYN/mo; 2025 data
+Junior,0-3,mid_market,8000,14000,667,1167,EUR,medium,"dev.by;Levels.fyi Minsk;Paylab BY",IT sector; ~2200-3850 BYN/mo
+Middle,3-5,mid_market,15000,24000,1250,2000,EUR,medium,"Levels.fyi Minsk;Paylab BY 2025",IT mid-market; ~4100-6600 BYN/mo
+Middle,3-5,premium,22000,34000,1833,2833,EUR,medium,"Levels.fyi Minsk;LinkedIn Belarus",Outsourcing/product cos; ~6050-9350 BYN/mo
+Senior,5+,mid_market,28000,40000,2333,3333,EUR,medium,"Levels.fyi Minsk 2026;rabota.by","IT senior; ~7700-11000 BYN/mo"
+Senior,5+,premium,38000,55000,3167,4583,EUR,medium,"Levels.fyi Minsk;LinkedIn Belarus",Premium IT/product; ~10450-15125 BYN/mo
+Lead,7+,premium,50000,72000,4167,6000,EUR,low,"Levels.fyi Minsk;LinkedIn BY","~13750-19800 BYN/mo; limited data; 1 EUR≈3.3 BYN"
+Head,10+,premium,60000,90000,5000,7500,EUR,low,"LinkedIn Belarus;Levels.fyi","Limited data; Levels.fyi max ~221K BYN/yr≈€67K"

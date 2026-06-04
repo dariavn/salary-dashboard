@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Jobicy Armenia PM,aggregator,jobicy.com/salaries/am/product-manager,2026,yes,high,"Avg $27,000/yr; jun $16,200-$21,600; sen $32,400-$48,600"
+Glassdoor Yerevan PM,aggregator,glassdoor.com/Salaries/yerevan-armenia-product-manager,2026,yes,medium,"Avg AMD 641,667–1,391,667/mo = AMD 7.7M-16.7M/yr"
+Levels.fyi Armenia PM,aggregator,levels.fyi/t/product-manager/locations/armenia,2026,yes,medium,"Range AMD 11,463,531–30,516,880 avg"
+Levels.fyi Yerevan PM,aggregator,levels.fyi/t/product-manager/locations/yerevan-arm,2026,yes,medium,"Yerevan-specific PM data"
+Levels.fyi Yerevan Senior PM,aggregator,levels.fyi/en-gb/t/product-manager/levels/senior/locations/yerevan-arm,2026,yes,medium,"Senior PM Yerevan: AMD 17,570,077–33,141,283"
+Glassdoor Yerevan Senior PM,aggregator,glassdoor.co.uk/Salaries/yerevan-armenia-senior-product-manager,2026,yes,medium,"Senior PM avg AMD 2,391,513/yr"
+LinkedIn Jobs Armenia,job_posting,linkedin.com/jobs: Product Manager Yerevan 2026,2026-05,partial,low,"Used for Lead/Head band estimation"
+salaries.am,salary_survey,salaries.am/data.csv,2025,partial,medium,"Armenian IT salary survey data; PM data limited"

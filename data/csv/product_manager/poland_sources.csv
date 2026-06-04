@@ -1,0 +1,11 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Warsaw PM,aggregator,glassdoor.com/Salaries/warsaw-poland-product-manager,2026,yes,high,"Warsaw avg PM salary data"
+Glassdoor Poland PM,aggregator,glassdoor.com/Salaries/poland-product-manager,2026,yes,high,"Poland national avg PM salary"
+SalaryExpert Poland PM,aggregator,salaryexpert.com/salary/job/product-manager/poland,2026,yes,high,"Entry PLN 158,653/yr; Senior PLN 275,376/yr"
+SalaryExpert Warsaw Digital PM,aggregator,salaryexpert.com/salary/job/digital-product-manager/poland/warsaw,2026,yes,medium,"Warsaw digital PM: entry PLN 187,302; senior PLN 305,850"
+PayScale Poland PM Software,aggregator,payscale.com/research/PL/Job=Product_Manager%2C_Software/Salary,2026-03,yes,medium,"Avg 183,126 PLN; limited sample"
+PayScale Poland Senior PM,aggregator,payscale.com/research/PL/Job=Senior_Product_Manager/Salary,2026,yes,medium,"Senior PM Poland data"
+Levels.fyi Poland PM,aggregator,levels.fyi/t/product-manager/locations/poland,2026,yes,high,"Avg PLN 295,666 total comp; range PLN 232,721–PLN 355,241"
+Levels.fyi Warsaw PM,aggregator,levels.fyi/t/product-manager/locations/warsaw-pol,2026,yes,high,"Warsaw-specific; consistent with national"
+Jobicy Poland PM,aggregator,jobicy.com/salaries/pl/product-manager,2026,yes,high,"Poland avg PM 2026"
+LinkedIn Jobs Poland,job_posting,linkedin.com/jobs: Product Manager Poland 2026,2026-05,partial,medium,"Senior/Lead postings used for premium band validation"

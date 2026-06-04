@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,26000,34000,2167,2833,EUR,medium,"PayScale ES 2026;InfoJobs",Smaller Spanish companies
+Junior,0-3,mid_market,34000,44000,2833,3667,EUR,high,"Glassdoor Spain 2026;Jobicy ES 2026;SalaryExpert",Main market
+Junior,0-3,premium,45000,60000,3750,5000,EUR,medium,"SalaryExpert digital PM ES;LinkedIn Spain",FinTech/BigTech
+Middle,3-5,mid_market,42000,56000,3500,4667,EUR,high,"Glassdoor Spain 2026;Jobicy ES 2026;PayScale",
+Middle,3-5,premium,58000,74000,4833,6167,EUR,medium,"SalaryExpert ES;LinkedIn Jobs Spain 2026",
+Senior,5+,mid_market,56000,72000,4667,6000,EUR,high,"Glassdoor ES 2026;ravio.com 2026;PayScale",
+Senior,5+,premium,74000,95000,6167,7917,EUR,medium,"SalaryExpert ES;ravio.com;LinkedIn Spain",FinTech/Scaleup; ravio: €78.9K avg senior
+Lead,7+,mid_market,70000,90000,5833,7500,EUR,medium,"LinkedIn Spain;Glassdoor ES",
+Lead,7+,premium,92000,118000,7667,9833,EUR,medium,"LinkedIn Spain 2026;ravio.com",
+Head,10+,premium,110000,145000,9167,12083,EUR,low,"LinkedIn Spain;ravio.com","CPO/Director level; limited data"

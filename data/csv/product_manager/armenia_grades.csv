@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,11000,16000,917,1333,EUR,medium,"Glassdoor Yerevan 2026;SalaryExpert AM",Local companies; ~AMD 4.5M-6.6M/yr
+Junior,0-3,mid_market,16000,23000,1333,1917,EUR,medium,"Jobicy AM 2026;Glassdoor Yerevan 2026",~AMD 6.6M-9.4M/yr
+Middle,3-5,mid_market,20000,30000,1667,2500,EUR,medium,"Jobicy AM 2026;Levels.fyi Armenia",~AMD 8.2M-12.3M/yr
+Middle,3-5,premium,30000,45000,2500,3750,EUR,medium,"Levels.fyi Yerevan;LinkedIn Armenia",Intl/relocated companies
+Senior,5+,mid_market,28000,40000,2333,3333,EUR,medium,"Glassdoor Yerevan 2026;Jobicy AM",~AMD 11.5M-16.4M/yr
+Senior,5+,premium,42000,65000,3500,5417,EUR,medium,"Levels.fyi Yerevan 2026;LinkedIn AM",~AMD 17.2M-26.7M/yr
+Lead,7+,premium,55000,80000,4583,6667,EUR,low,"Levels.fyi Armenia;LinkedIn AM","Limited data; 1 EUR≈410 AMD"
+Head,10+,premium,70000,100000,5833,8333,EUR,low,"LinkedIn Armenia 2026",Very limited data; 1-2 sources

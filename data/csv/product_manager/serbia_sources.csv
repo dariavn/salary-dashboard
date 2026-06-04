@@ -1,0 +1,10 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Jobicy Serbia PM,aggregator,jobicy.com/salaries/rs/product-manager,2025,yes,high,"Avg $42,625; jun $25,575-$34,100; sen $51,150-$76,725; most recent = 2025"
+Glassdoor Belgrade PM,aggregator,glassdoor.com/Salaries/belgrade-serbia-product-manager,2026,yes,high,"Belgrade avg; range data"
+Glassdoor Serbia PM,aggregator,glassdoor.com/Salaries/serbia-product-manager,2025,yes,high,"Serbia national avg"
+WorldSalaries Serbia PM,aggregator,worldsalaries.com/average-product-manager-salary-in-serbia/,2025,yes,medium,"RSD 2,327,100 avg yr; jun RSD 1,464,200; sen RSD 2,435,600"
+WorldSalaries Belgrade PM,aggregator,worldsalaries.com/average-product-manager-salary-in-belgrade/serbia/,2025,yes,medium,"Belgrade avg RSD 2,557,100"
+Levels.fyi Serbia PM,aggregator,levels.fyi/t/product-manager/locations/serbia,2026,yes,medium,"Avg total comp $56,509"
+Levels.fyi Belgrade Senior PM,aggregator,levels.fyi/t/product-manager/levels/senior/locations/belgrade-srb,2026,yes,medium,"Senior PM Belgrade: $56,509–$107,713"
+InfoPlate.rs IT PM,salary_survey,infoplate.rs/en/salaryinfo/information-technology/it-product-manager,2025,yes,medium,"80% earn RSD 103,772–460,342/mo net; local survey"
+LinkedIn Jobs Serbia,job_posting,linkedin.com/jobs: Product Manager Serbia 2026,2026-05,partial,low,"Few postings; used for Lead band"

@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,840000,1200000,70000,100000,RUB,high,"GetGrade 2026;Yandex Praktikum 2026;hh.ru",Lower tier Russian companies
+Junior,0-3,mid_market,1200000,2220000,100000,185000,RUB,high,"GetGrade 2026;Kariernik 2026;ProductLab 2026",Typical IT market
+Middle,3-5,mid_market,2400000,3600000,200000,300000,RUB,high,"GetGrade 2026;Habr Career 2026;Yandex Praktikum",Main market band
+Middle,3-5,premium,3360000,4800000,280000,400000,RUB,high,"GetGrade 2026;Habr Career;vc.ru FinTech 2026",FinTech/BigTech +15-25%
+Senior,5+,mid_market,3600000,5400000,300000,450000,RUB,high,"GetGrade 2026;Kariernik 2026;ProductLab",
+Senior,5+,premium,4800000,7200000,400000,600000,RUB,high,"vc.ru FinTech 2026;GetGrade;Habr Career",FinTech Senior 350K-500K/mo
+Lead,7+,mid_market,5400000,7800000,450000,650000,RUB,medium,"GetGrade 2026;Kariernik 2026",Product Lead
+Lead,7+,premium,7200000,10800000,600000,900000,RUB,medium,"vc.ru CPO analysis;Habr 2026",FinTech/iGaming lead
+Head,10+,premium,9600000,16800000,800000,1400000,RUB,medium,"vc.ru CPO FinTech 2026;Yandex Praktikum","CPO level; T-Bank 500K-800K base; total comp to 14M/yr"

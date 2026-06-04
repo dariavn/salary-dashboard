@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Paylab Belarus PM,aggregator,paylab.com/by/zarabotnaya-plata/product-manager,2025,yes,medium,"80% earn BYN 1,106–3,512/mo; general market incl non-IT; 2025 data"
+Levels.fyi Minsk Senior PM,aggregator,levels.fyi/ru-RU/t/product-manager/levels/senior/locations/greater-minsk,2026,yes,medium,"Senior PM Minsk: BYN 110,808–221,616/yr = €33K-€67K"
+rabota.by PM vacancies,job_posting,rabota.by/vacancies/prodakt_menedzher,2025,partial,medium,"Junior PM from BYN 1,300/mo noted; 74 vacancies total in 2025 survey"
+BSU economy research,salary_survey,economy.bsu.by/2025/07/project-manager-profession/,2025,yes,medium,"Academic labor market study BY; senior PM 5,000-7,000 BYN/mo"
+LinkedIn Jobs Belarus,job_posting,linkedin.com/jobs: Product Manager Belarus 2026,2026-05,partial,low,"Limited postings; some with salary; used for premium band"
+dev.by community,salary_survey,dev.by,2025,partial,low,"IT community site; salary discussions; informal data; no structured CSV found"
+BeBee Belarus Senior PM,job_posting,bebee.com/by/jobs/senior-product-manager,2026,partial,low,"Senior PM postings aggregated; used for Lead band sanity check"

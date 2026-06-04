@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Tbilisi PM,aggregator,glassdoor.com/Salaries/tbilisi-georgia-product-manager,2026,yes,medium,"Avg GEL 6,800/mo = GEL 81,600/yr; limited sample"
+Levels.fyi Tbilisi PM,aggregator,levels.fyi/t/product-manager/locations/tbilisi-geo,2026,yes,medium,"Range GEL 114,576–296,852; avg total comp GEL 163,680"
+SalaryExpert Tbilisi Asst PM,aggregator,salaryexpert.com/salary/job/assistant-product-manager/georgia/tbilisi,2026,yes,low,"Asst PM avg GEL 55,685; entry GEL 40,495; senior GEL 70,188; used for Junior range"
+WorldSalaries Bank PM Tbilisi,aggregator,worldsalaries.com/average-bank-product-manager-salary-in-tbilisi/georgia/,2026,yes,low,"Bank PM avg GEL 113,560; range GEL 61,840–172,200"
+LinkedIn Jobs Tbilisi,job_posting,linkedin.com/jobs: Product Manager Tbilisi 2026,2026-05,partial,low,"Limited postings; used for premium band validation"
+SalaryExpert IT PM Tbilisi,aggregator,salaryexpert.com/salary/job/it-project-manager/georgia/tbilisi,2026,yes,low,"IT PM (proxy): avg GEL 104,043; entry GEL 73,720; senior GEL 132,005"
