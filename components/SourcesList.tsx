@@ -5,11 +5,11 @@ import { useLang } from '@/context/LangContext'
 import { t } from '@/lib/i18n'
 import ConfidenceBadge from './ConfidenceBadge'
 
-const TYPE_BADGE: Record<string, string> = {
-  aggregator:       'bg-sky-100 text-sky-800',
-  salary_survey:    'bg-purple-100 text-purple-800',
-  job_posting:      'bg-orange-100 text-orange-800',
-  recruiter_report: 'bg-pink-100 text-pink-800',
+const TYPE_STYLES: Record<string, { text: string; bg: string }> = {
+  aggregator:       { text: '#89dceb', bg: 'rgba(137,220,235,0.15)' },
+  salary_survey:    { text: '#cba6f7', bg: 'rgba(203,166,247,0.15)' },
+  job_posting:      { text: '#ffd166', bg: 'rgba(255,209,102,0.15)' },
+  recruiter_report: { text: '#f38ba8', bg: 'rgba(243,139,168,0.15)' },
 }
 
 interface Props {
@@ -22,40 +22,49 @@ export default function SourcesList({ sources, countryLabel }: Props) {
   const [open, setOpen] = useState(true)
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
+    <div className="rounded-xl overflow-hidden" style={{ border: '1px solid var(--border)' }}>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between px-5 py-3 bg-gray-50 hover:bg-gray-100 transition-colors"
+        className="w-full flex items-center justify-between px-5 py-3 transition-colors"
+        style={{ background: 'var(--card2)', color: 'var(--text)' }}
       >
-        <span className="font-semibold text-gray-800">{countryLabel}</span>
-        <span className="text-gray-400 text-lg">{open ? '▲' : '▼'}</span>
+        <span className="font-semibold">{countryLabel}</span>
+        <span style={{ color: 'var(--muted)' }}>{open ? '▲' : '▼'}</span>
       </button>
+
       {open && (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" style={{ background: 'var(--card)' }}>
           <table className="min-w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-200 text-left text-xs text-gray-500 uppercase tracking-wide">
-                <th className="py-2 px-4">{t(lang, 'sourceName')}</th>
-                <th className="py-2 px-4">{t(lang, 'sourceType')}</th>
-                <th className="py-2 px-4">{t(lang, 'dataDate')}</th>
-                <th className="py-2 px-4">{t(lang, 'confidence')}</th>
-                <th className="py-2 px-4 max-w-xs">{t(lang, 'notes')}</th>
+              <tr className="text-xs uppercase tracking-wide" style={{ borderBottom: '1px solid var(--border)', color: 'var(--muted)' }}>
+                <th className="py-2 px-4 text-left">{t(lang, 'sourceName')}</th>
+                <th className="py-2 px-4 text-left">{t(lang, 'sourceType')}</th>
+                <th className="py-2 px-4 text-left">{t(lang, 'dataDate')}</th>
+                <th className="py-2 px-4 text-left">{t(lang, 'confidence')}</th>
+                <th className="py-2 px-4 text-left">{t(lang, 'notes')}</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
-              {sources.map((s, i) => (
-                <tr key={i} className="hover:bg-gray-50">
-                  <td className="py-2 px-4 font-medium text-gray-800">{s.source_name}</td>
-                  <td className="py-2 px-4">
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${TYPE_BADGE[s.source_type] ?? 'bg-gray-100 text-gray-700'}`}>
-                      {s.source_type.replace(/_/g, ' ')}
-                    </span>
-                  </td>
-                  <td className="py-2 px-4 text-gray-500">{s.data_date}</td>
-                  <td className="py-2 px-4"><ConfidenceBadge value={s.confidence} /></td>
-                  <td className="py-2 px-4 text-gray-500 text-xs max-w-xs" title={s.notes}>{s.notes}</td>
-                </tr>
-              ))}
+            <tbody>
+              {sources.map((s, i) => {
+                const ts = TYPE_STYLES[s.source_type] ?? { text: '#8b90a8', bg: 'rgba(139,144,168,0.12)' }
+                return (
+                  <tr
+                    key={i}
+                    className="transition-colors hover:bg-white/[0.02]"
+                    style={{ borderBottom: i < sources.length - 1 ? '1px solid var(--border)' : undefined }}
+                  >
+                    <td className="py-2.5 px-4 font-medium" style={{ color: 'var(--text)' }}>{s.source_name}</td>
+                    <td className="py-2.5 px-4">
+                      <span className="text-xs px-2 py-0.5 rounded-full font-medium" style={{ color: ts.text, background: ts.bg }}>
+                        {s.source_type.replace(/_/g, ' ')}
+                      </span>
+                    </td>
+                    <td className="py-2.5 px-4 text-xs" style={{ color: 'var(--muted)' }}>{s.data_date}</td>
+                    <td className="py-2.5 px-4"><ConfidenceBadge value={s.confidence} /></td>
+                    <td className="py-2.5 px-4 text-xs max-w-xs" style={{ color: 'var(--muted)' }} title={s.notes}>{s.notes}</td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>

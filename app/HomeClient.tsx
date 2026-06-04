@@ -33,34 +33,40 @@ export default function HomeClient({ positions, locationsByPosition }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
+    <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header style={{ borderBottom: '1px solid var(--border)', background: 'rgba(26,29,39,0.8)', backdropFilter: 'blur(8px)' }} className="sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-bold text-gray-900">{t(lang, 'appTitle')}</h1>
-            <p className="text-xs text-gray-500">{t(lang, 'appSubtitle')}</p>
+            <h1
+              className="text-xl font-bold"
+              style={{ background: 'linear-gradient(90deg, #6c63ff, #00d4aa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+            >
+              {t(lang, 'appTitle')}
+            </h1>
+            <p className="text-xs" style={{ color: 'var(--muted)' }}>{t(lang, 'appSubtitle')}</p>
           </div>
           <LanguageToggle />
         </div>
       </header>
 
       <main className="max-w-5xl mx-auto px-4 py-10">
-        {/* Step 1: Position */}
+        {/* Step 1 */}
         <section className="mb-10">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">
-            1. {t(lang, 'selectPosition')}
+          <h2 className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>
+            1 — {t(lang, 'selectPosition')}
           </h2>
           <div className="flex flex-wrap gap-3">
             {positions.map((p) => (
               <button
                 key={p.slug}
                 onClick={() => { setSelectedPosition(p.slug); setSelectedLocations([]) }}
-                className={`px-5 py-2.5 rounded-xl font-medium border-2 transition-all ${
+                className="px-5 py-2.5 rounded-xl font-medium transition-all text-sm"
+                style={
                   selectedPosition === p.slug
-                    ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
-                }`}
+                    ? { border: '1px solid var(--accent)', background: 'rgba(108,99,255,0.12)', color: '#e8eaf0' }
+                    : { border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--muted)' }
+                }
               >
                 {p.name[lang]}
               </button>
@@ -68,14 +74,14 @@ export default function HomeClient({ positions, locationsByPosition }: Props) {
           </div>
         </section>
 
-        {/* Step 2: Locations */}
+        {/* Step 2 */}
         {selectedPosition && (
           <section className="mb-10">
-            <h2 className="text-lg font-semibold text-gray-800 mb-1">
-              2. {t(lang, 'selectCountries')}
+            <h2 className="text-sm font-semibold uppercase tracking-widest mb-1" style={{ color: 'var(--muted)' }}>
+              2 — {t(lang, 'selectCountries')}
             </h2>
             {selectedLocations.length >= 3 && (
-              <p className="text-xs text-amber-600 mb-3">{t(lang, 'maxCountries')}</p>
+              <p className="text-xs mb-3" style={{ color: 'var(--accent4)' }}>{t(lang, 'maxCountries')}</p>
             )}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-3">
               {locations.map((loc) => {
@@ -86,16 +92,19 @@ export default function HomeClient({ positions, locationsByPosition }: Props) {
                     key={loc.slug}
                     onClick={() => !disabled && toggleLocation(loc.slug)}
                     disabled={disabled}
-                    className={`flex items-center gap-2 px-4 py-3 rounded-xl border-2 font-medium text-sm transition-all
-                      ${selected ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : ''}
-                      ${!selected && !disabled ? 'border-gray-200 bg-white text-gray-700 hover:border-gray-300' : ''}
-                      ${disabled ? 'border-gray-100 bg-gray-50 text-gray-300 cursor-not-allowed' : ''}
-                    `}
+                    className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all"
+                    style={
+                      selected
+                        ? { border: '1px solid var(--accent)', background: 'rgba(108,99,255,0.12)', color: '#e8eaf0' }
+                        : disabled
+                        ? { border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--border)', cursor: 'not-allowed' }
+                        : { border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--muted)' }
+                    }
                   >
                     <span className="text-xl">{loc.flag}</span>
                     <span>{loc.name[lang]}</span>
                     {loc.currency === 'RUB' && (
-                      <span className="ml-auto text-xs text-gray-400">₽</span>
+                      <span className="ml-auto text-xs" style={{ color: 'var(--muted)' }}>₽</span>
                     )}
                   </button>
                 )
@@ -104,13 +113,16 @@ export default function HomeClient({ positions, locationsByPosition }: Props) {
           </section>
         )}
 
-        {/* Compare button */}
         <div className="flex justify-end">
           <button
             onClick={handleCompare}
             disabled={!selectedLocations.length}
-            className="px-8 py-3 rounded-xl bg-indigo-600 text-white font-semibold text-base shadow-md
-              hover:bg-indigo-700 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+            className="px-8 py-3 rounded-xl font-semibold text-base transition-all active:scale-95"
+            style={
+              selectedLocations.length
+                ? { background: 'var(--accent)', color: '#fff', boxShadow: '0 0 20px rgba(108,99,255,0.4)' }
+                : { background: 'var(--card2)', color: 'var(--border)', cursor: 'not-allowed' }
+            }
           >
             {t(lang, 'compareBtn')} {selectedLocations.length > 0 && `(${selectedLocations.length})`}
           </button>

@@ -6,7 +6,8 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggle}
-      className="px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium hover:bg-gray-100 transition-colors"
+      className="px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
+      style={{ background: 'var(--card2)', border: '1px solid var(--border)', color: 'var(--muted)' }}
     >
       {lang === 'en' ? 'RU' : 'EN'}
     </button>

@@ -1,15 +1,18 @@
 import type { Confidence } from '@/lib/types'
 
-const cfg: Record<Confidence, { cls: string; label: string }> = {
-  high:   { cls: 'bg-emerald-100 text-emerald-800',  label: 'high' },
-  medium: { cls: 'bg-amber-100 text-amber-800',      label: 'medium' },
-  low:    { cls: 'bg-red-100 text-red-700',           label: 'low ⚠' },
+const cfg: Record<Confidence, { text: string; bg: string; label: string }> = {
+  high:   { text: '#00d4aa', bg: 'rgba(0,212,170,0.15)',   label: '▲ high' },
+  medium: { text: '#ffd166', bg: 'rgba(255,209,102,0.15)', label: '◆ medium' },
+  low:    { text: '#8b90a8', bg: 'rgba(139,144,168,0.12)', label: '▽ low' },
 }
 
 export default function ConfidenceBadge({ value }: { value: Confidence }) {
-  const { cls, label } = cfg[value] ?? cfg.low
+  const { text, bg, label } = cfg[value] ?? cfg.low
   return (
-    <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${cls}`}>
+    <span
+      className="inline-block px-2 py-0.5 rounded-full text-xs font-medium whitespace-nowrap"
+      style={{ color: text, background: bg }}
+    >
       {label}
     </span>
   )

@@ -1,90 +1,129 @@
 'use client'
 import type { DomainRow } from '@/lib/types'
-import type { Tier } from '@/lib/types'
 import { useLang } from '@/context/LangContext'
-import { t, TIER_LABELS, PRESENCE_LABELS } from '@/lib/i18n'
+import { t, TIER_LABELS, TIER_STYLES, PRESENCE_LABELS } from '@/lib/i18n'
 import ConfidenceBadge from './ConfidenceBadge'
-
-const TIER_COLORS: Record<Tier, string> = {
-  top:  'border-violet-400 bg-violet-50',
-  high: 'border-blue-400 bg-blue-50',
-  mid:  'border-emerald-400 bg-emerald-50',
-  base: 'border-gray-300 bg-gray-50',
-}
-
-const TIER_BADGE: Record<Tier, string> = {
-  top:  'bg-violet-100 text-violet-800',
-  high: 'bg-blue-100 text-blue-800',
-  mid:  'bg-emerald-100 text-emerald-800',
-  base: 'bg-gray-100 text-gray-700',
-}
 
 function fmt(n: number | null, currency: string): string {
   if (n == null) return '—'
-  if (currency === 'RUB') return `${Math.round(n / 1000)}K ₽`
+  if (currency === 'RUB') return `${Math.round(n / 1000)}K`
   return `€${Math.round(n / 1000)}K`
 }
 
-function SalaryRow({ label, min, max, currency }: { label: string; min: number | null; max: number | null; currency: string }) {
-  if (min == null && max == null) return null
+function SalaryCell({ min, max, currency }: { min: number | null; max: number | null; currency: string }) {
+  if (min == null && max == null) return <span style={{ color: 'var(--border)' }}>—</span>
   return (
-    <tr className="text-xs">
-      <td className="text-gray-500 pr-3 py-0.5">{label}</td>
-      <td className="font-mono text-gray-700 text-right py-0.5">{fmt(min, currency)}</td>
-      <td className="text-gray-400 px-1">–</td>
-      <td className="font-mono text-gray-900 font-medium py-0.5">{fmt(max, currency)}</td>
-    </tr>
+    <span className="font-mono text-xs whitespace-nowrap" style={{ color: 'var(--text)' }}>
+      {fmt(min, currency)}<span style={{ color: 'var(--muted)' }}>–</span>{fmt(max, currency)}
+    </span>
   )
 }
 
-export default function DomainsGrid({ domains, currency }: { domains: DomainRow[]; currency: string }) {
+interface DomainsGridProps {
+  domains: DomainRow[]
+  currency: string
+  period: 'annual' | 'monthly'
+}
+
+export default function DomainsGrid({ domains, currency, period }: DomainsGridProps) {
   const { lang } = useLang()
 
-  if (!domains.length) return <p className="text-gray-400 text-sm py-4">{t(lang, 'noData')}</p>
+  if (!domains.length) return <p className="text-sm py-4" style={{ color: 'var(--muted)' }}>{t(lang, 'noData')}</p>
 
   const sorted = [...domains].sort((a, b) => {
     const order = ['top', 'high', 'mid', 'base']
     return order.indexOf(a.tier) - order.indexOf(b.tier)
   })
 
+  const isMonthly = period === 'monthly'
+
+  const gradeFields: { label: string; minKey: keyof DomainRow; maxKey: keyof DomainRow }[] = isMonthly
+    ? [
+        { label: 'Jun',  minKey: 'jun_monthly_min',  maxKey: 'jun_monthly_max' },
+        { label: 'Mid',  minKey: 'mid_monthly_min',  maxKey: 'mid_monthly_max' },
+        { label: 'Sen',  minKey: 'sen_monthly_min',  maxKey: 'sen_monthly_max' },
+        { label: 'Lead', minKey: 'lead_monthly_min', maxKey: 'lead_monthly_max' },
+        { label: 'Head', minKey: 'head_monthly_min', maxKey: 'head_monthly_max' },
+      ]
+    : [
+        { label: 'Jun',  minKey: 'jun_annual_min',  maxKey: 'jun_annual_max' },
+        { label: 'Mid',  minKey: 'mid_annual_min',  maxKey: 'mid_annual_max' },
+        { label: 'Sen',  minKey: 'sen_annual_min',  maxKey: 'sen_annual_max' },
+        { label: 'Lead', minKey: 'lead_annual_min', maxKey: 'lead_annual_max' },
+        { label: 'Head', minKey: 'head_annual_min', maxKey: 'head_annual_max' },
+      ]
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {sorted.map((d, i) => (
-        <div key={i} className={`rounded-xl border-2 p-4 ${TIER_COLORS[d.tier]}`}>
-          <div className="flex items-start justify-between gap-2 mb-3">
-            <h4 className="font-bold text-gray-900 text-base leading-tight">
-              {d.domain.replace(/_/g, ' ')}
-            </h4>
-            <div className="flex flex-col items-end gap-1 shrink-0">
-              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${TIER_BADGE[d.tier]}`}>
-                {TIER_LABELS[d.tier]?.[lang] ?? d.tier}
-              </span>
-              <span className="text-xs text-gray-500">
-                {PRESENCE_LABELS[d.presence_in_region]?.[lang] ?? d.presence_in_region}
-              </span>
-            </div>
-          </div>
+    <div
+      className="rounded-xl overflow-x-auto"
+      style={{ border: '1px solid var(--border)', background: 'var(--card)' }}
+    >
+      {/* Table header */}
+      <table className="text-xs" style={{ width: '100%', minWidth: 560 }}>
+        <thead>
+          <tr style={{ borderBottom: '1px solid var(--border)', background: 'var(--card2)' }}>
+            <th className="py-2 px-4 text-left font-medium uppercase tracking-wide" style={{ color: 'var(--muted)' }}>
+              {t(lang, 'domain')}
+            </th>
+            {gradeFields.map(f => (
+              <th key={f.label} className="py-2 px-2 text-right font-medium uppercase tracking-wide" style={{ color: 'var(--muted)' }}>
+                {f.label}
+              </th>
+            ))}
+            <th className="py-2 px-3 text-left font-medium uppercase tracking-wide" style={{ color: 'var(--muted)' }}>
+              {t(lang, 'tier')}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((d, i) => {
+            const ts = TIER_STYLES[d.tier] ?? TIER_STYLES.base
+            const borderLeft = `3px solid ${ts.text}`
+            return (
+              <tr
+                key={i}
+                style={{
+                  borderBottom: i < sorted.length - 1 ? '1px solid var(--border)' : undefined,
+                  borderLeft,
+                }}
+                className="hover:bg-white/[0.02] transition-colors"
+              >
+                {/* Domain name */}
+                <td className="py-3 px-4">
+                  <div className="font-medium" style={{ color: 'var(--text)' }}>
+                    {d.domain.replace(/_/g, ' ')}
+                  </div>
+                  <div className="text-xs mt-0.5" style={{ color: 'var(--muted)' }}>
+                    {PRESENCE_LABELS[d.presence_in_region]?.[lang] ?? d.presence_in_region}
+                  </div>
+                </td>
 
-          <table className="w-full mb-2">
-            <tbody>
-              <SalaryRow label="Jun" min={d.jun_annual_min} max={d.jun_annual_max} currency={currency} />
-              <SalaryRow label="Mid" min={d.mid_annual_min} max={d.mid_annual_max} currency={currency} />
-              <SalaryRow label="Sen" min={d.sen_annual_min} max={d.sen_annual_max} currency={currency} />
-              <SalaryRow label="Lead" min={d.lead_annual_min} max={d.lead_annual_max} currency={currency} />
-              <SalaryRow label="Head" min={d.head_annual_min} max={d.head_annual_max} currency={currency} />
-            </tbody>
-          </table>
+                {/* Salary per grade */}
+                {gradeFields.map(f => (
+                  <td key={f.label} className="py-3 px-2 text-right">
+                    <SalaryCell
+                      min={d[f.minKey] as number | null}
+                      max={d[f.maxKey] as number | null}
+                      currency={currency}
+                    />
+                  </td>
+                ))}
 
-          <div className="flex items-center justify-between">
-            <ConfidenceBadge value={d.confidence} />
-            {d.notes && (
-              <p className="text-xs text-gray-500 ml-2 text-right line-clamp-2" title={d.notes}>
-                {d.notes.split(';')[0]}
-              </p>
-            )}
-          </div>
-        </div>
-      ))}
+                {/* Tier + confidence */}
+                <td className="py-3 px-3">
+                  <span
+                    className="inline-block px-2 py-0.5 rounded text-xs font-bold"
+                    style={{ color: ts.text, background: ts.bg }}
+                  >
+                    {TIER_LABELS[d.tier]?.[lang] ?? d.tier}
+                  </span>
+                  <div className="mt-1"><ConfidenceBadge value={d.confidence} /></div>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }
