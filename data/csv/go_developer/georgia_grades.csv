@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,28000,1500,2333,EUR,medium,"SalaryExpert Tbilisi 2026;jobs.ge","SWE entry Tbilisi: GEL 118,310 = €41.5K; Go Junior slightly lower"
+Junior,0-3,mid_market,28000,42000,2333,3500,EUR,medium,"Levels.fyi Tbilisi;golang.cafe Tbilisi","Levels.fyi SWE Tbilisi: GEL 98K–164K = €34.4K–€57.5K; Go premium"
+Middle,3-5,mid_market,34000,50000,2833,4167,EUR,medium,"Levels.fyi Tbilisi 2026;SalaryExpert","SWE avg GEL 143,368 = €50.3K total comp; mid band"
+Middle,3-5,premium,48000,68000,4000,5667,EUR,low,"Levels.fyi GEO;LinkedIn Tbilisi","Intl companies / relocated post-2022; premium segment"
+Senior,5+,mid_market,44000,64000,3667,5333,EUR,medium,"SalaryExpert Tbilisi;Levels.fyi","SWE senior GEL 192,383 = €67.5K; Go developer ~10% above avg SWE"
+Senior,5+,premium,62000,88000,5167,7333,EUR,low,"Levels.fyi GEO;LinkedIn Tbilisi","Meta/FAANG-equivalent; Meta avg GEL 797K = €280K outlier excluded"
+Lead,7+,premium,68000,95000,5667,7917,EUR,low,"Levels.fyi GEO;LinkedIn","Few Go lead roles; extrapolated; 1 EUR≈2.85 GEL"
+Head,10+,premium,85000,115000,7083,9583,EUR,low,"LinkedIn Tbilisi 2026","Very limited data"

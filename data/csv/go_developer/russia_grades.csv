@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,960000,1440000,80000,120000,RUB,high,"enigmai.ru 2026;hh.ru","Junior 80K–150K/mo; regional companies lower bound"
+Junior,0-3,mid_market,1440000,2400000,120000,200000,RUB,high,"enigmai.ru 2026;hh.ru;sborka.work","Moscow junior Go 132K–191K/mo (enigmai); mid-market"
+Middle,3-5,mid_market,2160000,3120000,180000,260000,RUB,high,"enigmai.ru;hh.ru;balun.courses","Middle 180K–260K/mo; median Go dev Russia 260K/mo"
+Middle,3-5,premium,3120000,4800000,260000,400000,RUB,high,"enigmai.ru;Avito/Ozon data 2026","Avito/Ozon Middle 380K–480K/mo; FinTech premium"
+Senior,5+,mid_market,3600000,5160000,300000,430000,RUB,high,"enigmai.ru;sborka.work;hirehi.ru","enigmai senior 344K–407K/mo median 320K–351K"
+Senior,5+,premium,5400000,8400000,450000,700000,RUB,high,"enigmai.ru companies;Avito/Yandex","Avito/Yandex Senior 550K–700K/mo; Go top-paying in RU"
+Lead,7+,mid_market,4800000,7200000,400000,600000,RUB,medium,"enigmai.ru;hh.ru","Lead Go developer; enigmai lead ~420K/mo"
+Lead,7+,premium,7200000,10800000,600000,900000,RUB,medium,"Yandex/Ozon data;enigmai 2026","BigTech lead/staff; Yandex/Avito Go leads"
+Head,10+,premium,9600000,18000000,800000,1500000,RUB,medium,"enigmai companies 2026;hirehi.ru","Staff/Principal Eng: Avito/Yandex 900K–1.5M/mo"

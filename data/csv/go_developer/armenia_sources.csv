@@ -1,0 +1,4 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Jobicy Armenia Go Developer,aggregator,jobicy.com/salaries/am/go-developer,2025,yes,medium,"Avg $27,200; entry $16,320–$21,760; senior $32,640–$48,960; 2025 data"
+LinkedIn Armenia Go,job_posting,linkedin.com/jobs: Go Developer Yerevan 2026,2026-05,partial,low,"Premium band estimation; sparse Go postings"
+Levels.fyi Armenia SWE,aggregator,levels.fyi/t/software-engineer/locations/armenia,2026,yes,low,"SWE Armenia; proxy for Go developer salary"

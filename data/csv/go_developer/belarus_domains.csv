@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+SaaS_B2B,mid,strong,18000,30000,30000,46000,46000,66000,60000,84000,75000,102000,1500,2500,2500,3833,3833,5500,5000,7000,6250,8500,EUR,medium,"Dominant IT segment BY; Wargaming/EPAM product teams; Go for cloud/microservices"
+Outsourcing,mid,strong,16000,26000,26000,42000,38000,58000,50000,72000,,,1333,2167,2167,3500,3167,4833,4167,6000,,,EUR,medium,"EPAM Belarus/IBA; strong Go outsourcing demand; below product cos"
+iGaming,mid,moderate,18000,30000,30000,46000,44000,64000,56000,80000,,,1500,2500,2500,3833,3667,5333,4667,6667,,,EUR,low,"Several iGaming operators in BY HTP; Go for betting engines; limited data"
+FinTech,mid,moderate,20000,32000,32000,50000,46000,68000,60000,86000,,,1667,2667,2667,4167,3833,5667,5000,7167,,,EUR,low,"Some fintech in HTP; Go popular choice; limited BY-specific data"

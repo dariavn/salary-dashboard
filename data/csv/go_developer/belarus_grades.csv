@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,10000,18000,833,1500,EUR,medium,"rabota.by 2025;recruitment.by","Local market; Go junior rare; ~2750-5000 BYN/mo; 2025 data"
+Junior,0-3,mid_market,18000,30000,1500,2500,EUR,medium,"Levels.fyi BY;recruitment.by 2026","IT export companies; ~5000-8250 BYN/mo; 1 EUR≈3.3 BYN"
+Middle,3-5,mid_market,26000,40000,2167,3333,EUR,medium,"Levels.fyi BY;recruitment.by","IT mid-market; Levels.fyi BY SWE avg €28,581; Go +10–15%"
+Middle,3-5,premium,38000,56000,3167,4667,EUR,medium,"Levels.fyi BY;LinkedIn BY","Export IT companies $2K–$3.5K/mo for mid Go devs"
+Senior,5+,mid_market,42000,62000,3500,5167,EUR,medium,"Levels.fyi BY 2026;recruitment.by","IT senior Go; $4K–$5.5K/mo export"
+Senior,5+,premium,58000,80000,4833,6667,EUR,medium,"Levels.fyi BY;LinkedIn Belarus","Premium: EPAM/Wargaming export; $5.5K–$7.5K/mo"
+Lead,7+,premium,68000,92000,5667,7667,EUR,low,"LinkedIn BY;Levels.fyi","Limited Go lead roles in BY; ~18.7K–25.3K BYN/mo"
+Head,10+,premium,82000,110000,6833,9167,EUR,low,"LinkedIn Belarus 2026","Very limited; Head of Engineering"

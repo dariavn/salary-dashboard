@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+SaaS_B2B,mid,moderate,18000,28000,26000,42000,38000,58000,50000,72000,,,1500,2333,2167,3500,3167,4833,4167,6000,,,EUR,medium,"Picsart/TeamViewer Yerevan; Go for cloud backend; growing post-2022"
+FinTech,mid,moderate,20000,32000,30000,48000,42000,65000,55000,80000,,,1667,2667,2500,4000,3500,5417,4583,6667,,,EUR,medium,"Crypto/fintech relocation wave; Go popular for payments infra"
+Outsourcing,base,moderate,14000,22000,20000,34000,30000,48000,,,,,1167,1833,1667,2833,2500,4000,,,,,EUR,medium,"EPAM Armenia/Synopsys; outsourcing base; Go backend roles"
+iGaming,mid,limited,16000,26000,24000,38000,34000,54000,,,,,1333,2167,2000,3167,2833,4500,,,,,EUR,low,"Some operators post-relocation; limited Go-specific data"

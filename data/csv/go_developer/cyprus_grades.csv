@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,mid_market,28000,42000,2333,3500,EUR,medium,"golang.cafe CY;Glassdoor Limassol 2026;Levels.fyi CY","golang.cafe CY: €25K–€45K; Go is premium vs average dev"
+Junior,0-3,premium,42000,60000,3500,5000,EUR,medium,"Glassdoor Limassol 2026;Emerald Zebra CY","FinTech/iGaming (Exness/Wargaming); entry SWE Levels.fyi €16K–€44K range"
+Middle,3-5,mid_market,45000,62000,3750,5167,EUR,high,"Glassdoor Limassol 2026;Levels.fyi CY;plane.com","Glassdoor Limassol avg €62,450; mid-market band"
+Middle,3-5,premium,62000,85000,5167,7083,EUR,medium,"Levels.fyi Limassol;Emerald Zebra","FinTech/iGaming premium; Limassol SWE avg €68,306"
+Senior,5+,mid_market,62000,82000,5167,6833,EUR,high,"Glassdoor Limassol 2026;Levels.fyi CY;SaviorHire","Glassdoor 25th–75th: €58K–€80K; senior SWE Levels €60K–€89K"
+Senior,5+,premium,82000,110000,6833,9167,EUR,high,"Levels.fyi CY;Emerald Zebra;LinkedIn CY","Exness avg comp €85K; FinTech/iGaming premium band"
+Lead,7+,mid_market,80000,100000,6667,8333,EUR,medium,"LinkedIn CY 2026;Glassdoor","Limited Go lead postings; extrapolated from senior +25%"
+Lead,7+,premium,100000,130000,8333,10833,EUR,medium,"Levels.fyi CY;LinkedIn CY 2026","FinTech/iGaming tech lead; top employers Uber/Exness"
+Head,10+,premium,110000,145000,9167,12083,EUR,low,"LinkedIn CY;Emerald Zebra","Head of Engineering / Staff; very limited data"

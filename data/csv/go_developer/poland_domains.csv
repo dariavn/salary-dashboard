@@ -1,0 +1,6 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,44000,62000,65000,86000,88000,115000,108000,140000,125000,158000,3667,5167,5417,7167,7333,9583,9000,11667,10417,13167,EUR,high,"PKO BP Tech/Revolut/N26 PL; Go for payments/microservices; +15-20% vs SaaS"
+SaaS_B2B,mid,strong,30000,44000,46000,64000,66000,88000,84000,108000,105000,138000,2500,3667,3833,5333,5500,7333,7000,9000,8750,11500,EUR,high,"Largest IT segment PL; cloud/microservices heavy; many Go shops"
+Gaming,high,strong,36000,52000,54000,74000,74000,98000,92000,120000,,,3000,4333,4500,6167,6167,8167,7667,10000,,,EUR,high,"CD Projekt RED/11 bit/Techland; Go for backend infra/services; strong gaming PL"
+iGaming,mid,moderate,34000,50000,52000,72000,72000,95000,88000,115000,,,2833,4167,4333,6000,6000,7917,7333,9583,,,EUR,medium,"Operators with PL offices; Go for platform backends"
+Outsourcing,base,strong,24000,36000,38000,55000,55000,75000,68000,90000,,,2000,3000,3167,4583,4583,6250,5667,7500,,,EUR,high,"EPAM/Luxoft PL; nearshore Go development; below product cos"

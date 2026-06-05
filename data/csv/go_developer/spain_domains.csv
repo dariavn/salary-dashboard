@@ -1,0 +1,6 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,40000,58000,58000,80000,80000,108000,102000,135000,120000,158000,3333,4833,4833,6667,6667,9000,8500,11250,10000,13167,EUR,high,"Cabify/Glovo tech/Bankinter digital; Go for payments/microservices; +15-20% vs SaaS"
+SaaS_B2B,mid,strong,30000,44000,46000,64000,62000,84000,80000,105000,98000,130000,2500,3667,3833,5333,5167,7000,6667,8750,8167,10833,EUR,high,"Largest tech segment; Go for cloud-native/Kubernetes; many Spanish scaleups"
+E_commerce,mid,moderate,28000,42000,44000,62000,60000,80000,76000,100000,,,2333,3500,3667,5167,5000,6667,6333,8333,,,EUR,medium,"Inditex tech/Mango digital; Go for high-throughput backends"
+Cybersecurity,high,moderate,34000,50000,50000,70000,68000,92000,86000,114000,,,2833,4167,4167,5833,5667,7667,7167,9500,,,EUR,medium,"Telefónica cybersecurity; Go popular for security tooling"
+iGaming,mid,limited,32000,46000,46000,66000,62000,86000,,,,,2667,3833,3833,5500,5167,7167,,,,,EUR,low,"Some operators ES offices; limited Go-specific data"

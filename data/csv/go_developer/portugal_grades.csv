@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,28000,1500,2333,EUR,medium,"Jobicy PT;PayScale PT","Smaller companies"
+Junior,0-3,mid_market,25000,38000,2083,3167,EUR,high,"Jobicy PT 2026;Glassdoor Lisbon;plane.com","Jobicy entry $30K–$40K ≈ €27.6K–€36.8K; mid-market"
+Junior,0-3,premium,38000,54000,3167,4500,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT","FinTech (Revolut/Feedzai); Go backend junior"
+Middle,3-5,mid_market,38000,52000,3167,4333,EUR,high,"Jobicy PT 2026;Glassdoor Lisbon;plane.com","Mid-market band; Lisbon FinTech cluster growing"
+Middle,3-5,premium,52000,72000,4333,6000,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT","FinTech/NOS digital/Unbabel"
+Senior,5+,mid_market,52000,72000,4333,6000,EUR,high,"Jobicy PT;Glassdoor Lisbon SE Golang;plane.com","Jobicy senior $60K–$91K ≈ €55K–€84K; Glassdoor Lisbon SE Golang data"
+Senior,5+,premium,72000,96000,6000,8000,EUR,high,"Levels.fyi Lisbon;LinkedIn PT 2026","Revolut Lisbon/FinTech premium; Go backend senior"
+Lead,7+,mid_market,70000,90000,5833,7500,EUR,medium,"LinkedIn PT;Glassdoor Lisbon","Go lead backend"
+Lead,7+,premium,90000,120000,7500,10000,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT 2026","FinTech/Farfetch principal engineer"
+Head,10+,premium,105000,140000,8750,11667,EUR,low,"LinkedIn Portugal","Head of Engineering; limited data"

@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,22000,32000,1833,2667,EUR,medium,"Jobicy ES;PayScale ES","Smaller Spanish companies"
+Junior,0-3,mid_market,28000,40000,2333,3333,EUR,high,"Glassdoor Barcelona 2026;Jobicy ES;golang.cafe ES","Entry Jobicy ~$47K–$64K ≈ €43K–€59K; local mid-market lower"
+Junior,0-3,premium,40000,56000,3333,4667,EUR,medium,"LinkedIn Spain;golang.cafe ES","FinTech/Barcelona tech cos"
+Middle,3-5,mid_market,40000,56000,3333,4667,EUR,high,"Glassdoor ES 2026;Jobicy ES;golang.cafe ES","golang.cafe Spain $36K–$88K avg; mid band"
+Middle,3-5,premium,56000,76000,4667,6333,EUR,medium,"LinkedIn Spain;golang.cafe ES","Madrid/Barcelona BigTech/FinTech"
+Senior,5+,mid_market,58000,78000,4833,6500,EUR,high,"Glassdoor Barcelona 2026;Jobicy;golang.cafe","Glassdoor Barcelona senior Golang avg €60K (€55K–€65K range)"
+Senior,5+,premium,78000,105000,6500,8750,EUR,medium,"LinkedIn Spain 2026;golang.cafe ES","FinTech/scaleup Barcelona; Go senior commands premium"
+Lead,7+,mid_market,78000,98000,6500,8167,EUR,medium,"LinkedIn Spain;Glassdoor ES","Tech lead Go backend"
+Lead,7+,premium,98000,128000,8167,10667,EUR,medium,"LinkedIn Spain 2026","Principal/staff backend"
+Head,10+,premium,115000,150000,9583,12500,EUR,low,"LinkedIn Spain","Head of Backend/Engineering; limited data"

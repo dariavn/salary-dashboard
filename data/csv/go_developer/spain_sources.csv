@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Barcelona Senior Golang,aggregator,glassdoor.com/Salaries/barcelona-senior-golang-developer,2026,yes,high,"Senior avg €60,000; range €55K–€65K; strong data point"
+Jobicy Spain Go Developer,aggregator,jobicy.com/salaries/es/go-developer,2025,yes,medium,"$36K–$88K avg range Spain; 2025 data"
+golang.cafe Spain,job_posting,golang.cafe/Golang-Developer-Salary-Spain,2026,partial,medium,"Spain Go job postings with salary; market data"
+Alcor Golang salary worldwide,salary_survey,alcor.com/average-golang-developer-salary-worldwide-research/,2026,yes,medium,"Spain entry $47.7K–$63.6K; senior $95.4K–$143.1K"
+RubyOnRemote Europe Go 2026,aggregator,rubyonremote.com/go-developer-salaries-in-europe/,2026,yes,medium,"Europe avg $163K — remote-weighted; upper reference"
+LinkedIn Jobs Spain Go,job_posting,linkedin.com/jobs: Go Developer Spain 2026,2026-05,partial,medium,"Madrid/Barcelona Senior Go postings with salary"

@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Jobicy Portugal Go Developer,aggregator,jobicy.com/salaries/pt/go-developer,2026,yes,high,"Entry $30.2K–$40.3K; senior $60.5K–$90.7K; solid Portugal data"
+beincrypto.com Portugal Golang,aggregator,beincrypto.com/jobs/salary/golang+portugal/,2026-04,yes,medium,"Median salary Golang Portugal; recent data"
+plane.com Portugal Go,aggregator,plane.com/salaries/golang-developer/portugal,2026,yes,medium,"Portugal Go developer salary data"
+Glassdoor Lisbon SE Golang,aggregator,glassdoor.com/Salaries/senior-software-engineer-golang-salary-SRCH_IM1121,2026,yes,medium,"Lisbon Senior SWE Golang; proxy for senior Go dev"
+RubyOnRemote Europe Go,aggregator,rubyonremote.com/go-developer-salaries-in-europe/,2026,yes,medium,"Europe avg $163K remote; upper bound reference"
+LinkedIn Jobs Portugal Go,job_posting,linkedin.com/jobs: Go Developer Portugal 2026,2026-05,partial,medium,"Lisbon postings; FinTech segment validation"

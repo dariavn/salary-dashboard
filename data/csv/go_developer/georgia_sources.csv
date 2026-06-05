@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Levels.fyi Tbilisi SWE,aggregator,levels.fyi/t/software-engineer/locations/tbilisi-geo,2026,yes,medium,"SWE Tbilisi: GEL 98,487–164,200; avg GEL 143,368; proxy for Go dev"
+SalaryExpert Tbilisi SWE,aggregator,salaryexpert.com/salary/job/software-developer/georgia/tbilisi,2026,yes,medium,"SWE avg GEL 166,001; entry GEL 118,310; senior GEL 192,383"
+Glassdoor Tbilisi SWE,aggregator,glassdoor.com/Salaries/tbilisi-georgia-developer-salary,2026,yes,low,"Avg GEL 6,367/yr (likely monthly GEL 6,367); limited sample"
+golang.cafe Tbilisi,job_posting,golang.cafe/Golang-Developer-Salary-Tbilisi,2026,partial,low,"Some Go postings Tbilisi; limited salary data"
+jobs.ge Go,job_posting,jobs.ge: Go developer Tbilisi 2026,2026-05,partial,low,"Local Georgian job board; few Go roles listed"
+LinkedIn Jobs Tbilisi Go,job_posting,linkedin.com/jobs: Go Developer Tbilisi 2026,2026-05,partial,low,"Limited postings; used for premium band estimation"

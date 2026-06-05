@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Limassol Golang Dev,aggregator,glassdoor.com/Salaries/limassol-cyprus-golang-developer,2026-02,yes,high,"Avg €62,450; 25pct €58,175; 75pct €80,750; 6 salaries submitted"
+Levels.fyi Cyprus SWE,aggregator,levels.fyi/t/software-engineer/locations/cyprus,2026,yes,high,"SWE range €50,374–€84,732; Limassol avg €68,306; proxy for Go dev"
+Levels.fyi Entry SWE Cyprus,aggregator,levels.fyi/t/software-engineer/levels/entry-level/locations/cyprus,2026,yes,medium,"Entry SWE €16,849–€44,352; used for Junior range"
+golang.cafe Cyprus,job_posting,golang.cafe/Golang-Developer-Salary-Cyprus,2026,yes,medium,"Go dev CY: €25K–€100K range; real job postings"
+SaviorHire CY SWE,salary_survey,saviorhire.com/post/software-developer-salaries-in-cyprus,2026,yes,medium,"SWE salary overview Cyprus 2026; FinTech/iGaming context"
+Emerald Zebra CY,recruiter_report,emeraldzebra.cy,2025,yes,medium,"700+ Cyprus employees; FinTech/iGaming/Finance salary survey"
+LinkedIn Jobs Cyprus Go,job_posting,linkedin.com/jobs: Go Developer Cyprus 2026,2026-05,partial,medium,"Postings with salary; used for Lead/Head estimation"

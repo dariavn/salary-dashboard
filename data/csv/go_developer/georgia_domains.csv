@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,moderate,28000,44000,42000,62000,58000,84000,72000,100000,,,2333,3667,3500,5167,4833,7000,6000,8333,,,EUR,medium,"TBC/Bank of Georgia tech; Go for backend services; crypto-friendly jurisdiction"
+SaaS_B2B,mid,moderate,22000,34000,34000,52000,46000,68000,58000,82000,,,1833,2833,2833,4333,3833,5667,4833,6833,,,EUR,medium,"Growing Tbilisi tech; Go cloud/microservices"
+iGaming,mid,limited,20000,32000,32000,50000,46000,68000,,,,,1667,2667,2667,4167,3833,5667,,,,,EUR,low,"Some operators post-2022 relocation; limited data"
+Outsourcing,base,limited,16000,26000,24000,38000,36000,54000,,,,,1333,2167,2000,3167,3000,4500,,,,,EUR,low,"Limited nearshore; mainly domestic market"

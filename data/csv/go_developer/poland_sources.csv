@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+NoFluffJobs Poland Go,job_posting,nofluffjobs.com: Go developer Poland 2026,2026-05,yes,high,"Senior up to PLN 32,000/mo = PLN 384K/yr; real salary-listed postings"
+Glassdoor Warsaw Golang Junior,aggregator,glassdoor.com/Salaries/warsaw-poland-golang-junior-developer,2026-05,yes,medium,"Junior Warsaw range PLN 8,300–10,500/mo (suspiciously low — annual?)"
+RubyOnRemote Poland Go,aggregator,rubyonremote.com/go-developer-salaries-in-poland/,2026-05,yes,medium,"Avg $150K/yr — remote-weighted; high end of market"
+golang.cafe Warsaw,job_posting,golang.cafe/Golang-Developer-Salary-Warsaw,2026,yes,medium,"Warsaw Go postings with salary data"
+Alcor Polish Devs 2026,salary_survey,alcor.com/polish-developers-pros-cons-rates-insights/,2026,yes,medium,"Eastern EU senior Go $45/hr median; Poland context"
+K&C International Go salary,salary_survey,kruschecompany.com/international-go-lang-developer-salary-rates/,2025,yes,medium,"Eastern EU Go dev rates; 2025 data used"
+PayScale Poland Golang,aggregator,payscale.com/research/PL/Skill=Go_(Golang)_Programming_Language/Salary,2026,yes,medium,"Poland Go skill salary premium data"
+LinkedIn Jobs Poland Go,job_posting,linkedin.com/jobs: Go Developer Poland 2026,2026-05,partial,medium,"Used for Lead/Head range validation"

@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,16000,24000,1333,2000,EUR,medium,"Glassdoor Belgrade 2026;InfoPlate.rs","Local market; Go roles scarce at junior level"
+Junior,0-3,mid_market,24000,38000,2000,3167,EUR,medium,"golang.cafe RS;beincrypto.com;LinkedIn Serbia","golang.cafe RS avg $70K (all levels); premium backend skill"
+Middle,3-5,mid_market,32000,48000,2667,4000,EUR,medium,"golang.cafe RS 2025;plane.com;LinkedIn","$50K–$70K range (golang.cafe Oct 2025); mid-market"
+Middle,3-5,premium,48000,65000,4000,5417,EUR,medium,"RubyOnRemote Europe;LinkedIn Serbia","Product companies; remote-friendly; Go commands premium"
+Senior,5+,mid_market,48000,68000,4000,5667,EUR,high,"golang.cafe RS;beincrypto;RubyOnRemote","golang.cafe median $74,611 remote; min $60K max $80K"
+Senior,5+,premium,65000,88000,5417,7333,EUR,medium,"LinkedIn Serbia 2026;RubyOnRemote Europe","Premium Belgrade companies and remote-first"
+Lead,7+,premium,75000,98000,6250,8167,EUR,low,"LinkedIn Jobs RS 2026","Limited Go lead postings in Serbia"
+Head,10+,premium,90000,120000,7500,10000,EUR,low,"LinkedIn RS;RubyOnRemote","Very limited data; Head of Backend"

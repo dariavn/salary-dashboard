@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,28000,1500,2333,EUR,medium,"Glassdoor Warsaw 2026;PayScale PL","~PLN 76K–119K; Glassdoor Warsaw Golang Junior PLN 8.3K–10.5K/mo"
+Junior,0-3,mid_market,28000,42000,2333,3500,EUR,high,"NoFluffJobs 2026;Glassdoor Warsaw;RubyOnRemote","NoFluffJobs junior PLN 5K–10K/mo; mid-market band"
+Junior,0-3,premium,45000,60000,3750,5000,EUR,medium,"RubyOnRemote PL;LinkedIn PL 2026","Big tech/FinTech premium; ~PLN 191K–255K"
+Middle,3-5,mid_market,42000,58000,3500,4833,EUR,high,"NoFluffJobs 2026;Glassdoor PL;Alcor","~PLN 179K–247K; strong Go backend market in PL"
+Middle,3-5,premium,62000,82000,5167,6833,EUR,medium,"RubyOnRemote PL;LinkedIn PL","Product/FinTech companies; ~PLN 264K–349K"
+Senior,5+,mid_market,62000,82000,5167,6833,EUR,high,"NoFluffJobs 2026;RubyOnRemote;Glassdoor","NoFluffJobs senior up to PLN 32K/mo = €90K; mid band"
+Senior,5+,premium,85000,110000,7083,9167,EUR,high,"NoFluffJobs 2026;RubyOnRemote;LinkedIn PL","NoFluffJobs top: PLN 32K/mo = €90K; ~$150K avg RubyOnRemote"
+Lead,7+,mid_market,82000,105000,6833,8750,EUR,medium,"LinkedIn PL 2026;Glassdoor","Tech lead; ~PLN 349K–447K"
+Lead,7+,premium,105000,135000,8750,11250,EUR,low,"LinkedIn PL;RubyOnRemote","Principal/staff; PL has strong Go cloud/backend scene"
+Head,10+,premium,120000,155000,10000,12917,EUR,low,"LinkedIn PL 2026","Head of Backend/Engineering; limited data; 1 EUR≈4.25 PLN"

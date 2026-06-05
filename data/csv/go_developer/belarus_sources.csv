@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Levels.fyi Belarus SWE,aggregator,levels.fyi/t/software-engineer/locations/belarus,2026,yes,medium,"BY SWE avg ~€28,581; sparse data; Go adds premium"
+Recruitment.by IT salaries,salary_survey,recruitment.by/rus/news/it-salary-developers-belarus/,2026,yes,medium,"IT salary overview BY 2026; developer grades"
+rabota.by Go vacancies,job_posting,rabota.by/vacancies/go-developer,2025,partial,medium,"BY job board; some Go roles listed; 2025 data"
+LinkedIn Belarus Go,job_posting,linkedin.com/jobs: Go Developer Belarus 2026,2026-05,partial,low,"Limited BY Go postings; used for premium band"
+geeklink.io Golang BY,aggregator,geeklink.io/salary-stat/golang-razrabotchik/,2026,yes,medium,"Golang developer salary stats including BY region"

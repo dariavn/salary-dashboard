@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,12000,18000,1000,1500,EUR,medium,"Jobicy AM 2025;LinkedIn AM","Jobicy avg $27,200/yr ≈ €25K all levels; local market lower"
+Junior,0-3,mid_market,18000,28000,1500,2333,EUR,medium,"Jobicy AM;LinkedIn AM 2026","Jobicy entry $16,320–$21,760 = €15K–€20K; Go +20% vs avg"
+Middle,3-5,mid_market,24000,38000,2000,3167,EUR,medium,"Jobicy AM 2025;LinkedIn AM","~AMD 9.8M–15.6M/yr; 1 EUR≈410 AMD"
+Middle,3-5,premium,36000,54000,3000,4500,EUR,medium,"LinkedIn AM;Levels.fyi AM","Intl/relocated companies (Picsart/TeamViewer Yerevan)"
+Senior,5+,mid_market,34000,54000,2833,4500,EUR,medium,"Jobicy AM;LinkedIn 2026","Jobicy senior $32.6K–$49K ≈ €30K–€45K; Go premium +15%"
+Senior,5+,premium,52000,75000,4333,6250,EUR,medium,"LinkedIn AM 2026;Levels.fyi","~AMD 21.3M–30.8M/yr; premium post-2022 relocation market"
+Lead,7+,premium,58000,85000,4833,7083,EUR,low,"LinkedIn AM;Levels.fyi AM","Limited Go lead roles in Armenia"
+Head,10+,premium,75000,105000,6250,8750,EUR,low,"LinkedIn AM 2026","Very limited data"

@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+golang.cafe Serbia,aggregator,golang.cafe/Golang-Developer-Salary-Serbia,2025-10,yes,medium,"Avg $70K; min $60K; max $80K; Oct 2025 data"
+beincrypto.com Serbia Go,aggregator,beincrypto.com/jobs/salary/golang+serbia/,2025-11,yes,medium,"Median $74,611 remote; Nov 2025 data"
+plane.com Serbia Go,aggregator,plane.com/salaries/golang-developer/serbia,2026,yes,medium,"Serbia Go developer salary data"
+RubyOnRemote Europe Go,aggregator,rubyonremote.com/go-developer-salaries-in-europe/,2026,yes,medium,"Eastern EU average $163K — remote-weighted; used as upper bound"
+LinkedIn Jobs Serbia Go,job_posting,linkedin.com/jobs: Go Developer Serbia 2026,2026-05,partial,low,"Few Go-specific postings; used for Lead band"
