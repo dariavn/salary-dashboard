@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,14000,20000,1167,1667,EUR,medium,"WorldSalaries RS 2026;InfoPlate.rs","WorldSalaries <2yrs: RSD 1.62M/yr ÷ 117 = €13.9K; local market"
+Junior,0-3,mid_market,20000,32000,1667,2667,EUR,medium,"Glassdoor Belgrade 2026;LinkedIn Serbia","Mid-market IT companies; DS is premium role in RS"
+Middle,3-5,mid_market,26000,40000,2167,3333,EUR,medium,"Glassdoor Belgrade;WorldSalaries RS","WorldSalaries 2-5yrs: RSD 1.99M = €17K; Glassdoor 25th RSD 160K/mo = €16.5K/mo"
+Middle,3-5,premium,38000,56000,3167,4667,EUR,medium,"Levels.fyi Belgrade;LinkedIn Serbia","Levels.fyi Belgrade DS: avg $52,737 ≈ €48.5K; international cos"
+Senior,5+,mid_market,36000,52000,3000,4333,EUR,medium,"WorldSalaries RS;Glassdoor Belgrade 2026","WorldSalaries 5-10yrs: RSD 2.82M ÷ 117 = €24.1K — local lower; Glassdoor 75th higher"
+Senior,5+,premium,50000,72000,4167,6000,EUR,high,"Levels.fyi Belgrade 2026;LinkedIn Serbia","Levels.fyi Belgrade DS: $46K–$77K = €42K–€71K; premium segment"
+Lead,7+,premium,62000,88000,5167,7333,EUR,low,"LinkedIn Jobs RS 2026","Limited DS lead postings in Serbia"
+Head,10+,premium,82000,108000,6833,9000,EUR,low,"LinkedIn RS;WorldSalaries RS","Very limited data; Head of Data"

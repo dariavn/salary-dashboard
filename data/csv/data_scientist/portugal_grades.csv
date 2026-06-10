@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,20000,28000,1667,2333,EUR,medium,"PayScale PT 2026;SalaryExpert PT","Smaller companies; entry PT SalaryExpert avg €38,018"
+Junior,0-3,mid_market,28000,38000,2333,3167,EUR,high,"Glassdoor Lisbon DS 2026;SalaryExpert PT;Jobicy PT","Glassdoor Lisbon 25th: €28K; SalaryExpert entry Lisbon €43,604"
+Junior,0-3,premium,38000,52000,3167,4333,EUR,medium,"Glassdoor Lisbon Junior DS 2026;Levels.fyi Lisbon","Glassdoor Lisbon Junior DS avg entry €43,604; FinTech premium"
+Middle,3-5,mid_market,36000,50000,3000,4167,EUR,high,"Glassdoor PT 2026;SalaryExpert PT;Jobicy PT","Glassdoor PT 25th-75th: €28K–€44.2K; SalaryExpert avg €54,214"
+Middle,3-5,premium,50000,68000,4167,5667,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT","Revolut/Feedzai/NOS digital; premium Lisbon segment"
+Senior,5+,mid_market,48000,64000,4000,5333,EUR,high,"Glassdoor Lisbon Senior DS 2026;SalaryExpert PT;PayScale PT","Glassdoor Lisbon Senior: €39K–€62K; SalaryExpert senior €61,088"
+Senior,5+,premium,62000,85000,5167,7083,EUR,high,"Glassdoor Porto Senior;SalaryExpert Lisbon;Jobicy PT","SalaryExpert Porto senior €67,201; Lisbon premium FinTech"
+Lead,7+,mid_market,62000,82000,5167,6833,EUR,medium,"LinkedIn PT;Glassdoor Lisbon","DS/ML lead"
+Lead,7+,premium,82000,108000,6833,9000,EUR,medium,"Levels.fyi Lisbon;LinkedIn PT 2026","FinTech/Farfetch principal DS"
+Head,10+,premium,98000,130000,8167,10833,EUR,low,"LinkedIn Portugal","Head of Data Science; limited data"

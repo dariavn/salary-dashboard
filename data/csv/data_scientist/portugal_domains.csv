@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,38000,55000,55000,78000,72000,100000,92000,122000,108000,145000,3167,4583,4583,6500,6000,8333,7667,10167,9000,12083,EUR,high,"Revolut Lisbon/Feedzai/N26 PT; DS for fraud/risk/credit; +20% vs SaaS"
+SaaS_B2B,mid,strong,28000,42000,42000,60000,54000,76000,70000,95000,85000,115000,2333,3500,3500,5000,4500,6333,5833,7917,7083,9583,EUR,high,"Feedzai/Unbabel/Talkdesk; main IT segment; at-market DS"
+E_commerce,mid,moderate,26000,38000,38000,56000,50000,70000,64000,86000,,,2167,3167,3167,4667,4167,5833,5333,7167,,,EUR,medium,"Farfetch (DS for recommendations)/Jerónimo digital; growing"
+Outsourcing,base,moderate,20000,32000,30000,46000,42000,62000,54000,74000,,,1667,2667,2500,3833,3500,5167,4500,6167,,,EUR,medium,"Accenture PT/Capgemini Lisbon; DS outsourcing; below product cos"

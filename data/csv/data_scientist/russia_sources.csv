@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+enigmai.ru DS salary 2026,salary_survey,enigmai.ru/salary/data-scientist/,2026,yes,high,"Junior 85K–130K; Middle 220K–380K; Senior 450K–750K/mo; LLM +25-30%"
+enigmai.ru DS 2026 grades,salary_survey,enigmai.ru/salary/data-scientist/ds-salary-2026/,2026,yes,high,"Detailed 2026 DS salary guide by grade; LLM engineer top 900K/mo"
+getgrade.ru DS 2026,salary_survey,getgrade.ru/zarplaty-data-science,2026,yes,high,"Anonymous survey data; DS grade breakdown"
+Habr Career DS Russia,aggregator,career.habr.com/salaries data_scientist,2026,yes,high,"Junior avg 112K; Middle 219K; Senior 335K/mo (conservative)"
+hh.ru DS vacancies,job_posting,hh.ru: Data Scientist 2026,2026-06,partial,high,"Main RU job board; vacancy salary bands"
+uchis-online.ru DS salary,aggregator,uchis-online.ru/blog/professii/skolko-zarabativaet-data-scientist,2026,yes,medium,"Russia/USA DS salary comparison 2026"
+getmatch.ru DS,aggregator,getmatch.ru/salaries/data_science,2026,yes,medium,"DS salary stats; premium companies"
+geeklink.io DS 2026,aggregator,geeklink.io/salary-stat/data-scientist/,2026,yes,medium,"Russia DS salary aggregated data"

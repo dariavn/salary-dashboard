@@ -1,0 +1,10 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Levels.fyi Poland DS,aggregator,levels.fyi/t/data-scientist/locations/poland,2026-02,yes,high,"Avg PLN 208,918; range PLN 135,709–282,888; Warsaw avg PLN 221,479"
+Levels.fyi Poland Entry DS,aggregator,levels.fyi/t/data-scientist/levels/entry-level/locations/poland,2026,yes,medium,"Entry PLN 66,344–165,742"
+Levels.fyi Poland Senior DS,aggregator,levels.fyi/t/data-scientist/levels/senior/locations/poland,2026,yes,high,"Senior PLN 260,956–349,412 = €61K–€82K"
+Glassdoor Warsaw DS,aggregator,glassdoor.com/Salaries/warsaw-poland-data-scientist,2026,yes,high,"Warsaw DS salary data"
+Glassdoor Warsaw Senior DS,aggregator,glassdoor.com/Salaries/warsaw-poland-senior-data-scientist,2026,yes,high,"Warsaw Senior DS range"
+PayScale Poland DS,aggregator,payscale.com/research/PL/Job=Data_Scientist/Salary,2026,yes,medium,"Avg PLN 118,571; entry avg PLN 81,000"
+WorldSalaries Warsaw DS,aggregator,worldsalaries.com/average-data-scientist-salary-in-warsaw/poland/,2026,yes,medium,"Warsaw avg PLN 161,300"
+Itentio PL DS salary guide,salary_survey,itentio.com/blog/data-scientist-salary-in-poland/,2026,yes,high,"Based on NoFluffJobs/JustJoin.it/Pracuj.pl; 21K–27K PLN/mo senior"
+Jobicy Poland DS,aggregator,jobicy.com/salaries/pl/data-scientist,2026,yes,medium,"Poland DS 2026"

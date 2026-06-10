@@ -1,0 +1,5 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Yerevan DS,aggregator,glassdoor.com/Salaries/yerevan-armenia-data-scientist,2025-09,yes,medium,"34 salaries; avg AMD 743,333/mo; 25th AMD 365K/mo; 90th AMD 1.75M/mo; 2025 data"
+Levels.fyi Yerevan DS,aggregator,levels.fyi/en-gb/t/data-scientist/locations/yerevan-arm,2026,yes,medium,"AMD 20,638,476 total comp/yr = €50,338/yr; premium segment"
+salaries.am,salary_survey,salaries.am/,2025,partial,low,"Armenian IT salary survey; DS data limited"
+LinkedIn Jobs Yerevan DS,job_posting,linkedin.com/jobs: Data Scientist Yerevan 2026,2026-06,partial,low,"Premium band estimation"

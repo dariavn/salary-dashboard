@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Belgrade DS,aggregator,glassdoor.com/Salaries/belgrade-serbia-data-scientist,2026-02,yes,medium,"27 salaries; 25th RSD 160,708; 75th RSD 391,667; avg $252,500 (likely error)"
+Levels.fyi Belgrade DS,aggregator,levels.fyi/t/data-scientist/locations/belgrade-srb,2026,yes,high,"Range $46,225–$77,228; avg $52,737 ≈ €48,519; key reference"
+WorldSalaries Serbia DS,aggregator,worldsalaries.com/average-data-scientist-salary-in-serbia/,2026,yes,medium,"By experience: <2yrs RSD 1.62M; 5-10yrs RSD 2.82M ÷ 117 = €24K"
+InfoPlate.rs DS,salary_survey,infoplate.rs/en/salaryinfo/information-technology/data-scientist,2025,yes,medium,"Local Serbian survey; 2025 data used"
+LinkedIn Jobs Serbia DS,job_posting,linkedin.com/jobs: Data Scientist Serbia 2026,2026-06,partial,low,"Few postings; Lead/Head estimation"

@@ -1,0 +1,6 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,42000,60000,62000,86000,82000,110000,105000,138000,120000,158000,3500,5000,5167,7167,6833,9167,8750,11500,10000,13167,EUR,high,"PKO BP Tech/Revolut/N26 PL; DS for credit scoring/fraud/trading; +15-20% vs SaaS"
+Gaming,high,strong,38000,55000,58000,80000,78000,105000,98000,128000,,,3167,4583,4833,6667,6500,8750,8167,10667,,,EUR,high,"CD Projekt RED/11 bit studios; game analytics/economy DS; strong gaming PL"
+SaaS_B2B,mid,strong,28000,44000,44000,62000,62000,84000,80000,105000,100000,132000,2333,3667,3667,5167,5167,7000,6667,8750,8333,11000,EUR,high,"Largest IT segment PL; many DS-heavy scaleups; at-market benchmark"
+iGaming,mid,moderate,34000,50000,52000,72000,72000,96000,90000,118000,,,2833,4167,4333,6000,6000,8000,7500,9833,,,EUR,medium,"Operators with PL offices; DS for betting analytics"
+Outsourcing,base,strong,22000,34000,36000,52000,52000,70000,65000,86000,,,1833,2833,3000,4333,4333,5833,5417,7167,,,EUR,high,"EPAM/Luxoft; DS outsourcing demand; below product cos"

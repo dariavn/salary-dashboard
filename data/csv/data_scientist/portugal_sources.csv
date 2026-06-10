@@ -1,0 +1,10 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Lisbon DS,aggregator,glassdoor.com/Salaries/lisbon-portugal-data-scientist,2026,yes,high,"Lisbon DS; 25th €28K; 75th €44.2K avg"
+Glassdoor Lisbon Junior DS,aggregator,glassdoor.com/Salaries/lisbon-portugal-junior-data-scientist,2026,yes,high,"Junior Lisbon avg entry €43,604"
+Glassdoor Lisbon Senior DS,aggregator,glassdoor.com/Salaries/lisbon-portugal-senior-data-scientist,2026,yes,high,"Senior Lisbon: 25th €39K; 75th €62K"
+SalaryExpert Portugal DS,aggregator,salaryexpert.com/salary/job/data-scientist/portugal,2026,yes,high,"Avg €54,214; entry €38,018; senior €61,088"
+SalaryExpert Lisbon DS,aggregator,salaryexpert.com/salary/job/data-scientist/portugal/lisbon,2026,yes,high,"Lisbon DS; entry €43,604; senior €61K+"
+SalaryExpert Porto DS,aggregator,salaryexpert.com/salary/job/data-scientist/portugal/porto,2026,yes,medium,"Porto entry €41,822; senior €67,201"
+PayScale Portugal DS,aggregator,payscale.com/research/PT/Job=Data_Scientist/Salary,2026,yes,medium,"Portugal DS PayScale data"
+Jobicy Portugal DS,aggregator,jobicy.com/salaries/pt/data-scientist,2026,yes,high,"Portugal DS 2026"
+LinkedIn Portugal DS,job_posting,linkedin.com/jobs: Data Scientist Portugal 2026,2026-06,partial,medium,"Lisbon postings; premium band validation"

@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,26000,1500,2167,EUR,medium,"Glassdoor Warsaw 2026;PayScale PL","~PLN 76K–110K; Levels.fyi entry PLN 66K–165K = €15.6K–€38.8K"
+Junior,0-3,mid_market,28000,42000,2333,3500,EUR,high,"Levels.fyi PL 2026;Glassdoor Warsaw;WorldSalaries","Levels.fyi entry lower bound PLN 66K; mid-market band"
+Junior,0-3,premium,42000,58000,3500,4833,EUR,medium,"Levels.fyi PL;LinkedIn PL 2026","Big tech/FinTech; ~PLN 179K–247K"
+Middle,3-5,mid_market,40000,56000,3333,4667,EUR,high,"Levels.fyi PL 2026;Glassdoor Warsaw;Jobicy PL","Levels.fyi avg PLN 208,918 = €49K; Warsaw avg PLN 221,479 = €52K"
+Middle,3-5,premium,58000,78000,4833,6500,EUR,medium,"Itentio/NoFluffJobs;Levels.fyi PL","NoFluffJobs 21K–27K PLN/mo = €59K–€76K; middle-premium"
+Senior,5+,mid_market,58000,78000,4833,6500,EUR,high,"Levels.fyi Senior PL 2026;Glassdoor Warsaw Senior DS;Jobicy","Levels.fyi Senior PLN 260,956–349,412 = €61K–€82K; mid band"
+Senior,5+,premium,80000,105000,6667,8750,EUR,high,"Itentio/NoFluffJobs;Levels.fyi PL;LinkedIn","NoFluffJobs top 27K PLN/mo = €76K; premium senior"
+Lead,7+,mid_market,80000,100000,6667,8333,EUR,medium,"LinkedIn PL 2026;Glassdoor Warsaw","Tech/ML lead; ~PLN 340K–425K"
+Lead,7+,premium,100000,130000,8333,10833,EUR,low,"Levels.fyi PL;LinkedIn PL","Staff/Principal DS; 1 EUR≈4.25 PLN"
+Head,10+,premium,115000,150000,9583,12500,EUR,low,"LinkedIn PL 2026","Head of Data Science; limited data"

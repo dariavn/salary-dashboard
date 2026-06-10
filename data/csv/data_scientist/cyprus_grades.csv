@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,22000,32000,1833,2667,EUR,medium,"WorldSalaries CY 2026;Paylab CY","Paylab avg €3,156/mo = €37,872 all-levels; local market lower"
+Junior,0-3,mid_market,30000,45000,2500,3750,EUR,high,"Glassdoor Limassol 2026;Jobicy CY;WorldSalaries","Jobicy entry ~$50K–$67K ≈ €46K–€62K; mid-market band lower"
+Junior,0-3,premium,45000,62000,3750,5167,EUR,medium,"Glassdoor Limassol 2026;Emerald Zebra CY","FinTech/iGaming Limassol; premium employers"
+Middle,3-5,mid_market,42000,60000,3500,5000,EUR,high,"Glassdoor Limassol 2026;Jobicy CY;Levels.fyi","Levels.fyi CY DS: €60.9K–€89K range; mid-market band"
+Middle,3-5,premium,60000,82000,5000,6833,EUR,medium,"Levels.fyi CY;Emerald Zebra CY","FinTech/iGaming premium; Jobicy avg $83,450 ≈ €76.8K"
+Senior,5+,mid_market,58000,76000,4833,6333,EUR,high,"Glassdoor Limassol Senior DS 2026;Levels.fyi","Glassdoor Limassol Senior avg €77K; range €65.5K–€89.5K"
+Senior,5+,premium,76000,100000,6333,8333,EUR,high,"Glassdoor Limassol Senior DS;Levels.fyi CY;Emerald Zebra","Top of Glassdoor Senior range €89.5K; FinTech/iGaming premium"
+Lead,7+,mid_market,90000,115000,7500,9583,EUR,medium,"LinkedIn CY 2026;Glassdoor","Limited postings; extrapolated from senior band"
+Lead,7+,premium,115000,148000,9583,12333,EUR,medium,"Levels.fyi CY;LinkedIn CY 2026","FinTech/iGaming ML lead; top employers"
+Head,10+,premium,130000,165000,10833,13750,EUR,low,"LinkedIn CY;Emerald Zebra","Head of Data/ML; very limited data"

@@ -1,0 +1,11 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Spain DS,aggregator,glassdoor.com/Salaries/spain-data-scientist,2026-05,yes,high,"3003 salaries; 25th €31,475; 75th €56,000; strong dataset"
+Glassdoor Madrid DS,aggregator,glassdoor.com/Salaries/madrid-spain-data-scientist,2026,yes,high,"Madrid: 25th €32K; 75th €52K"
+Glassdoor Barcelona DS,aggregator,glassdoor.com/Salaries/barcelona-spain-data-scientist,2026,yes,high,"Barcelona: 25th €35,950; 75th €55,000"
+Glassdoor Barcelona Junior DS,aggregator,glassdoor.com/Salaries/barcelona-spain-junior-data-scientist,2026,yes,high,"Junior Barcelona: 25th €25,750; 75th €37,700"
+PayScale Spain DS,aggregator,payscale.com/research/ES/Job=Data_Scientist/Salary,2026,yes,medium,"Avg €43,982 (Barcelona)"
+PayScale Spain Senior DS,aggregator,payscale.com/research/ES/Job=Senior_Data_Scientist/Salary,2026,yes,medium,"Senior avg €64,754"
+SalaryExpert Spain DS,aggregator,salaryexpert.com/salary/job/data-scientist/spain,2026,yes,high,"Avg €69,674; entry €48,891; senior €78,600"
+SalaryExpert Barcelona DS,aggregator,salaryexpert.com/salary/job/data-scientist/spain/barcelona,2026,yes,high,"Barcelona avg €74,398; entry €52,206; senior €83,929"
+Jobicy Spain DS,aggregator,jobicy.com/salaries/es/data-scientist,2026,yes,medium,"Spain DS 2026"
+LinkedIn Spain DS,job_posting,linkedin.com/jobs: Data Scientist Spain 2026,2026-06,partial,medium,"Madrid/Barcelona DS postings with salary"

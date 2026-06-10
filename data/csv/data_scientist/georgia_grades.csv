@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,14000,22000,1167,1833,EUR,medium,"Glassdoor Tbilisi DS 2026;SalaryExpert Tbilisi","Glassdoor Tbilisi DS 25th: GEL 3,917/mo = €1,638/mo = €19.6K/yr"
+Junior,0-3,mid_market,22000,32000,1833,2667,EUR,medium,"Levels.fyi Tbilisi DS;Glassdoor Tbilisi","Levels.fyi Tbilisi DS: GEL 99.6K–167.2K = €35K–€58.7K; lower entry band"
+Middle,3-5,mid_market,28000,42000,2333,3500,EUR,medium,"Levels.fyi Tbilisi DS 2026;Glassdoor Tbilisi","Mid-market IT/FinTech; Glassdoor avg GEL 5,167/mo = €21.8K/yr (all levels)"
+Middle,3-5,premium,42000,62000,3500,5167,EUR,low,"Levels.fyi GEO;LinkedIn Tbilisi","Intl companies; upper bound Levels.fyi €58.7K"
+Senior,5+,mid_market,38000,55000,3167,4583,EUR,medium,"Levels.fyi Tbilisi DS;SalaryExpert Tbilisi","Levels.fyi upper GEL 167.2K/yr = €58.7K; mid segment"
+Senior,5+,premium,55000,80000,4583,6667,EUR,low,"Levels.fyi GEO;LinkedIn Tbilisi","Premium intl companies; Glassdoor 90th pct GEL 28.4K/mo = €119.6K — outlier excl."
+Lead,7+,premium,70000,95000,5833,7917,EUR,low,"Levels.fyi GEO;LinkedIn","Limited DS lead roles; 1 EUR≈2.85 GEL"
+Head,10+,premium,88000,118000,7333,9833,EUR,low,"LinkedIn Tbilisi 2026","Very limited data"

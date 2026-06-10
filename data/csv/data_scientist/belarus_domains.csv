@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+SaaS_B2B,mid,strong,18000,28000,28000,44000,42000,60000,55000,78000,70000,98000,1500,2333,2333,3667,3500,5000,4583,6500,5833,8167,EUR,medium,"Dominant IT BY HTP; Wargaming/EPAM product teams; DS for product analytics"
+Outsourcing,mid,strong,16000,26000,24000,40000,36000,54000,48000,68000,,,1333,2167,2000,3333,3000,4500,4000,5667,,,EUR,medium,"EPAM Belarus; DS outsourcing demand; below product cos"
+iGaming,mid,moderate,18000,28000,28000,44000,42000,60000,55000,78000,,,1500,2333,2333,3667,3500,5000,4583,6500,,,EUR,low,"Several iGaming operators in BY HTP; DS for betting analytics; limited data"
+FinTech,mid,moderate,20000,32000,30000,48000,46000,66000,60000,85000,,,1667,2667,2500,4000,3833,5500,5000,7083,,,EUR,low,"Some fintech in HTP; DS for risk modelling; limited BY-specific data"

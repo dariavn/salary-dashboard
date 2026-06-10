@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,12000,20000,1000,1667,EUR,medium,"rabota.by 2025;recruitment.by","Local market; DS junior rare; ~3300-5500 BYN/mo; 2025 data"
+Junior,0-3,mid_market,18000,28000,1500,2333,EUR,medium,"Levels.fyi BY;EPAM Minsk Glassdoor","IT sector HTP; ~5000-7700 BYN/mo; 1 EUR≈3.3 BYN"
+Middle,3-5,mid_market,24000,38000,2000,3167,EUR,medium,"Levels.fyi BY;EPAM Minsk Glassdoor;dev.by","Mid-market DS; export companies $2K–$3.5K/mo"
+Middle,3-5,premium,36000,52000,3000,4333,EUR,medium,"Levels.fyi BY;LinkedIn BY","EPAM/Wargaming DS; $3K–$4.5K/mo"
+Senior,5+,mid_market,38000,56000,3167,4667,EUR,medium,"Levels.fyi BY 2026;recruitment.by","IT senior DS; $3.5K–$5K/mo export"
+Senior,5+,premium,52000,72000,4333,6000,EUR,medium,"Levels.fyi BY;LinkedIn Belarus","Premium: international-scope; $5K–$7K/mo"
+Lead,7+,premium,62000,85000,5167,7083,EUR,low,"LinkedIn BY;Levels.fyi","Limited DS lead roles BY; ~17K-23.4K BYN/mo"
+Head,10+,premium,80000,108000,6667,9000,EUR,low,"LinkedIn Belarus 2026","Very limited; Head of Data Science"

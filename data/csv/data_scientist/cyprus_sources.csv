@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Limassol DS,aggregator,glassdoor.com/Salaries/limassol-cyprus-data-scientist,2026-02,yes,high,"General DS avg €14,833/yr (likely monthly); used as context"
+Glassdoor Limassol Senior DS,aggregator,glassdoor.com/Salaries/limassol-cyprus-senior-data-scientist,2026,yes,high,"Senior avg €77,000; range €65,500–€89,500; key data point"
+Levels.fyi Cyprus DS,aggregator,levels.fyi/t/data-scientist/locations/cyprus,2026,yes,high,"Range €60,905–€88,952; tech company premium"
+WorldSalaries Cyprus DS,aggregator,worldsalaries.com/average-data-scientist-salary-in-cyprus/,2026,yes,medium,"Avg ~€37,872; range €21,560–€59,940; all-market"
+Jobicy Cyprus DS,aggregator,jobicy.com/salaries/cy/data-scientist,2025,yes,medium,"Avg $83,450 ≈ €76.8K; 2025 data"
+Paylab Cyprus DS,aggregator,paylab.com/cy/salaryinfo/information-technology/data-scientist,2026,yes,medium,"Avg €3,156/mo = €37,872/yr gross"
+Emerald Zebra CY,recruiter_report,emeraldzebra.cy/our-services/salary-benchmarking/,2025,yes,medium,"700+ verified Cyprus FinTech/iGaming/Tech salary survey"
+LinkedIn Jobs CY DS,job_posting,linkedin.com/jobs: Data Scientist Cyprus 2026,2026-06,partial,medium,"Lead/Head range estimation from postings"

@@ -1,0 +1,6 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+FinTech,high,strong,38000,55000,56000,78000,74000,100000,95000,128000,112000,150000,3167,4583,4667,6500,6167,8333,7917,10667,9333,12500,EUR,high,"Cabify/Glovo tech/Bankinter digital; DS for credit/fraud/pricing; +15-20% vs SaaS"
+SaaS_B2B,mid,strong,28000,42000,42000,60000,56000,76000,72000,96000,90000,122000,2333,3500,3500,5000,4667,6333,6000,8000,7500,10167,EUR,high,"Largest segment; many DS-heavy Spanish scaleups; at-market"
+MarTech_AdTech,mid,strong,26000,40000,40000,58000,54000,74000,68000,90000,,,2167,3333,3333,4833,4500,6167,5667,7500,,,EUR,medium,"Grupo Prisa/Telefónica Tech/Mediaset; DS for ad targeting/recommenders"
+E_commerce,mid,moderate,26000,38000,38000,56000,52000,72000,65000,88000,,,2167,3167,3167,4667,4333,6000,5417,7333,,,EUR,medium,"Inditex tech/Zara/El Corte Inglés digital; growing DS demand"
+iGaming,mid,limited,28000,42000,42000,60000,56000,78000,,,,,2333,3500,3500,5000,4667,6500,,,,,EUR,low,"Some operators; limited DS data"

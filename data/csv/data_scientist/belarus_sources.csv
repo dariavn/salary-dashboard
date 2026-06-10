@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+EPAM Minsk DS Glassdoor,aggregator,glassdoor.com/Salary/EPAM-Systems-Data-Scientist-Minsk-Salaries,2026,yes,medium,"EPAM Minsk DS salary data; key employer in BY"
+Levels.fyi Belarus DS,aggregator,levels.fyi/t/data-scientist/locations/belarus,2026,yes,medium,"BY DS general salary range"
+Recruitment.by IT salaries,salary_survey,recruitment.by/rus/news/it-salary-developers-belarus/,2026,yes,medium,"IT salary overview BY 2026; DS context: $2K–$3.5K/mo export"
+rabota.by DS vacancies,job_posting,rabota.by/vacancies/data-scientist,2025,partial,medium,"BY job board; some DS roles listed; 2025 data"
+getgrade.ru DS Belarus context,salary_survey,getgrade.ru/zarplaty-data-science,2026,yes,medium,"CIS DS salary comparison incl. BY context"
+LinkedIn Belarus DS,job_posting,linkedin.com/jobs: Data Scientist Belarus 2026,2026-06,partial,low,"Limited BY postings; premium band estimation"

@@ -1,0 +1,5 @@
+domain,tier,presence_in_region,jun_annual_min,jun_annual_max,mid_annual_min,mid_annual_max,sen_annual_min,sen_annual_max,lead_annual_min,lead_annual_max,head_annual_min,head_annual_max,jun_monthly_min,jun_monthly_max,mid_monthly_min,mid_monthly_max,sen_monthly_min,sen_monthly_max,lead_monthly_min,lead_monthly_max,head_monthly_min,head_monthly_max,currency,confidence,notes
+Outsourcing,mid,strong,16000,26000,26000,40000,40000,58000,52000,72000,,,1333,2167,2167,3333,3333,4833,4333,6000,,,EUR,high,"Main IT segment RS; DS outsourcing for banking/finance; EPAM/Levi9"
+SaaS_B2B,mid,moderate,18000,30000,30000,46000,44000,64000,56000,78000,,,1500,2500,2500,3833,3667,5333,4667,6500,,,EUR,medium,"Growing Belgrade tech scene; DS for product analytics"
+FinTech,high,moderate,20000,34000,34000,52000,50000,72000,65000,90000,,,1667,2833,2833,4333,4167,6000,5417,7500,,,EUR,medium,"NBS fintech; crypto; DS for risk/fraud modelling; +15-20% vs outsourcing"
+iGaming,mid,limited,18000,30000,28000,44000,42000,62000,,,,,1500,2500,2333,3667,3500,5167,,,,,EUR,low,"Some operators; limited DS data; Lead/Head absent"

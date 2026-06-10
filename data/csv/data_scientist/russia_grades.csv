@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,960000,1320000,80000,110000,RUB,high,"enigmai.ru 2026;hh.ru","Junior DS 85K–130K/mo; regional/smaller companies lower bound"
+Junior,0-3,mid_market,1320000,1920000,110000,160000,RUB,high,"enigmai.ru;Habr Career 2026;getgrade.ru","Habr Career Junior avg 112K/mo; Moscow mid-market IT"
+Middle,3-5,mid_market,2400000,3840000,200000,320000,RUB,high,"enigmai.ru 2026;getgrade.ru;hh.ru","enigmai Middle 220K–380K/mo; Habr Career avg 219K/mo"
+Middle,3-5,premium,3840000,6000000,320000,500000,RUB,high,"enigmai.ru;getmatch.ru;geeklink.io","BigTech/FinTech premium; top FAANG-like companies 400K–500K/mo"
+Senior,5+,mid_market,4200000,6600000,350000,550000,RUB,high,"enigmai.ru;Habr Career;hh.ru","enigmai Senior 450K–750K/mo; Habr Career avg 335K — conservative"
+Senior,5+,premium,6600000,10800000,550000,900000,RUB,high,"enigmai.ru 2026;getgrade.ru","LLM/GenAI Senior 650K–900K/mo; median DS Russia 285K/mo"
+Lead,7+,mid_market,6000000,9600000,500000,800000,RUB,medium,"enigmai.ru;hh.ru","DS team/tech lead"
+Lead,7+,premium,9000000,15600000,750000,1300000,RUB,medium,"enigmai.ru companies;getgrade","BigTech DS lead; Yandex/Sber ML lead"
+Head,10+,premium,12000000,21600000,1000000,1800000,RUB,medium,"enigmai.ru;geeklink.io","Head of DS/ML; Principal/Staff MLE level"

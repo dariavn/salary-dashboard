@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,10000,15000,833,1250,EUR,medium,"Glassdoor Yerevan DS 2025;salaries.am","Glassdoor Yerevan 25th pct: AMD 365K/mo × 12 ÷ 410 = €10.7K/yr"
+Junior,0-3,mid_market,15000,24000,1250,2000,EUR,medium,"Glassdoor Yerevan DS;LinkedIn AM","Glassdoor Yerevan avg AMD 743K/mo = €21.8K/yr (all levels)"
+Middle,3-5,mid_market,20000,32000,1667,2667,EUR,medium,"Glassdoor Yerevan DS 2025;LinkedIn AM","Mid-market IT Yerevan; 1 EUR≈410 AMD"
+Middle,3-5,premium,32000,50000,2667,4167,EUR,medium,"Levels.fyi Yerevan DS;LinkedIn AM","Glassdoor 90th pct AMD 1.75M/mo × 12 ÷ 410 = €51.2K/yr"
+Senior,5+,mid_market,26000,40000,2167,3333,EUR,medium,"Glassdoor Yerevan DS 2025;Jobicy AM","Glassdoor 75th pct AMD 1.025M/mo × 12 ÷ 410 = €30K/yr mid bound"
+Senior,5+,premium,42000,65000,3500,5417,EUR,medium,"Levels.fyi Yerevan DS 2026;LinkedIn AM","Levels.fyi Yerevan avg AMD 20.6M/yr ÷ 410 = €50.3K; intl companies"
+Lead,7+,premium,55000,82000,4583,6833,EUR,low,"Levels.fyi AM;LinkedIn Yerevan","Limited DS lead data; few postings"
+Head,10+,premium,72000,100000,6000,8333,EUR,low,"LinkedIn AM 2026","Very limited data; Head of DS/ML"

@@ -1,0 +1,5 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Tbilisi DS,aggregator,glassdoor.com/Salaries/tbilisi-georgia-data-scientist,2026-04,yes,medium,"23 salaries; avg GEL 5,167/mo; 25th GEL 3,917/mo; 75th GEL 11,630/mo"
+Levels.fyi Tbilisi DS,aggregator,levels.fyi/t/data-scientist/locations/tbilisi-geo,2026,yes,medium,"Range GEL 99,593–167,220/yr = €34.9K–€58.7K"
+SalaryExpert Tbilisi DS,aggregator,salaryexpert.com/salary/job/scientist-data/georgia/tbilisi,2026,yes,medium,"Tbilisi DS salary data 2026"
+LinkedIn Jobs Tbilisi DS,job_posting,linkedin.com/jobs: Data Scientist Tbilisi 2026,2026-06,partial,low,"Limited postings; Lead/Head estimation"
