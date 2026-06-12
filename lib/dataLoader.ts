@@ -82,6 +82,13 @@ export function loadCandidates(position: string, location: string) {
   return readCandidates(position, location)
 }
 
+// Returns the most recent data_date from sources CSV — used to assess market data freshness
+export function getResearchDate(position: string, location: string): string {
+  const sources = readSources(position, location)
+  const dates = sources.map(s => s.data_date).filter(Boolean).sort()
+  return dates[dates.length - 1] ?? ''
+}
+
 export function loadAllCandidatesForPosition(position: string) {
   const locs = loadLocations(position)
   return locs.flatMap(loc =>

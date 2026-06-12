@@ -1,9 +1,8 @@
 'use client'
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import type { CandidateWithLocation } from '@/lib/types'
+import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { PositionMeta, LocationMeta } from '@/lib/types'
-import type { Lang } from '@/lib/i18n'
 import { t, GRADE_ORDER, GRADE_VAR } from '@/lib/i18n'
 import { useLang } from '@/context/LangContext'
 
@@ -11,6 +10,54 @@ interface Props {
   positions: PositionMeta[]
   candidatesByPosition: Record<string, CandidateWithLocation[]>
   locationMeta: Record<string, LocationMeta>
+  // position → location → GradeRow[] (market benchmark)
+  benchmarkGrades: Record<string, Record<string, GradeRow[]>>
+}
+
+type BenchmarkResult = { type: 'above' | 'below' | 'at' | 'unknown'; pct: number }
+
+function getBenchmark(
+  salaryMonthlyEur: number | null,
+  location: string,
+  grade: string,
+  grades: GradeRow[]
+): BenchmarkResult {
+  if (!salaryMonthlyEur || grade === 'unknown') return { type: 'unknown', pct: 0 }
+  const rows = grades.filter(r => r.grade === grade && r.segment === 'mid_market')
+  if (!rows.length) return { type: 'unknown', pct: 0 }
+  const row = rows[0]
+  // Convert to EUR if RUB (approximate: 1 EUR ≈ 98 RUB)
+  const toEur = (n: number) => row.currency === 'RUB' ? n / 98 : n
+  const mid = (toEur(row.monthly_gross_min) + toEur(row.monthly_gross_max)) / 2
+  if (!mid) return { type: 'unknown', pct: 0 }
+  const diff = (salaryMonthlyEur - mid) / mid
+  if (diff > 0.1) return { type: 'above', pct: Math.round(diff * 100) }
+  if (diff < -0.1) return { type: 'below', pct: Math.round(Math.abs(diff) * 100) }
+  return { type: 'at', pct: Math.round(Math.abs(diff) * 100) }
+}
+
+function BenchmarkBadge({ result, lang }: { result: BenchmarkResult; lang: string }) {
+  if (result.type === 'unknown') return <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>
+  const cfg = {
+    above: { icon: '↑', color: 'var(--warn)',    bg: 'var(--warn-bg)',    label: lang === 'ru' ? 'выше рынка'  : 'above market' },
+    below: { icon: '↓', color: 'var(--pos)',     bg: 'var(--pos-bg)',    label: lang === 'ru' ? 'ниже рынка'  : 'below market' },
+    at:    { icon: '≈', color: 'var(--muted)',   bg: 'var(--surface-3)', label: lang === 'ru' ? 'на уровне'   : 'at market' },
+  }
+  const { icon, color, bg, label } = cfg[result.type]
+  const pctStr = result.type !== 'at' ? ` ${result.pct}%` : ''
+  return (
+    <span
+      className="mono"
+      title={`${label} (mid-market)`}
+      style={{
+        display: 'inline-flex', alignItems: 'center', gap: 2,
+        fontSize: 12, fontWeight: 600, padding: '2px 7px',
+        borderRadius: 999, background: bg, color, whiteSpace: 'nowrap', cursor: 'default',
+      }}
+    >
+      {icon}{pctStr}
+    </span>
+  )
 }
 
 function filterByPeriod(candidates: CandidateWithLocation[], period: string): CandidateWithLocation[] {
@@ -20,9 +67,7 @@ function filterByPeriod(candidates: CandidateWithLocation[], period: string): Ca
   return candidates.filter(c => {
     if (!c.data_as_of) return true
     const [y, m] = c.data_as_of.split('-').map(Number)
-    const d = new Date(y, m - 1)
-    const cutoff = new Date(now.getFullYear(), now.getMonth() - months)
-    return d >= cutoff
+    return new Date(y, m - 1) >= new Date(now.getFullYear(), now.getMonth() - months)
   })
 }
 
@@ -32,21 +77,48 @@ function fmtSalary(n: number | null, period: 'monthly' | 'annual'): string {
   return '€' + Math.round(v / 1000) + 'K'
 }
 
-export default function AtsPipelineView({ positions, candidatesByPosition, locationMeta }: Props) {
+function formatDate(d: string, lang: string): string {
+  if (!d) return ''
+  const [y, m] = d.split('-')
+  const mo = { '01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec' }
+  const moRu = { '01':'янв','02':'фев','03':'мар','04':'апр','05':'май','06':'июн','07':'июл','08':'авг','09':'сен','10':'окт','11':'ноя','12':'дек' }
+  return lang === 'ru' ? `${(moRu as any)[m] ?? m} ${y}` : `${(mo as any)[m] ?? m} ${y}`
+}
+
+export default function AtsPipelineView({ positions, candidatesByPosition, locationMeta, benchmarkGrades }: Props) {
   const { lang } = useLang()
   const router = useRouter()
   const [position, setPosition] = useState(positions[0]?.slug ?? '')
   const [period, setPeriod] = useState<'all' | '6m' | '3m'>('all')
   const [gradeFilter, setGradeFilter] = useState('all')
   const [salaryPeriod, setSalaryPeriod] = useState<'monthly' | 'annual'>('monthly')
+  const [locationFilter, setLocationFilter] = useState<string[]>([]) // empty = all
 
   const allCandidates = candidatesByPosition[position] ?? []
   const periodFiltered = filterByPeriod(allCandidates, period)
-  const filtered = gradeFilter === 'all'
-    ? periodFiltered
-    : periodFiltered.filter(c => c.exp_grade === gradeFilter)
 
-  // Sort: grade order first, then by salary desc
+  // Available locations in current period-filtered set
+  const availableLocations = [...new Set(periodFiltered.map(c => c.location))].sort()
+  const activeLocationFilter = locationFilter.filter(l => availableLocations.includes(l))
+
+  // Apply filters
+  const locationFiltered = activeLocationFilter.length
+    ? periodFiltered.filter(c => activeLocationFilter.includes(c.location))
+    : periodFiltered
+
+  // Only show grade options that actually have data
+  const gradesWithData = ['all', ...GRADE_ORDER.filter(g =>
+    locationFiltered.some(c => c.exp_grade === g)
+  )]
+
+  // Reset grade filter if current selection has no data
+  const effectiveGradeFilter = gradesWithData.includes(gradeFilter) ? gradeFilter : 'all'
+
+  const filtered = effectiveGradeFilter === 'all'
+    ? locationFiltered
+    : locationFiltered.filter(c => c.exp_grade === effectiveGradeFilter)
+
+  // Sort: grade order then salary desc
   const sorted = [...filtered].sort((a, b) => {
     const ga = GRADE_ORDER.indexOf(a.exp_grade)
     const gb = GRADE_ORDER.indexOf(b.exp_grade)
@@ -54,21 +126,17 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     return (b.salary_monthly_eur ?? 0) - (a.salary_monthly_eur ?? 0)
   })
 
-  const hasData = sorted.length > 0
-  const totalAll = allCandidates.length
-  const activeN = allCandidates.filter(c => c.status === 'active').length
-  const declinedN = allCandidates.filter(c => c.status === 'declined').length
-
-  // Get unique dates for "last updated" badge
   const dates = [...new Set(allCandidates.map(c => c.data_as_of).filter(Boolean))].sort()
   const lastUpdated = dates[dates.length - 1] ?? ''
 
-  function formatDate(d: string) {
-    if (!d) return ''
-    const [y, m] = d.split('-')
-    const months = { '01': 'Jan','02': 'Feb','03': 'Mar','04': 'Apr','05': 'May','06': 'Jun','07': 'Jul','08': 'Aug','09': 'Sep','10': 'Oct','11': 'Nov','12': 'Dec' }
-    const monthsRu = { '01': 'янв','02': 'фев','03': 'мар','04': 'апр','05': 'май','06': 'июн','07': 'июл','08': 'авг','09': 'сен','10': 'окт','11': 'ноя','12': 'дек' }
-    return lang === 'ru' ? `${(monthsRu as any)[m] ?? m} ${y}` : `${(months as any)[m] ?? m} ${y}`
+  function toggleLocation(slug: string) {
+    setLocationFilter(prev =>
+      prev.includes(slug) ? prev.filter(l => l !== slug) : [...prev, slug]
+    )
+  }
+
+  function goCompare(loc: string) {
+    router.push(`/compare?position=${position}&countries=${loc}&source=ats`)
   }
 
   const periodOpts: { v: 'all' | '6m' | '3m'; label: string }[] = [
@@ -77,23 +145,18 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     { v: '3m',  label: t(lang, 'period3m') },
   ]
 
-  const gradeOpts = ['all', ...GRADE_ORDER]
-
-  function goCompare(loc: string) {
-    router.push(`/compare?position=${position}&countries=${loc}&source=ats`)
-  }
-
   return (
     <div>
-      {/* Controls row */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginBottom: 20, alignItems: 'center' }}>
-        {/* Role selector */}
+      {/* Controls */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 18, alignItems: 'center' }}>
+        {/* Role */}
         {positions.length > 1 && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span className="eyebrow">{t(lang, 'selectPosition')}</span>
             <div className="seg">
               {positions.map(p => (
-                <button key={p.slug} aria-pressed={position === p.slug} onClick={() => setPosition(p.slug)}>
+                <button key={p.slug} aria-pressed={position === p.slug}
+                  onClick={() => { setPosition(p.slug); setLocationFilter([]) }}>
                   {p.name[lang]}
                 </button>
               ))}
@@ -101,7 +164,7 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
           </div>
         )}
 
-        {/* Period filter */}
+        {/* Period */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span className="eyebrow">{t(lang, 'atsPeriodLabel')}</span>
           <div className="seg">
@@ -111,19 +174,20 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
           </div>
         </div>
 
-        {/* Grade filter */}
+        {/* Grade — only grades with data */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span className="eyebrow">{t(lang, 'gradeFilter')}</span>
           <div className="seg">
-            {gradeOpts.map(g => (
-              <button key={g} aria-pressed={gradeFilter === g} onClick={() => setGradeFilter(g)}>
+            {gradesWithData.map(g => (
+              <button key={g} aria-pressed={effectiveGradeFilter === g}
+                onClick={() => setGradeFilter(g)}>
                 {g === 'all' ? t(lang, 'allGrades') : g}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Salary period */}
+        {/* Monthly/Annual */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
           <div className="seg">
             <button aria-pressed={salaryPeriod === 'monthly'} onClick={() => setSalaryPeriod('monthly')}>{t(lang, 'monthly')}</button>
@@ -132,29 +196,59 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
         </div>
       </div>
 
-      {/* Stats bar */}
-      {totalAll > 0 && (
-        <div style={{ display: 'flex', gap: 20, marginBottom: 16, fontSize: 12.5, color: 'var(--muted)' }}>
+      {/* Location filter pills */}
+      {availableLocations.length > 1 && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
+          <span className="eyebrow">{t(lang, 'locationCol')}</span>
+          {availableLocations.map(slug => {
+            const loc = locationMeta[slug]
+            const on = activeLocationFilter.includes(slug)
+            return (
+              <button
+                key={slug}
+                onClick={() => toggleLocation(slug)}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 5,
+                  fontSize: 13, fontWeight: on ? 600 : 400, padding: '4px 12px',
+                  borderRadius: 999, cursor: 'pointer', fontFamily: 'var(--font-ui)',
+                  border: '1px solid',
+                  borderColor: on ? 'var(--accent)' : 'var(--border-strong)',
+                  background: on ? 'var(--accent-soft)' : 'var(--surface)',
+                  color: on ? 'var(--text)' : 'var(--text-2)',
+                  transition: 'all .12s',
+                }}
+              >
+                <span>{loc?.flag ?? '🌐'}</span>
+                <span>{loc?.name[lang] ?? slug}</span>
+              </button>
+            )
+          })}
+          {activeLocationFilter.length > 0 && (
+            <button onClick={() => setLocationFilter([])}
+              style={{ fontSize: 12, color: 'var(--muted)', background: 'transparent', border: 'none', cursor: 'pointer', padding: '4px 6px' }}>
+              × {lang === 'ru' ? 'Сбросить' : 'Clear'}
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Stats */}
+      {allCandidates.length > 0 && (
+        <div style={{ display: 'flex', gap: 16, marginBottom: 14, fontSize: 12.5, color: 'var(--muted)', alignItems: 'center' }}>
           <span>
-            <span style={{ fontWeight: 600, color: 'var(--text-2)' }}>{totalAll}</span> {t(lang, 'atsCandidates')}
-          </span>
-          <span>
-            <span className="dot" style={{ background: 'var(--pos)', width: 7, height: 7, display: 'inline-block', marginRight: 4 }} />
-            {activeN} {t(lang, 'statusActive').toLowerCase()}
-          </span>
-          <span>
-            <span className="dot" style={{ background: 'var(--neutral)', width: 7, height: 7, display: 'inline-block', marginRight: 4 }} />
-            {declinedN} {t(lang, 'statusDeclined').toLowerCase()}
+            <span style={{ fontWeight: 600, color: 'var(--text-2)' }}>{sorted.length}</span>
+            {filtered.length !== allCandidates.length && <span style={{ color: 'var(--muted-2)' }}> / {allCandidates.length}</span>}
+            {' '}{t(lang, 'atsCandidates')}
           </span>
           {lastUpdated && (
             <span style={{ marginLeft: 'auto' }}>
-              {t(lang, 'atsUpdated')}: <span style={{ color: 'var(--text-2)' }}>{formatDate(lastUpdated)}</span>
+              {t(lang, 'atsUpdated')}: <span style={{ color: 'var(--text-2)' }}>{formatDate(lastUpdated, lang)}</span>
             </span>
           )}
         </div>
       )}
 
-      {!hasData ? (
+      {sorted.length === 0 ? (
         <div style={{ padding: '32px 0', textAlign: 'center', color: 'var(--muted)', fontSize: 14 }}>
           {t(lang, 'noAtsDataForRole')}
         </div>
@@ -165,24 +259,27 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
               <tr>
                 <th style={{ paddingLeft: 16, minWidth: 90 }}>{t(lang, 'grade')}</th>
                 <th style={{ minWidth: 130 }}>{t(lang, 'locationCol')}</th>
-                <th style={{ textAlign: 'right', minWidth: 120 }}>
+                <th style={{ textAlign: 'right', minWidth: 110 }}>
                   {salaryPeriod === 'monthly' ? t(lang, 'salaryMonthly') : t(lang, 'annualApprox')}
                 </th>
+                <th style={{ minWidth: 60, textAlign: 'center' }}
+                  title={lang === 'ru' ? 'Сравнение с медианой mid-market бенчмарка для этой локации' : 'vs mid-market benchmark median for this location'}>
+                  {lang === 'ru' ? 'vs рынок' : 'vs market'}
+                </th>
                 <th style={{ minWidth: 160 }}>{t(lang, 'originalSalary')}</th>
-                <th style={{ textAlign: 'right', width: 60 }}>{t(lang, 'expYears')}</th>
-                <th style={{ textAlign: 'center', width: 80 }}>{t(lang, 'sourceType')}</th>
+                <th style={{ textAlign: 'right', width: 55 }}>{t(lang, 'expYears')}</th>
                 <th style={{ textAlign: 'center', width: 70 }}>{t(lang, 'dataDate')}</th>
-                <th style={{ paddingRight: 16, width: 100 }}></th>
+                <th style={{ paddingRight: 16, width: 110 }}></th>
               </tr>
             </thead>
             <tbody>
               {sorted.map((c, i) => {
                 const loc = locationMeta[c.location]
-                const isOutlier = c.outlier
-                const isActive = c.status === 'active'
                 const gradeColor = GRADE_VAR[c.exp_grade]
+                const bmGrades = benchmarkGrades[position]?.[c.location] ?? []
+                const bm = getBenchmark(c.salary_monthly_eur, c.location, c.exp_grade, bmGrades)
                 return (
-                  <tr key={i} style={isOutlier ? { opacity: 0.6 } : undefined}>
+                  <tr key={i}>
                     {/* Grade */}
                     <td style={{ paddingLeft: 16 }}>
                       {c.exp_grade && c.exp_grade !== 'unknown' ? (
@@ -190,9 +287,7 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                           <span className="dot" style={{ background: gradeColor, width: 8, height: 8 }} />
                           <span style={{ fontWeight: 600, fontSize: 13 }}>{c.exp_grade}</span>
                         </span>
-                      ) : (
-                        <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>
-                      )}
+                      ) : <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>}
                     </td>
                     {/* Location */}
                     <td>
@@ -204,11 +299,15 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                     {/* Salary EUR */}
                     <td className="mono" style={{ textAlign: 'right', fontWeight: 600, fontSize: 14 }}>
                       {c.salary_monthly_eur ? (
-                        <span style={{ color: isOutlier ? 'var(--warn)' : 'var(--text)' }}>
+                        <span>
                           {fmtSalary(c.salary_monthly_eur, salaryPeriod)}
-                          {isOutlier && <span title={t(lang, 'outlierBadge')} style={{ marginLeft: 4, fontSize: 11, color: 'var(--warn)' }}>⚠</span>}
+                          {c.outlier && <span title={t(lang, 'outlierBadge')} style={{ marginLeft: 4, fontSize: 11, color: 'var(--warn)' }}>⚠</span>}
                         </span>
                       ) : '—'}
+                    </td>
+                    {/* Benchmark indicator */}
+                    <td style={{ textAlign: 'center' }}>
+                      <BenchmarkBadge result={bm} lang={lang} />
                     </td>
                     {/* Original */}
                     <td style={{ fontSize: 12, color: 'var(--muted)', maxWidth: 180 }} title={c.salary_original_raw}>
@@ -223,17 +322,11 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                     <td className="mono" style={{ textAlign: 'right', fontSize: 12.5, color: 'var(--muted)' }}>
                       {c.go_exp_years != null ? c.go_exp_years + 'y' : '—'}
                     </td>
-                    {/* Status */}
-                    <td style={{ textAlign: 'center' }}>
-                      <span className="dot" title={isActive ? t(lang, 'statusActive') : t(lang, 'statusDeclined')}
-                        style={{ background: isActive ? 'var(--pos)' : 'var(--neutral)', width: 8, height: 8, display: 'inline-block' }}
-                      />
-                    </td>
                     {/* Date */}
                     <td className="mono" style={{ textAlign: 'center', fontSize: 11.5, color: 'var(--muted-2)' }}>
-                      {formatDate(c.data_as_of)}
+                      {formatDate(c.data_as_of, lang)}
                     </td>
-                    {/* Compare button */}
+                    {/* Compare */}
                     <td style={{ paddingRight: 16 }}>
                       <button
                         onClick={() => goCompare(c.location)}
@@ -241,10 +334,8 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                           fontFamily: 'var(--font-ui)', fontSize: 12, fontWeight: 500, cursor: 'pointer',
                           padding: '4px 10px', borderRadius: 'var(--r-sm)',
                           border: '1px solid var(--border-strong)', background: 'var(--surface-2)',
-                          color: 'var(--text-2)', whiteSpace: 'nowrap',
-                          transition: 'all .12s',
+                          color: 'var(--text-2)', whiteSpace: 'nowrap', transition: 'all .12s',
                         }}
-                        title={`${t(lang, 'compareWithMarket')} — ${loc?.name[lang] ?? c.location}`}
                       >
                         ↗ {t(lang, 'compareWithMarket')}
                       </button>
@@ -257,11 +348,20 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
         </div>
       )}
 
-      <p style={{ fontSize: 12, color: 'var(--muted-2)', marginTop: 12 }}>
-        {lang === 'ru'
-          ? '⚠ Выбросы помечены знаком ⚠ и показаны с пониженной яркостью. Все значения нормализованы в EUR monthly gross.'
-          : '⚠ Outliers are marked with ⚠ and shown at reduced opacity. All values normalized to EUR monthly gross.'}
-      </p>
+      {/* Legend */}
+      <div style={{ display: 'flex', gap: 16, marginTop: 10, fontSize: 11.5, color: 'var(--muted-2)', flexWrap: 'wrap', alignItems: 'center' }}>
+        <span style={{ fontWeight: 600, color: 'var(--muted)' }}>
+          {lang === 'ru' ? 'vs рынок:' : 'vs market:'}
+        </span>
+        <span><span style={{ color: 'var(--warn)', fontWeight: 600 }}>↑</span> {lang === 'ru' ? 'выше mid-market бенчмарка (>+10%)' : 'above mid-market benchmark (>+10%)'}</span>
+        <span><span style={{ color: 'var(--pos)',  fontWeight: 600 }}>↓</span> {lang === 'ru' ? 'ниже mid-market бенчмарка (>-10%)' : 'below mid-market benchmark (>-10%)'}</span>
+        <span><span style={{ color: 'var(--muted)', fontWeight: 600 }}>≈</span> {lang === 'ru' ? 'на уровне рынка (±10%)' : 'at market rate (±10%)'}</span>
+        <span style={{ marginLeft: 'auto' }}>
+          {lang === 'ru'
+            ? '⚠ выбросы помечены · все значения нормализованы в EUR/мес gross'
+            : '⚠ outliers marked · all values normalized to EUR/mo gross'}
+        </span>
+      </div>
     </div>
   )
 }
