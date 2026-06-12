@@ -70,7 +70,16 @@ export default function HomeClient({
 
   function switchTab(tab: HomeTab) {
     setHomeTab(tab)
-    router.replace(tab === 'ats' ? '/?tab=ats' : '/', { scroll: false })
+    if (tab === 'ats') {
+      // Include atsPos so back navigation restores the correct position
+      const existingPos = searchParams.get('atsPos')
+      const defaultPos = positions.find(p => (candidatesByPosition[p.slug]?.length ?? 0) > 0)?.slug
+        ?? positions[0]?.slug ?? ''
+      const pos = existingPos ?? defaultPos
+      router.replace(`/?tab=ats&atsPos=${pos}`, { scroll: false })
+    } else {
+      router.replace('/', { scroll: false })
+    }
   }
 
   function toggle(slug: string) {

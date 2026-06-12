@@ -1,5 +1,5 @@
 'use client'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { PositionMeta, LocationMeta } from '@/lib/types'
@@ -90,9 +90,13 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
   const router = useRouter()
   const searchParams = useSearchParams()
 
+  // Default: first position that has ATS data, fallback to positions[0]
+  const defaultPos = positions.find(p => (candidatesByPosition[p.slug]?.length ?? 0) > 0)?.slug
+    ?? positions[0]?.slug ?? ''
+
   // Initialise from URL so state survives browser back
   const [position, setPositionState] = useState(
-    searchParams.get('atsPos') ?? positions[0]?.slug ?? ''
+    searchParams.get('atsPos') ?? defaultPos
   )
   const [period, setPeriodState] = useState<'all' | '6m' | '3m'>(
     (searchParams.get('atsPeriod') as any) ?? 'all'
@@ -121,6 +125,16 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     if (locs.length) p.set('atsLoc', locs.join(','))
     router.replace(`/?${p.toString()}`, { scroll: false })
   }, [position, period, gradeFilter, salaryPeriod, locationFilter, router])
+
+  // On mount: always write current state to URL (ensures back navigation restores position)
+  const didMount = useRef(false)
+  useEffect(() => {
+    if (!didMount.current) {
+      didMount.current = true
+      syncUrl({})
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   function setPosition(v: string)      { setPositionState(v);      syncUrl({ pos: v, locs: [] }); setLocationFilterState([]) }
   function setPeriod(v: 'all'|'6m'|'3m') { setPeriodState(v);     syncUrl({ period: v }) }
