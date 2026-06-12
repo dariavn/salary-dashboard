@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import type { PositionMeta, LocationMeta, CandidateWithLocation } from '@/lib/types'
 import { useLang } from '@/context/LangContext'
 import { t } from '@/lib/i18n'
@@ -31,9 +31,17 @@ function Logo() {
 export default function HomeClient({ positions, locationsByPosition, candidatesByPosition, locationMeta }: Props) {
   const { lang } = useLang()
   const router = useRouter()
-  const [homeTab, setHomeTab] = useState<HomeTab>('market')
+  const searchParams = useSearchParams()
+  const [homeTab, setHomeTab] = useState<HomeTab>(
+    searchParams.get('tab') === 'ats' ? 'ats' : 'market'
+  )
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
   const [selected, setSelected] = useState<string[]>([])
+
+  function switchTab(tab: HomeTab) {
+    setHomeTab(tab)
+    router.replace(tab === 'ats' ? '/?tab=ats' : '/', { scroll: false })
+  }
 
   const locations = locationsByPosition[selectedPosition] ?? []
   const hasCandidates = Object.values(candidatesByPosition).some(c => c.length > 0)
@@ -70,7 +78,7 @@ export default function HomeClient({ positions, locationsByPosition, candidatesB
             {tabs.map(tab => (
               <button
                 key={tab.key}
-                onClick={() => setHomeTab(tab.key)}
+                onClick={() => switchTab(tab.key)}
                 style={{
                   border: 'none', background: 'transparent', cursor: 'pointer',
                   padding: '13px 4px', marginRight: 18,

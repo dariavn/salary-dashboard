@@ -1,8 +1,9 @@
+import { Suspense } from 'react'
 import { loadPositions, loadLocations, getLocationMeta, loadAllCandidatesForPosition } from '@/lib/dataLoader'
 import type { CandidateWithLocation } from '@/lib/types'
 import HomeClient from './HomeClient'
 
-export default function HomePage() {
+function HomeContent() {
   const positions = loadPositions()
   const locationsByPosition: Record<string, ReturnType<typeof getLocationMeta>[]> = {}
   const candidatesByPosition: Record<string, CandidateWithLocation[]> = {}
@@ -22,5 +23,13 @@ export default function HomePage() {
       candidatesByPosition={candidatesByPosition}
       locationMeta={allLocationMeta}
     />
+  )
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
+      <HomeContent />
+    </Suspense>
   )
 }
