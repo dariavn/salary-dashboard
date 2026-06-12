@@ -1,0 +1,5 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+c007,active,4.3,Middle,5980,6000-7000 USD gross,USD,gross,2026-06,no,Tbilisi; minimum $6000×0.92
+c216,declined,5.0,Senior,6500,от 6500 EUR gross,EUR,gross,2026-06,no,Tbilisi; using minimum
+c219,declined,5.3,Senior,5000,5000 EUR gross,EUR,gross,2026-06,no,Georgia
+c224,declined,4.4,Middle,11960,13000 USD/мес,USD,gross,2026-06,yes,Tbilisi; outlier: $13K×0.92 for Middle level; exceptional case

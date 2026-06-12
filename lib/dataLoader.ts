@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { readGrades, readDomains, readSources } from './csvParser'
+import { readGrades, readDomains, readSources, readCandidates } from './csvParser'
 import type { CountryData, LocationMeta, PositionMeta } from './types'
 
 const CSV_BASE = path.join(process.cwd(), 'data', 'csv')
@@ -76,4 +76,8 @@ export function loadCountryData(position: string, location: string): CountryData
   const sources = readSources(position, location)
   const currency = grades[0]?.currency ?? getLocationMeta(location).currency
   return { position, location, grades, domains, sources, currency }
+}
+
+export function loadCandidates(position: string, location: string) {
+  return readCandidates(position, location)
 }

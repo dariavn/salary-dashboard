@@ -1,0 +1,5 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+c005,active,5.5,Senior,5000,от 5000 EUR,EUR,gross,2026-06,no,Serbia; using minimum
+c009,active,5.7,Senior,1633,160000 руб.,RUB,gross,2026-06,yes,Serbia; outlier: RUB salary request; likely Russian national; 160K/98
+c204,declined,12.5,Head,3220,от 3500 (валюта не указана),unknown,unclear,2026-06,no,Serbia; 12+ yr exp; assumed USD; 3500×0.92; currency flag
+c220,declined,5.5,Senior,4750,4500-5000 EUR gross,EUR,gross,2026-06,no,Serbia; midpoint €4750

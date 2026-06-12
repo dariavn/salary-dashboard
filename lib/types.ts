@@ -77,3 +77,18 @@ export interface PositionMeta {
   slug: string
   name: { en: string; ru: string }
 }
+
+// Internal ATS candidate data
+export interface CandidateRow {
+  candidate_id: string
+  status: 'active' | 'declined'
+  go_exp_years: number | null
+  exp_grade: string          // Junior | Middle | Senior | Lead | Head | unknown
+  salary_monthly_eur: number | null  // normalized to EUR monthly gross
+  salary_original_raw: string
+  currency_original: string
+  gross_net: string          // gross | net | b2b | unclear
+  data_as_of: string         // YYYY-MM
+  outlier: boolean
+  notes: string
+}

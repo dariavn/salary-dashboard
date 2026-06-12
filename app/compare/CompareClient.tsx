@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import type { PositionMeta, LocationMeta, CountryData } from '@/lib/types'
+import type { PositionMeta, LocationMeta, CountryData, CandidateRow } from '@/lib/types'
 import type { Segment } from '@/lib/types'
 import { useLang } from '@/context/LangContext'
 import { t, SERIES, GRADE_VAR, GRADE_KEY, GRADE_ORDER, fmtK } from '@/lib/i18n'
@@ -11,8 +11,9 @@ import SummaryCards from '@/components/SummaryCards'
 import GradesTable from '@/components/GradesTable'
 import DomainsGrid from '@/components/DomainsGrid'
 import SourcesList from '@/components/SourcesList'
+import InternalSection from '@/components/InternalSection'
 
-interface Entry { meta: LocationMeta; data: CountryData }
+interface Entry { meta: LocationMeta; data: CountryData; candidates: CandidateRow[] }
 interface Props { positionMeta: PositionMeta; allData: Entry[] }
 type Tab = 'overview' | 'grades' | 'domains' | 'sources'
 
@@ -101,6 +102,7 @@ export default function CompareClient({ positionMeta, allData }: Props) {
   const [segment, setSegment] = useState<Segment | 'all'>('mid_market')
   const [period, setPeriod] = useState<'annual' | 'monthly'>('annual')
   const [detail, setDetail] = useState<'columns' | 'matrix'>('columns')
+  const [dataSource, setDataSource] = useState<'market' | 'ats'>('market')
 
   const cols = gridCols(allData.length)
   const series = allData.map((en, i) => ({
@@ -204,12 +206,27 @@ export default function CompareClient({ positionMeta, allData }: Props) {
         {tab === 'grades' && (
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 18 }}>
+              {/* Data source toggle */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span className="eyebrow">{t(lang, 'segment')}</span>
-                <Toggle options={segOpts} value={segment} onChange={v => setSegment(v as Segment | 'all')} />
+                <span className="eyebrow">{t(lang, 'dataSource')}</span>
+                <Toggle
+                  options={[
+                    { v: 'market', label: t(lang, 'market') + ' ↗' },
+                    { v: 'ats', label: '🏢 ' + t(lang, 'atsData') },
+                  ]}
+                  value={dataSource}
+                  onChange={v => setDataSource(v as 'market' | 'ats')}
+                />
               </div>
+              {/* Market controls (hidden in ATS mode) */}
+              {dataSource === 'market' && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span className="eyebrow">{t(lang, 'segment')}</span>
+                  <Toggle options={segOpts} value={segment} onChange={v => setSegment(v as Segment | 'all')} />
+                </div>
+              )}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
-                {allData.length > 1 && (
+                {dataSource === 'market' && allData.length > 1 && (
                   <Toggle
                     options={[{ v: 'columns', label: lang === 'ru' ? 'Колонки' : 'Columns' }, { v: 'matrix', label: lang === 'ru' ? 'Матрица' : 'Matrix' }]}
                     value={detail}
@@ -220,28 +237,41 @@ export default function CompareClient({ positionMeta, allData }: Props) {
               </div>
             </div>
 
-            {detail === 'matrix' ? (
-              <GradeMatrix allData={allData} segment={segment} period={period} lang={lang} />
-            ) : (
-              <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 18 }}>
-                {allData.map((en, i) => (
-                  <div key={en.meta.slug} className="card" style={{ padding: '4px 4px 0', overflow: 'hidden' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 14px 10px' }}>
-                      <span className="dot" style={{ background: SERIES[i], width: 8, height: 8 }} />
-                      <span style={{ fontSize: 16 }}>{en.meta.flag}</span>
-                      <span style={{ fontWeight: 600 }}>{en.meta.name[lang]}</span>
-                      <span style={{ marginLeft: 'auto', fontSize: 11, fontWeight: 600, color: 'var(--muted-2)' }}>{en.data.currency}</span>
-                    </div>
-                    <GradesTable rows={en.data.grades} segment={segment} period={period} lang={lang} />
-                  </div>
-                ))}
-              </div>
+            {/* ATS MODE */}
+            {dataSource === 'ats' && (
+              <InternalSection
+                allData={allData.map((e, i) => ({ meta: e.meta, candidates: e.candidates, color: SERIES[i] }))}
+                period={period}
+                lang={lang}
+              />
             )}
 
-            {segment === 'all' && (
-              <p style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 16, maxWidth: 760 }}>
-                {t(lang, 'midMarketNote')}
-              </p>
+            {/* MARKET MODE */}
+            {dataSource === 'market' && (
+              <div>
+                {detail === 'matrix' ? (
+                  <GradeMatrix allData={allData} segment={segment} period={period} lang={lang} />
+                ) : (
+                  <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 18 }}>
+                    {allData.map((en, i) => (
+                      <div key={en.meta.slug} className="card" style={{ padding: '4px 4px 0', overflow: 'hidden' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 14px 10px' }}>
+                          <span className="dot" style={{ background: SERIES[i], width: 8, height: 8 }} />
+                          <span style={{ fontSize: 16 }}>{en.meta.flag}</span>
+                          <span style={{ fontWeight: 600 }}>{en.meta.name[lang]}</span>
+                          <span style={{ marginLeft: 'auto', fontSize: 11, fontWeight: 600, color: 'var(--muted-2)' }}>{en.data.currency}</span>
+                        </div>
+                        <GradesTable rows={en.data.grades} segment={segment} period={period} lang={lang} />
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {segment === 'all' && (
+                  <p style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 16, maxWidth: 760 }}>
+                    {t(lang, 'midMarketNote')}
+                  </p>
+                )}
+              </div>
             )}
           </div>
         )}

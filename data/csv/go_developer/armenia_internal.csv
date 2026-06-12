@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+c214,declined,,unknown,5520,от 6000 USD gross,USD,gross,2026-06,no,Armenia; no Go exp data in CV; 6000×0.92

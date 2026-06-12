@@ -1,0 +1,8 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+c001,active,5.8,Senior,6500,мин. 6000 - комф. 7000 EUR gross,EUR,gross,2026-06,no,Valencia; midpoint of range
+c003,active,7.0,Lead,7360,8000 USD gross,USD,gross,2026-06,no,Valencia; 8000×0.92
+c008,active,7.3,Lead,2806,220000 руб. на руки,RUB,net,2026-06,yes,Barcelona; outlier: RUB salary in Barcelona; 220K/98=€2244 net → €2806 gross approx
+c206,declined,8.3,Lead,7200,7200 EUR gross,EUR,gross,2026-06,no,Valencia
+c307,declined,5.3,Senior,6000,от 6000 EUR,EUR,gross,2026-06,no,Digital nomad / traveling; using minimum
+c308,declined,7.4,Lead,7130,до 7500-8000 USD gross,USD,gross,2026-06,no,Barcelona; midpoint $7750×0.92
+c318,declined,7.5,Lead,6670,6500-8000 USD gross,USD,gross,2026-06,no,Valencia; midpoint $7250×0.92

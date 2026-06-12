@@ -85,3 +85,21 @@ export function readSources(position: string, location: string) {
     notes: r.notes?.trim() ?? '',
   }))
 }
+
+export function readCandidates(position: string, location: string) {
+  const file = path.join(CSV_BASE, position, `${location}_internal.csv`)
+  const rows = parseCSV<Record<string, string>>(file)
+  return rows.map((r) => ({
+    candidate_id: r.candidate_id?.trim() ?? '',
+    status: (r.status?.trim() === 'active' ? 'active' : 'declined') as 'active' | 'declined',
+    go_exp_years: parseNum(r.go_exp_years),
+    exp_grade: r.exp_grade?.trim() ?? 'unknown',
+    salary_monthly_eur: parseNum(r.salary_monthly_eur),
+    salary_original_raw: r.salary_original_raw?.trim() ?? '',
+    currency_original: r.currency_original?.trim() ?? '',
+    gross_net: r.gross_net?.trim() ?? '',
+    data_as_of: r.data_as_of?.trim() ?? '',
+    outlier: r.outlier?.trim().toLowerCase() === 'yes',
+    notes: r.notes?.trim() ?? '',
+  }))
+}

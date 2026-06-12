@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+c221,declined,1.9,Junior,5500,5500 EUR без НДС,EUR,b2b,2026-06,no,Warsaw; B2B rate excl. VAT; employment gross equivalent ~€4200-4500; 1.9yr exp

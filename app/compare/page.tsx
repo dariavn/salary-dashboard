@@ -1,4 +1,4 @@
-import { loadCountryData, getLocationMeta, getPositionMeta } from '@/lib/dataLoader'
+import { loadCountryData, getLocationMeta, getPositionMeta, loadCandidates } from '@/lib/dataLoader'
 import CompareClient from './CompareClient'
 
 interface Props {
@@ -14,6 +14,7 @@ export default async function ComparePage({ searchParams }: Props) {
   const allData = locationSlugs.map((slug) => ({
     meta: getLocationMeta(slug),
     data: loadCountryData(position, slug),
+    candidates: loadCandidates(position, slug),
   }))
 
   return <CompareClient positionMeta={positionMeta} allData={allData} />
