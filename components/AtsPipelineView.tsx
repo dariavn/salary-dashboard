@@ -94,6 +94,10 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
   const [salaryPeriod, setSalaryPeriod] = useState<'monthly' | 'annual'>('monthly')
   const [locationFilter, setLocationFilter] = useState<string[]>([]) // empty = all
 
+  // Lead/Head → Senior for display purposes
+  const DISPLAY_GRADE_MAP: Record<string, string> = { Lead: 'Senior', Head: 'Senior' }
+  function displayGrade(g: string) { return DISPLAY_GRADE_MAP[g] ?? g }
+
   const allCandidates = candidatesByPosition[position] ?? []
   const periodFiltered = filterByPeriod(allCandidates, period)
 
@@ -101,27 +105,26 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
   const availableLocations = [...new Set(periodFiltered.map(c => c.location))].sort()
   const activeLocationFilter = locationFilter.filter(l => availableLocations.includes(l))
 
-  // Apply filters
+  // Apply location filter
   const locationFiltered = activeLocationFilter.length
     ? periodFiltered.filter(c => activeLocationFilter.includes(c.location))
     : periodFiltered
 
-  // Only show grade options that actually have data
-  const gradesWithData = ['all', ...GRADE_ORDER.filter(g =>
-    locationFiltered.some(c => c.exp_grade === g)
+  // Grade options — using display grades (Lead/Head merged into Senior), only with data
+  const DISPLAY_GRADE_ORDER = ['Junior', 'Middle', 'Senior']
+  const gradesWithData = ['all', ...DISPLAY_GRADE_ORDER.filter(g =>
+    locationFiltered.some(c => displayGrade(c.exp_grade) === g)
   )]
-
-  // Reset grade filter if current selection has no data
   const effectiveGradeFilter = gradesWithData.includes(gradeFilter) ? gradeFilter : 'all'
 
   const filtered = effectiveGradeFilter === 'all'
     ? locationFiltered
-    : locationFiltered.filter(c => c.exp_grade === effectiveGradeFilter)
+    : locationFiltered.filter(c => displayGrade(c.exp_grade) === effectiveGradeFilter)
 
-  // Sort: grade order then salary desc
+  // Sort: Junior < Middle < Senior, then salary desc
   const sorted = [...filtered].sort((a, b) => {
-    const ga = GRADE_ORDER.indexOf(a.exp_grade)
-    const gb = GRADE_ORDER.indexOf(b.exp_grade)
+    const ga = DISPLAY_GRADE_ORDER.indexOf(displayGrade(a.exp_grade))
+    const gb = DISPLAY_GRADE_ORDER.indexOf(displayGrade(b.exp_grade))
     if (ga !== gb) return (ga === -1 ? 99 : ga) - (gb === -1 ? 99 : gb)
     return (b.salary_monthly_eur ?? 0) - (a.salary_monthly_eur ?? 0)
   })
@@ -174,7 +177,7 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
           </div>
         </div>
 
-        {/* Grade — only grades with data */}
+        {/* Grade — only grades with data (Lead/Head merged into Senior) */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span className="eyebrow">{t(lang, 'gradeFilter')}</span>
           <div className="seg">
@@ -186,6 +189,7 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
             ))}
           </div>
         </div>
+
 
         {/* Monthly/Annual */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
@@ -200,6 +204,23 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
       {availableLocations.length > 1 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
           <span className="eyebrow">{t(lang, 'locationCol')}</span>
+          {/* All pill */}
+          <button
+            onClick={() => setLocationFilter([])}
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 5,
+              fontSize: 13, fontWeight: activeLocationFilter.length === 0 ? 600 : 400,
+              padding: '4px 14px', borderRadius: 999, cursor: 'pointer', fontFamily: 'var(--font-ui)',
+              border: '1px solid',
+              borderColor: activeLocationFilter.length === 0 ? 'var(--accent)' : 'var(--border-strong)',
+              background: activeLocationFilter.length === 0 ? 'var(--accent-soft)' : 'var(--surface)',
+              color: activeLocationFilter.length === 0 ? 'var(--text)' : 'var(--text-2)',
+              transition: 'all .12s',
+            }}
+          >
+            {lang === 'ru' ? 'Все' : 'All'}
+          </button>
+          {/* Individual location pills */}
           {availableLocations.map(slug => {
             const loc = locationMeta[slug]
             const on = activeLocationFilter.includes(slug)
@@ -223,12 +244,6 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
               </button>
             )
           })}
-          {activeLocationFilter.length > 0 && (
-            <button onClick={() => setLocationFilter([])}
-              style={{ fontSize: 12, color: 'var(--muted)', background: 'transparent', border: 'none', cursor: 'pointer', padding: '4px 6px' }}>
-              × {lang === 'ru' ? 'Сбросить' : 'Clear'}
-            </button>
-          )}
         </div>
       )}
 
@@ -275,17 +290,18 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
             <tbody>
               {sorted.map((c, i) => {
                 const loc = locationMeta[c.location]
-                const gradeColor = GRADE_VAR[c.exp_grade]
+                const dg = displayGrade(c.exp_grade)   // Lead/Head → Senior
+                const gradeColor = GRADE_VAR[dg]
                 const bmGrades = benchmarkGrades[position]?.[c.location] ?? []
-                const bm = getBenchmark(c.salary_monthly_eur, c.location, c.exp_grade, bmGrades)
+                const bm = getBenchmark(c.salary_monthly_eur, c.location, dg, bmGrades)
                 return (
                   <tr key={i}>
-                    {/* Grade */}
+                    {/* Grade (Lead/Head shown as Senior) */}
                     <td style={{ paddingLeft: 16 }}>
-                      {c.exp_grade && c.exp_grade !== 'unknown' ? (
+                      {dg && dg !== 'unknown' ? (
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                           <span className="dot" style={{ background: gradeColor, width: 8, height: 8 }} />
-                          <span style={{ fontWeight: 600, fontSize: 13 }}>{c.exp_grade}</span>
+                          <span style={{ fontWeight: 600, fontSize: 13 }}>{dg}</span>
                         </span>
                       ) : <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>}
                     </td>
