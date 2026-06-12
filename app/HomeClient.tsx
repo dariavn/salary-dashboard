@@ -37,6 +37,7 @@ export default function HomeClient({ positions, locationsByPosition, candidatesB
   )
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
   const [selected, setSelected] = useState<string[]>([])
+  const [period, setPeriod] = useState<'annual' | 'monthly'>('annual')
 
   function switchTab(tab: HomeTab) {
     setHomeTab(tab)
@@ -52,7 +53,7 @@ export default function HomeClient({ positions, locationsByPosition, candidatesB
 
   function handleCompare() {
     if (!selected.length) return
-    router.push(`/compare?position=${selectedPosition}&countries=${selected.join(',')}`)
+    router.push(`/compare?position=${selectedPosition}&countries=${selected.join(',')}&period=${period}`)
   }
 
   const tabs: { key: HomeTab; label: string; icon: string }[] = [
@@ -179,7 +180,12 @@ export default function HomeClient({ positions, locationsByPosition, candidatesB
                 {t(lang, 'clear')}
               </button>
             )}
-            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 14 }}>
+            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
+              {/* Period toggle */}
+              <div className="seg">
+                <button aria-pressed={period === 'annual'}  onClick={() => setPeriod('annual')}>{t(lang, 'annual')}</button>
+                <button aria-pressed={period === 'monthly'} onClick={() => setPeriod('monthly')}>{t(lang, 'monthly')}</button>
+              </div>
               <span style={{ fontSize: 13, color: 'var(--muted)' }}>{selected.length}/4 {t(lang, 'selected')}</span>
               <button
                 disabled={!selected.length}

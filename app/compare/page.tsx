@@ -2,15 +2,15 @@ import { loadCountryData, getLocationMeta, getPositionMeta, loadCandidates } fro
 import CompareClient from './CompareClient'
 
 interface Props {
-  searchParams: Promise<{ position?: string; countries?: string }>
+  searchParams: Promise<{ position?: string; countries?: string; source?: string; period?: string }>
 }
 
 export default async function ComparePage({ searchParams }: Props) {
   const params = await searchParams
   const position = params.position ?? 'product_manager'
   const locationSlugs = (params.countries ?? '').split(',').filter(Boolean).slice(0, 4)
-
-  const source = ((params as any).source === 'ats' ? 'ats' : 'market') as 'market' | 'ats'
+  const source = (params.source === 'ats' ? 'ats' : 'market') as 'market' | 'ats'
+  const initialPeriod = (params.period === 'monthly' ? 'monthly' : 'annual') as 'annual' | 'monthly'
 
   const positionMeta = getPositionMeta(position)
   const allData = locationSlugs.map((slug) => ({
@@ -19,5 +19,5 @@ export default async function ComparePage({ searchParams }: Props) {
     candidates: loadCandidates(position, slug),
   }))
 
-  return <CompareClient positionMeta={positionMeta} allData={allData} initialSource={source} />
+  return <CompareClient positionMeta={positionMeta} allData={allData} initialSource={source} initialPeriod={initialPeriod} />
 }

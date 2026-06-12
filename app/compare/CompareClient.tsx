@@ -14,7 +14,7 @@ import SourcesList from '@/components/SourcesList'
 import InternalSection from '@/components/InternalSection'
 
 interface Entry { meta: LocationMeta; data: CountryData; candidates: CandidateRow[] }
-interface Props { positionMeta: PositionMeta; allData: Entry[]; initialSource?: 'market' | 'ats' }
+interface Props { positionMeta: PositionMeta; allData: Entry[]; initialSource?: 'market' | 'ats'; initialPeriod?: 'annual' | 'monthly' }
 type Tab = 'overview' | 'grades' | 'domains' | 'sources'
 
 function Toggle({ options, value, onChange }: { options: { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
@@ -96,11 +96,11 @@ function gridCols(n: number) {
   return 'repeat(2, 1fr)'
 }
 
-export default function CompareClient({ positionMeta, allData, initialSource = 'market' }: Props) {
+export default function CompareClient({ positionMeta, allData, initialSource = 'market', initialPeriod = 'annual' }: Props) {
   const { lang } = useLang()
   const [tab, setTab] = useState<Tab>('overview')
   const [segment, setSegment] = useState<Segment | 'all'>('mid_market')
-  const [period, setPeriod] = useState<'annual' | 'monthly'>('annual')
+  const [period, setPeriod] = useState<'annual' | 'monthly'>(initialPeriod)
   const [detail, setDetail] = useState<'columns' | 'matrix'>('columns')
   const [dataSource, setDataSource] = useState<'market' | 'ats'>(initialSource)
 
