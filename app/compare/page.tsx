@@ -10,6 +10,8 @@ export default async function ComparePage({ searchParams }: Props) {
   const position = params.position ?? 'product_manager'
   const locationSlugs = (params.countries ?? '').split(',').filter(Boolean).slice(0, 4)
 
+  const source = ((params as any).source === 'ats' ? 'ats' : 'market') as 'market' | 'ats'
+
   const positionMeta = getPositionMeta(position)
   const allData = locationSlugs.map((slug) => ({
     meta: getLocationMeta(slug),
@@ -17,5 +19,5 @@ export default async function ComparePage({ searchParams }: Props) {
     candidates: loadCandidates(position, slug),
   }))
 
-  return <CompareClient positionMeta={positionMeta} allData={allData} />
+  return <CompareClient positionMeta={positionMeta} allData={allData} initialSource={source} />
 }

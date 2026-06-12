@@ -81,3 +81,10 @@ export function loadCountryData(position: string, location: string): CountryData
 export function loadCandidates(position: string, location: string) {
   return readCandidates(position, location)
 }
+
+export function loadAllCandidatesForPosition(position: string) {
+  const locs = loadLocations(position)
+  return locs.flatMap(loc =>
+    readCandidates(position, loc.slug).map(c => ({ ...c, location: loc.slug }))
+  )
+}

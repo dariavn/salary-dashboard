@@ -78,6 +78,11 @@ export interface PositionMeta {
   name: { en: string; ru: string }
 }
 
+// Internal ATS candidate with location attached (for home page table)
+export interface CandidateWithLocation extends CandidateRow {
+  location: string
+}
+
 // Internal ATS candidate data
 export interface CandidateRow {
   candidate_id: string

@@ -14,7 +14,7 @@ import SourcesList from '@/components/SourcesList'
 import InternalSection from '@/components/InternalSection'
 
 interface Entry { meta: LocationMeta; data: CountryData; candidates: CandidateRow[] }
-interface Props { positionMeta: PositionMeta; allData: Entry[] }
+interface Props { positionMeta: PositionMeta; allData: Entry[]; initialSource?: 'market' | 'ats' }
 type Tab = 'overview' | 'grades' | 'domains' | 'sources'
 
 function Toggle({ options, value, onChange }: { options: { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
@@ -96,13 +96,13 @@ function gridCols(n: number) {
   return 'repeat(2, 1fr)'
 }
 
-export default function CompareClient({ positionMeta, allData }: Props) {
+export default function CompareClient({ positionMeta, allData, initialSource = 'market' }: Props) {
   const { lang } = useLang()
   const [tab, setTab] = useState<Tab>('overview')
   const [segment, setSegment] = useState<Segment | 'all'>('mid_market')
   const [period, setPeriod] = useState<'annual' | 'monthly'>('annual')
   const [detail, setDetail] = useState<'columns' | 'matrix'>('columns')
-  const [dataSource, setDataSource] = useState<'market' | 'ats'>('market')
+  const [dataSource, setDataSource] = useState<'market' | 'ats'>(initialSource)
 
   const cols = gridCols(allData.length)
   const series = allData.map((en, i) => ({
