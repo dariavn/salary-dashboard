@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useCallback } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { PositionMeta, LocationMeta } from '@/lib/types'
 import { t, GRADE_ORDER, GRADE_VAR } from '@/lib/i18n'
@@ -88,11 +88,51 @@ function formatDate(d: string, lang: string): string {
 export default function AtsPipelineView({ positions, candidatesByPosition, locationMeta, benchmarkGrades }: Props) {
   const { lang } = useLang()
   const router = useRouter()
-  const [position, setPosition] = useState(positions[0]?.slug ?? '')
-  const [period, setPeriod] = useState<'all' | '6m' | '3m'>('all')
-  const [gradeFilter, setGradeFilter] = useState('all')
-  const [salaryPeriod, setSalaryPeriod] = useState<'monthly' | 'annual'>('monthly')
-  const [locationFilter, setLocationFilter] = useState<string[]>([]) // empty = all
+  const searchParams = useSearchParams()
+
+  // Initialise from URL so state survives browser back
+  const [position, setPositionState] = useState(
+    searchParams.get('atsPos') ?? positions[0]?.slug ?? ''
+  )
+  const [period, setPeriodState] = useState<'all' | '6m' | '3m'>(
+    (searchParams.get('atsPeriod') as any) ?? 'all'
+  )
+  const [gradeFilter, setGradeFilterState] = useState(
+    searchParams.get('atsGrade') ?? 'all'
+  )
+  const [salaryPeriod, setSalaryPeriodState] = useState<'monthly' | 'annual'>(
+    (searchParams.get('atsSalary') as any) ?? 'monthly'
+  )
+  const [locationFilter, setLocationFilterState] = useState<string[]>(
+    searchParams.get('atsLoc') ? searchParams.get('atsLoc')!.split(',').filter(Boolean) : []
+  )
+
+  // Helper: persist all ATS state to URL without pushing history
+  const syncUrl = useCallback((overrides: {
+    pos?: string; period?: string; grade?: string; salary?: string; locs?: string[]
+  }) => {
+    const p = new URLSearchParams()
+    p.set('tab', 'ats')
+    p.set('atsPos', overrides.pos ?? position)
+    p.set('atsPeriod', overrides.period ?? period)
+    p.set('atsGrade', overrides.grade ?? gradeFilter)
+    p.set('atsSalary', overrides.salary ?? salaryPeriod)
+    const locs = overrides.locs ?? locationFilter
+    if (locs.length) p.set('atsLoc', locs.join(','))
+    router.replace(`/?${p.toString()}`, { scroll: false })
+  }, [position, period, gradeFilter, salaryPeriod, locationFilter, router])
+
+  function setPosition(v: string)      { setPositionState(v);      syncUrl({ pos: v, locs: [] }); setLocationFilterState([]) }
+  function setPeriod(v: 'all'|'6m'|'3m') { setPeriodState(v);     syncUrl({ period: v }) }
+  function setGradeFilter(v: string)   { setGradeFilterState(v);   syncUrl({ grade: v }) }
+  function setSalaryPeriod(v: 'monthly'|'annual') { setSalaryPeriodState(v); syncUrl({ salary: v }) }
+  function setLocationFilter(v: string[] | ((p: string[]) => string[])) {
+    setLocationFilterState(prev => {
+      const next = typeof v === 'function' ? v(prev) : v
+      syncUrl({ locs: next })
+      return next
+    })
+  }
 
   // Lead/Head → Senior for display purposes
   const DISPLAY_GRADE_MAP: Record<string, string> = { Lead: 'Senior', Head: 'Senior' }

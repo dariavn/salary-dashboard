@@ -102,10 +102,13 @@ export default function HomeClient({
       {/* Header */}
       <header style={{ position: 'sticky', top: 0, zIndex: 30, borderBottom: '1px solid var(--border)', background: 'color-mix(in srgb, var(--surface) 88%, transparent)', backdropFilter: 'blur(10px)' }}>
         <div className="wrap" style={{ height: 58, display: 'flex', alignItems: 'center', gap: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+          <button
+            onClick={() => { switchTab('market') }}
+            style={{ display: 'flex', alignItems: 'center', gap: 9, border: 'none', background: 'transparent', cursor: 'pointer', padding: 0, color: 'var(--text)' }}
+          >
             <Logo />
             <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: '-0.01em' }}>{t(lang, 'appTitle')}</span>
-          </div>
+          </button>
           <div style={{ marginLeft: 'auto' }}><LanguageToggle /></div>
         </div>
         {/* Tab bar */}
