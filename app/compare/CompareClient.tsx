@@ -29,12 +29,22 @@ function Toggle({ options, value, onChange }: { options: { v: string; label: str
 
 function CurrencyNote({ allData, lang }: { allData: Entry[]; lang: string }) {
   const mixed = new Set(allData.map(e => e.data.currency)).size > 1
-  if (!mixed) return null
+  const hasRussia = allData.some(e => e.meta.slug === 'russia')
   return (
-    <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', padding: '11px 14px', borderRadius: 'var(--r-md)', background: 'var(--warn-bg)', border: '1px solid color-mix(in srgb, var(--warn) 28%, transparent)', marginBottom: 18, fontSize: 13, color: 'var(--text-2)' }}>
-      <span style={{ color: 'var(--warn)', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>!</span>
-      <span>{t(lang as any, 'currencyWarning')}</span>
-    </div>
+    <>
+      {mixed && (
+        <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', padding: '11px 14px', borderRadius: 'var(--r-md)', background: 'var(--warn-bg)', border: '1px solid color-mix(in srgb, var(--warn) 28%, transparent)', marginBottom: 10, fontSize: 13, color: 'var(--text-2)' }}>
+          <span style={{ color: 'var(--warn)', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>!</span>
+          <span>{t(lang as any, 'currencyWarning')}</span>
+        </div>
+      )}
+      {hasRussia && (
+        <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', padding: '11px 14px', borderRadius: 'var(--r-md)', background: 'var(--accent-soft)', border: '1px solid var(--accent-ring)', marginBottom: 18, fontSize: 13, color: 'var(--text-2)' }}>
+          <span style={{ color: 'var(--accent)', fontWeight: 700, fontFamily: 'var(--font-mono)', flexShrink: 0 }}>₽</span>
+          <span>{t(lang as any, 'russiaNetNote')}</span>
+        </div>
+      )}
+    </>
   )
 }
 
