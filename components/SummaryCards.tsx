@@ -23,7 +23,7 @@ interface Props {
 
 export default function SummaryCards({ allData, period, lang }: Props) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: `repeat(${allData.length}, 1fr)`, gap: 14, marginBottom: 24 }}>
+    <div style={{ display: 'grid', gridTemplateColumns: allData.length <= 3 ? `repeat(${allData.length}, 1fr)` : 'repeat(auto-fill, minmax(260px, 1fr))', gap: 14, marginBottom: 24 }}>
       {allData.map((entry, i) => {
         const seniors = entry.data.grades.filter(r => r.grade === 'Senior')
         const lo = (r: typeof seniors[0]) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min

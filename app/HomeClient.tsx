@@ -83,11 +83,16 @@ export default function HomeClient({
   }
 
   function toggle(slug: string) {
-    setSelected(prev => prev.includes(slug)
-      ? prev.filter(s => s !== slug)
-      : prev.length >= 4 ? prev : [...prev, slug]
+    setSelected(prev =>
+      prev.includes(slug) ? prev.filter(s => s !== slug) : [...prev, slug]
     )
   }
+
+  function selectAll() {
+    setSelected(locations.map(l => l.slug))
+  }
+
+  const allSelected = locations.length > 0 && locations.every(l => selected.includes(l.slug))
 
   function handleCompare() {
     if (!selected.length) return
@@ -213,25 +218,51 @@ export default function HomeClient({
                   : 'No data for the selected period. Try "All time".'}
               </p>
             ) : (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 10 }}>
+              <>
+                {/* All / Clear row */}
+                <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                  <button
+                    onClick={allSelected ? () => setSelected([]) : selectAll}
+                    style={{
+                      fontFamily: 'var(--font-ui)', fontSize: 13, fontWeight: 600,
+                      padding: '5px 16px', borderRadius: 999, cursor: 'pointer',
+                      border: '1px solid',
+                      borderColor: allSelected ? 'var(--accent)' : 'var(--border-strong)',
+                      background: allSelected ? 'var(--accent-soft)' : 'var(--surface)',
+                      color: allSelected ? 'var(--text)' : 'var(--text-2)',
+                      transition: 'all .14s',
+                    }}
+                  >
+                    {allSelected
+                      ? (lang === 'ru' ? '× Сбросить все' : '× Clear all')
+                      : (lang === 'ru' ? '✓ Все страны' : '✓ All countries')}
+                  </button>
+                  {selected.length > 0 && !allSelected && (
+                    <button
+                      onClick={() => setSelected([])}
+                      style={{ fontFamily: 'var(--font-ui)', fontSize: 13, fontWeight: 400, border: 'none', background: 'transparent', color: 'var(--muted)', cursor: 'pointer', padding: '5px 4px' }}
+                    >
+                      {lang === 'ru' ? 'Сбросить' : 'Clear'}
+                    </button>
+                  )}
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 10 }}>
                 {locations.map(loc => {
                   const on = selected.includes(loc.slug)
-                  const dis = !on && selected.length >= 4
                   const rd = researchDates[selectedPosition]?.[loc.slug]
                   return (
                     <button
                       key={loc.slug}
-                      onClick={() => !dis && toggle(loc.slug)}
-                      disabled={dis}
+                      onClick={() => toggle(loc.slug)}
                       style={{
                         display: 'flex', flexDirection: 'column', alignItems: 'flex-start',
                         gap: 2, padding: '10px 14px',
-                        fontFamily: 'var(--font-ui)', cursor: dis ? 'not-allowed' : 'pointer',
+                        fontFamily: 'var(--font-ui)', cursor: 'pointer',
                         borderRadius: 'var(--r-md)', border: '1px solid',
                         borderColor: on ? 'var(--accent)' : 'var(--border-strong)',
                         background: on ? 'var(--accent-soft)' : 'var(--surface)',
                         color: on ? 'var(--text)' : 'var(--text-2)',
-                        opacity: dis ? 0.4 : 1, transition: 'all .14s',
+                        transition: 'all .14s',
                       }}
                     >
                       <span style={{ display: 'flex', alignItems: 'center', gap: 8, width: '100%' }}>
@@ -247,7 +278,8 @@ export default function HomeClient({
                     </button>
                   )
                 })}
-              </div>
+                </div>
+              </>
             )}
           </div>
 
@@ -260,7 +292,9 @@ export default function HomeClient({
               </button>
             )}
             <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 14 }}>
-              <span style={{ fontSize: 13, color: 'var(--muted)' }}>{selected.length}/4 {t(lang, 'selected')}</span>
+              <span style={{ fontSize: 13, color: 'var(--muted)' }}>
+                {selected.length}/{locations.length} {t(lang, 'selected')}
+              </span>
               <button
                 disabled={!selected.length}
                 onClick={handleCompare}

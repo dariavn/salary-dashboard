@@ -188,7 +188,10 @@ export const GRADE_VAR: Record<string, string> = {
   Lead: 'var(--grade-lead)', Head: 'var(--grade-head)',
 }
 
-export const SERIES = ['var(--s1)', 'var(--s2)', 'var(--s3)', 'var(--s4)']
+export const SERIES = [
+  'var(--s1)', 'var(--s2)', 'var(--s3)', 'var(--s4)',
+  'var(--s5)', 'var(--s6)', 'var(--s7)', 'var(--s8)', 'var(--s9)',
+]
 
 export const TIER_LABELS: Record<string, { en: string; ru: string }> = {
   top:  { en: 'Top',  ru: 'Топ' },

@@ -102,8 +102,8 @@ function GradeMatrix({ allData, segment, period, lang }: { allData: Entry[]; seg
 function gridCols(n: number) {
   if (n <= 1) return '1fr'
   if (n === 2) return 'repeat(2, 1fr)'
-  if (n === 3) return 'repeat(3, 1fr)'
-  return 'repeat(2, 1fr)'
+  if (n <= 4) return 'repeat(3, 1fr)'
+  return 'repeat(3, 1fr)' // 5–9 countries: 3-col wrapping grid
 }
 
 export default function CompareClient({ positionMeta, allData, initialSource = 'market', initialPeriod = 'annual' }: Props) {
