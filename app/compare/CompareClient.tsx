@@ -109,7 +109,7 @@ function gridCols(n: number) {
 export default function CompareClient({ positionMeta, allData, initialSource = 'market', initialPeriod = 'annual' }: Props) {
   const { lang } = useLang()
   const [tab, setTab] = useState<Tab>('overview')
-  const [segment, setSegment] = useState<Segment | 'all'>('mid_market')
+  const segment = 'all' as const   // always show full market range; segments kept in CSV for data integrity
   const [period, setPeriod] = useState<'annual' | 'monthly'>(initialPeriod)
   const [detail, setDetail] = useState<'columns' | 'matrix'>('columns')
   const [dataSource, setDataSource] = useState<'market' | 'ats'>(initialSource)
@@ -127,12 +127,6 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
     { key: 'sources',  label: t(lang, 'sources') },
   ]
 
-  const segOpts = [
-    { v: 'mid_market', label: t(lang, 'mid_market') },
-    { v: 'all',        label: t(lang, 'allSegments') },
-    { v: 'local_sme',  label: t(lang, 'local_sme') },
-    { v: 'premium',    label: t(lang, 'premium') },
-  ]
   const periodOpts = [
     { v: 'annual',  label: t(lang, 'annual') },
     { v: 'monthly', label: t(lang, 'monthly') },
@@ -228,13 +222,6 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
                   onChange={v => setDataSource(v as 'market' | 'ats')}
                 />
               </div>
-              {/* Market controls (hidden in ATS mode) */}
-              {dataSource === 'market' && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span className="eyebrow">{t(lang, 'segment')}</span>
-                  <Toggle options={segOpts} value={segment} onChange={v => setSegment(v as Segment | 'all')} />
-                </div>
-              )}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
                 {dataSource === 'market' && allData.length > 1 && (
                   <Toggle
@@ -276,11 +263,9 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
                     ))}
                   </div>
                 )}
-                {segment === 'all' && (
-                  <p style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 16, maxWidth: 760 }}>
-                    {t(lang, 'midMarketNote')}
-                  </p>
-                )}
+                <p style={{ fontSize: 12.5, color: 'var(--muted)', marginTop: 16, maxWidth: 760 }}>
+                  {t(lang, 'midMarketNote')}
+                </p>
               </div>
             )}
           </div>
