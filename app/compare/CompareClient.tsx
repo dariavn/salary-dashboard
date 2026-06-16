@@ -192,14 +192,15 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
         {/* OVERVIEW */}
         {tab === 'overview' && (
           <div>
+            {/* Period toggle — prominent, above the cards */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: 16 }}>
+              <Toggle options={periodOpts} value={period} onChange={v => setPeriod(v as 'annual' | 'monthly')} />
+            </div>
             <SummaryCards allData={allData} period={period} lang={lang} />
             <div className="card" style={{ padding: '20px 22px' }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap', rowGap: 10, marginBottom: 18 }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap', rowGap: 6, marginBottom: 18 }}>
                 <h3 style={{ fontSize: 14, fontWeight: 600, margin: 0, whiteSpace: 'nowrap' }}>{t(lang, 'salaryRange')}</h3>
                 <span style={{ fontSize: 12.5, color: 'var(--muted)', whiteSpace: 'nowrap' }}>{t(lang, 'allSizesNote')}</span>
-                <div style={{ marginLeft: 'auto' }}>
-                  <Toggle options={periodOpts} value={period} onChange={v => setPeriod(v as 'annual' | 'monthly')} />
-                </div>
               </div>
               <RangeChart series={series} period={period} lang={lang} />
             </div>
