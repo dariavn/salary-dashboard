@@ -2,17 +2,17 @@ candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_ra
 c002,active,12.0,Head,8280,9000 USD/mo,USD,gross,2026-06,no,Moscow; currency assumed USD (not specified); 9000×0.92
 c004,active,6.2,Senior,6440,от 7000 USD/mo,USD,gross,2026-06,no,Moscow (considering relocation); using minimum; 7000×0.92
 c006,active,5.0,Senior,4140,4500 USDT/mo,USDT,gross,2026-06,no,Moscow; USDT treated as USD; 4500×0.92
-c201,declined,2.3,Junior,4082,400000 руб. gross,RUB,gross,2026-06,no,Moscow; 400K/98
+c201,declined,4.5,Middle,4082,400000 руб. gross,RUB,gross,2026-06,no,Moscow; 400K/98; grade скорректирован до Middle
 c202,declined,6.0,Senior,3500,от 3500 EUR gross,EUR,gross,2026-06,no,Moscow; using minimum
 c203,declined,3.0,Middle,5520,от 6000 USD gross,USD,gross,2026-06,no,Russia/Indonesia; using minimum; 6000×0.92
 c209,declined,15.0,Head,5867,480000-520000 руб. на руки,RUB,net,2026-06,no,St. Petersburg; midpoint 500K net; gross 500K×1.149/98
 c211,declined,5.0,Senior,4107,от 350000 руб. net,RUB,net,2026-06,no,Tbilisi/Moscow; using minimum; 350K×1.149/98
-c212,declined,2.0,Junior,5867,500000 руб. нетт,RUB,net,2026-06,yes,Moscow; high for 2yr exp; 500K×1.149/98; outlier
+c212,declined,4.5,Middle,5867,500000 руб. нетт,RUB,net,2026-06,yes,Moscow; grade скорректирован до Middle; 500K×1.149/98; outlier (высокие ожидания)
 c215,declined,5.3,Senior,3520,от 300000 руб. на руки,RUB,net,2026-06,no,Moscow; using minimum; 300K×1.149/98
 c217,declined,10.6,Lead,6122,600000 руб. gross / 500000 нетт,RUB,gross,2026-06,no,Moscow; using gross; 600K/98
 c222,declined,15.0,Head,2857,280000 руб.,RUB,gross,2026-06,yes,St. Petersburg; outlier: very low for 15yr exp; 280K/98
 c223,declined,6.8,Senior,5867,500000 руб. нетт,RUB,net,2026-06,no,Germany (Russian national); unusual RUB request; 500K×1.149/98
-c225,declined,1.8,Junior,816,80000 руб.,RUB,gross,2026-06,yes,St. Petersburg; outlier: very low; 80K/98
-c226,declined,2.4,Junior,4453,от 380000 руб. нетт,RUB,net,2026-06,no,Moscow; using minimum; 380K×1.149/98
+c225,declined,4.5,Middle,816,80000 руб.,RUB,gross,2026-06,yes,St. Petersburg; grade скорректирован до Middle; outlier: очень низкие ожидания; 80K/98
+c226,declined,4.5,Middle,4453,от 380000 руб. нетт,RUB,net,2026-06,no,Moscow; grade скорректирован до Middle; 380K×1.149/98
 c227,declined,5.3,Senior,4592,400000-500000 руб.,RUB,gross,2026-06,no,Russia; midpoint 450K/98
 c228,declined,4.8,Middle,3520,300000 руб. нетт,RUB,net,2026-06,no,Moscow; 300K×1.149/98
