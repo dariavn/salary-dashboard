@@ -186,10 +186,19 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
   const dates = [...new Set(allCandidates.map(c => c.data_as_of).filter(Boolean))].sort()
   const lastUpdated = dates[dates.length - 1] ?? ''
 
-  function toggleLocation(slug: string) {
-    setLocationFilter(prev =>
-      prev.includes(slug) ? prev.filter(l => l !== slug) : [...prev, slug]
-    )
+  // Primary click: EXCLUSIVE select (radio-style, deselects others)
+  function selectLocationExclusive(slug: string) {
+    const isSelected = activeLocationFilter.includes(slug)
+    setLocationFilter(isSelected ? [] : [slug])
+  }
+  // "+" click: ADDITIVE (add to existing multi-select)
+  function addLocation(slug: string) {
+    if (!activeLocationFilter.includes(slug))
+      setLocationFilter(prev => [...prev, slug])
+  }
+  // Remove one from multi-select
+  function removeLocation(slug: string) {
+    setLocationFilter(prev => prev.filter(l => l !== slug))
   }
 
   function goCompare(loc: string) {
@@ -256,48 +265,97 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
 
       {/* Location filter pills */}
       {availableLocations.length > 1 && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
-          <span className="eyebrow">{t(lang, 'locationCol')}</span>
-          {/* All pill */}
-          <button
-            onClick={() => setLocationFilter([])}
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 5,
-              fontSize: 13, fontWeight: activeLocationFilter.length === 0 ? 600 : 400,
-              padding: '4px 14px', borderRadius: 999, cursor: 'pointer', fontFamily: 'var(--font-ui)',
-              border: '1px solid',
-              borderColor: activeLocationFilter.length === 0 ? 'var(--accent)' : 'var(--border-strong)',
-              background: activeLocationFilter.length === 0 ? 'var(--accent-soft)' : 'var(--surface)',
-              color: activeLocationFilter.length === 0 ? 'var(--text)' : 'var(--text-2)',
-              transition: 'all .12s',
-            }}
-          >
-            {lang === 'ru' ? 'Все' : 'All'}
-          </button>
-          {/* Individual location pills */}
-          {availableLocations.map(slug => {
-            const loc = locationMeta[slug]
-            const on = activeLocationFilter.includes(slug)
-            return (
-              <button
-                key={slug}
-                onClick={() => toggleLocation(slug)}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 5,
-                  fontSize: 13, fontWeight: on ? 600 : 400, padding: '4px 12px',
-                  borderRadius: 999, cursor: 'pointer', fontFamily: 'var(--font-ui)',
-                  border: '1px solid',
-                  borderColor: on ? 'var(--accent)' : 'var(--border-strong)',
-                  background: on ? 'var(--accent-soft)' : 'var(--surface)',
-                  color: on ? 'var(--text)' : 'var(--text-2)',
-                  transition: 'all .12s',
-                }}
-              >
-                <span>{loc?.flag ?? '🌐'}</span>
-                <span>{loc?.name[lang] ?? slug}</span>
-              </button>
-            )
-          })}
+        <div style={{ marginBottom: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+            <span className="eyebrow">{t(lang, 'locationCol')}</span>
+
+            {/* All pill */}
+            <button
+              onClick={() => setLocationFilter([])}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 5,
+                fontSize: 13, fontWeight: activeLocationFilter.length === 0 ? 600 : 400,
+                padding: '4px 14px', borderRadius: 999, cursor: 'pointer', fontFamily: 'var(--font-ui)',
+                border: '1px solid',
+                borderColor: activeLocationFilter.length === 0 ? 'var(--accent)' : 'var(--border-strong)',
+                background: activeLocationFilter.length === 0 ? 'var(--accent-soft)' : 'var(--surface)',
+                color: activeLocationFilter.length === 0 ? 'var(--text)' : 'var(--text-2)',
+                transition: 'all .12s',
+              }}
+            >
+              {lang === 'ru' ? 'Все' : 'All'}
+            </button>
+
+            {/* Individual location pills */}
+            {availableLocations.map(slug => {
+              const loc = locationMeta[slug]
+              const on = activeLocationFilter.includes(slug)
+              const hasFilter = activeLocationFilter.length > 0
+              const pillStyle: React.CSSProperties = {
+                display: 'inline-flex', alignItems: 'center', gap: 5,
+                fontSize: 13, fontWeight: on ? 600 : 400,
+                padding: on ? '4px 6px 4px 12px' : '4px 12px',
+                borderRadius: 999, cursor: 'pointer', fontFamily: 'var(--font-ui)',
+                border: '1px solid',
+                borderColor: on ? 'var(--accent)' : 'var(--border-strong)',
+                background: on ? 'var(--accent-soft)' : 'var(--surface)',
+                color: on ? 'var(--text)' : 'var(--text-2)',
+                transition: 'all .12s',
+              }
+
+              if (on) {
+                // Selected: show flag + name + × to deselect
+                return (
+                  <button key={slug} onClick={() => removeLocation(slug)} style={pillStyle}
+                    title={lang === 'ru' ? 'Убрать из выборки' : 'Remove from selection'}>
+                    <span>{loc?.flag ?? '🌐'}</span>
+                    <span>{loc?.name[lang] ?? slug}</span>
+                    <span style={{ fontSize: 11, opacity: 0.7, marginLeft: 2 }}>×</span>
+                  </button>
+                )
+              } else if (hasFilter) {
+                // Other countries: pill = exclusive switch, + = additive
+                return (
+                  <span key={slug} style={{ display: 'inline-flex', gap: 2 }}>
+                    <button onClick={() => selectLocationExclusive(slug)} style={{ ...pillStyle, borderRadius: '999px 0 0 999px', paddingRight: 8 }}
+                      title={lang === 'ru' ? 'Показать только эту страну' : 'Show only this country'}>
+                      <span>{loc?.flag ?? '🌐'}</span>
+                      <span>{loc?.name[lang] ?? slug}</span>
+                    </button>
+                    <button onClick={() => addLocation(slug)}
+                      title={lang === 'ru' ? 'Добавить к сравнению' : 'Add to comparison'}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        width: 26, borderRadius: '0 999px 999px 0', cursor: 'pointer',
+                        fontFamily: 'var(--font-ui)', fontSize: 14, fontWeight: 600,
+                        border: '1px solid var(--border-strong)', borderLeft: 'none',
+                        background: 'var(--surface)', color: 'var(--muted)',
+                        transition: 'all .12s',
+                      }}>
+                      +
+                    </button>
+                  </span>
+                )
+              } else {
+                // No filter active: single click = exclusive select
+                return (
+                  <button key={slug} onClick={() => selectLocationExclusive(slug)} style={pillStyle}>
+                    <span>{loc?.flag ?? '🌐'}</span>
+                    <span>{loc?.name[lang] ?? slug}</span>
+                  </button>
+                )
+              }
+            })}
+          </div>
+
+          {/* Hint */}
+          {activeLocationFilter.length === 1 && (
+            <div style={{ fontSize: 11.5, color: 'var(--muted-2)', marginTop: 6, paddingLeft: 2 }}>
+              {lang === 'ru'
+                ? 'Нажмите «+» рядом с другой страной, чтобы добавить её к сравнению'
+                : 'Click «+» next to another country to add it to the comparison'}
+            </div>
+          )}
         </div>
       )}
 
