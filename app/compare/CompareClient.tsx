@@ -1,8 +1,11 @@
 'use client'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import type { PositionMeta, LocationMeta, CountryData, CandidateRow } from '@/lib/types'
 import type { Segment } from '@/lib/types'
+import type { PositionEntry } from '@/lib/salary-bands'
+import type { SalaryBandsData } from '@/lib/salary-bands-loader'
+import { lookupBand, normaliseToMonthlyEur, fmtBandValue, RESEARCH_COUNTRY_MAP } from '@/lib/salary-bands'
 import { useLang } from '@/context/LangContext'
 import { t, SERIES, GRADE_VAR, GRADE_KEY, GRADE_ORDER, fmtK } from '@/lib/i18n'
 import LanguageToggle from '@/components/LanguageToggle'
@@ -14,7 +17,13 @@ import SourcesList from '@/components/SourcesList'
 import InternalSection from '@/components/InternalSection'
 
 interface Entry { meta: LocationMeta; data: CountryData; candidates: CandidateRow[] }
-interface Props { positionMeta: PositionMeta; allData: Entry[]; initialSource?: 'market' | 'ats'; initialPeriod?: 'annual' | 'monthly' }
+interface Props {
+  positionMeta: PositionMeta
+  allData: Entry[]
+  initialSource?: 'market' | 'ats'
+  initialPeriod?: 'annual' | 'monthly'
+  salaryBandsData?: SalaryBandsData
+}
 type Tab = 'overview' | 'grades' | 'domains' | 'sources'
 
 function Toggle({ options, value, onChange }: { options: { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
@@ -106,10 +115,32 @@ function gridCols(n: number) {
   return 'repeat(3, 1fr)' // 5–9 countries: 3-col wrapping grid
 }
 
-export default function CompareClient({ positionMeta, allData, initialSource = 'market', initialPeriod = 'annual' }: Props) {
+export default function CompareClient({ positionMeta, allData, initialSource = 'market', initialPeriod = 'annual', salaryBandsData }: Props) {
   const { lang } = useLang()
   const [tab, setTab] = useState<Tab>('overview')
-  const segment = 'all' as const   // always show full market range; segments kept in CSV for data integrity
+  const segment = 'all' as const
+  const [bandQuery, setBandQuery] = useState('')
+  const [bandRef, setBandRef] = useState<PositionEntry | null>(null)
+  const [showBandDropdown, setShowBandDropdown] = useState(false)
+
+  // Band position autocomplete
+  const bandSuggestions = useMemo(() => {
+    if (!salaryBandsData) return []
+    const q = bandQuery.trim().toLowerCase()
+    if (!q || q.length < 2) return []
+    return salaryBandsData.positions.filter(p => p.position.toLowerCase().includes(q)).slice(0, 12)
+  }, [bandQuery, salaryBandsData])
+
+  // Compute band for each country in comparison
+  const bandResults = useMemo(() => {
+    if (!bandRef || !salaryBandsData) return {}
+    const out: Record<string, ReturnType<typeof lookupBand>> = {}
+    for (const entry of allData) {
+      const country = RESEARCH_COUNTRY_MAP[entry.meta.slug] ?? entry.meta.slug
+      out[entry.meta.slug] = lookupBand(salaryBandsData.hubs, salaryBandsData.bands, bandRef, country)
+    }
+    return out
+  }, [bandRef, salaryBandsData, allData])   // always show full market range; segments kept in CSV for data integrity
   const [period, setPeriod] = useState<'annual' | 'monthly'>(initialPeriod)
   const [detail, setDetail] = useState<'columns' | 'matrix'>('columns')
   const [dataSource, setDataSource] = useState<'market' | 'ats'>(initialSource)
@@ -204,6 +235,123 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
               </div>
               <RangeChart series={series} period={period} lang={lang} />
             </div>
+
+            {/* SALARY BAND REFERENCE */}
+            {salaryBandsData && (
+              <div className="card" style={{ padding: '20px 22px', marginTop: 18 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16, flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: 14, fontWeight: 600 }}>💰 {lang === 'ru' ? 'Salary Band — эталон' : 'Salary Band reference'}</span>
+                  <div style={{ position: 'relative', flex: 1, maxWidth: 360 }}>
+                    <input
+                      type="text" value={bandQuery}
+                      onChange={e => { setBandQuery(e.target.value); setShowBandDropdown(true); if (!e.target.value) setBandRef(null) }}
+                      onFocus={() => setShowBandDropdown(true)}
+                      onBlur={() => setTimeout(() => setShowBandDropdown(false), 150)}
+                      placeholder={lang === 'ru' ? 'Выберите позицию…' : 'Select a position…'}
+                      style={{ width: '100%', padding: '7px 12px', borderRadius: 'var(--r-md)', border: '1px solid var(--border-strong)', background: 'var(--surface)', color: 'var(--text)', fontFamily: 'var(--font-ui)', fontSize: 13, outline: 'none', boxSizing: 'border-box' }}
+                    />
+                    {showBandDropdown && bandSuggestions.length > 0 && (
+                      <div style={{ position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 50, marginTop: 4, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--r-md)', boxShadow: 'var(--shadow-2)', maxHeight: 240, overflowY: 'auto' }}>
+                        {bandSuggestions.map((p, i) => (
+                          <button key={i} onMouseDown={() => { setBandRef(p); setBandQuery(p.position); setShowBandDropdown(false) }}
+                            style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', border: 'none', background: 'transparent', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-ui)' }}
+                            onMouseEnter={e => (e.currentTarget.style.background = 'var(--surface-2)')}
+                            onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                          >
+                            <span style={{ fontSize: 13, flex: 1 }}>{p.position}</span>
+                            <span style={{ fontSize: 10.5, color: 'var(--accent)', fontWeight: 600, flexShrink: 0 }}>{p.level}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {bandRef && <span style={{ fontSize: 11.5, color: 'var(--muted)' }}>{bandRef.level} · {bandRef.salaryBand}</span>}
+                </div>
+                {!bandRef && (
+                  <p style={{ fontSize: 13, color: 'var(--muted)', margin: 0 }}>
+                    {lang === 'ru'
+                      ? 'Выберите позицию выше, чтобы сравнить внутренние вилки с рыночными данными'
+                      : 'Select a position above to compare internal bands with market data'}
+                  </p>
+                )}
+                {bandRef && (
+                  <div style={{ overflowX: 'auto' }}>
+                    <table className="data">
+                      <thead>
+                        <tr>
+                          <th style={{ paddingLeft: 0 }}>{lang === 'ru' ? 'Локация' : 'Location'}</th>
+                          <th style={{ textAlign: 'right' }}>{lang === 'ru' ? 'Band мин–макс (€/мес ≈)' : 'Band min–max (≈€/mo)'}</th>
+                          <th style={{ textAlign: 'right' }}>{lang === 'ru' ? 'Band медиана' : 'Band median'}</th>
+                          <th style={{ textAlign: 'right' }}>{lang === 'ru' ? 'Рынок Senior (≈€/мес)' : 'Market Senior (≈€/mo)'}</th>
+                          <th style={{ textAlign: 'center' }}>{lang === 'ru' ? 'Статус' : 'Status'}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {allData.map((entry, i) => {
+                          const br = bandResults[entry.meta.slug]
+                          if (!br) return (
+                            <tr key={entry.meta.slug}>
+                              <td style={{ paddingLeft: 0 }}>
+                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                                  <span className="dot" style={{ background: SERIES[i], width: 7, height: 7 }} />
+                                  <span>{entry.meta.flag} {entry.meta.name[lang]}</span>
+                                </span>
+                              </td>
+                              <td colSpan={4} style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</td>
+                            </tr>
+                          )
+                          const norm = normaliseToMonthlyEur(br.salary)
+                          // Market Senior midpoint (all segments)
+                          const seniors = entry.data.grades.filter(r => r.grade === 'Senior')
+                          const senMin = seniors.length ? Math.min(...seniors.map(r => r.monthly_gross_min)) : null
+                          const senMax = seniors.length ? Math.max(...seniors.map(r => r.monthly_gross_max)) : null
+                          const senMid = senMin != null && senMax != null ? Math.round((senMin + senMax) / 2) : null
+                          // Compare band median vs market senior midpoint
+                          let status = '—'
+                          let statusColor = 'var(--muted)'
+                          if (senMid != null) {
+                            const diff = ((norm.median - senMid) / senMid) * 100
+                            if (diff > 10) { status = `↑ +${Math.round(diff)}%`; statusColor = 'var(--pos)' }
+                            else if (diff < -10) { status = `↓ ${Math.round(diff)}%`; statusColor = 'var(--warn)' }
+                            else { status = `≈ ${diff > 0 ? '+' : ''}${Math.round(diff)}%`; statusColor = 'var(--muted)' }
+                          }
+                          return (
+                            <tr key={entry.meta.slug}>
+                              <td style={{ paddingLeft: 0 }}>
+                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                                  <span className="dot" style={{ background: SERIES[i], width: 7, height: 7 }} />
+                                  <span>{entry.meta.flag} {entry.meta.name[lang]}</span>
+                                </span>
+                              </td>
+                              <td className="mono" style={{ textAlign: 'right', fontSize: 13 }}>
+                                €{norm.min}K – €{norm.max}K
+                                <div style={{ fontSize: 10.5, color: 'var(--muted-2)' }}>
+                                  {fmtBandValue(br.salary, br.salary.min)} – {fmtBandValue(br.salary, br.salary.max)} orig
+                                </div>
+                              </td>
+                              <td className="mono" style={{ textAlign: 'right', fontWeight: 600, color: 'var(--accent)' }}>
+                                €{norm.median}K
+                              </td>
+                              <td className="mono" style={{ textAlign: 'right', color: 'var(--text-2)' }}>
+                                {senMid != null ? `€${Math.round(senMid / 1000)}K` : '—'}
+                              </td>
+                              <td style={{ textAlign: 'center' }}>
+                                <span className="mono" style={{ fontSize: 12, fontWeight: 600, color: statusColor }}>{status}</span>
+                              </td>
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                    <div style={{ padding: '8px 0', fontSize: 11, color: 'var(--muted-2)' }}>
+                      {lang === 'ru'
+                        ? 'Статус = Band медиана vs рыночный Senior (медиана). ↑ band выше рынка. ↓ band ниже рынка.'
+                        : 'Status = Band median vs market Senior midpoint. ↑ band above market. ↓ band below market.'}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 

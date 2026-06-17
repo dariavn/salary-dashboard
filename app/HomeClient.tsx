@@ -335,6 +335,7 @@ export default function HomeClient({
             candidatesByPosition={candidatesByPosition}
             locationMeta={locationMeta}
             benchmarkGrades={benchmarkGrades}
+            salaryBandsData={salaryBandsData}
           />
         </div>
       )}

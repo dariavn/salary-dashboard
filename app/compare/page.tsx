@@ -1,4 +1,5 @@
 import { loadCountryData, getLocationMeta, getPositionMeta, loadCandidates } from '@/lib/dataLoader'
+import { loadSalaryBandsData } from '@/lib/salary-bands-loader'
 import CompareClient from './CompareClient'
 
 interface Props {
@@ -18,6 +19,7 @@ export default async function ComparePage({ searchParams }: Props) {
     data: loadCountryData(position, slug),
     candidates: loadCandidates(position, slug),
   }))
+  const salaryBandsData = loadSalaryBandsData()
 
-  return <CompareClient positionMeta={positionMeta} allData={allData} initialSource={source} initialPeriod={initialPeriod} />
+  return <CompareClient positionMeta={positionMeta} allData={allData} initialSource={source} initialPeriod={initialPeriod} salaryBandsData={salaryBandsData} />
 }

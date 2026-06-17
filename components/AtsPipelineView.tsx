@@ -1,8 +1,11 @@
 'use client'
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { PositionMeta, LocationMeta } from '@/lib/types'
+import type { PositionEntry } from '@/lib/salary-bands'
+import type { SalaryBandsData } from '@/lib/salary-bands-loader'
+import { lookupBand, compareToBand, normaliseToMonthlyEur, RESEARCH_COUNTRY_MAP } from '@/lib/salary-bands'
 import { t, GRADE_ORDER, GRADE_VAR } from '@/lib/i18n'
 import { useLang } from '@/context/LangContext'
 
@@ -10,8 +13,8 @@ interface Props {
   positions: PositionMeta[]
   candidatesByPosition: Record<string, CandidateWithLocation[]>
   locationMeta: Record<string, LocationMeta>
-  // position → location → GradeRow[] (market benchmark)
   benchmarkGrades: Record<string, Record<string, GradeRow[]>>
+  salaryBandsData?: SalaryBandsData
 }
 
 type BenchmarkResult = { type: 'above' | 'below' | 'at' | 'unknown'; pct: number }
@@ -85,7 +88,7 @@ function formatDate(d: string, lang: string): string {
   return lang === 'ru' ? `${(moRu as any)[m] ?? m} ${y}` : `${(mo as any)[m] ?? m} ${y}`
 }
 
-export default function AtsPipelineView({ positions, candidatesByPosition, locationMeta, benchmarkGrades }: Props) {
+export default function AtsPipelineView({ positions, candidatesByPosition, locationMeta, benchmarkGrades, salaryBandsData }: Props) {
   const { lang } = useLang()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -125,6 +128,18 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     if (locs.length) p.set('atsLoc', locs.join(','))
     router.replace(`/?${p.toString()}`, { scroll: false })
   }, [position, period, gradeFilter, salaryPeriod, locationFilter, router])
+
+  // Salary Band reference state
+  const [bandQuery, setBandQuery] = useState('')
+  const [bandRef, setBandRef] = useState<PositionEntry | null>(null)
+  const [showBandDropdown, setShowBandDropdown] = useState(false)
+
+  const bandSuggestions = useMemo(() => {
+    if (!salaryBandsData) return []
+    const q = bandQuery.trim().toLowerCase()
+    if (!q || q.length < 2) return []
+    return salaryBandsData.positions.filter(p => p.position.toLowerCase().includes(q)).slice(0, 10)
+  }, [bandQuery, salaryBandsData])
 
   // On mount: always write current state to URL (ensures back navigation restores position)
   const didMount = useRef(false)
@@ -227,6 +242,37 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Salary Band reference picker */}
+        {salaryBandsData && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span className="eyebrow">💰 {lang === 'ru' ? 'Band-эталон' : 'Band ref'}</span>
+            <div style={{ position: 'relative' }}>
+              <input type="text" value={bandQuery}
+                onChange={e => { setBandQuery(e.target.value); setShowBandDropdown(true); if (!e.target.value) setBandRef(null) }}
+                onFocus={() => setShowBandDropdown(true)}
+                onBlur={() => setTimeout(() => setShowBandDropdown(false), 150)}
+                placeholder={lang === 'ru' ? 'Позиция…' : 'Position…'}
+                style={{ padding: '5px 10px', borderRadius: 'var(--r-sm)', border: '1px solid var(--border-strong)', background: 'var(--surface)', color: 'var(--text)', fontFamily: 'var(--font-ui)', fontSize: 12, outline: 'none', width: 180 }}
+              />
+              {showBandDropdown && bandSuggestions.length > 0 && (
+                <div style={{ position: 'absolute', top: '100%', left: 0, zIndex: 50, marginTop: 2, width: 280, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--r-md)', boxShadow: 'var(--shadow-2)', maxHeight: 220, overflowY: 'auto' }}>
+                  {bandSuggestions.map((p, i) => (
+                    <button key={i} onMouseDown={() => { setBandRef(p); setBandQuery(p.position); setShowBandDropdown(false) }}
+                      style={{ width: '100%', display: 'flex', justifyContent: 'space-between', padding: '7px 12px', border: 'none', background: 'transparent', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-ui)', fontSize: 12 }}
+                      onMouseEnter={e => (e.currentTarget.style.background = 'var(--surface-2)')}
+                      onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                    >
+                      <span style={{ color: 'var(--text)' }}>{p.position}</span>
+                      <span style={{ color: 'var(--accent)', fontWeight: 600, flexShrink: 0, marginLeft: 8 }}>{p.level}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+            {bandRef && <span style={{ fontSize: 11, color: 'var(--muted)' }}>{bandRef.level}</span>}
           </div>
         )}
 
@@ -393,6 +439,11 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                   title={lang === 'ru' ? 'Сравнение с медианой mid-market бенчмарка для этой локации' : 'vs mid-market benchmark median for this location'}>
                   {lang === 'ru' ? 'vs рынок' : 'vs market'}
                 </th>
+                {bandRef && (
+                  <th style={{ minWidth: 80, textAlign: 'center' }} title={`vs Salary Band: ${bandRef.position} (${bandRef.level})`}>
+                    💰 Band
+                  </th>
+                )}
                 <th style={{ minWidth: 160 }}>{t(lang, 'originalSalary')}</th>
                 <th style={{ textAlign: 'right', width: 55 }}>{t(lang, 'expYears')}</th>
                 <th style={{ textAlign: 'center', width: 70 }}>{t(lang, 'dataDate')}</th>
@@ -406,6 +457,18 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                 const gradeColor = GRADE_VAR[dg]
                 const bmGrades = benchmarkGrades[position]?.[c.location] ?? []
                 const bm = getBenchmark(c.salary_monthly_eur, c.location, dg, bmGrades)
+                // Salary Band indicator
+                let bandStatus: 'within' | 'above' | 'below' | 'unknown' = 'unknown'
+                let bandNormStr = ''
+                if (bandRef && salaryBandsData && c.salary_monthly_eur) {
+                  const country = RESEARCH_COUNTRY_MAP[c.location] ?? c.location
+                  const br = lookupBand(salaryBandsData.hubs, salaryBandsData.bands, bandRef, country)
+                  if (br) {
+                    bandStatus = compareToBand(c.salary_monthly_eur, br.salary)
+                    const norm = normaliseToMonthlyEur(br.salary)
+                    bandNormStr = `€${norm.min}K–€${norm.max}K`
+                  }
+                }
                 return (
                   <tr key={i}>
                     {/* Grade (Lead/Head shown as Senior) */}
@@ -437,6 +500,26 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
                     <td style={{ textAlign: 'center' }}>
                       <BenchmarkBadge result={bm} lang={lang} />
                     </td>
+                    {/* Band indicator */}
+                    {bandRef && (
+                      <td style={{ textAlign: 'center' }}>
+                        {bandStatus === 'unknown' ? (
+                          <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>
+                        ) : (
+                          <span
+                            className="mono"
+                            title={`vs Band ${bandRef.level}: ${bandNormStr}`}
+                            style={{
+                              fontSize: 11.5, fontWeight: 600, padding: '2px 7px', borderRadius: 999, cursor: 'default',
+                              background: bandStatus === 'within' ? 'var(--pos-bg)' : bandStatus === 'above' ? 'var(--warn-bg)' : 'color-mix(in srgb, var(--accent) 12%, transparent)',
+                              color: bandStatus === 'within' ? 'var(--pos)' : bandStatus === 'above' ? 'var(--warn)' : 'var(--accent)',
+                            }}
+                          >
+                            {bandStatus === 'within' ? '✓' : bandStatus === 'above' ? '↑' : '↓'}
+                          </span>
+                        )}
+                      </td>
+                    )}
                     {/* Original */}
                     <td style={{ fontSize: 12, color: 'var(--muted)', maxWidth: 180 }} title={c.salary_original_raw}>
                       <span style={{ display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
