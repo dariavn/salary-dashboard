@@ -1,0 +1,1562 @@
+[
+  {
+    "position": "Affiliate Lead",
+    "salaryBand": "Marketing",
+    "level": "M3"
+  },
+  {
+    "position": "Affiliate Manager Junior",
+    "salaryBand": "Marketing",
+    "level": "O2"
+  },
+  {
+    "position": "Affiliate Manager Middle",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "Affiliate Manager Senior",
+    "salaryBand": "Marketing",
+    "level": "P4"
+  },
+  {
+    "position": "ASO Specialist",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "Graphic Designer",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "Marketing Manager",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "Media Buyer Junior",
+    "salaryBand": "PA / Design",
+    "level": "O2"
+  },
+  {
+    "position": "Media Buyer Middle",
+    "salaryBand": "PA / Design",
+    "level": "P3"
+  },
+  {
+    "position": "Media Buyer Senior",
+    "salaryBand": "PA / Design",
+    "level": "P4"
+  },
+  {
+    "position": "PA Team Lead",
+    "salaryBand": "PA / Design",
+    "level": "M3"
+  },
+  {
+    "position": "Brand Manager",
+    "salaryBand": "Marketing",
+    "level": "P4"
+  },
+  {
+    "position": "Community Manager",
+    "salaryBand": "Marketing",
+    "level": "M0"
+  },
+  {
+    "position": "Community Specialist",
+    "salaryBand": "Marketing",
+    "level": "O3"
+  },
+  {
+    "position": "Community Specialist Senior",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "Engagement Marketing Manager",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "Head of Awareness",
+    "salaryBand": "Marketing",
+    "level": "M3"
+  },
+  {
+    "position": "Marketing Researcher",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "ORM (Online Safety) Manager",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "ORM (Online Safety) Specialist Junior",
+    "salaryBand": "Marketing",
+    "level": "O1"
+  },
+  {
+    "position": "ORM Manager",
+    "salaryBand": "Marketing",
+    "level": "M0"
+  },
+  {
+    "position": "ORM Specialist",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "ORM Specialist Junior",
+    "salaryBand": "Marketing",
+    "level": "O1"
+  },
+  {
+    "position": "ORM/SERM Manager",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "PR Manager",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "PR&ORM&Community Analyst",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "PR&ORM&Community Process Manager",
+    "salaryBand": "Marketing",
+    "level": "O3"
+  },
+  {
+    "position": "PR&ORM&Community Team Lead",
+    "salaryBand": "Marketing",
+    "level": "M2"
+  },
+  {
+    "position": "Publisher",
+    "salaryBand": "Marketing",
+    "level": "O2"
+  },
+  {
+    "position": "SEO Specialist",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "Social Media Content Manager",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "3D Designer Senior",
+    "salaryBand": "PA / Design",
+    "level": "P3"
+  },
+  {
+    "position": "After Effects Tech Artist",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "Banner Designer",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "Communication Design Lead",
+    "salaryBand": "PA / Design",
+    "level": "M2"
+  },
+  {
+    "position": "Communication Designer Middle",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "Communication Designer Senior",
+    "salaryBand": "PA / Design",
+    "level": "P3"
+  },
+  {
+    "position": "Content Creator",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "Copywriter (SMM & CRM)",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "Creative Copywriter",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "Creative Lead",
+    "salaryBand": "Marketing",
+    "level": "M2"
+  },
+  {
+    "position": "Creative producer",
+    "salaryBand": "Marketing",
+    "level": "P4"
+  },
+  {
+    "position": "Editor",
+    "salaryBand": "Marketing",
+    "level": "P1"
+  },
+  {
+    "position": "Frontend Developer (Web Development) Junior",
+    "salaryBand": "Web Development",
+    "level": "P1"
+  },
+  {
+    "position": "Frontend Developer (Web Development) Middle",
+    "salaryBand": "Web Development",
+    "level": "P2"
+  },
+  {
+    "position": "Frontend Developer (Web Development) Senior",
+    "salaryBand": "Web Development",
+    "level": "P3"
+  },
+  {
+    "position": "Head of CPS",
+    "salaryBand": "Marketing",
+    "level": "M3"
+  },
+  {
+    "position": "HR Brand Designer Senior",
+    "salaryBand": "PA / Design",
+    "level": "M0"
+  },
+  {
+    "position": "Illustrator",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer (Web Development) Junior",
+    "salaryBand": "Web Development",
+    "level": "O3"
+  },
+  {
+    "position": "Localization Lead",
+    "salaryBand": "Marketing",
+    "level": "M1"
+  },
+  {
+    "position": "Localization Manager",
+    "salaryBand": "Marketing",
+    "level": "O3"
+  },
+  {
+    "position": "Marketing Design Lead",
+    "salaryBand": "PA / Design",
+    "level": "P5"
+  },
+  {
+    "position": "QA Engineer (Web Development) Middle",
+    "salaryBand": "Web Development",
+    "level": "P1"
+  },
+  {
+    "position": "Motion Design Lead",
+    "salaryBand": "PA / Design",
+    "level": "M2"
+  },
+  {
+    "position": "Motion Designer Middle",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "Motion Designer Senior",
+    "salaryBand": "PA / Design",
+    "level": "P3"
+  },
+  {
+    "position": "Project Manager Video Production",
+    "salaryBand": "Project managers",
+    "level": "P2"
+  },
+  {
+    "position": "Project Manager (Web Development) Junior",
+    "salaryBand": "Web Development",
+    "level": "P2"
+  },
+  {
+    "position": "Project Manager (Web Development) Middle",
+    "salaryBand": "Web Development",
+    "level": "P3"
+  },
+  {
+    "position": "QA Engineer (Web Development) Senior",
+    "salaryBand": "Web Development",
+    "level": "P2"
+  },
+  {
+    "position": "Video Engineer",
+    "salaryBand": "Marketing",
+    "level": "P2"
+  },
+  {
+    "position": "Video Producer",
+    "salaryBand": "Marketing",
+    "level": "P3"
+  },
+  {
+    "position": "Web Designer Senior",
+    "salaryBand": "PA / Design",
+    "level": "P3"
+  },
+  {
+    "position": "Web Design Lead",
+    "salaryBand": "PA / Design",
+    "level": "M1"
+  },
+  {
+    "position": "Web Development Lead",
+    "salaryBand": "Web Development",
+    "level": "M2"
+  },
+  {
+    "position": "Education Lead",
+    "salaryBand": "Marketing",
+    "level": "M1"
+  },
+  {
+    "position": "Educational specialist",
+    "salaryBand": "Marketing",
+    "level": "P1"
+  },
+  {
+    "position": "Trading expert",
+    "salaryBand": "Marketing",
+    "level": "P1"
+  },
+  {
+    "position": "Marketing Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P1"
+  },
+  {
+    "position": "PMM Lead",
+    "salaryBand": "Product",
+    "level": "M3"
+  },
+  {
+    "position": "Product Marketing Manager Middle",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "Product Marketing Manager Senior",
+    "salaryBand": "Product",
+    "level": "P4"
+  },
+  {
+    "position": "CRM Content Manager",
+    "salaryBand": "PA / Design",
+    "level": "O2"
+  },
+  {
+    "position": "CRM Content Manager Senior",
+    "salaryBand": "PA / Design",
+    "level": "P1"
+  },
+  {
+    "position": "CRM Head",
+    "salaryBand": "PA / Design",
+    "level": "M3"
+  },
+  {
+    "position": "CRM Manager Middle",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "CRM Manager Senior",
+    "salaryBand": "PA / Design",
+    "level": "P3"
+  },
+  {
+    "position": "Head of VIP Account Services",
+    "salaryBand": "Marketing",
+    "level": "M3"
+  },
+  {
+    "position": "Team Lead IN + TH",
+    "salaryBand": "Marketing",
+    "level": "M0"
+  },
+  {
+    "position": "Business Development Manager",
+    "salaryBand": "Product",
+    "level": "P4"
+  },
+  {
+    "position": "Process Manager",
+    "salaryBand": "Backoffice",
+    "level": "P3"
+  },
+  {
+    "position": "Process Manager Lead",
+    "salaryBand": "Backoffice",
+    "level": "M2"
+  },
+  {
+    "position": "Chief Marketing Officer",
+    "salaryBand": "Marketing",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Legal Officer",
+    "salaryBand": "Backoffice",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Finance Officer",
+    "salaryBand": "Backoffice",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Payments Officer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Marketing Officer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Technical Officer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Risk Officer",
+    "salaryBand": "Data & Analytics",
+    "level": "M4"
+  },
+  {
+    "position": "Chief Product Officer",
+    "salaryBand": "Product",
+    "level": "M4"
+  },
+  {
+    "position": "HR Business Partner",
+    "salaryBand": "Backoffice",
+    "level": "P3"
+  },
+  {
+    "position": "Recruiter",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Recruitment Lead",
+    "salaryBand": "Backoffice",
+    "level": "M2"
+  },
+  {
+    "position": "HR Lead",
+    "salaryBand": "Backoffice",
+    "level": "M3"
+  },
+  {
+    "position": "HR Brand Lead",
+    "salaryBand": "Backoffice",
+    "level": "M2"
+  },
+  {
+    "position": "Frontend Developer",
+    "salaryBand": "IT & Information Security",
+    "level": "P2"
+  },
+  {
+    "position": "Backend Developer",
+    "salaryBand": "IT & Information Security",
+    "level": "P2"
+  },
+  {
+    "position": "ITIS Development Lead",
+    "salaryBand": "IT & Information Security",
+    "level": "M2"
+  },
+  {
+    "position": "HR Administrator",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "HR Administrator",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Lead Specialist of Employee Records",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Specialist of Employee Records",
+    "salaryBand": "Backoffice",
+    "level": "P1"
+  },
+  {
+    "position": "SMM Manager",
+    "salaryBand": "Backoffice",
+    "level": "O2"
+  },
+  {
+    "position": "HR Brand Designer",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Senior HR Brand Designer",
+    "salaryBand": "PA / Design",
+    "level": "M0"
+  },
+  {
+    "position": "Production Manager",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Travel + Event Manager",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Internal Communications Manager",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "HR Brand Lead",
+    "salaryBand": "Backoffice",
+    "level": "M2"
+  },
+  {
+    "position": "Graphic Designer",
+    "salaryBand": "PA / Design",
+    "level": "P2"
+  },
+  {
+    "position": "Information Security Specialist (СБ)",
+    "salaryBand": "IT & Information Security",
+    "level": "P1"
+  },
+  {
+    "position": "Information Security Specialist (OSINT)",
+    "salaryBand": "IT & Information Security",
+    "level": "P1"
+  },
+  {
+    "position": "Technical Writer",
+    "salaryBand": "IT & Information Security",
+    "level": "P2"
+  },
+  {
+    "position": "IT Infra Lead",
+    "salaryBand": "IT & Information Security",
+    "level": "M1"
+  },
+  {
+    "position": "InfraOps Specialist",
+    "salaryBand": "IT & Information Security",
+    "level": "P1"
+  },
+  {
+    "position": "IT Services Lead",
+    "salaryBand": "IT & Information Security",
+    "level": "M1"
+  },
+  {
+    "position": "1С Developer",
+    "salaryBand": "IT & Information Security",
+    "level": "P2"
+  },
+  {
+    "position": "IT Specialist",
+    "salaryBand": "IT & Information Security",
+    "level": "P1"
+  },
+  {
+    "position": "Head of IT and Information Security",
+    "salaryBand": "IT & Information Security",
+    "level": "M3"
+  },
+  {
+    "position": "DevSecOps Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "SOC Engineer",
+    "salaryBand": "IT & Information Security",
+    "level": "P2"
+  },
+  {
+    "position": "DevSecOps Engineer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P2"
+  },
+  {
+    "position": "Account Manager",
+    "salaryBand": "Support / Monitoring",
+    "level": "O3"
+  },
+  {
+    "position": "Android Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Android Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Android Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Android Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Android Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Android Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Android Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Android Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Android Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Auto QA Lead",
+    "salaryBand": "QA",
+    "level": "M1"
+  },
+  {
+    "position": "Backend Developer Middle Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P2"
+  },
+  {
+    "position": "Backend Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P2"
+  },
+  {
+    "position": "Backend Developer Middle Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Middle Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Middle Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Senior Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Developer Senior Core",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Developer Senior Core",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Backend Developer Senior Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Developer Senior Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Developer Senior Product",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Backend Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Backend Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Billing Support Lead",
+    "salaryBand": "Support / Monitoring",
+    "level": "M1"
+  },
+  {
+    "position": "Billing Support QA",
+    "salaryBand": "Support / Monitoring",
+    "level": "O3"
+  },
+  {
+    "position": "Billing Support Specialist",
+    "salaryBand": "Support / Monitoring",
+    "level": "O2"
+  },
+  {
+    "position": "Rust / C++ Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Rust / C++ Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "Data Engineer Junior",
+    "salaryBand": "Data Office",
+    "level": "P1"
+  },
+  {
+    "position": "Data Engineer Middle",
+    "salaryBand": "Data Office",
+    "level": "P2"
+  },
+  {
+    "position": "Data Engineer Senior",
+    "salaryBand": "Data Office",
+    "level": "P4"
+  },
+  {
+    "position": "Data Office Head",
+    "salaryBand": "Data Office",
+    "level": "M3"
+  },
+  {
+    "position": "Data Engineer Junior",
+    "salaryBand": "Data Office",
+    "level": "P1"
+  },
+  {
+    "position": "Data Engineer Middle",
+    "salaryBand": "Data Office",
+    "level": "P2"
+  },
+  {
+    "position": "Data Engineer Senior",
+    "salaryBand": "Data Office",
+    "level": "P4"
+  },
+  {
+    "position": "Data Ops Engineer",
+    "salaryBand": "Data Office",
+    "level": "P1"
+  },
+  {
+    "position": "Data Scientist",
+    "salaryBand": "Data & Analytics",
+    "level": "P2"
+  },
+  {
+    "position": "Data Team Lead",
+    "salaryBand": "Data Office",
+    "level": "M2"
+  },
+  {
+    "position": "DevOps Engineer Junior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P1"
+  },
+  {
+    "position": "DevOps Engineer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P2"
+  },
+  {
+    "position": "DevOps Engineer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "DevOps Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P2"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P2"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Developer Middle",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P4"
+  },
+  {
+    "position": "Frontend Lead",
+    "salaryBand": "Frontend",
+    "level": "M2"
+  },
+  {
+    "position": "Full Stack Developer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Head of Billing",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M4"
+  },
+  {
+    "position": "Head of Development",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M3"
+  },
+  {
+    "position": "Head of Operations",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M3"
+  },
+  {
+    "position": "Head of QA",
+    "salaryBand": "QA",
+    "level": "M3"
+  },
+  {
+    "position": "Infrastructure Lead",
+    "salaryBand": "Data Office",
+    "level": "M2"
+  },
+  {
+    "position": "IOS Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "IOS Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "IOS Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "IOS Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "IOS Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "IOS Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "IOS Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "IOS Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "IOS Developer Middle",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "IOS Developer Senior",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "IOS Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Frontend Developer Senior",
+    "salaryBand": "Frontend",
+    "level": "P3"
+  },
+  {
+    "position": "Marketing Development Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Monitoring Engineer Junior",
+    "salaryBand": "Support / Monitoring",
+    "level": "O1"
+  },
+  {
+    "position": "Monitoring Engineer Middle",
+    "salaryBand": "Support / Monitoring",
+    "level": "O2"
+  },
+  {
+    "position": "Monitoring Engineer Senior",
+    "salaryBand": "Support / Monitoring",
+    "level": "O3"
+  },
+  {
+    "position": "Monitoring Team Lead",
+    "salaryBand": "Support / Monitoring",
+    "level": "M2"
+  },
+  {
+    "position": "Network Engineer",
+    "salaryBand": "Data Office",
+    "level": "P3"
+  },
+  {
+    "position": "Tech Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P3"
+  },
+  {
+    "position": "Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P2"
+  },
+  {
+    "position": "Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P3"
+  },
+  {
+    "position": "Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P2"
+  },
+  {
+    "position": "Tech Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P3"
+  },
+  {
+    "position": "Auto QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "Auto QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Automation Lead",
+    "salaryBand": "QA",
+    "level": "M1"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P1"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P1"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Engineer Middle",
+    "salaryBand": "QA",
+    "level": "P2"
+  },
+  {
+    "position": "QA Engineer Senior",
+    "salaryBand": "QA",
+    "level": "P3"
+  },
+  {
+    "position": "QA Lead",
+    "salaryBand": "QA",
+    "level": "M1"
+  },
+  {
+    "position": "Rust Team Lead",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "M2"
+  },
+  {
+    "position": "Senior Web Analyst",
+    "salaryBand": "Data Office",
+    "level": "P2"
+  },
+  {
+    "position": "Software developer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P3"
+  },
+  {
+    "position": "Staff Software Engineer",
+    "salaryBand": "Android / IOS / Rust & C++ / Backend/ Full stack / Billing Dev / Devops",
+    "level": "P4"
+  },
+  {
+    "position": "System Analyst",
+    "salaryBand": "Project managers",
+    "level": "P2"
+  },
+  {
+    "position": "Tech Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P3"
+  },
+  {
+    "position": "Tech Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P3"
+  },
+  {
+    "position": "Tech Project Manager",
+    "salaryBand": "Project managers",
+    "level": "P3"
+  },
+  {
+    "position": "Tech Project Managers Lead",
+    "salaryBand": "Project managers",
+    "level": "M2"
+  },
+  {
+    "position": "UI/UX designer",
+    "salaryBand": "Product",
+    "level": "P1"
+  },
+  {
+    "position": "UI/UX designer",
+    "salaryBand": "Product",
+    "level": "P2"
+  },
+  {
+    "position": "UX Writer",
+    "salaryBand": "Product",
+    "level": "P1"
+  },
+  {
+    "position": "Virtualization Engineer",
+    "salaryBand": "Data Office",
+    "level": "P2"
+  },
+  {
+    "position": "Web Analyst",
+    "salaryBand": "Data Office",
+    "level": "P2"
+  },
+  {
+    "position": "Database Engineer",
+    "salaryBand": "Data Office",
+    "level": "P3"
+  },
+  {
+    "position": "Chief Legal Officer",
+    "salaryBand": "Backoffice",
+    "level": "M4"
+  },
+  {
+    "position": "Accountant Specialist",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Legal Counsel",
+    "salaryBand": "Backoffice",
+    "level": "P3"
+  },
+  {
+    "position": "Payments Officer (Banking)",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Data Protection Specialist",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Cyprus Senior Legal Counsel",
+    "salaryBand": "Backoffice",
+    "level": "P4"
+  },
+  {
+    "position": "Payments Officer (PSP)",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "Senior Legal Counsel",
+    "salaryBand": "Backoffice",
+    "level": "P4"
+  },
+  {
+    "position": "Senior Finance Manager",
+    "salaryBand": "Backoffice",
+    "level": "M1"
+  },
+  {
+    "position": "Treasury Lead (PSP)",
+    "salaryBand": "Backoffice",
+    "level": "M1"
+  },
+  {
+    "position": "Operations manager",
+    "salaryBand": "Backoffice",
+    "level": "O3"
+  },
+  {
+    "position": "Treasury Lead (Banking)",
+    "salaryBand": "Backoffice",
+    "level": "M2"
+  },
+  {
+    "position": "Chief Finance Officer",
+    "salaryBand": "Backoffice",
+    "level": "M4"
+  },
+  {
+    "position": "Finance Analyst",
+    "salaryBand": "Backoffice",
+    "level": "P3"
+  },
+  {
+    "position": "Data Protection Officer",
+    "salaryBand": "Backoffice",
+    "level": "M1"
+  },
+  {
+    "position": "Corporate Administrator",
+    "salaryBand": "Backoffice",
+    "level": "O2"
+  },
+  {
+    "position": "Senior Finance Officer",
+    "salaryBand": "Backoffice",
+    "level": "P3"
+  },
+  {
+    "position": "Head of Accounting",
+    "salaryBand": "Backoffice",
+    "level": "M2"
+  },
+  {
+    "position": "Finance Officer",
+    "salaryBand": "Backoffice",
+    "level": "P2"
+  },
+  {
+    "position": "BI Lead",
+    "salaryBand": "Data & Analytics",
+    "level": "M2"
+  },
+  {
+    "position": "BI Developer",
+    "salaryBand": "Data & Analytics",
+    "level": "P3"
+  },
+  {
+    "position": "DA Lead",
+    "salaryBand": "Data & Analytics",
+    "level": "M2"
+  },
+  {
+    "position": "Data Analyst",
+    "salaryBand": "Data & Analytics",
+    "level": "P3"
+  },
+  {
+    "position": "Data Scientist",
+    "salaryBand": "Data & Analytics",
+    "level": "P4"
+  },
+  {
+    "position": "DS Lead",
+    "salaryBand": "Data & Analytics",
+    "level": "M2"
+  },
+  {
+    "position": "Coordinator",
+    "salaryBand": "Support / Monitoring",
+    "level": "P4"
+  },
+  {
+    "position": "Business Analyst",
+    "salaryBand": "Support / Monitoring",
+    "level": "P2"
+  },
+  {
+    "position": "Claim Lead",
+    "salaryBand": "Support / Monitoring",
+    "level": "M1"
+  },
+  {
+    "position": "Claim Officer",
+    "salaryBand": "Support / Monitoring",
+    "level": "O1"
+  },
+  {
+    "position": "KYC Lead",
+    "salaryBand": "Support / Monitoring",
+    "level": "M1"
+  },
+  {
+    "position": "KYC Officer Senior",
+    "salaryBand": "Support / Monitoring",
+    "level": "O3"
+  },
+  {
+    "position": "KYC Officer Middle",
+    "salaryBand": "Support / Monitoring",
+    "level": "O2"
+  },
+  {
+    "position": "KYC Officer Junior",
+    "salaryBand": "Support / Monitoring",
+    "level": "O1"
+  },
+  {
+    "position": "Payout Lead",
+    "salaryBand": "Support / Monitoring",
+    "level": "M1"
+  },
+  {
+    "position": "Payout Operation Specialist",
+    "salaryBand": "Support / Monitoring",
+    "level": "O3"
+  },
+  {
+    "position": "Chief Product Officer",
+    "salaryBand": "Product",
+    "level": "M4"
+  },
+  {
+    "position": "Product Manager",
+    "salaryBand": "Product",
+    "level": "P4"
+  },
+  {
+    "position": "Product Design Lead",
+    "salaryBand": "Product",
+    "level": "M2"
+  },
+  {
+    "position": "Product Designer Middle",
+    "salaryBand": "Product",
+    "level": "P2"
+  },
+  {
+    "position": "Product Designer Senior",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "UX editorial writer",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "UX writer Senior",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "Growth Lead",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "Research Lead",
+    "salaryBand": "Product",
+    "level": "M2"
+  },
+  {
+    "position": "Competitive Researcher",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "UX Researcher",
+    "salaryBand": "Product",
+    "level": "P3"
+  },
+  {
+    "position": "AML Lead",
+    "salaryBand": "Risk & Compliance",
+    "level": "M2"
+  },
+  {
+    "position": "AntiFraud/AML Officer",
+    "salaryBand": "Risk & Compliance",
+    "level": "O2"
+  },
+  {
+    "position": "AntiFraud/AML Officer Senior",
+    "salaryBand": "Risk & Compliance",
+    "level": "O3"
+  },
+  {
+    "position": "Dealer",
+    "salaryBand": "Risk & Compliance",
+    "level": "P2"
+  },
+  {
+    "position": "Dealing Lead",
+    "salaryBand": "Risk & Compliance",
+    "level": "M2"
+  },
+  {
+    "position": "AntiFraud/AML Lead",
+    "salaryBand": "Risk & Compliance",
+    "level": "M3"
+  },
+  {
+    "position": "Quant Analyst",
+    "salaryBand": "Risk & Compliance",
+    "level": "P4"
+  },
+  {
+    "position": "Monetisation Lead",
+    "salaryBand": "Risk & Compliance",
+    "level": "M2"
+  },
+  {
+    "position": "Quant Analyst",
+    "salaryBand": "Risk & Compliance",
+    "level": "P4"
+  },
+  {
+    "position": "Chief Risk Officer",
+    "salaryBand": "Risk & Compliance",
+    "level": "M4"
+  },
+  {
+    "position": "Quant Analyst",
+    "salaryBand": "Risk & Compliance",
+    "level": "P4"
+  },
+  {
+    "position": "Quant Analyst",
+    "salaryBand": "Risk & Compliance",
+    "level": "P4"
+  },
+  {
+    "position": "Quant Lead",
+    "salaryBand": "Risk & Compliance",
+    "level": "M2"
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "country": "Singapore",
+    "city": "Singapore",
+    "hub": "1",
+    "costOfLivingIndex": 87.4
+  },
+  {
+    "country": "United States",
+    "city": "Washington",
+    "hub": "1",
+    "costOfLivingIndex": 85.8
+  },
+  {
+    "country": "United Kingdom",
+    "city": "London",
+    "hub": "1",
+    "costOfLivingIndex": 83.7
+  },
+  {
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "hub": "1",
+    "costOfLivingIndex": 81.6
+  },
+  {
+    "country": "Israel",
+    "city": "Jerusalem",
+    "hub": "1",
+    "costOfLivingIndex": 76.1
+  },
+  {
+    "country": "Australia",
+    "city": "Canberra",
+    "hub": "1",
+    "costOfLivingIndex": 69.3
+  },
+  {
+    "country": "Germany",
+    "city": "Berlin",
+    "hub": "1",
+    "costOfLivingIndex": 68.9
+  },
+  {
+    "country": "Estonia",
+    "city": "Tallinn",
+    "hub": "1",
+    "costOfLivingIndex": 63.0
+  },
+  {
+    "country": "Italy",
+    "city": "Rome",
+    "hub": "1",
+    "costOfLivingIndex": 61.7
+  },
+  {
+    "country": "Latvia",
+    "city": "Riga",
+    "hub": "1",
+    "costOfLivingIndex": 53.2
+  },
+  {
+    "country": "Lithuania",
+    "city": "Vilnius",
+    "hub": "1",
+    "costOfLivingIndex": 52.5
+  },
+  {
+    "country": "Cyprus",
+    "city": "Limassol",
+    "hub": "CY",
+    "costOfLivingIndex": 62.0
+  },
+  {
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "hub": "2",
+    "costOfLivingIndex": 61.2
+  },
+  {
+    "country": "Spain",
+    "city": "Madrid",
+    "hub": "2",
+    "costOfLivingIndex": 58.1
+  },
+  {
+    "country": "Czech Republic",
+    "city": "Prague",
+    "hub": "2",
+    "costOfLivingIndex": 57.1
+  },
+  {
+    "country": "Greece",
+    "city": "Athens",
+    "hub": "2",
+    "costOfLivingIndex": 56.1
+  },
+  {
+    "country": "Cyprus",
+    "city": "remote",
+    "hub": "2",
+    "costOfLivingIndex": 55.2
+  },
+  {
+    "country": "Taiwan",
+    "city": "Taipei",
+    "hub": "2",
+    "costOfLivingIndex": 54.3
+  },
+  {
+    "country": "Portugal",
+    "city": "Lisbon",
+    "hub": "2",
+    "costOfLivingIndex": 52.8
+  },
+  {
+    "country": "Poland",
+    "city": "Warsaw",
+    "hub": "2",
+    "costOfLivingIndex": 51.7
+  },
+  {
+    "country": "Hungary",
+    "city": "Budapest",
+    "hub": "2",
+    "costOfLivingIndex": 48.9
+  },
+  {
+    "country": "Argentina",
+    "city": "Buenos Aires",
+    "hub": "2",
+    "costOfLivingIndex": 47.9
+  },
+  {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "hub": "2",
+    "costOfLivingIndex": 45.8
+  },
+  {
+    "country": "Armenia",
+    "city": "Yerevan",
+    "hub": "2",
+    "costOfLivingIndex": 42.3
+  },
+  {
+    "country": "Montenegro",
+    "city": "Podgorica",
+    "hub": "2",
+    "costOfLivingIndex": 41.0
+  },
+  {
+    "country": "Russia",
+    "city": "Saint Petersburg",
+    "hub": "RU",
+    "costOfLivingIndex": 40.4
+  },
+  {
+    "country": "Thailand",
+    "city": "Bangkok",
+    "hub": "3",
+    "costOfLivingIndex": 39.6
+  },
+  {
+    "country": "Mauritius",
+    "city": "Port Louis",
+    "hub": "3",
+    "costOfLivingIndex": 37.0
+  },
+  {
+    "country": "Russia",
+    "city": "remote",
+    "hub": "3",
+    "costOfLivingIndex": 36.1
+  },
+  {
+    "country": "Moldova",
+    "city": "Chișinău",
+    "hub": "3",
+    "costOfLivingIndex": 35.8
+  },
+  {
+    "country": "Georgia",
+    "city": "Tbilisi",
+    "hub": "3",
+    "costOfLivingIndex": 35.5
+  },
+  {
+    "country": "Philippines",
+    "city": "Manila",
+    "hub": "3",
+    "costOfLivingIndex": 34.6
+  },
+  {
+    "country": "Brazil",
+    "city": "Brasília",
+    "hub": "3",
+    "costOfLivingIndex": 34.0
+  },
+  {
+    "country": "Colombia",
+    "city": "Bogotá",
+    "hub": "3",
+    "costOfLivingIndex": 31.9
+  },
+  {
+    "country": "Bali (Indonesia)",
+    "city": "Denpasar",
+    "hub": "3",
+    "costOfLivingIndex": 29.5
+  },
+  {
+    "country": "Indonesia",
+    "city": "Jakarta",
+    "hub": "3",
+    "costOfLivingIndex": 29.5
+  },
+  {
+    "country": "Uzbekistan",
+    "city": "Tashkent",
+    "hub": "3",
+    "costOfLivingIndex": 28.7
+  },
+  {
+    "country": "Algeria",
+    "city": "Algiers",
+    "hub": "3",
+    "costOfLivingIndex": 28.6
+  },
+  {
+    "country": "Kyrgyzstan",
+    "city": "Bishkek",
+    "hub": "3",
+    "costOfLivingIndex": 28.6
+  },
+  {
+    "country": "Kazakhstan",
+    "city": "Astana",
+    "hub": "3",
+    "costOfLivingIndex": 28.1
+  },
+  {
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "hub": "3",
+    "costOfLivingIndex": 27.7
+  },
+  {
+    "country": "Belarus",
+    "city": "Minsk",
+    "hub": "3",
+    "costOfLivingIndex": 27.3
+  },
+  {
+    "country": "India",
+    "city": "New Delhi",
+    "hub": "3",
+    "costOfLivingIndex": 22.8
+  },
+  {
+    "country": "Egypt",
+    "city": "Cairo",
+    "hub": "3",
+    "costOfLivingIndex": 22.6
+  },
+  {
+    "country": "Pakistan",
+    "city": "Islamabad",
+    "hub": "3",
+    "costOfLivingIndex": 20.4
+  }
+]

@@ -2,10 +2,12 @@
 import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { PositionMeta, LocationMeta, CandidateWithLocation, GradeRow } from '@/lib/types'
+import type { SalaryBandsData } from '@/lib/salary-bands-loader'
 import { useLang } from '@/context/LangContext'
 import { t } from '@/lib/i18n'
 import LanguageToggle from '@/components/LanguageToggle'
 import AtsPipelineView from '@/components/AtsPipelineView'
+import SalaryBandsTab from '@/components/SalaryBandsTab'
 
 interface Props {
   positions: PositionMeta[]
@@ -14,9 +16,10 @@ interface Props {
   locationMeta: Record<string, LocationMeta>
   benchmarkGrades: Record<string, Record<string, GradeRow[]>>
   researchDates: Record<string, Record<string, string>>
+  salaryBandsData: SalaryBandsData
 }
 
-type HomeTab = 'market' | 'ats'
+type HomeTab = 'market' | 'ats' | 'bands'
 type MarketPeriod = 'all' | '12m' | '6m' | '3m'
 
 function Logo() {
@@ -48,15 +51,18 @@ function isWithinPeriod(dateStr: string, period: MarketPeriod): boolean {
 
 export default function HomeClient({
   positions, locationsByPosition, candidatesByPosition,
-  locationMeta, benchmarkGrades, researchDates,
+  locationMeta, benchmarkGrades, researchDates, salaryBandsData,
 }: Props) {
   const { lang } = useLang()
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const [homeTab, setHomeTab] = useState<HomeTab>(
-    searchParams.get('tab') === 'ats' ? 'ats' : 'market'
-  )
+  const [homeTab, setHomeTab] = useState<HomeTab>(() => {
+    const tab = searchParams.get('tab')
+    if (tab === 'ats') return 'ats'
+    if (tab === 'bands') return 'bands'
+    return 'market'
+  })
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
   const [selected, setSelected] = useState<string[]>([])
   const [marketPeriod, setMarketPeriod] = useState<MarketPeriod>('all')
@@ -71,12 +77,13 @@ export default function HomeClient({
   function switchTab(tab: HomeTab) {
     setHomeTab(tab)
     if (tab === 'ats') {
-      // Include atsPos so back navigation restores the correct position
       const existingPos = searchParams.get('atsPos')
       const defaultPos = positions.find(p => (candidatesByPosition[p.slug]?.length ?? 0) > 0)?.slug
         ?? positions[0]?.slug ?? ''
       const pos = existingPos ?? defaultPos
       router.replace(`/?tab=ats&atsPos=${pos}`, { scroll: false })
+    } else if (tab === 'bands') {
+      router.replace('/?tab=bands', { scroll: false })
     } else {
       router.replace('/', { scroll: false })
     }
@@ -109,6 +116,7 @@ export default function HomeClient({
   const tabs: { key: HomeTab; icon: string; label: string }[] = [
     { key: 'market', icon: '↗', label: t(lang, 'marketTab') },
     { key: 'ats',    icon: '🏢', label: t(lang, 'atsTab') },
+    { key: 'bands',  icon: '💰', label: lang === 'ru' ? 'Salary Bands' : 'Salary Bands' },
   ]
 
   return (
@@ -327,6 +335,18 @@ export default function HomeClient({
             candidatesByPosition={candidatesByPosition}
             locationMeta={locationMeta}
             benchmarkGrades={benchmarkGrades}
+          />
+        </div>
+      )}
+
+      {/* ——— SALARY BANDS ——— */}
+      {homeTab === 'bands' && (
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '40px 28px 80px' }}>
+          <SalaryBandsTab
+            hubs={salaryBandsData.hubs}
+            positions={salaryBandsData.positions}
+            bands={salaryBandsData.bands}
+            locationMeta={locationMeta}
           />
         </div>
       )}

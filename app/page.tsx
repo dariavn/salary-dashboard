@@ -3,6 +3,7 @@ import {
   loadPositions, loadLocations, getLocationMeta,
   loadAllCandidatesForPosition, loadCountryData, getResearchDate,
 } from '@/lib/dataLoader'
+import { loadSalaryBandsData } from '@/lib/salary-bands-loader'
 import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import HomeClient from './HomeClient'
 
@@ -11,9 +12,7 @@ function HomeContent() {
   const locationsByPosition: Record<string, ReturnType<typeof getLocationMeta>[]> = {}
   const candidatesByPosition: Record<string, CandidateWithLocation[]> = {}
   const allLocationMeta: Record<string, ReturnType<typeof getLocationMeta>> = {}
-  // benchmark grades: position → location → GradeRow[]
   const benchmarkGrades: Record<string, Record<string, GradeRow[]>> = {}
-  // research dates: position → location → latest data_date string (e.g. "2026-05")
   const researchDates: Record<string, Record<string, string>> = {}
 
   for (const pos of positions) {
@@ -29,6 +28,8 @@ function HomeContent() {
     }
   }
 
+  const salaryBandsData = loadSalaryBandsData()
+
   return (
     <HomeClient
       positions={positions}
@@ -37,6 +38,7 @@ function HomeContent() {
       locationMeta={allLocationMeta}
       benchmarkGrades={benchmarkGrades}
       researchDates={researchDates}
+      salaryBandsData={salaryBandsData}
     />
   )
 }
