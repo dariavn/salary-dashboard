@@ -42,10 +42,9 @@ const FLAG_MAP: Record<string, string> = {
 
 function flag(country: string) { return FLAG_MAP[country] ?? '🌐' }
 
-function BandResultRow({ hubEntry, salary, showNorm }: { hubEntry: HubEntry; salary: SalaryRange; showNorm?: boolean }) {
+function BandResultRow({ hubEntry, salary }: { hubEntry: HubEntry; salary: SalaryRange }) {
   const isCY = hubEntry.hub === 'CY'
   const isRU = hubEntry.hub === 'RU'
-  const norm = normaliseToMonthlyEur(salary)
   return (
     <tr>
       <td style={{ paddingLeft: 16, whiteSpace: 'nowrap' }}>
@@ -62,22 +61,17 @@ function BandResultRow({ hubEntry, salary, showNorm }: { hubEntry: HubEntry; sal
           {hubEntry.hub}
         </span>
       </td>
-      <td className="mono" style={{ fontSize: 13.5, fontWeight: 600 }}>
+      <td className="mono" style={{ fontSize: 13.5, fontWeight: 600, whiteSpace: 'nowrap' }}>
         {fmtBandValue(salary, salary.min)} – {fmtBandValue(salary, salary.max)}
       </td>
-      <td className="mono" style={{ textAlign: 'right', fontSize: 14, fontWeight: 700, color: 'var(--accent)' }}>
+      <td className="mono" style={{ textAlign: 'right', fontSize: 14, fontWeight: 700, color: 'var(--accent)', whiteSpace: 'nowrap' }}>
         {fmtBandValue(salary, salary.median)}
       </td>
-      <td style={{ textAlign: 'center', fontSize: 11.5, color: 'var(--muted)' }}>
+      <td style={{ textAlign: 'center', fontSize: 11.5, color: 'var(--muted)', paddingRight: 16 }}>
         {salary.period === 'annual' ? 'annual' : 'monthly'} · {salary.type}
         {isCY && <div style={{ fontSize: 10, color: 'var(--warn)' }}>cap €85K</div>}
         {isRU && <div style={{ fontSize: 10, color: 'var(--warn)' }}>₽ нетт</div>}
       </td>
-      {showNorm && (
-        <td className="mono" style={{ textAlign: 'right', fontSize: 12.5, color: 'var(--muted)', paddingRight: 16 }}>
-          €{norm.min}K – €{norm.max}K
-        </td>
-      )}
     </tr>
   )
 }
@@ -254,12 +248,11 @@ export default function SalaryBandsTab({ hubs, positions, bands, locationMeta }:
                     <th style={{ textAlign: 'center' }}>Hub</th>
                     <th>{lang === 'ru' ? 'Вилка (мин – макс)' : 'Band (min – max)'}</th>
                     <th style={{ textAlign: 'right' }}>{lang === 'ru' ? 'Медиана' : 'Median'}</th>
-                    <th style={{ textAlign: 'center' }}>{lang === 'ru' ? 'Период / тип' : 'Period / type'}</th>
-                    <th style={{ textAlign: 'right', paddingRight: 16 }}>≈ €/mo</th>
+                    <th style={{ textAlign: 'center', paddingRight: 16 }}>{lang === 'ru' ? 'Период / тип' : 'Period / type'}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <BandResultRow hubEntry={selectedHub} salary={singleResult.salary} showNorm />
+                  <BandResultRow hubEntry={selectedHub} salary={singleResult.salary} />
                 </tbody>
               </table>
             </div>
@@ -286,21 +279,15 @@ export default function SalaryBandsTab({ hubs, positions, bands, locationMeta }:
                 <th style={{ textAlign: 'center' }}>Hub</th>
                 <th>{lang === 'ru' ? 'Вилка (мин – макс)' : 'Band (min – max)'}</th>
                 <th style={{ textAlign: 'right' }}>{lang === 'ru' ? 'Медиана' : 'Median'}</th>
-                <th style={{ textAlign: 'center' }}>{lang === 'ru' ? 'Период / тип' : 'Period / type'}</th>
-                <th style={{ textAlign: 'right', paddingRight: 16 }}>≈ €/mo</th>
+                <th style={{ textAlign: 'center', paddingRight: 16 }}>{lang === 'ru' ? 'Период / тип' : 'Period / type'}</th>
               </tr>
             </thead>
             <tbody>
               {allResults.map(r => r.hubEntry && r.result && (
-                <BandResultRow key={r.slug} hubEntry={r.hubEntry} salary={r.result.salary} showNorm />
+                <BandResultRow key={r.slug} hubEntry={r.hubEntry} salary={r.result.salary} />
               ))}
             </tbody>
           </table>
-          <div style={{ padding: '10px 16px', fontSize: 11, color: 'var(--muted-2)', borderTop: '1px solid var(--border)' }}>
-            {lang === 'ru'
-              ? '≈ €/mo — приблизительная нормализация к EUR/месяц gross (CY: /12; RU: ×1.15 /98)'
-              : '≈ €/mo — approx normalisation to EUR/month gross (CY: /12; RU: ×1.15 /98)'}
-          </div>
         </div>
       )}
     </div>

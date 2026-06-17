@@ -98,9 +98,9 @@ export function normaliseToMonthlyEur(salary: SalaryRange) {
 
 // Format a SalaryRange value for display (respects original currency/period)
 export function fmtBandValue(salary: SalaryRange, value: number): string {
-  if (salary.currency === 'RUB') return `${Math.round(value / 1000)}K ₽`
-  if (salary.period === 'annual') return `€${Math.round(value / 1000)}K`
-  return `€${Math.round(value / 1000)}K`
+  const v = Math.round(value)
+  if (salary.currency === 'RUB') return v.toLocaleString('ru-RU') + ' ₽'
+  return '€' + v.toLocaleString('en-US')
 }
 
 // Is a candidate salary (monthly EUR) within / above / below a band?
