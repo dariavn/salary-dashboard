@@ -93,9 +93,11 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
   const router = useRouter()
   const searchParams = useSearchParams()
 
+  // Only positions with actual ATS candidates
+  const positionsWithData = positions.filter(p => (candidatesByPosition[p.slug]?.length ?? 0) > 0)
+
   // Default: first position that has ATS data, fallback to positions[0]
-  const defaultPos = positions.find(p => (candidatesByPosition[p.slug]?.length ?? 0) > 0)?.slug
-    ?? positions[0]?.slug ?? ''
+  const defaultPos = positionsWithData[0]?.slug ?? positions[0]?.slug ?? ''
 
   // Initialise from URL so state survives browser back
   const [position, setPositionState] = useState(
@@ -231,11 +233,11 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
       {/* Controls */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 18, alignItems: 'center' }}>
         {/* Role */}
-        {positions.length > 1 && (
+        {positionsWithData.length > 1 && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span className="eyebrow">{t(lang, 'selectPosition')}</span>
             <div className="seg">
-              {positions.map(p => (
+              {positionsWithData.map(p => (
                 <button key={p.slug} aria-pressed={position === p.slug}
                   onClick={() => { setPosition(p.slug); setLocationFilter([]) }}>
                   {p.name[lang]}
