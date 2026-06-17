@@ -233,16 +233,25 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
       {/* Controls */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 18, alignItems: 'center' }}>
         {/* Role */}
-        {positionsWithData.length > 1 && (
+        {positions.length > 1 && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span className="eyebrow">{t(lang, 'selectPosition')}</span>
             <div className="seg">
-              {positionsWithData.map(p => (
-                <button key={p.slug} aria-pressed={position === p.slug}
-                  onClick={() => { setPosition(p.slug); setLocationFilter([]) }}>
-                  {p.name[lang]}
-                </button>
-              ))}
+              {positions.map(p => {
+                const hasData = (candidatesByPosition[p.slug]?.length ?? 0) > 0
+                return (
+                  <button
+                    key={p.slug}
+                    aria-pressed={position === p.slug}
+                    disabled={!hasData}
+                    onClick={() => { if (hasData) { setPosition(p.slug); setLocationFilter([]) } }}
+                    title={!hasData ? (lang === 'ru' ? 'Данные скоро появятся' : 'Coming soon') : undefined}
+                    style={!hasData ? { opacity: 0.4, cursor: 'not-allowed' } : undefined}
+                  >
+                    {p.name[lang]}
+                  </button>
+                )
+              })}
             </div>
           </div>
         )}
