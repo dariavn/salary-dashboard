@@ -203,6 +203,19 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
   const dates = [...new Set(allCandidates.map(c => c.data_as_of).filter(Boolean))].sort()
   const lastUpdated = dates[dates.length - 1] ?? ''
 
+  // Group sorted candidates by display grade — computed outside JSX so router closures work
+  const gradeGroups = useMemo(() => {
+    const groups: { grade: string; items: typeof sorted }[] = []
+    for (const c of sorted) {
+      const dg = displayGrade(c.exp_grade)
+      const last = groups[groups.length - 1]
+      if (last && last.grade === dg) last.items.push(c)
+      else groups.push({ grade: dg, items: [c] })
+    }
+    return groups
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sorted])
+
   // Primary click: EXCLUSIVE select (radio-style, deselects others)
   function selectLocationExclusive(slug: string) {
     const isSelected = activeLocationFilter.includes(slug)
@@ -438,18 +451,8 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
         </div>
       ) : (
         <div className="card" style={{ overflowX: 'auto' }}>
-          {/* Group candidates by grade */}
           {(() => {
-            const groups: { grade: string; items: typeof sorted }[] = []
-            for (const c of sorted) {
-              const dg = displayGrade(c.exp_grade)
-              const last = groups[groups.length - 1]
-              if (last && last.grade === dg) last.items.push(c)
-              else groups.push({ grade: dg, items: [c] })
-            }
-            // number of columns
             const colCount = bandRef ? 8 : 7
-
             return (
           <table className="data">
             <thead>
@@ -474,12 +477,12 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
               </tr>
             </thead>
             <tbody>
-              {groups.map(group => (
+              {gradeGroups.map(group => (
                 <>
                   {/* Grade section header */}
                   <tr key={`hdr-${group.grade}`}>
                     <td colSpan={colCount} style={{
-                      paddingTop: 14, paddingBottom: 6, paddingLeft: 0,
+                      paddingTop: 14, paddingBottom: 6, paddingLeft: 16,
                       background: 'var(--surface-2)',
                       borderBottom: '1px solid var(--border)',
                     }}>
