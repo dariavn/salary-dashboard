@@ -438,135 +438,166 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
         </div>
       ) : (
         <div className="card" style={{ overflowX: 'auto' }}>
+          {/* Group candidates by grade */}
+          {(() => {
+            const groups: { grade: string; items: typeof sorted }[] = []
+            for (const c of sorted) {
+              const dg = displayGrade(c.exp_grade)
+              const last = groups[groups.length - 1]
+              if (last && last.grade === dg) last.items.push(c)
+              else groups.push({ grade: dg, items: [c] })
+            }
+            // number of columns
+            const colCount = bandRef ? 8 : 7
+
+            return (
           <table className="data">
             <thead>
               <tr>
-                <th style={{ paddingLeft: 16, minWidth: 90 }}>{t(lang, 'grade')}</th>
                 <th style={{ minWidth: 130 }}>{t(lang, 'locationCol')}</th>
                 <th style={{ textAlign: 'right', minWidth: 110 }}>
                   {salaryPeriod === 'monthly' ? t(lang, 'salaryMonthly') : t(lang, 'annualApprox')}
                 </th>
-                <th style={{ minWidth: 60, textAlign: 'center' }}
-                  title={lang === 'ru' ? 'Сравнение с медианой mid-market бенчмарка для этой локации' : 'vs mid-market benchmark median for this location'}>
+                <th style={{ minWidth: 70, textAlign: 'center' }}
+                  title={lang === 'ru' ? 'vs медиана mid-market для этой локации' : 'vs mid-market median for this location'}>
                   {lang === 'ru' ? 'vs рынок' : 'vs market'}
                 </th>
                 {bandRef && (
-                  <th style={{ minWidth: 80, textAlign: 'center' }} title={`vs Salary Band: ${bandRef.position} (${bandRef.level})`}>
-                    💰 Band
+                  <th style={{ minWidth: 80, textAlign: 'center' }} title={`${bandRef.position} (${bandRef.level})`}>
+                    💰 vs band
                   </th>
                 )}
                 <th style={{ minWidth: 160 }}>{t(lang, 'originalSalary')}</th>
                 <th style={{ textAlign: 'right', width: 55 }}>{t(lang, 'expYears')}</th>
                 <th style={{ textAlign: 'center', width: 70 }}>{t(lang, 'dataDate')}</th>
-                <th style={{ paddingRight: 16, width: 110 }}></th>
+                <th style={{ paddingRight: 16 }}></th>
               </tr>
             </thead>
             <tbody>
-              {sorted.map((c, i) => {
-                const loc = locationMeta[c.location]
-                const dg = displayGrade(c.exp_grade)   // Lead/Head → Senior
-                const gradeColor = GRADE_VAR[dg]
-                const bmGrades = benchmarkGrades[position]?.[c.location] ?? []
-                const bm = getBenchmark(c.salary_monthly_eur, c.location, dg, bmGrades)
-                // Salary Band indicator
-                let bandStatus: 'within' | 'above' | 'below' | 'unknown' = 'unknown'
-                let bandNormStr = ''
-                if (bandRef && salaryBandsData && c.salary_monthly_eur) {
-                  const country = RESEARCH_COUNTRY_MAP[c.location] ?? c.location
-                  const br = lookupBand(salaryBandsData.hubs, salaryBandsData.bands, bandRef, country)
-                  if (br) {
-                    bandStatus = compareToBand(c.salary_monthly_eur, br.salary)
-                    const norm = normaliseToMonthlyEur(br.salary)
-                    bandNormStr = `€${norm.min}K–€${norm.max}K`
-                  }
-                }
-                return (
-                  <tr key={i}>
-                    {/* Grade (Lead/Head shown as Senior) */}
-                    <td style={{ paddingLeft: 16 }}>
-                      {dg && dg !== 'unknown' ? (
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                          <span className="dot" style={{ background: gradeColor, width: 8, height: 8 }} />
-                          <span style={{ fontWeight: 600, fontSize: 13 }}>{dg}</span>
-                        </span>
-                      ) : <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>}
-                    </td>
-                    {/* Location */}
-                    <td>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
-                        <span>{loc?.flag ?? '🌐'}</span>
-                        <span>{loc?.name[lang] ?? c.location}</span>
+              {groups.map(group => (
+                <>
+                  {/* Grade section header */}
+                  <tr key={`hdr-${group.grade}`}>
+                    <td colSpan={colCount} style={{
+                      paddingTop: 14, paddingBottom: 6, paddingLeft: 0,
+                      background: 'var(--surface-2)',
+                      borderBottom: '1px solid var(--border)',
+                    }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                        <span className="dot" style={{ background: GRADE_VAR[group.grade] ?? 'var(--muted)', width: 9, height: 9 }} />
+                        <span style={{ fontWeight: 700, fontSize: 13, color: 'var(--text)' }}>{group.grade}</span>
+                        <span style={{ fontSize: 11.5, color: 'var(--muted-2)' }}>· {group.items.length}</span>
                       </span>
                     </td>
-                    {/* Salary EUR */}
-                    <td className="mono" style={{ textAlign: 'right', fontWeight: 600, fontSize: 14 }}>
-                      {c.salary_monthly_eur ? (
-                        <span>
-                          {fmtSalary(c.salary_monthly_eur, salaryPeriod)}
-                          {c.outlier && <span title={t(lang, 'outlierBadge')} style={{ marginLeft: 4, fontSize: 11, color: 'var(--warn)' }}>⚠</span>}
-                        </span>
-                      ) : '—'}
-                    </td>
-                    {/* Benchmark indicator */}
-                    <td style={{ textAlign: 'center' }}>
-                      <BenchmarkBadge result={bm} lang={lang} />
-                    </td>
-                    {/* Band indicator */}
-                    {bandRef && (
-                      <td style={{ textAlign: 'center' }}>
-                        {bandStatus === 'unknown' ? (
-                          <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>
-                        ) : (
-                          <span
-                            className="mono"
-                            title={`vs Band ${bandRef.level}: ${bandNormStr}`}
-                            style={{
-                              fontSize: 11.5, fontWeight: 600, padding: '2px 7px', borderRadius: 999, cursor: 'default',
-                              background: bandStatus === 'within' ? 'var(--pos-bg)' : bandStatus === 'above' ? 'var(--warn-bg)' : 'color-mix(in srgb, var(--accent) 12%, transparent)',
-                              color: bandStatus === 'within' ? 'var(--pos)' : bandStatus === 'above' ? 'var(--warn)' : 'var(--accent)',
-                            }}
-                          >
-                            {bandStatus === 'within' ? '✓' : bandStatus === 'above' ? '↑' : '↓'}
+                  </tr>
+                  {group.items.map((c, i) => {
+                    const loc = locationMeta[c.location]
+                    const dg = displayGrade(c.exp_grade)
+                    const bmGrades = benchmarkGrades[position]?.[c.location] ?? []
+                    const bm = getBenchmark(c.salary_monthly_eur, c.location, dg, bmGrades)
+                    // Band indicator with %
+                    let bandStatus: 'within' | 'above' | 'below' | 'unknown' = 'unknown'
+                    let bandPct = 0
+                    let bandNormStr = ''
+                    if (bandRef && salaryBandsData && c.salary_monthly_eur) {
+                      const country = RESEARCH_COUNTRY_MAP[c.location] ?? c.location
+                      const br = lookupBand(salaryBandsData.hubs, salaryBandsData.bands, bandRef, country)
+                      if (br) {
+                        bandStatus = compareToBand(c.salary_monthly_eur, br.salary)
+                        const norm = normaliseToMonthlyEur(br.salary)
+                        bandNormStr = `€${norm.min}K–€${norm.max}K (median €${norm.median}K)`
+                        if (norm.median > 0)
+                          bandPct = Math.round(((c.salary_monthly_eur - norm.median) / norm.median) * 100)
+                      }
+                    }
+                    const bandBtnStyle = {
+                      fontFamily: 'var(--font-ui)', fontSize: 12, fontWeight: 500, cursor: 'pointer',
+                      padding: '4px 10px', borderRadius: 'var(--r-sm)', whiteSpace: 'nowrap' as const,
+                      border: '1px solid var(--border-strong)', background: 'var(--surface-2)',
+                      color: 'var(--text-2)', transition: 'all .12s',
+                    }
+                    return (
+                      <tr key={i}>
+                        {/* Location */}
+                        <td style={{ paddingLeft: 16 }}>
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13 }}>
+                            <span>{loc?.flag ?? '🌐'}</span>
+                            <span>{loc?.name[lang] ?? c.location}</span>
                           </span>
+                        </td>
+                        {/* Salary EUR */}
+                        <td className="mono" style={{ textAlign: 'right', fontWeight: 600, fontSize: 14 }}>
+                          {c.salary_monthly_eur ? (
+                            <span>
+                              {fmtSalary(c.salary_monthly_eur, salaryPeriod)}
+                              {c.outlier && <span title={t(lang, 'outlierBadge')} style={{ marginLeft: 4, fontSize: 11, color: 'var(--warn)' }}>⚠</span>}
+                            </span>
+                          ) : '—'}
+                        </td>
+                        {/* vs market */}
+                        <td style={{ textAlign: 'center' }}>
+                          <BenchmarkBadge result={bm} lang={lang} />
+                        </td>
+                        {/* vs band with % */}
+                        {bandRef && (
+                          <td style={{ textAlign: 'center' }}>
+                            {bandStatus === 'unknown' ? (
+                              <span style={{ color: 'var(--muted-2)', fontSize: 12 }}>—</span>
+                            ) : (
+                              <span className="mono" title={bandNormStr} style={{
+                                fontSize: 11.5, fontWeight: 600, padding: '2px 7px', borderRadius: 999,
+                                background: bandStatus === 'within' ? 'var(--pos-bg)' : bandStatus === 'above' ? 'var(--warn-bg)' : 'color-mix(in srgb, var(--accent) 12%, transparent)',
+                                color: bandStatus === 'within' ? 'var(--pos)' : bandStatus === 'above' ? 'var(--warn)' : 'var(--accent)',
+                              }}>
+                                {bandStatus === 'above' ? '↑' : bandStatus === 'below' ? '↓' : '≈'}
+                                {' '}{bandPct > 0 ? '+' : ''}{bandPct}%
+                              </span>
+                            )}
+                          </td>
                         )}
-                      </td>
-                    )}
-                    {/* Original */}
-                    <td style={{ fontSize: 12, color: 'var(--muted)', maxWidth: 180 }} title={c.salary_original_raw}>
-                      <span style={{ display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                        {c.salary_original_raw}
-                      </span>
-                      {c.gross_net !== 'gross' && c.gross_net && (
-                        <span style={{ fontSize: 10, color: 'var(--muted-2)', textTransform: 'uppercase' }}>{c.gross_net}</span>
-                      )}
-                    </td>
-                    {/* Exp */}
-                    <td className="mono" style={{ textAlign: 'right', fontSize: 12.5, color: 'var(--muted)' }}>
-                      {c.go_exp_years != null ? c.go_exp_years + 'y' : '—'}
-                    </td>
-                    {/* Date */}
-                    <td className="mono" style={{ textAlign: 'center', fontSize: 11.5, color: 'var(--muted-2)' }}>
-                      {formatDate(c.data_as_of, lang)}
-                    </td>
-                    {/* Compare */}
-                    <td style={{ paddingRight: 16 }}>
-                      <button
-                        onClick={() => goCompare(c.location)}
-                        style={{
-                          fontFamily: 'var(--font-ui)', fontSize: 12, fontWeight: 500, cursor: 'pointer',
-                          padding: '4px 10px', borderRadius: 'var(--r-sm)',
-                          border: '1px solid var(--border-strong)', background: 'var(--surface-2)',
-                          color: 'var(--text-2)', whiteSpace: 'nowrap', transition: 'all .12s',
-                        }}
-                      >
-                        ↗ {t(lang, 'compareWithMarket')}
-                      </button>
-                    </td>
+                        {/* Original */}
+                        <td style={{ fontSize: 12, color: 'var(--muted)', maxWidth: 180 }} title={c.salary_original_raw}>
+                          <span style={{ display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                            {c.salary_original_raw}
+                          </span>
+                          {c.gross_net !== 'gross' && c.gross_net && (
+                            <span style={{ fontSize: 10, color: 'var(--muted-2)', textTransform: 'uppercase' }}>{c.gross_net}</span>
+                          )}
+                        </td>
+                        {/* Exp */}
+                        <td className="mono" style={{ textAlign: 'right', fontSize: 12.5, color: 'var(--muted)' }}>
+                          {c.go_exp_years != null ? c.go_exp_years + 'y' : '—'}
+                        </td>
+                        {/* Date */}
+                        <td className="mono" style={{ textAlign: 'center', fontSize: 11.5, color: 'var(--muted-2)' }}>
+                          {formatDate(c.data_as_of, lang)}
+                        </td>
+                        {/* Action buttons */}
+                        <td style={{ paddingRight: 16 }}>
+                          <div style={{ display: 'flex', gap: 6 }}>
+                            <button onClick={() => goCompare(c.location)} style={bandBtnStyle}>
+                              ↗ {t(lang, 'compareWithMarket')}
+                            </button>
+                            {bandRef && (
+                              <button
+                                onClick={() => router.push(`/?tab=bands&bandsPos=${encodeURIComponent(bandRef.position)}`)}
+                                style={{ ...bandBtnStyle, borderColor: 'color-mix(in srgb, var(--accent) 40%, transparent)', color: 'var(--accent)', background: 'var(--accent-soft)' }}
+                                title={`${bandRef.position} · ${bandRef.level}`}
+                              >
+                                💰 Band
+                              </button>
+                            )}
+                          </div>
+                        </td>
                   </tr>
                 )
               })}
+                </>
+              ))}
             </tbody>
           </table>
+            )
+          })()}
         </div>
       )}
 

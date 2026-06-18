@@ -1,5 +1,6 @@
 'use client'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import type { HubEntry, PositionEntry, BandEntry, SalaryRange } from '@/lib/salary-bands'
 import {
   lookupBand, fmtBandValue, normaliseToMonthlyEur, RESEARCH_COUNTRY_MAP,
@@ -78,9 +79,20 @@ function BandResultRow({ hubEntry, salary }: { hubEntry: HubEntry; salary: Salar
 
 export default function SalaryBandsTab({ hubs, positions, bands, locationMeta }: Props) {
   const { lang } = useLang()
+  const searchParams = useSearchParams()
   const [posQuery, setPosQuery] = useState('')
   const [selectedPos, setSelectedPos] = useState<PositionEntry | null>(null)
   const [showPosDropdown, setShowPosDropdown] = useState(false)
+
+  // Pre-select position from URL param (e.g. from ATS band link)
+  useEffect(() => {
+    const bandsPos = searchParams.get('bandsPos')
+    if (bandsPos && !selectedPos) {
+      const match = positions.find(p => p.position === bandsPos)
+      if (match) { setSelectedPos(match); setPosQuery(match.position) }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   const [locQuery, setLocQuery] = useState('')
   const [selectedHub, setSelectedHub] = useState<HubEntry | null>(null)
   const [showLocDropdown, setShowLocDropdown] = useState(false)
