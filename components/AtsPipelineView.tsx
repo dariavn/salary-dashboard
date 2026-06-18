@@ -1,5 +1,5 @@
 'use client'
-import { useState, useCallback, useEffect, useRef, useMemo } from 'react'
+import { useState, useCallback, useEffect, useMemo } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { PositionMeta, LocationMeta } from '@/lib/types'
@@ -143,15 +143,8 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     return salaryBandsData.positions.filter(p => p.position.toLowerCase().includes(q)).slice(0, 10)
   }, [bandQuery, salaryBandsData])
 
-  // On mount: always write current state to URL (ensures back navigation restores position)
-  const didMount = useRef(false)
-  useEffect(() => {
-    if (!didMount.current) {
-      didMount.current = true
-      syncUrl({})
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  // No didMount syncUrl — each filter change calls syncUrl explicitly.
+  // Removing it prevents overwriting the restored URL on browser back navigation.
 
   function setPosition(v: string)      { setPositionState(v);      syncUrl({ pos: v, locs: [] }); setLocationFilterState([]) }
   function setPeriod(v: 'all'|'6m'|'3m') { setPeriodState(v);     syncUrl({ period: v }) }
@@ -454,7 +447,7 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
           {(() => {
             const colCount = bandRef ? 8 : 7
             return (
-          <table className="data">
+          <table className="data no-row-hover">
             <thead>
               <tr>
                 <th style={{ minWidth: 130 }}>{t(lang, 'locationCol')}</th>

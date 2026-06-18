@@ -150,6 +150,8 @@ table.data td {
 table.data tbody tr:last-child td { border-bottom: none; }
 table.data tbody tr { transition: background .12s; }
 table.data tbody tr:hover { background: var(--surface-2); }
+table.data.no-row-hover tbody tr { transition: none; }
+table.data.no-row-hover tbody tr:hover { background: transparent; }
 
 /* segmented control */
 .seg {

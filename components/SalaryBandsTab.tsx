@@ -84,25 +84,20 @@ export default function SalaryBandsTab({ hubs, positions, bands, locationMeta }:
   const [selectedPos, setSelectedPos] = useState<PositionEntry | null>(null)
   const [showPosDropdown, setShowPosDropdown] = useState(false)
 
-  // Track last bandsPos from URL to detect changes
-  const prevBandsPosRef = useRef<string | null>(searchParams.get('bandsPos'))
+  // ref starts null — so on first mount with bandsPos, `bandsPos !== null` fires pre-fill
+  const prevBandsPosRef = useRef<string | null>(null)
 
-  // React to URL bandsPos changes:
-  // - appears → pre-fill (came from ATS Band button)
-  // - disappears → clear (user clicked Salary Bands tab directly)
-  // - user manually searches → no bandsPos in URL → no action (prevRef stays null)
   useEffect(() => {
     const bandsPos = searchParams.get('bandsPos')
-    const prev = prevBandsPosRef.current
-    if (bandsPos && bandsPos !== prev) {
-      // New pre-fill from URL
-      const match = positions.find(p => p.position === bandsPos)
-      if (match) { setSelectedPos(match); setPosQuery(match.position) }
+    if (bandsPos !== prevBandsPosRef.current) {
+      if (bandsPos) {
+        const match = positions.find(p => p.position === bandsPos)
+        if (match) { setSelectedPos(match); setPosQuery(match.position) }
+      } else if (prevBandsPosRef.current) {
+        // bandsPos removed (user clicked Salary Bands tab directly) → clean state
+        setSelectedPos(null); setPosQuery('')
+      }
       prevBandsPosRef.current = bandsPos
-    } else if (!bandsPos && prev) {
-      // bandsPos cleared → reset to clean state
-      setSelectedPos(null); setPosQuery('')
-      prevBandsPosRef.current = null
     }
   }, [searchParams, positions])
   const [locQuery, setLocQuery] = useState('')
