@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { PositionMeta, LocationMeta, CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { SalaryBandsData } from '@/lib/salary-bands-loader'
@@ -63,6 +63,13 @@ export default function HomeClient({
     if (tab === 'bands') return 'bands'
     return 'market'
   })
+
+  // Keep homeTab in sync with URL so router.push() from child components triggers tab switch
+  useEffect(() => {
+    const tab = searchParams.get('tab')
+    const next: HomeTab = tab === 'ats' ? 'ats' : tab === 'bands' ? 'bands' : 'market'
+    setHomeTab(next)
+  }, [searchParams])
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
   const [selected, setSelected] = useState<string[]>([])
   const [marketPeriod, setMarketPeriod] = useState<MarketPeriod>('all')

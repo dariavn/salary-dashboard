@@ -1,5 +1,5 @@
 'use client'
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import type { HubEntry, PositionEntry, BandEntry, SalaryRange } from '@/lib/salary-bands'
 import {
@@ -84,15 +84,27 @@ export default function SalaryBandsTab({ hubs, positions, bands, locationMeta }:
   const [selectedPos, setSelectedPos] = useState<PositionEntry | null>(null)
   const [showPosDropdown, setShowPosDropdown] = useState(false)
 
-  // Pre-select position from URL param (e.g. from ATS band link)
+  // Track last bandsPos from URL to detect changes
+  const prevBandsPosRef = useRef<string | null>(searchParams.get('bandsPos'))
+
+  // React to URL bandsPos changes:
+  // - appears → pre-fill (came from ATS Band button)
+  // - disappears → clear (user clicked Salary Bands tab directly)
+  // - user manually searches → no bandsPos in URL → no action (prevRef stays null)
   useEffect(() => {
     const bandsPos = searchParams.get('bandsPos')
-    if (bandsPos && !selectedPos) {
+    const prev = prevBandsPosRef.current
+    if (bandsPos && bandsPos !== prev) {
+      // New pre-fill from URL
       const match = positions.find(p => p.position === bandsPos)
       if (match) { setSelectedPos(match); setPosQuery(match.position) }
+      prevBandsPosRef.current = bandsPos
+    } else if (!bandsPos && prev) {
+      // bandsPos cleared → reset to clean state
+      setSelectedPos(null); setPosQuery('')
+      prevBandsPosRef.current = null
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [searchParams, positions])
   const [locQuery, setLocQuery] = useState('')
   const [selectedHub, setSelectedHub] = useState<HubEntry | null>(null)
   const [showLocDropdown, setShowLocDropdown] = useState(false)
