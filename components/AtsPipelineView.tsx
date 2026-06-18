@@ -5,7 +5,7 @@ import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { PositionMeta, LocationMeta } from '@/lib/types'
 import type { PositionEntry } from '@/lib/salary-bands'
 import type { SalaryBandsData } from '@/lib/salary-bands-loader'
-import { lookupBand, compareToBand, normaliseToMonthlyEur, RESEARCH_COUNTRY_MAP } from '@/lib/salary-bands'
+import { lookupBand, compareToBand, normaliseToMonthlyEur, RESEARCH_COUNTRY_MAP, RUB_PER_EUR } from '@/lib/salary-bands'
 import { t, GRADE_ORDER, GRADE_VAR } from '@/lib/i18n'
 import { useLang } from '@/context/LangContext'
 
@@ -29,8 +29,8 @@ function getBenchmark(
   const rows = grades.filter(r => r.grade === grade && r.segment === 'mid_market')
   if (!rows.length) return { type: 'unknown', pct: 0 }
   const row = rows[0]
-  // Convert to EUR if RUB (approximate: 1 EUR ≈ 98 RUB)
-  const toEur = (n: number) => row.currency === 'RUB' ? n / 98 : n
+  // Convert to EUR using CBR rate (cbr.ru/currency_base/daily/)
+  const toEur = (n: number) => row.currency === 'RUB' ? n / RUB_PER_EUR : n
   const mid = (toEur(row.monthly_gross_min) + toEur(row.monthly_gross_max)) / 2
   if (!mid) return { type: 'unknown', pct: 0 }
   const diff = (salaryMonthlyEur - mid) / mid

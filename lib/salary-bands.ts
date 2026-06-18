@@ -1,5 +1,9 @@
 // Salary Bands types + lookup logic
 
+// EUR/RUB rate — source: ЦБ РФ (cbr.ru/currency_base/daily/), updated 2026-06-18
+// Update this constant periodically and redeploy to keep conversions accurate.
+export const RUB_PER_EUR = 84.34
+
 export interface HubEntry {
   country: string
   city: string
@@ -82,7 +86,7 @@ export function cyprusCap(annualGross: number) {
 export function toMonthlyEur(salary: SalaryRange, value: number): number {
   let v = value
   if (salary.period === 'annual') v /= 12                          // annual → monthly
-  if (salary.currency === 'RUB') v /= 98                           // RUB → EUR
+  if (salary.currency === 'RUB') v /= RUB_PER_EUR                  // RUB → EUR
   if (salary.type === 'nett' && salary.currency === 'RUB') v *= 1.15  // nett RUB → gross
   return Math.round(v)
 }
