@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css'
 import { AppProvider } from '@/context/LangContext'
 
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${plexSans.variable} ${plexMono.variable} min-h-screen`}
-        style={{ fontFamily: 'var(--font-ui)' }}>
-        <AppProvider>{children}</AppProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${plexSans.variable} ${plexMono.variable} min-h-screen`}
+          style={{ fontFamily: 'var(--font-ui)' }}>
+          <AppProvider>{children}</AppProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

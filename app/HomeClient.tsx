@@ -6,6 +6,7 @@ import type { SalaryBandsData } from '@/lib/salary-bands-loader'
 import { useLang } from '@/context/LangContext'
 import { t } from '@/lib/i18n'
 import LanguageToggle from '@/components/LanguageToggle'
+import { UserButton } from '@clerk/nextjs'
 import AtsPipelineView from '@/components/AtsPipelineView'
 import SalaryBandsTab from '@/components/SalaryBandsTab'
 
@@ -138,7 +139,10 @@ export default function HomeClient({
             <Logo />
             <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: '-0.01em' }}>{t(lang, 'appTitle')}</span>
           </button>
-          <div style={{ marginLeft: 'auto' }}><LanguageToggle /></div>
+          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 10 }}>
+            <LanguageToggle />
+            <UserButton />
+          </div>
         </div>
         {/* Tab bar */}
         <div style={{ borderBottom: '1px solid var(--border)', background: 'var(--surface)' }}>

@@ -9,6 +9,7 @@ import { lookupBand, normaliseToMonthlyEur, fmtBandValue, RESEARCH_COUNTRY_MAP }
 import { useLang } from '@/context/LangContext'
 import { t, SERIES, GRADE_VAR, GRADE_KEY, GRADE_ORDER, fmtK } from '@/lib/i18n'
 import LanguageToggle from '@/components/LanguageToggle'
+import { UserButton } from '@clerk/nextjs'
 import RangeChart from '@/components/RangeChart'
 import SummaryCards from '@/components/SummaryCards'
 import GradesTable from '@/components/GradesTable'
@@ -191,7 +192,10 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
               </span>
             ))}
           </div>
-          <div style={{ marginLeft: 'auto' }}><LanguageToggle /></div>
+          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 10 }}>
+            <LanguageToggle />
+            <UserButton />
+          </div>
         </div>
 
         {/* Tab bar */}
