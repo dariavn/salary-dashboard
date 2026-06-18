@@ -77,8 +77,7 @@ function filterByPeriod(candidates: CandidateWithLocation[], period: string): Ca
 function fmtSalary(n: number | null, period: 'monthly' | 'annual'): string {
   if (n == null) return '—'
   const v = period === 'annual' ? n * 12 : n
-  const k = v / 1000
-  // One decimal place, but strip trailing zero (e.g. 4.0 → 4K, 4.6 → 4.6K)
+  const k = Math.round(v / 100) / 10  // round to 1 decimal first
   const str = k % 1 === 0 ? k.toFixed(0) : k.toFixed(1)
   return '€' + str + 'K'
 }
