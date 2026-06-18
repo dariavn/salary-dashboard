@@ -116,9 +116,20 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     searchParams.get('atsLoc') ? searchParams.get('atsLoc')!.split(',').filter(Boolean) : []
   )
 
+  // Salary Band reference — initialise from URL so it survives back navigation
+  const [bandRef, setBandRefState] = useState<PositionEntry | null>(() => {
+    const bp = searchParams.get('atsBandPos')
+    const bl = searchParams.get('atsBandLevel')
+    if (!bp || !salaryBandsData) return null
+    return salaryBandsData.positions.find(p => p.position === bp && p.level === bl) ?? null
+  })
+  const [bandQuery, setBandQuery] = useState(searchParams.get('atsBandPos') ?? '')
+  const [showBandDropdown, setShowBandDropdown] = useState(false)
+
   // Helper: persist all ATS state to URL without pushing history
   const syncUrl = useCallback((overrides: {
     pos?: string; period?: string; grade?: string; salary?: string; locs?: string[]
+    bandPos?: string | null; bandLevel?: string | null
   }) => {
     const p = new URLSearchParams()
     p.set('tab', 'ats')
@@ -128,13 +139,18 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     p.set('atsSalary', overrides.salary ?? salaryPeriod)
     const locs = overrides.locs ?? locationFilter
     if (locs.length) p.set('atsLoc', locs.join(','))
+    // Persist band reference
+    const bp = overrides.bandPos !== undefined ? overrides.bandPos : (bandRef?.position ?? null)
+    const bl = overrides.bandLevel !== undefined ? overrides.bandLevel : (bandRef?.level ?? null)
+    if (bp) p.set('atsBandPos', bp)
+    if (bl) p.set('atsBandLevel', bl)
     router.replace(`/?${p.toString()}`, { scroll: false })
-  }, [position, period, gradeFilter, salaryPeriod, locationFilter, router])
+  }, [position, period, gradeFilter, salaryPeriod, locationFilter, bandRef, router])
 
-  // Salary Band reference state
-  const [bandQuery, setBandQuery] = useState('')
-  const [bandRef, setBandRef] = useState<PositionEntry | null>(null)
-  const [showBandDropdown, setShowBandDropdown] = useState(false)
+  function setBandRef(entry: PositionEntry | null) {
+    setBandRefState(entry)
+    syncUrl({ bandPos: entry?.position ?? null, bandLevel: entry?.level ?? null })
+  }
 
   const bandSuggestions = useMemo(() => {
     if (!salaryBandsData) return []
