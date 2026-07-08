@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,8000,14000,650,1150,EUR,low,"gorodrabot.by Minsk CFO avg BYN 4084/mo (~€1150);estimation","1 EUR ≈ 3.55 BYN; min wage Jan 2026 BYN 858/mo; 2025 data"
+Junior,5-8,mid_market,12000,20000,1000,1650,EUR,low,"gorodrabot.by Minsk;rabota.by CFO listings","International IT companies paying higher; mid-market range"
+Middle,8-12,local_sme,13000,20000,1100,1650,EUR,low,"gorodrabot.by average CFO Minsk BYN 4084/mo;estimation",""
+Middle,8-12,mid_market,18000,30000,1500,2500,EUR,low,"ares.by CFO vacancy from $2000/mo (~€1850);gorodrabot.by max BYN 15289/mo","IT companies in HTP (High Technology Park)"
+Middle,8-12,premium,26000,40000,2150,3350,EUR,low,"HTP company benchmark;EPAM Belarus caliber;estimation","International IT companies with EUR/USD packages; Wargaming, EPAM, etc."
+Senior,12-18,local_sme,16000,24000,1350,2000,EUR,low,"gorodrabot.by upper range BYN 15289/mo → €4310/mo max;estimation",""
+Senior,12-18,mid_market,22000,35000,1850,2900,EUR,low,"ares.by $2000/mo minimum benchmark;gorodrabot.by data","Mid-market Minsk IT companies"
+Senior,12-18,premium,32000,52000,2650,4350,EUR,low,"HTP company benchmark;estimation from EPAM/Wargaming caliber","HTP-resident international companies; USD/EUR packages; 2025 data"
+Lead,15-20,mid_market,28000,42000,2350,3500,EUR,low,"Estimation; very limited data at this level in Belarus","Group CFO; sparse local data"
+Lead,15-20,premium,42000,65000,3500,5400,EUR,low,"Estimation from premium senior + 30-40% lead premium;HTP benchmark","International companies; 2025 data — no 2026 Belarus CFO data at this level"

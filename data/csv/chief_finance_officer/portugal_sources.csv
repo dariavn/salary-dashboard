@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+PayScale CFO Portugal 2026,aggregator,payscale.com/research/PT/Job=Chief_Financial_Officer_(CFO)/Salary,2026,Average €64242/year,medium,"Portugal-specific CFO data; lower bound anchor for local_sme segment"
+SalaryExpert CFO Portugal 2026,aggregator,salaryexpert.com/salary/job/chief-financial-officer-cfo/portugal,2026,"Average €114064; entry €71653; senior €169702",medium,"ERI methodology; primary source for mid_market and premium; Lisbon avg €130929"
+Glassdoor CFO Portugal 2026,aggregator,glassdoor.com/Salaries/portugal-cfo-salary,2026,"Range: €70527 – €179222",medium,"Self-reported data; broad range consistent with SalaryExpert senior level as upper bound"
+ERI CFO Portugal 2026,aggregator,erieri.com/salary/job/cfo/portugal,2026,Average approx €114000/year,medium,"Cross-reference for SalaryExpert data; ERI methodology"
+DigitalDefynd CFO Salaries Europe 2026,salary_survey,digitaldefynd.com/IQ/cfo-salaries-in-europe/,2026,European CFO benchmarks including Portugal context,low,"Regional context; useful for Portugal/Spain comparison"
+LinkedIn Jobs Lisbon CFO 2026,job_posting,linkedin.com/jobs CFO Lisbon Portugal,2026,Multiple CFO listings in Lisbon and Porto,low,"Self-reported or partially disclosed; qualitative confirmation of Lisbon premium"

@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,1800000,2500000,150000,208350,RUB,medium,"hh.ru analysis 2025-2026;quick-offer.ru 2026","First-time CFO at small Russian company; gross; 13% income tax applies"
+Junior,5-8,mid_market,2200000,3200000,183350,266650,RUB,medium,"SalaryExpert Russia national avg 2025;hh.ru data 2025-2026",""
+Middle,8-12,local_sme,2500000,3600000,208350,300000,RUB,medium,"hh.ru CFO salary analysis 2025;quick-offer.ru 2026",""
+Middle,8-12,mid_market,3200000,5000000,266650,416650,RUB,medium,"SalaryExpert Russia 2025;hh.ru Moscow 215-250K/mo benchmark","Moscow-based mid-market; regional multiplier: Moscow +19% vs national avg"
+Middle,8-12,premium,4000000,6500000,333350,541650,RUB,medium,"hh.ru IT sector data 2025-2026;SalaryExpert entry-senior range","IT/tech sector premium; profitable sectors add 20-50%"
+Senior,12-18,local_sme,3500000,5000000,291650,416650,RUB,medium,"SalaryExpert national avg RUB 4453530;hh.ru analysis",""
+Senior,12-18,mid_market,5000000,8000000,416650,666650,RUB,high,"SalaryExpert Moscow RUB 5510041;hh.ru Moscow CFO 215-450K/mo;quick-offer.ru","Moscow senior CFO; well-supported by multiple sources"
+Senior,12-18,premium,7000000,12000000,583350,1000000,RUB,medium,"hh.ru large corp data;Kommersant executive pay data","Large IT companies (Sber, Yandex, VK caliber); IT sector significantly above average"
+Lead,15-20,mid_market,8000000,14000000,666650,1166650,RUB,medium,"hh.ru CFO Moscow up to RUB 450K/mo for standard corp;premium extrapolation","Group CFO; major corporation"
+Lead,15-20,premium,12000000,20000000,1000000,1666650,RUB,low,"Kommersant top management salary data;estimation","Large financial/IT conglomerates; bonuses and equity not included"
+Head,20+,premium,18000000,30000000,1500000,2500000,RUB,low,"Estimation from executive compensation data;hh.ru maximum ranges","Top-tier Group CFO at major public company; significant bonus component typical"

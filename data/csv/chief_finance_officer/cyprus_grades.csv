@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,48000,65000,4000,5400,EUR,medium,"CareerFinders Cyprus 2025;Glassdoor Limassol 2026","First-time CFO at small local company; total finance exp 5-8y"
+Junior,5-8,mid_market,65000,85000,5400,7100,EUR,medium,"Emerald Zebra Cyprus 2024/2025;Glassdoor Limassol 2026","General IT/finance sector"
+Junior,5-8,premium,80000,96000,6650,8000,EUR,medium,"Emerald Zebra Cyprus 2024/2025","iGaming/FinTech/Crypto sector; Emerald Zebra junior CFO range"
+Middle,8-12,local_sme,65000,84000,5400,7000,EUR,high,"CareerFinders Cyprus 2025;Glassdoor Limassol 2026 50th pct",""
+Middle,8-12,mid_market,84000,110000,7000,9150,EUR,high,"Emerald Zebra 2024/2025;CareerFinders 2025;Glassdoor 2026",""
+Middle,8-12,premium,100000,130000,8350,10850,EUR,medium,"Emerald Zebra 2024/2025;LinkedIn job postings","iGaming/FinTech/Crypto; VP Finance or deputy CFO level"
+Senior,12-18,local_sme,84000,105000,7000,8750,EUR,high,"CareerFinders 2025;Glassdoor 2026 90th percentile",""
+Senior,12-18,mid_market,105000,140000,8750,11650,EUR,high,"Emerald Zebra 2024/2025;CareerFinders 2025;job posting Forex brokerage €70-120K","General IT and finance sector Limassol"
+Senior,12-18,premium,140000,180000,11650,15000,EUR,high,"Emerald Zebra 2024/2025;FinanceMagnates survey;Glassdoor 90th pct","iGaming/FinTech/FX/Crypto Limassol; benchmark CFO role"
+Lead,15-20,mid_market,130000,170000,10850,14150,EUR,medium,"Emerald Zebra 2024/2025;LinkedIn job postings","Group CFO / multi-entity CFO; moderate data"
+Lead,15-20,premium,160000,210000,13350,17500,EUR,medium,"Emerald Zebra 2024/2025;FinanceMagnates;Emerald Zebra job posting EMI/Crypto/iGaming €80-100K base + bonus","Group CFO at iGaming or FinTech group; performance bonuses add 20-40%"
+Head,20+,premium,200000,280000,16650,23350,EUR,low,"Emerald Zebra 2024/2025 (senior execs up to €300K);FinanceMagnates","Top-tier Group CFO at major international group; limited data; bonuses not included"

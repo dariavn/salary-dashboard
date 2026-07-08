@@ -1,0 +1,5 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+SalaryExpert CFO Tbilisi 2025,aggregator,salaryexpert.com/salary/job/chief-financial-officer-cfo/georgia/tbilisi,2025,"Avg GEL 243699 (~€82.6K); entry GEL 156494 (~€53K); senior GEL 397682 (~€134.8K)",medium,"1 EUR ≈ 2.95 GEL; may include non-IT sectors; primary quantitative source"
+Glassdoor CFO Tbilisi,aggregator,glassdoor.com/Salaries/tbilisi-cfo-salary,2025,Tbilisi CFO salary data,low,"Limited data points for Georgia; used as cross-reference"
+Pedersen and Partners CEO Georgia,salary_survey,pedersenandpartners.com/news/average-ceo-salary-georgia-amounts-usd-58300-the-financial,2024,Average CEO salary Georgia ~$58300 USD (~€54K),low,"CEO used as upper proxy; CFO typically 70-85% of CEO in Georgia; 2024 data"
+WorldSalaries CFO Armenia,aggregator,worldsalaries.com/average-chief-executive-officer-salary-in-yerevan/armenia/,2024,Regional context data,low,"Armenia data used for CIS/Caucasus regional context"

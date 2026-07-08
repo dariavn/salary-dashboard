@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,15000,22000,1250,1850,EUR,low,"WorldSalaries CFO Armenia 2024;estimation","1 EUR ≈ 420 AMD; 2024 data — no 2026 Armenia-specific found"
+Junior,5-8,mid_market,20000,32000,1650,2650,EUR,low,"WorldSalaries CFO Armenia range AMD 10.2-29.2M → €24-70K","Mid-market: IT product companies, international banks"
+Middle,8-12,local_sme,22000,32000,1850,2650,EUR,low,"WorldSalaries 2024 average AMD 19.2M → €45.7K as midpoint ref",""
+Middle,8-12,mid_market,30000,48000,2500,4000,EUR,low,"WorldSalaries;talentup.io Head of Finance Yerevan AMD 22.8M → €54.3K as ref","Major Armenian companies; international presence"
+Middle,8-12,premium,40000,62000,3350,5150,EUR,low,"Estimation from Finance Director Yerevan AMD 23.6M → €56.3K;international co benchmark","International tech companies; Synopsys, PicsArt caliber"
+Senior,12-18,local_sme,30000,45000,2500,3750,EUR,low,"WorldSalaries CFO Armenia range upper;estimation",""
+Senior,12-18,mid_market,45000,65000,3750,5400,EUR,low,"WorldSalaries senior range AMD 29.2M → €69.4K as upper;talentup.io","Mid-market IT and financial services"
+Senior,12-18,premium,60000,88000,5000,7350,EUR,low,"Estimation from international company benchmark;regional premiums","International tech; Synopsys-caliber companies pay USD/EUR-denominated"
+Lead,15-20,mid_market,55000,78000,4600,6500,EUR,low,"Estimation only","Very limited Group CFO data for Armenia"
+Lead,15-20,premium,75000,110000,6250,9150,EUR,low,"Estimation from international benchmark","2024 data — no 2026 Armenia CFO data at this level found"

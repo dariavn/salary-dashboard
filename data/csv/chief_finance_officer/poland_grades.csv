@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,42000,60000,3500,5000,EUR,medium,"PayScale Poland 2026;SalaryExpert Poland 2025","First-time CFO at SME; total finance exp 5-8y; EUR/PLN ≈ 4.25"
+Junior,5-8,mid_market,55000,78000,4600,6500,EUR,medium,"SalaryExpert Poland 2025;Glassdoor Warsaw 2026","Growing mid-size company"
+Middle,8-12,local_sme,58000,80000,4850,6650,EUR,medium,"PayScale Poland 2026;SalaryExpert entry level PLN 337K → €79K",""
+Middle,8-12,mid_market,75000,105000,6250,8750,EUR,medium,"SalaryExpert Poland 2025;ERI Poland 2026","Warsaw and major cities"
+Middle,8-12,premium,95000,130000,7900,10850,EUR,medium,"SalaryExpert Poland 2025 senior range;ERI range €78-200K","Large tech/finance multinationals"
+Senior,12-18,local_sme,78000,105000,6500,8750,EUR,medium,"PayScale Poland 2026;SalaryExpert 2025",""
+Senior,12-18,mid_market,100000,140000,8350,11650,EUR,medium,"SalaryExpert Poland 2025;ERI Poland 2026","Large Polish companies; Warsaw-based"
+Senior,12-18,premium,130000,185000,10850,15400,EUR,medium,"SalaryExpert Poland 2025 senior PLN 809K → €190K;ERI upper range","Multinationals; large tech companies; financial services"
+Lead,15-20,mid_market,130000,175000,10850,14600,EUR,low,"ERI Poland 2026 upper range;estimation from aggregator data","Group CFO / multi-subsidiary; limited direct data"
+Lead,15-20,premium,160000,220000,13350,18350,EUR,low,"SalaryExpert senior range;ERI upper bound €200K","Large multinationals; PE-backed companies; 2025 data — limited 2026 specifics"
+Head,20+,premium,195000,290000,16250,24150,EUR,low,"ERI range upper bound;estimation","Major corporation Group CFO; limited Poland-specific data at this level"

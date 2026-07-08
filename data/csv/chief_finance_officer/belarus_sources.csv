@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+gorodrabot.by Minsk CFO vacancies 2025,job_posting,minsk.gorodrabot.by/finansovyy_direktor,2025,"Avg BYN 4084/mo (~€1150); min BYN 1200; max BYN 15289/mo (~€4310); 1187 vacancies",medium,"Primary Belarusian source; 1 EUR ≈ 3.55 BYN; includes all sectors not just IT"
+rabota.by CFO vacancies Minsk,job_posting,rabota.by/vacancies/finansovyy_direktor,2025,"Multiple CFO listings; direct employer postings",low,"Primary Belarusian job board; salary data often hidden; quantitative data limited"
+ares.by CFO vacancy (direct employer),job_posting,ares.by/vacancies/financial_director/,2025,"From $2000 USD/month (~€1850/mo minimum); direct employer",medium,"Specific vacancy with declared salary; one data point"
+Belarus minimum wage 2026,salary_survey,myfin.by/wiki/term/minimalnaya-zarabotnaya-plata,2026,Min wage BYN 858/month from Jan 2026,high,"Official data; used for market context calibration"
+Belstat average wage 2026,salary_survey,belstat.gov.by,2026,Average wage context Belarus,medium,"Official statistics; used for market baseline"

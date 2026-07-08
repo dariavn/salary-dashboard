@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,18000,28000,1500,2350,EUR,low,"SalaryExpert Tbilisi CFO 2025;estimation","1 EUR ≈ 2.95 GEL; entry-level CFO at local Georgian company; total finance exp 5-8y"
+Junior,5-8,mid_market,28000,42000,2350,3500,EUR,low,"SalaryExpert Tbilisi entry GEL 156494 → €53K;estimation","Growing mid-size companies; many relocated international businesses post-2022"
+Middle,8-12,local_sme,30000,45000,2500,3750,EUR,low,"SalaryExpert Tbilisi average GEL 243699 → €82.6K as upper ref;estimation",""
+Middle,8-12,mid_market,42000,62000,3500,5150,EUR,low,"SalaryExpert Tbilisi 2025;Glassdoor Tbilisi CFO","Mid-market includes relocated Russian/international IT companies"
+Middle,8-12,premium,58000,82000,4850,6850,EUR,low,"Pedersen & Partners CEO data (~$58K avg CEO);estimation","Premium: international tech companies, major FinTech players"
+Senior,12-18,local_sme,40000,58000,3350,4850,EUR,low,"SalaryExpert Tbilisi 2025 average as midpoint;estimation",""
+Senior,12-18,mid_market,58000,88000,4850,7350,EUR,low,"SalaryExpert Tbilisi senior GEL 397682 → €134.8K used as upper ref","Large Georgian companies and international presence"
+Senior,12-18,premium,82000,125000,6850,10400,EUR,low,"SalaryExpert Tbilisi senior level;Pedersen & Partners data;estimation","International companies; FinTech/tech sector premium"
+Lead,15-20,mid_market,72000,105000,6000,8750,EUR,low,"Estimation from market data","Group CFO; limited data"
+Lead,15-20,premium,100000,148000,8350,12350,EUR,low,"Estimation from SalaryExpert senior range + premium","International companies; 2025 data — no 2026 Georgia-specific data"

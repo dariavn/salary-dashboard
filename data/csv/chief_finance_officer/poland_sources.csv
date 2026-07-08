@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+PayScale CFO Poland 2026,aggregator,payscale.com/research/PL/Job=Chief_Financial_Officer_(CFO)/Salary,2026,Average PLN 291518 (~€68.6K),medium,"Likely skewed toward smaller companies; lower end of market"
+SalaryExpert CFO Poland 2025,aggregator,salaryexpert.com/salary/job/chief-financial-officer-cfo/poland,2025,"Average PLN 540009 (~€127K); entry PLN 337047 (~€79K); senior PLN 809099 (~€190K)",medium,"ERI methodology; broader sample including multinationals"
+ERI CFO Poland 2026,aggregator,erieri.com/salary/job/chief-financial-officer/poland,2026,Range PLN 334265-849433 (~€78.6K-€200K),medium,"Wide range confirms large market spread"
+Glassdoor Warsaw CFO 2026,aggregator,glassdoor.com/Salaries/warsaw-poland-chief-financial-officer-cfo-salary,2026,Warsaw range data,medium,"Self-reported; Warsaw market focus"
+Veritahr Poland Salary Guide 2026,salary_survey,veritahr.com/poland-salary-guide-2026-it-finance-engineering-pay-benchmarks/,2026,"Finance sector avg PLN 13200/month gross; senior roles above this",low,"IT-focused guide; limited CFO-specific data"
+DigitalDefynd CFO Salaries Europe 2026,salary_survey,digitaldefynd.com/IQ/cfo-salaries-in-europe/,2026,European CFO benchmarks,low,"Regional aggregation; useful for cross-country context"

@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,45000,62000,3750,5150,EUR,medium,"PayScale Spain 2026 avg €95K;Glassdoor Spain range;estimation","First-time CFO at SME; total finance exp 5-8y"
+Junior,5-8,mid_market,58000,78000,4850,6500,EUR,medium,"Glassdoor Spain CFO 2026;SalaryExpert entry level €95.6K","Madrid/Barcelona mid-size companies"
+Middle,8-12,local_sme,65000,88000,5400,7350,EUR,medium,"PayScale Spain €95K avg as midpoint;Glassdoor 25-75th range €73-121K",""
+Middle,8-12,mid_market,82000,108000,6850,9000,EUR,medium,"Glassdoor Spain CFO avg €94.8K;PayScale €95K;Glassdoor 75th €120.8K","Large Spanish companies"
+Middle,8-12,premium,100000,135000,8350,11250,EUR,medium,"SalaryExpert Spain €152K avg;ERI entry €95.6K baseline","Large multinationals in Spain; tech companies"
+Senior,12-18,local_sme,85000,110000,7100,9150,EUR,medium,"Glassdoor Spain range;PayScale data",""
+Senior,12-18,mid_market,105000,140000,8750,11650,EUR,high,"Glassdoor Spain €94.8K avg + experience premium;PayScale range €73-121K;SalaryExpert avg €152K","Well-supported by multiple sources"
+Senior,12-18,premium,135000,185000,11250,15400,EUR,medium,"SalaryExpert Spain avg €152K;ERI senior €242.9K upper ref","Large international companies; Madrid/Barcelona"
+Lead,15-20,mid_market,135000,175000,11250,14600,EUR,medium,"SalaryExpert €152K mid-point;ERI range;estimation","Group CFO"
+Lead,15-20,premium,165000,220000,13750,18350,EUR,medium,"SalaryExpert Spain senior range;ERI €242.9K senior as upper bound","Large multinationals; bonus common"
+Head,20+,premium,200000,290000,16650,24150,EUR,low,"ERI senior €242.9K;estimation for top level","Major corporation; limited direct Spain CFO data at this level"

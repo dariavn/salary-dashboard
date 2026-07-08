@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,38000,55000,3150,4600,EUR,medium,"PayScale Portugal 2026 avg €64K;Glassdoor Portugal range;estimation","First-time CFO at SME"
+Junior,5-8,mid_market,50000,68000,4150,5650,EUR,medium,"Glassdoor Lisbon CFO 2026;SalaryExpert entry €71.7K","Lisbon mid-size companies"
+Middle,8-12,local_sme,55000,76000,4600,6350,EUR,medium,"PayScale Portugal 2026 €64K avg as low midpoint",""
+Middle,8-12,mid_market,70000,95000,5850,7900,EUR,medium,"SalaryExpert Portugal €114K avg;Glassdoor Lisbon €130.9K as upper ref","Well-supported range for Lisbon market"
+Middle,8-12,premium,88000,118000,7350,9850,EUR,medium,"SalaryExpert Portugal avg €114K;ERI €113.9K;Glassdoor Lisbon €130.9K","Large companies; multinationals in Lisbon"
+Senior,12-18,local_sme,70000,92000,5850,7650,EUR,medium,"PayScale avg + premium;Glassdoor Portugal data",""
+Senior,12-18,mid_market,88000,118000,7350,9850,EUR,high,"SalaryExpert Portugal €114K avg;ERI Portugal €113.9K;Glassdoor Lisbon €130.9K","Multiple sources agree; Lisbon-focused"
+Senior,12-18,premium,110000,155000,9150,12900,EUR,medium,"SalaryExpert senior €169.7K as upper ref;Glassdoor Lisbon avg €130.9K","Large multinationals; tech companies"
+Lead,15-20,mid_market,115000,155000,9600,12900,EUR,medium,"SalaryExpert senior €169.7K;ERI Portugal;estimation","Group CFO"
+Lead,15-20,premium,145000,195000,12100,16250,EUR,low,"SalaryExpert senior range;estimation for lead level","Large multinationals; limited direct Portugal data"
+Head,20+,premium,175000,240000,14600,20000,EUR,low,"SalaryExpert senior €169.7K + head premium;estimation","Major corporations; limited data"

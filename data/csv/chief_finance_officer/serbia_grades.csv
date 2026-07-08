@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,5-8,local_sme,20000,30000,1650,2500,EUR,low,"InfoPlate.rs IT salaries;WorldSalaries Serbia;estimation","Sparse direct data; estimated from market context; 1 EUR ≈ 117 RSD; average gross wage RSD 160K/mo (€1368)"
+Junior,5-8,mid_market,28000,42000,2350,3500,EUR,low,"Glassdoor Belgrade CEO RSD 680K/mo estimate;InfoPlate.rs","2025 data — no 2026 CFO-specific Serbia data found"
+Middle,8-12,local_sme,28000,42000,2350,3500,EUR,low,"InfoPlate.rs;estimation from Finance Manager RSD 143-405K/mo","Very limited Serbia-specific CFO data"
+Middle,8-12,mid_market,38000,58000,3150,4850,EUR,low,"Glassdoor Serbia finance data;estimation","Mid-market IT companies in Belgrade"
+Middle,8-12,premium,50000,72000,4150,6000,EUR,low,"Estimation from regional benchmarks;international IT cos","International companies (SaaS, outsourcing) paying EUR-denominated salaries"
+Senior,12-18,local_sme,36000,52000,3000,4350,EUR,low,"Estimation from Serbia executive compensation data",""
+Senior,12-18,mid_market,52000,75000,4350,6250,EUR,low,"InfoPlate.rs CEO data;Glassdoor Serbia;regional benchmarks","Belgrade-based mid-market tech"
+Senior,12-18,premium,68000,96000,5650,8000,EUR,low,"Estimation from regional data;international company benchmark","International tech companies; EUR-denominated packages"
+Lead,15-20,mid_market,65000,90000,5400,7500,EUR,low,"Estimation only; no direct Serbia Group CFO data","2025 data — no 2026 found; treat as directional only"
+Lead,15-20,premium,85000,120000,7100,10000,EUR,low,"Estimation from regional market","PE-backed or large international company"

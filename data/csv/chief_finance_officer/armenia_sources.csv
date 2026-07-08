@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+WorldSalaries CFO Armenia 2024,aggregator,worldsalaries.com/average-chief-financial-officer-salary-in-armenia/,2024,"Average AMD 19200400 (~€45.7K); range AMD 10.2M-29.2M (~€24-70K)",low,"2024 data — no 2026 Armenia CFO data found; 1 EUR ≈ 420 AMD"
+TalentUp Head of Finance Yerevan 2024,aggregator,talentup.io/salary/Head%20of%20Finance/yerevan,2024,"Head of Finance Yerevan AMD 22805900 (~€54.3K)",low,"Proxy data; 2024 data used as closest available"
+WorldSalaries Finance Director Yerevan 2024,aggregator,worldsalaries.com/average-finance-director-salary-in-yerevan/armenia/,2024,"Finance Director Yerevan AMD 23638700 (~€56.3K)",low,"Finance Director used as senior CFO proxy"
+WorldSalaries Armenia Average Salary 2026,aggregator,worldsalaries.com/average-salary-in-armenia/,2026,Average salary Armenia context,low,"Country context; finance sector highest-paying at up to AMD 350K/mo"
+Glassdoor Yerevan Financial Analyst,aggregator,glassdoor.com/Salaries/yerevan-armenia-financial-analyst-salary,2026,Yerevan finance sector context,low,"Used for market context only; CFO premium estimated at 4-6x analyst"

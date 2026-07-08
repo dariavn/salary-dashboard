@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+PayScale CFO Spain 2026,aggregator,payscale.com/research/ES/Job=Chief_Financial_Officer_(CFO)/Salary,2026,Average €94997/year,medium,"Good Spain-specific data; primary anchor for mid_market"
+Glassdoor Spain CFO 2026,aggregator,glassdoor.com/Salaries/spain-cfo-salary,2026,"Avg €94824; range €73883 (25th) - €120766 (75th)",medium,"Self-reported; consistent with PayScale; Madrid focus"
+SalaryExpert CFO Spain 2026,aggregator,salaryexpert.com/salary/job/chief-financial-officer-cfo/spain,2026,"Avg €152107; entry €95613; senior €242972; bonus €33555",medium,"ERI methodology; skews toward larger companies"
+Glassdoor Madrid CFO 2026,aggregator,glassdoor.com/Salaries/madrid-spain-chief-financial-officer-salary,2026,Madrid-specific CFO data,medium,"Madrid premium data point"
+Glassdoor Barcelona CFO 2026,aggregator,glassdoor.com/Salaries/barcelona-spain-cfo-salary,2026,Barcelona-specific CFO data,medium,"Barcelona data; slightly below Madrid"
+ERI CFO Spain 2026,aggregator,erieri.com/salary/job/cfo/spain,2026,Average €152213/year,medium,"Cross-reference for SalaryExpert data"
+DigitalDefynd CFO Salaries Europe 2026,salary_survey,digitaldefynd.com/IQ/cfo-salaries-in-europe/,2026,European CFO context,low,"Regional benchmarks; useful for Spain/Portugal comparison"

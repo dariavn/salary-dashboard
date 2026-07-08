@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+InfoPlate.rs IT Salaries Serbia,aggregator,infoplate.rs/en/salaryinfo/information-technology,2025,"IT sector: 103K-454K RSD/month net; Finance Manager avg RSD 254K/mo",low,"No CFO-specific data; used for market context and extrapolation"
+Glassdoor Belgrade CEO 2026,aggregator,glassdoor.com/Salaries/belgrade-ceo-salary,2026,CEO Belgrade avg RSD 680107/year,low,"CEO data used as upper bound proxy; CFO typically 60-80% of CEO"
+WorldSalaries Serbia Finance Analyst,aggregator,worldsalaries.com/average-finance-analyst-salary-in-serbia/,2025,Finance Analyst ~2026800 RSD/year (~€17K),low,"Finance analyst baseline; CFO premium estimated at 3-5x"
+Serbia Statistical Office (earnings),salary_survey,stat.gov.rs/en-US/oblasti/trziste-rada/zarade,2026,"Avg gross Feb 2026: RSD 160067/mo (~€1368/mo)",medium,"Official stats; useful for market context; 1 EUR ≈ 117 RSD"
+Mobiletator Serbia Average Salary 2026,aggregator,mobiletator.com/en/blog/labor-market/average-salary-in-serbia-in-2025,2026,Average gross RSD 169921 Feb 2026,medium,"Cross-reference for Serbia wage baseline"
