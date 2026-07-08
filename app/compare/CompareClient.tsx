@@ -7,7 +7,7 @@ import type { PositionEntry } from '@/lib/salary-bands'
 import type { SalaryBandsData } from '@/lib/salary-bands-loader'
 import { lookupBand, normaliseToMonthlyEur, fmtBandValue, RESEARCH_COUNTRY_MAP } from '@/lib/salary-bands'
 import { useLang } from '@/context/LangContext'
-import { t, SERIES, GRADE_VAR, GRADE_KEY, GRADE_ORDER, fmtK } from '@/lib/i18n'
+import { t, SERIES, GRADE_VAR, GRADE_KEY, GRADE_ORDER, fmtK, isHeadLevelRole } from '@/lib/i18n'
 import LanguageToggle from '@/components/LanguageToggle'
 import { UserButton } from '@clerk/nextjs'
 import RangeChart from '@/components/RangeChart'
@@ -58,7 +58,7 @@ function CurrencyNote({ allData, lang }: { allData: Entry[]; lang: string }) {
   )
 }
 
-function GradeMatrix({ allData, segment, period, lang }: { allData: Entry[]; segment: Segment | 'all'; period: 'annual' | 'monthly'; lang: any }) {
+function GradeMatrix({ allData, segment, period, lang, expMode }: { allData: Entry[]; segment: Segment | 'all'; period: 'annual' | 'monthly'; lang: any; expMode?: boolean }) {
   const lo = (r: any) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min
   const hi = (r: any) => period === 'annual' ? r.annual_gross_max : r.monthly_gross_max
   function rng(en: CountryData, g: string) {
@@ -68,12 +68,20 @@ function GradeMatrix({ allData, segment, period, lang }: { allData: Entry[]; seg
     const row = f.find(r => r.segment === 'mid_market') || f[0]
     return { min: lo(row), max: hi(row) }
   }
+  // For expMode: find exp_years label for each grade from the first country that has data
+  function expLabel(g: string): string {
+    for (const en of allData) {
+      const row = en.data.grades.find(r => r.grade === g)
+      if (row?.exp_years) return row.exp_years + ' ' + t(lang, 'years')
+    }
+    return g
+  }
   return (
     <div className="card" style={{ overflowX: 'auto', padding: '4px 4px' }}>
       <table className="data">
         <thead>
           <tr>
-            <th style={{ paddingLeft: 16 }}>{t(lang, 'grade')}</th>
+            <th style={{ paddingLeft: 16 }}>{expMode ? t(lang, 'expLabel') : t(lang, 'grade')}</th>
             {allData.map((en, i) => (
               <th key={en.meta.slug} style={{ textAlign: 'right' }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
@@ -90,7 +98,9 @@ function GradeMatrix({ allData, segment, period, lang }: { allData: Entry[]; seg
               <td style={{ paddingLeft: 16, whiteSpace: 'nowrap' }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
                   <span className="dot" style={{ background: GRADE_VAR[g], width: 8, height: 8 }} />
-                  <span style={{ fontWeight: 600, fontSize: 13.5 }}>{t(lang, GRADE_KEY[g]!)}</span>
+                  <span style={{ fontWeight: 600, fontSize: 13.5 }}>
+                    {expMode ? expLabel(g) : t(lang, GRADE_KEY[g]!)}
+                  </span>
                 </span>
               </td>
               {allData.map(en => {
@@ -120,6 +130,7 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
   const { lang } = useLang()
   const [tab, setTab] = useState<Tab>('overview')
   const segment = 'all' as const
+  const expMode = isHeadLevelRole(positionMeta.slug)
   const [bandQuery, setBandQuery] = useState('')
   const [bandRef, setBandRef] = useState<PositionEntry | null>(null)
   const [showBandDropdown, setShowBandDropdown] = useState(false)
@@ -237,7 +248,7 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
                 <h3 style={{ fontSize: 14, fontWeight: 600, margin: 0, whiteSpace: 'nowrap' }}>{t(lang, 'salaryRange')}</h3>
                 <span style={{ fontSize: 12.5, color: 'var(--muted)', whiteSpace: 'nowrap' }}>{t(lang, 'allSizesNote')}</span>
               </div>
-              <RangeChart series={series} period={period} lang={lang} />
+              <RangeChart series={series} period={period} lang={lang} expMode={expMode} />
             </div>
 
             {/* SALARY BAND REFERENCE */}
@@ -400,7 +411,7 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
             {dataSource === 'market' && (
               <div>
                 {detail === 'matrix' ? (
-                  <GradeMatrix allData={allData} segment={segment} period={period} lang={lang} />
+                  <GradeMatrix allData={allData} segment={segment} period={period} lang={lang} expMode={expMode} />
                 ) : (
                   <div style={{ display: 'grid', gridTemplateColumns: cols, gap: 18 }}>
                     {allData.map((en, i) => (
@@ -411,7 +422,7 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
                           <span style={{ fontWeight: 600 }}>{en.meta.name[lang]}</span>
                           <span style={{ marginLeft: 'auto', fontSize: 11, fontWeight: 600, color: 'var(--muted-2)' }}>{en.data.currency}</span>
                         </div>
-                        <GradesTable rows={en.data.grades} segment={segment} period={period} lang={lang} />
+                        <GradesTable rows={en.data.grades} segment={segment} period={period} lang={lang} expMode={expMode} />
                       </div>
                     ))}
                   </div>

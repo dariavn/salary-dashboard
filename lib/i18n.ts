@@ -2,6 +2,7 @@ export type Lang = 'en' | 'ru'
 
 const strings = {
   en: {
+    expLabel: 'Experience',
     appTitle: 'Salary Research',
     appSubtitle: 'IT compensation benchmarks · Product Manager',
     selectPosition: 'Role',
@@ -86,6 +87,7 @@ const strings = {
     annualApprox: 'Annual (approx.)',
   },
   ru: {
+    expLabel: 'Опыт',
     appTitle: 'Salary Research',
     appSubtitle: 'Бенчмарки IT-зарплат · Product Manager',
     selectPosition: 'Роль',
@@ -178,6 +180,13 @@ export function t(lang: Lang, key: StringKey): string {
 }
 
 export const GRADE_ORDER = ['Junior', 'Middle', 'Senior', 'Lead', 'Head']
+
+// Roles where the role itself is the seniority grade — show exp_years instead of grade labels
+export function isHeadLevelRole(slug: string): boolean {
+  return /^(chief_|head_of_|vp_of_|vp_)/.test(slug)
+    || /_(chief|head)$/.test(slug)
+    || ['cto', 'cfo', 'coo', 'cpo', 'cmo', 'cro', 'chro', 'ciso', 'cso'].includes(slug)
+}
 export const SEGMENT_ORDER = ['local_sme', 'mid_market', 'premium']
 export const GRADE_KEY: Record<string, StringKey> = {
   Junior: 'junior', Middle: 'middle', Senior: 'senior', Lead: 'lead', Head: 'head',

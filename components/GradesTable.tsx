@@ -17,11 +17,12 @@ interface Props {
   segment: Segment | 'all'
   period: 'annual' | 'monthly'
   lang?: Lang
+  expMode?: boolean
 }
 
 const CONF_RANK = { high: 3, medium: 2, low: 1 } as const
 
-export default function GradesTable({ rows, segment, period, lang: langProp }: Props) {
+export default function GradesTable({ rows, segment, period, lang: langProp, expMode }: Props) {
   const ctx = useLang()
   const lang = langProp ?? ctx.lang
 
@@ -58,7 +59,7 @@ export default function GradesTable({ rows, segment, period, lang: langProp }: P
       <table className="data">
         <thead>
           <tr>
-            <th>{t(lang, 'grade')}</th>
+            <th>{expMode ? t(lang, 'expLabel') : t(lang, 'grade')}</th>
             <th style={{ textAlign: 'right' }}>{t(lang, period === 'annual' ? 'annual' : 'monthly')}</th>
             <th style={{ textAlign: 'right', width: 1 }}></th>
           </tr>
@@ -67,11 +68,18 @@ export default function GradesTable({ rows, segment, period, lang: langProp }: P
           {displayRows.map((r, i) => (
             <tr key={i}>
               <td style={{ whiteSpace: 'nowrap' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
-                  <span className="dot" style={{ background: GRADE_VAR[r.grade], width: 8, height: 8 }} />
-                  <span style={{ fontWeight: 600, fontSize: 13.5 }}>{t(lang, GRADE_KEY[r.grade]!)}</span>
-                  <span style={{ fontSize: 11, color: 'var(--muted-2)' }}>{r.exp_years} {t(lang, 'years')}</span>
-                </span>
+                {expMode ? (
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                    <span className="dot" style={{ background: GRADE_VAR[r.grade], width: 8, height: 8 }} />
+                    <span style={{ fontWeight: 600, fontSize: 13.5 }}>{r.exp_years} {t(lang, 'years')}</span>
+                  </span>
+                ) : (
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7 }}>
+                    <span className="dot" style={{ background: GRADE_VAR[r.grade], width: 8, height: 8 }} />
+                    <span style={{ fontWeight: 600, fontSize: 13.5 }}>{t(lang, GRADE_KEY[r.grade]!)}</span>
+                    <span style={{ fontSize: 11, color: 'var(--muted-2)' }}>{r.exp_years} {t(lang, 'years')}</span>
+                  </span>
+                )}
               </td>
               <td className="mono" style={{ textAlign: 'right', fontSize: 14, fontWeight: 600, whiteSpace: 'nowrap', letterSpacing: '-0.01em' }}>
                 {fmtVal(r.min, r.currency, period)} – {fmtVal(r.max, r.currency, period)}

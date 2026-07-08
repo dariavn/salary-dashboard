@@ -15,6 +15,7 @@ interface Props {
   series: Series[]
   period: 'annual' | 'monthly'
   lang: Lang
+  expMode?: boolean
 }
 
 function niceMax(v: number) {
@@ -25,7 +26,7 @@ function niceMax(v: number) {
   return step * pow
 }
 
-export default function RangeChart({ series, period, lang }: Props) {
+export default function RangeChart({ series, period, lang, expMode }: Props) {
   const lo = (r: GradeRow) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min
   const hi = (r: GradeRow) => period === 'annual' ? r.annual_gross_max : r.monthly_gross_max
 
@@ -58,7 +59,9 @@ export default function RangeChart({ series, period, lang }: Props) {
             <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 9 }}>
               <span className="dot" style={{ background: GRADE_VAR[g], width: 9, height: 9 }} />
               <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>
-                {t(lang, GRADE_KEY[g]!)}
+                {expMode
+                  ? (series.flatMap(s => s.rows).find(r => r.grade === g)?.exp_years ?? g) + ' ' + t(lang, 'years')
+                  : t(lang, GRADE_KEY[g]!)}
               </span>
             </div>
             {/* One row per country */}
