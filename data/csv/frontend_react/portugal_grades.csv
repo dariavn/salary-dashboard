@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,14000,19000,1150,1600,EUR,medium,"SalaryExpert Portugal entry €29K anchor;payscale Portugal ~€31.2K avg;shecodes.io","Local Portuguese companies; 14 salários (12 + holiday + christmas)"
+Junior,0-3,mid_market,18000,26000,1500,2150,EUR,medium,"SalaryExpert Portugal entry €29,083;glassdoor Lisbon FED 2026;payscale","Lisbon/Porto international cos; startups"
+Junior,0-3,premium,24000,33000,2000,2750,EUR,medium,"glassdoor Lisbon FED;jobicy Portugal;LinkedIn Jobs Lisbon","FinTech startups (Feedzai, Talkdesk unicorn ecosystem)"
+Middle,3-5,local_sme,22000,30000,1850,2500,EUR,medium,"SalaryExpert avg €41.7K;payscale Portugal","Local product companies"
+Middle,3-5,mid_market,28000,38000,2350,3150,EUR,high,"SalaryExpert Portugal avg €41,715;payscale Portugal avg €31.2K;glassdoor Lisbon","Multiple sources; SalaryExpert more reliable for tech; mid-range"
+Middle,3-5,premium,36000,50000,3000,4150,EUR,medium,"glassdoor Lisbon FED 25th €44.8K anchor;plane.com Portugal","FinTech and SaaS scale-ups in Lisbon"
+Senior,5-8,local_sme,32000,42000,2650,3500,EUR,medium,"SalaryExpert senior €46.9K as anchor;payscale","Local companies"
+Senior,5-8,mid_market,40000,54000,3350,4500,EUR,high,"SalaryExpert senior €46,940;glassdoor Lisbon senior FED 25th €44,808 75th €59,223;plane.com","Good convergence; Lisbon data well-supported"
+Senior,5-8,premium,52000,70000,4350,5850,EUR,medium,"glassdoor Lisbon senior FED 75th €59.2K;plane.com;LinkedIn Jobs Lisbon","Farfetch, Talkdesk, Feedzai, Revolut Lisbon; unicorn ecosystem"
+Lead,7-10,mid_market,50000,65000,4150,5400,EUR,medium,"LinkedIn Jobs Lisbon;estimation from senior","Tech lead; limited direct data"
+Lead,7-10,premium,63000,84000,5250,7000,EUR,medium,"LinkedIn Jobs;estimation","Top Lisbon employers; B2B rates"
+Head,10+,premium,78000,105000,6500,8750,EUR,low,"estimation","Very limited data"

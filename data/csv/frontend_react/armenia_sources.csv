@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+glassdoor Yerevan Frontend Developer 2026,aggregator,glassdoor.com/Salaries/yerevan-armenia-frontend-developer-salary,2026,"AMD 827,500/year (~€2K/year — likely monthly figures labeled as annual); range AMD 346K-1.33M; 32 responses",low,"Small self-reported sample; May 2026; figures likely monthly not annual; 1 EUR ≈ 415 AMD"
+worldsalaries Armenia Frontend 2026,aggregator,worldsalaries.com/average-front-end-web-developer-salary-in-armenia/,2026,"Average AMD 8,257,300/year (~€19.9K/year); starts AMD 117,880/year",low,"More reliable annual figure; national average includes all company types"
+plane.com Armenia Frontend,aggregator,plane.com/salaries/frontend-developer/armenia,2026,"Armenia frontend salary data",low,"Supplementary; small sample"
+jobicy Armenia Software Dev 2026,aggregator,jobicy.com/salaries/am/software-developer,2026,"Software developer context Armenia",low,"Broader role; supplementary"
+spotsalary Armenia Frontend,aggregator,spotsalary.com/frontend-web-developer-salary-in-armenia-15259,2026,"Frontend web developer Armenia data",low,"Supplementary source"
+salaries.am,aggregator,salaries.am,2026,"General Armenia IT salary data",low,"Armenian salary aggregator; limited IT-specific breakdowns"

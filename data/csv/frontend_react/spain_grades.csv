@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,17000,22000,1400,1850,EUR,high,"glassdoor Spain junior FED 25th €19.4K 75th €26.4K;SalaryExpert Spain entry;payscale Spain","Local Spanish companies; 12 pagas"
+Junior,0-3,mid_market,21000,29000,1750,2400,EUR,high,"glassdoor Spain junior 25th-75th;glassdoor Barcelona junior FED up to €27K;shecodes.io Spain","Barcelona 25th-75th €19.4-26.4K; mid-size international cos pay premium"
+Junior,0-3,premium,28000,40000,2350,3350,EUR,medium,"glassdoor Barcelona frontend 25th €28K 75th €43K;linkedin Jobs Spain","iGaming and FinTech juniors; Barcelona/Madrid premium employers"
+Middle,3-5,local_sme,27000,36000,2250,3000,EUR,medium,"SalaryExpert Spain avg €53K as mid anchor;payscale Spain;shecodes.io","Local product companies"
+Middle,3-5,mid_market,34000,46000,2850,3850,EUR,high,"SalaryExpert Spain avg €52,973;glassdoor Barcelona frontend 25th €28K 75th €43K (all levels);payscale","Multiple sources agree on €45-55K range for mid-level"
+Middle,3-5,premium,44000,59000,3650,4900,EUR,medium,"glassdoor Madrid React developer;glassdoor Barcelona senior FED;techsalarycalculator Barcelona","Barcelona/Madrid top employers; iGaming"
+Senior,5-8,local_sme,42000,54000,3500,4500,EUR,medium,"SalaryExpert Spain senior €59.7K as anchor;payscale Spain","Local Spanish companies"
+Senior,5-8,mid_market,50000,65000,4150,5400,EUR,high,"SalaryExpert senior €59,677;glassdoor Barcelona frontend 25th-75th €44.8-59.2K senior;payscale","Well-supported by multiple sources; Barcelona median ~€49K"
+Senior,5-8,premium,62000,83000,5150,6900,EUR,medium,"glassdoor Barcelona FED 75th €59K+;glassdoor Madrid React 2026;techsalarycalculator","iGaming (licensed market) and fintech pay premium; Barcelona > Madrid"
+Lead,7-10,mid_market,62000,80000,5150,6650,EUR,medium,"LinkedIn Jobs Spain;glassdoor;estimation from senior +20-25%","Tech lead; B2B contracts common"
+Lead,7-10,premium,78000,105000,6500,8750,EUR,medium,"LinkedIn Jobs;estimation","Top iGaming/FinTech; B2B contractor rates"
+Head,10+,premium,95000,130000,7900,10850,EUR,low,"estimation;linkedin Jobs","Very limited data at this level in Spain"

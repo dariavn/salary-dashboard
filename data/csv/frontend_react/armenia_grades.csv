@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,7000,11000,600,900,EUR,low,"worldsalaries Armenia frontend €19.9K overall avg;glassdoor Yerevan frontend 2026;jobicy Armenia","1 EUR ≈ 415 AMD; local Armenian companies pay significantly below international"
+Junior,0-3,mid_market,10000,16000,850,1350,EUR,low,"glassdoor Yerevan AMD 625K/year (~€1.5K/mo);plane.com Armenia","International companies in Yerevan; post-2022 relocation wave boosted market"
+Junior,0-3,premium,15000,22000,1250,1850,EUR,low,"estimation;international company context Yerevan","Relocated CIS tech companies; global product companies"
+Middle,3-5,local_sme,14000,20000,1150,1650,EUR,low,"worldsalaries avg €19.9K anchor;glassdoor Yerevan range AMD 346K-1.33M/year","Low confidence; limited public data"
+Middle,3-5,mid_market,18000,26000,1500,2150,EUR,low,"glassdoor Yerevan AMD 75th 1.33M/year ≈ €26.4K;spotsalary Armenia;plane.com","Glassdoor 32 self-reported salaries"
+Middle,3-5,premium,24000,36000,2000,3000,EUR,low,"estimation;international company context","Post-2022 influx of Russian/international tech companies"
+Senior,5-8,local_sme,22000,30000,1850,2500,EUR,low,"worldsalaries Armenia senior context;estimation","Local market upper end"
+Senior,5-8,mid_market,28000,40000,2350,3350,EUR,low,"glassdoor Yerevan top earner AMD 1.82M/year ≈ €34.7K;plane.com;estimation","Limited sources"
+Senior,5-8,premium,36000,52000,3000,4350,EUR,low,"estimation;international company context","Very limited direct data; extrapolated"
+Lead,7-10,mid_market,36000,50000,3000,4150,EUR,low,"estimation from senior","Very limited data"
+Lead,7-10,premium,48000,68000,4000,5650,EUR,low,"estimation","Minimal data; international/relocated companies only"

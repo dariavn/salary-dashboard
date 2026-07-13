@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+infoplate.rs Serbia Frontend 2026,aggregator,infoplate.rs/en/salaryinfo/information-technology/frontend-developer,2026,"80% earn 63,378-233,842 RSD/mo net",medium,"Primary Serbian source; NET figures; covers all sectors not just IT; 117 RSD/EUR"
+worldsalaries Belgrade FED 2026,aggregator,worldsalaries.com/average-front-end-developer-salary-in-belgrade/serbia/,2026,"Average 1,476,700 RSD/year (~€12.6K all sectors)",medium,"Belgrade-specific; covers all sectors; IT-specific would be higher"
+glassdoor Serbia Frontend Engineer 2026,aggregator,glassdoor.com/Salaries/serbia-frontend-engineer-salary,2026,"Serbia frontend engineer data",low,"Small sample; self-reported"
+arc.dev Serbia Remote Dev 2026,aggregator,arc.dev/remote-developer-salary/serbia,2026,"Remote frontend median $47,604/year (~€43K)",low,"Remote/international pay included; skews above local market"
+plane.com Serbia Frontend,aggregator,plane.com/salaries/frontend-developer/serbia,2026,"Serbia frontend salary data",low,"Supplementary"
+glassdoor Serbia Software Developer 2026,aggregator,glassdoor.com/Salaries/serbia-software-developer-salary,2026,"General software developer data Serbia",low,"Broader role; used for context"

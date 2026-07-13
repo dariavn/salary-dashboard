@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+recruiting.by IT Salary Benchmarks Belarus 2026,salary_survey,recruiting.by/it-salary-benchmarks-belarus/,2026,"Junior $1,500-2,400/mo; Middle $2,200-3,500/mo; Senior $3,000-4,800/mo; Lead $4,500-7,500/mo gross USD",high,"Primary and most detailed Belarus IT salary source; React dominates; TypeScript required at mid+; HTP context"
+dev.by Salary Data 2026,salary_survey,salaries.devby.io/,2026,"Net take-home $1,400-1,800/mo for junior-middle; Senior $3,800 gross cited as benchmark",high,"Primary Belarusian IT community source; self-reported; HTP 9% tax advantage noted"
+recruitment.by Developers Belarus 2026,recruiter_report,recruitment.by/rus/news/it-salary-developers-belarus/,2026,"Developer salary context Belarus 2026",medium,"Supplementary context for grade calibration"
+glassdoor Minsk FED 2026,aggregator,glassdoor.com/Salaries/minsk-belarus-front-end-developer-salary,2026,"Average data; limited sample size for Belarus",low,"Supplementary; small sample; BYN figures converted"
+worldsalaries.com Belarus Frontend,aggregator,worldsalaries.com/average-front-end-developer-salary-in-belarus/,2026,"Average 26,540 BYN; Minsk 34,160 BYN; senior 30,685 BYN",low,"BYN to EUR: 1 EUR ≈ 3.55 BYN; used as sanity check only"

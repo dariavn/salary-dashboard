@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,7000,11000,600,900,EUR,low,"glassdoor Tbilisi frontend 2026;SalaryExpert Tbilisi entry context;estimation","GEL data adjusted; 1 GEL ≈ 0.35 EUR; local Georgian companies"
+Junior,0-3,mid_market,11000,17000,900,1400,EUR,low,"SalaryExpert Tbilisi front end entry €35.1K adjusted;glassdoor Tbilisi","International companies; post-2022 relocation companies boosted market"
+Junior,0-3,premium,16000,24000,1350,2000,EUR,low,"SalaryExpert/estimation;international company context","Relocated international companies (many Russian tech cos moved to Tbilisi)"
+Middle,3-5,local_sme,13000,20000,1100,1650,EUR,low,"SalaryExpert Tbilisi avg €49.2K context;estimation","Low confidence; limited public data for Tbilisi IT specifically"
+Middle,3-5,mid_market,18000,28000,1500,2350,EUR,low,"SalaryExpert avg context;glassdoor Tbilisi middle frontend 2026;plane.com Georgia","SalaryExpert avg GEL 140,710 → €49.2K as senior anchor"
+Middle,3-5,premium,26000,38000,2150,3150,EUR,low,"estimation;international company context in Tbilisi","Post-2022 influx of relocated companies increased premium ceiling"
+Senior,5-8,local_sme,20000,30000,1650,2500,EUR,low,"SalaryExpert Tbilisi senior €57.2K as anchor;estimation","Local market upper range"
+Senior,5-8,mid_market,28000,42000,2350,3500,EUR,low,"SalaryExpert Tbilisi senior front end €57.2K;glassdoor Tbilisi senior sw dev 2026","Limited sources; SalaryExpert-derived"
+Senior,5-8,premium,40000,58000,3350,4850,EUR,low,"estimation;international company salaries Tbilisi","Relocated or international employers; very limited data"
+Lead,7-10,mid_market,38000,52000,3150,4350,EUR,low,"estimation from senior","Very limited data; extrapolated"
+Lead,7-10,premium,50000,70000,4150,5850,EUR,low,"estimation","Minimal direct data; extrapolated from premium senior"

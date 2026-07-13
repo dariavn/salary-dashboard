@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+glassdoor Cyprus Senior FED 2026,aggregator,glassdoor.com/Salaries/cyprus-senior-front-end-developer-salary,2026,"25th €44,800 75th €81,500 annually",high,"Good sample for senior anchor; reflects full market spread including iGaming premium"
+glassdoor Limassol Senior Frontend 2026,aggregator,glassdoor.com/Salaries/limassol-cyprus-senior-frontend-developer-salary,2026,"Range €15,363-18,404/month (€184K-220K/year at top)",medium,"Small sample skewed by top iGaming/FinTech employers; used for premium ceiling only"
+glassdoor Limassol FED 2026,aggregator,glassdoor.com/Salaries/limassol-cyprus-front-end-developer-salary,2026,"Limassol frontend developer data",medium,"Cross-reference for Limassol premium"
+TalentUp Frontend Cyprus 2026,aggregator,talentup.io/salary/Frontend Developer/Cyprus,2026,"Median €49,900 (40 observations; Feb 2026)",medium,"Good median anchor for mid-market; data behind login for grade breakdown"
+plane.com Frontend Cyprus,aggregator,plane.com/salaries/frontend-developer/cyprus,2026,"Cyprus frontend developer salary data",medium,"Supplementary"
+worldsalaries.com Cyprus Frontend,aggregator,worldsalaries.com/average-front-end-developer-salary-in-cyprus/,2026,"Average data Cyprus",low,"Secondary reference"

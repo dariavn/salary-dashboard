@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+SalaryExpert Portugal Frontend 2026,aggregator,salaryexpert.com/salary/job/front-end-developer/portugal,2026,"Average €41,715; entry €29,083; senior €46,940",high,"Primary anchor; ERI methodology"
+glassdoor Lisbon FED 2026,aggregator,glassdoor.com/Salaries/lisbon-portugal-front-end-developer-salary,2026,"Lisbon FED data",high,"Lisbon-specific; primary location for Portugal tech market"
+glassdoor Lisbon Senior FED 2026,aggregator,glassdoor.com/Salaries/lisbon-portugal-senior-front-end-developer-salary,2026,"Senior Lisbon 25th €44,808 75th €59,223",high,"Well-supported senior Lisbon data"
+payscale Portugal FED 2026,aggregator,payscale.com/research/PT/Job=Front_End_Developer/Salary,2026,"Average €31,214",medium,"Self-reported; skews lower; UoP contracts"
+payscale Portugal React.js 2026,aggregator,payscale.com/research/PT/Skill=React.js/Salary,2026,"React.js specific skill data Portugal",medium,"React-specific premium data point"
+plane.com Portugal React 2026,aggregator,plane.com/salaries/react-developer/portugal,2026,"Portugal React developer data",medium,"Supplementary"
+jobicy Portugal SW Dev 2026,aggregator,jobicy.com/salaries/pt/software-developer,2026,"Software developer Portugal context",low,"Broader role; supplementary"
+shecodes.io Portugal Frontend,aggregator,shecodes.io/salaries/portugal/front-end-developer,2026,"Range €28,000-€75,000",low,"Wide range; used for boundaries only"

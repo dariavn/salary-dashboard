@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+SalaryExpert Spain Frontend 2026,aggregator,salaryexpert.com/salary/job/front-end-developer/spain,2026,"Average €52,973; senior €59,677",high,"Primary anchor; ERI methodology; reliable for Spain"
+glassdoor Spain Junior FED 2026,aggregator,glassdoor.com/Salaries/spain-junior-front-end-developer-salary,2026,"Junior 25th €19,365 75th €26,425 annually",high,"Spain-wide junior data; good sample"
+glassdoor Barcelona FED 2026,aggregator,glassdoor.com/Salaries/barcelona-spain-frontend-developer-salary,2026,"Barcelona FED 25th €28,000 75th €43,000",high,"Barcelona-specific; reflects premium market"
+glassdoor Madrid React Developer 2026,aggregator,glassdoor.com/Salaries/madrid-spain-react-developer-salary,2026,"Madrid React 25th €25,500 75th €36,500",high,"Madrid-specific React developer data"
+glassdoor Barcelona Junior FED 2026,aggregator,glassdoor.com/Salaries/barcelona-spain-junior-front-end-developer-salary,2026,"Junior Barcelona up to €27,070/year",medium,"Junior-specific Barcelona data"
+techsalarycalculator Barcelona React,aggregator,techsalarycalculator.com/react-developer-salary/barcelona,2026,"Barcelona React avg €48,948",medium,"Barcelona-specific React data"
+payscale Spain FED 2026,aggregator,payscale.com/research/ES/Job=Front_End_Developer/Salary,2026,"Spain PayScale data",medium,"Cross-reference; self-reported"
+whatisthesalary.com Spain 2026,aggregator,whatisthesalary.com/it-salaries/software-engineer-salary-in-spain/,2026,"Spain IT salary context",low,"Broader context"

@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,15000,20000,1250,1650,EUR,medium,"bulldogjob IT Community Report 2025 (latest);freenance.io Poland 2026","1 EUR ≈ 4.25 PLN; local SME; UoP contract"
+Junior,0-3,mid_market,19000,25000,1600,2100,EUR,high,"bulldogjob IT Community Report 2025;SalaryExpert Poland 2026;glassdoor Warsaw","Bulldogjob median junior 7,600 PLN/mo gross ≈ €21.5K/year; UoP contract"
+Junior,0-3,premium,24000,33000,2000,2750,EUR,medium,"glassdoor Warsaw;LinkedIn Jobs Poland;freenance.io","B2B/product companies; React+TypeScript required; Warsaw premium"
+Middle,3-5,local_sme,27000,35000,2250,2900,EUR,medium,"bulldogjob;freenance.io","Local product companies; UoP"
+Middle,3-5,mid_market,33000,43000,2750,3600,EUR,high,"bulldogjob IT Community Report 2025 median 13,200 PLN/mo ≈ €37.3K;SalaryExpert Poland;glassdoor","React+TypeScript expected; strong FinTech and gaming demand"
+Middle,3-5,premium,42000,56000,3500,4650,EUR,medium,"glassdoor Warsaw;LinkedIn Jobs;rubyonremote context","B2B contract rates; CD Projekt Red / top product cos; Warsaw top-of-market"
+Senior,5-8,local_sme,42000,54000,3500,4500,EUR,medium,"bulldogjob;freenance.io","Local product; UoP"
+Senior,5-8,mid_market,52000,66000,4350,5500,EUR,high,"bulldogjob median 19,900 PLN/mo ≈ €56.2K;SalaryExpert senior Poland;glassdoor Warsaw","Multiple sources converge; B2B slightly higher"
+Senior,5-8,premium,64000,84000,5350,7000,EUR,medium,"glassdoor Warsaw;LinkedIn Jobs;rubyonremote.com","Top gaming/fintech: CD Projekt Red, Allegro, Revolut Poland; B2B contract"
+Lead,7-10,mid_market,64000,82000,5350,6850,EUR,medium,"freenance.io;LinkedIn Jobs Poland;estimation from senior","Team/tech lead; limited direct data; extrapolated from senior + 20-25%"
+Lead,7-10,premium,80000,105000,6650,8750,EUR,medium,"LinkedIn Jobs;glassdoor;estimation","Top employers; B2B rates"
+Head,10+,premium,95000,130000,7900,10850,EUR,low,"LinkedIn Jobs;estimation","Principal / staff engineers; very limited data in Poland at this level"

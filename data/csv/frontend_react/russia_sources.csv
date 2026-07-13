@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Skillbox Media Frontend Survey 2026,salary_survey,skillbox.ru/media/code/zarplaty-i-skilly-frontendrazrabotchikov-raznykh-greydov-issledovanie-skillbox-media/,2026,"Junior 63-117K/mo; Middle 148-253K/mo; Senior 272-413K/mo; Lead 325-494K/mo RUB NET",high,"Primary source; detailed grade breakdown; Russia-specific; NET figures (Russian convention)"
+enigmai.ru Frontend Salary 2026,salary_survey,enigmai.ru/salary/frontend/frontend-salary-2026/,2026,"Middle 140-420K/mo median 210K; Senior median 329-550K/mo",high,"Detailed React/Vue/Angular breakdown; multiple grade points; NET"
+habr.career React Frontend 2026,salary_survey,career.habr.com/salaries?skills[]=react-js&spec_aliases[]=frontend,2026,"Median 258,500 RUB/mo for React frontend (1,516 responses)",high,"Primary aggregator for Russia IT; data behind partial paywall; median is most reliable"
+quick-offer.ru Frontend 2026,aggregator,quick-offer.ru/news/frontend-developers-salary,2026,"Median 200K/mo; Junior 76K; Middle 177K; Senior 329K",medium,"Secondary aggregator; consistent with Skillbox and habr data"
+getgrade.ru Dev Salaries 2026,aggregator,getgrade.ru/devsalaries,2026,"Senior median 550K as high-end reference",medium,"Useful for premium/lead anchoring; self-reported"
+hh.ru Senior Frontend Vacancies,job_posting,hh.ru React frontend developer Russia 2026,2026,"Senior median Moscow 287,500 RUB/mo (Feb 2026)",high,"Russia's primary job board; February 2026 data snapshot"

@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,9000,14000,750,1150,EUR,medium,"infoplate.rs Serbia frontend 2026;worldsalaries Belgrade €12.6K overall avg;glassdoor Serbia","117 RSD/EUR; local Serbian companies; gross"
+Junior,0-3,mid_market,13000,20000,1100,1650,EUR,medium,"glassdoor Serbia frontend;plane.com Serbia;arc.dev Serbia 2026","International product companies in Belgrade"
+Junior,0-3,premium,18000,28000,1500,2350,EUR,low,"arc.dev remote context $47.6K median;estimation","Premium product companies / remote-first; limited local data"
+Middle,3-5,local_sme,18000,26000,1500,2150,EUR,medium,"infoplate.rs;worldsalaries;glassdoor Serbia frontend engineer","Local mid-market"
+Middle,3-5,mid_market,24000,34000,2000,2850,EUR,medium,"glassdoor Serbia frontend engineer;plane.com;arc.dev","International product companies"
+Middle,3-5,premium,32000,46000,2650,3850,EUR,low,"arc.dev remote $47.6K median;estimation","Remote or multinational employers; limited Serbia-specific data"
+Senior,5-8,local_sme,30000,40000,2500,3350,EUR,medium,"infoplate.rs;worldsalaries Belgrade;glassdoor Serbia","Upper local market"
+Senior,5-8,mid_market,38000,52000,3150,4350,EUR,medium,"glassdoor Serbia software developer;arc.dev;plane.com Serbia","International product cos; Belgrade"
+Senior,5-8,premium,50000,68000,4150,5650,EUR,low,"arc.dev remote senior context;estimation","Remote senior or multinational; limited direct data"
+Lead,7-10,mid_market,50000,66000,4150,5500,EUR,low,"LinkedIn Jobs Serbia;estimation from senior","Limited direct data; extrapolated"
+Lead,7-10,premium,62000,85000,5150,7100,EUR,low,"arc.dev;estimation","Very limited data"

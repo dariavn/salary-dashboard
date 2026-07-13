@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+SalaryExpert Tbilisi Frontend 2026,aggregator,salaryexpert.com/salary/job/front-end-developer/georgia/tbilisi,2026,"Entry GEL 100,285; avg GEL 140,710; senior GEL 163,302; 1 GEL ≈ 0.35 EUR",medium,"Primary anchor; ERI methodology; entry ~€35K avg ~€49K senior ~€57K; may overestimate local SME"
+glassdoor Tbilisi FED 2026,aggregator,glassdoor.com/Salaries/tbilisi-georgia-front-end-developer-salary,2026,"GEL 5,104/year reported (likely data error — may be monthly); 25th GEL 2,367 75th GEL 8,354",low,"Very small sample; data appears to be monthly not annual; unreliable standalone"
+glassdoor Tbilisi Middle Frontend 2026,aggregator,glassdoor.com/Salaries/tbilisi-georgia-middle-frontend-developer-salary,2026,"Middle frontend data Tbilisi",low,"Small sample"
+plane.com Georgia React Developer,aggregator,plane.com/salaries/react-developer/georgia,2026,"Georgia React developer salary data",low,"Supplementary; small sample"
+glassdoor Tbilisi Senior SW Dev 2026,aggregator,glassdoor.com/Salaries/tbilisi-georgia-senior-software-developer-salary,2026,"Senior software developer Tbilisi context",low,"Broader role; used for senior anchor cross-check"

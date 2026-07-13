@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,18000,24000,1500,2000,EUR,medium,"TalentUp Cyprus Frontend 2026 (median €49.9K context);glassdoor Cyprus 2026;worldsalaries.com Cyprus","Local Cypriot companies; lower market entry"
+Junior,0-3,mid_market,23000,31000,1900,2600,EUR,medium,"glassdoor Cyprus frontend 2026;plane.com salaries Cyprus","Mid-size international companies in Limassol/Nicosia"
+Junior,0-3,premium,30000,42000,2500,3500,EUR,medium,"glassdoor Limassol senior context;emerald zebra;linkedin Jobs Limassol","iGaming/FinTech companies Limassol; React+TypeScript required"
+Middle,3-5,local_sme,28000,38000,2350,3150,EUR,medium,"TalentUp median €49.9K (all levels);worldsalaries Cyprus","Local companies"
+Middle,3-5,mid_market,36000,48000,3000,4000,EUR,medium,"glassdoor Cyprus 25th-75th senior €44.8-81.5K provides anchor;plane.com","International product companies"
+Middle,3-5,premium,46000,63000,3850,5250,EUR,medium,"glassdoor Limassol senior frontend;emerald zebra Cyprus","iGaming/FinTech; Limassol premium"
+Senior,5-8,local_sme,38000,52000,3150,4350,EUR,medium,"glassdoor Cyprus senior FED 25th €44.8K;worldsalaries","Local market upper end"
+Senior,5-8,mid_market,48000,66000,4000,5500,EUR,high,"glassdoor Cyprus senior 25th-75th €44,800-€81,500;TalentUp median €49.9K;plane.com","Good multi-source convergence"
+Senior,5-8,premium,64000,92000,5350,7650,EUR,medium,"glassdoor Limassol senior frontend €15,363-18,404/mo (upper outlier driven by top iGaming cos);emerald zebra","iGaming top employers (Playtech, Betsson, Melco); Limassol premium"
+Lead,7-10,mid_market,62000,82000,5150,6850,EUR,medium,"LinkedIn Jobs Limassol;glassdoor;estimation","Tech lead; limited direct data"
+Lead,7-10,premium,80000,118000,6650,9850,EUR,medium,"glassdoor Limassol senior range upper bound;emerald zebra;linkedin Jobs","Senior iGaming/FinTech tech leads; top of market Limassol"
+Head,10+,premium,100000,148000,8350,12350,EUR,low,"glassdoor Limassol extreme upper;estimation","Principal/staff engineers; very few openings; estimated"

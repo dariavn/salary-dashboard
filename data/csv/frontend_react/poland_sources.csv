@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+bulldogjob IT Community Report 2025,salary_survey,bulldogjob.com/it-report/salaries/frontend,2025,"Junior 7,600 PLN/mo; Middle 13,200 PLN/mo; Senior 19,900 PLN/mo UoP gross",high,"Best Poland-specific source; community survey Jan-Feb 2025; 2026 report not yet released at research date; 1 EUR ≈ 4.25 PLN"
+SalaryExpert Poland Frontend 2026,aggregator,salaryexpert.com/salary/job/front-end-developer/poland,2026,"Average annual; entry and senior level data",medium,"ERI methodology; used as cross-reference; 403 on direct fetch"
+glassdoor Warsaw Frontend 2026,aggregator,glassdoor.com/Salaries/warsaw-poland-frontend-developer-salary,2026,"PLN 11,333/mo median; 25th PLN 8,075 75th PLN 15,833",high,"151 self-reported salaries Warsaw; March 2026; reliable sample size"
+freenance.io Poland Frontend 2026,aggregator,freenance.io/professions/frontend-developer-salary-poland/,2026,"Junior below PLN 10K/mo; React+TypeScript 5-10% premium vs Angular",medium,"B2B vs UoP breakdown; location premium Warsaw 15-20%"
+rubyonremote.com Poland React 2026,aggregator,rubyonremote.com/react-developer-salaries-in-poland/,2026,"Avg $112,923 React Developer Poland",low,"Includes remote international pay; skews high; used only as premium ceiling reference"
+glassdoor Barcelona/Warsaw context,aggregator,glassdoor.com/Salaries/barcelona-spain-frontend-developer-salary,2026,"Cross-market comparison",low,"Supplementary"

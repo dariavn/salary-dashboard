@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,756000,1020000,63000,85000,RUB,high,"Skillbox Media Frontend Survey 2026;hh.ru frontend vacancies 2026;enigmai.ru salary report 2026","NET (after NDFL 13%); Russian convention quotes net; local product/service companies"
+Junior,0-3,mid_market,960000,1404000,80000,117000,RUB,high,"Skillbox Media Frontend Survey 2026;habr.career React frontend 2026;quick-offer.ru 2026","NET; mid-size product companies; Skillbox range 63-117K/mo covers junior spectrum"
+Middle,3-5,local_sme,1776000,2160000,148000,180000,RUB,high,"Skillbox Media Frontend Survey 2026;enigmai.ru frontend 2026","NET; local companies; lower end of middle range"
+Middle,3-5,mid_market,2100000,3000000,175000,250000,RUB,high,"Skillbox Media Frontend Survey 2026;habr.career 2026;enigmai.ru 2026","NET; mid-size product companies; Effector skill adds ~15-20% within this range"
+Middle,3-5,premium,2880000,3960000,240000,330000,RUB,medium,"habr.career React frontend;enigmai.ru;Yandex/VK/Sber job postings 2026","NET; top-tier tech companies (Yandex, VK, Tinkoff, Sber); Effector+TypeScript premium"
+Senior,5-8,local_sme,3264000,4080000,272000,340000,RUB,high,"Skillbox Media 2026;hh.ru senior frontend;quick-offer.ru senior 2026","NET; Skillbox range 272-413K/mo for senior"
+Senior,5-8,mid_market,3960000,5160000,330000,430000,RUB,high,"Skillbox Media 2026;habr.career;enigmai.ru senior 2026","NET; mid-market product; Effector+TypeScript adds ~15-20%"
+Senior,5-8,premium,5040000,6960000,420000,580000,RUB,medium,"habr.career premium;Yandex/VK/Tinkoff postings;getgrade.ru 2026","NET; top FinTech/Gaming (Yandex, Tinkoff, VK); Effector expertise commands top of range"
+Lead,7-10,mid_market,4800000,6360000,400000,530000,RUB,high,"Skillbox Media 2026;habr.career lead frontend;enigmai.ru 2026","NET; Skillbox range 325-494K/mo for team lead; Effector architecture knowledge premium"
+Lead,7-10,premium,6000000,8400000,500000,700000,RUB,medium,"habr.career;Yandex/Tinkoff/Sber senior postings;getgrade.ru","NET; top tech companies; Effector leads command top of range at FinTech unicorns"
+Head,10+,premium,7800000,12000000,650000,1000000,RUB,low,"getgrade.ru;enigmai.ru;limited job posting data","NET; staff/principal engineers; limited data points; estimated from senior lead extrapolation"
