@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Tbilisi DevOps 2026,aggregator,glassdoor.com/Salaries/tbilisi-georgia-devops-salary,2026,"Glassdoor data: GEL 5,680/year reported but highly likely monthly; 25th GEL 3,804; 75th GEL 10,606",low,"Small sample; Glassdoor figures appear to be monthly mislabeled as annual; 1 EUR ≈ 3.55 GEL; treating as monthly: avg €1,988/mo = €23.9K/yr; 75th €3,712/mo = €44.5K/yr"
+SalaryExpert Georgia DevOps 2026,aggregator,salaryexpert.com/salary/job/devops-engineer/georgia/tbilisi,2026,"Tbilisi DevOps context data",low,"ERI methodology; limited Georgia-specific data; cross-reference"
+LinkedIn Jobs Tbilisi DevOps 2026,job_posting,linkedin.com/jobs,2026,"Senior DevOps Tbilisi €30-44K; iGaming companies higher €40-60K postings",low,"Small sample; growing Tbilisi tech market; iGaming cluster emerging; limited postings"
+worldsalaries.com Georgia DevOps 2026,aggregator,worldsalaries.com,2026,"Average Georgia DevOps context",low,"Global aggregator; limited Georgia-specific DevOps data; supplementary only"
+jobicy.com Georgia DevOps 2026,aggregator,jobicy.com/salaries/ge,2026,"Georgia software developer context",low,"Broader role context; supplementary; low sample for DevOps specifically"

@@ -1,0 +1,6 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+recruiting.by DevOps Belarus 2026,recruiter_report,recruiting.by,2026,"Mid DevOps $2,800-4,200/mo gross; Senior/SRE $3,800-5,800/mo; Platform/Staff $5,500-8,500/mo",high,"Primary Belarus source; recruiter market data; USD gross converted ×0.91 to EUR; 1 USD ≈ 0.91 EUR at research date"
+dev.by Salary Survey 2026,salary_survey,dev.by,2026,"Belarus IT salary survey 2026; DevOps segment",medium,"Belarusian developer community; self-reported; used for cross-validation"
+LinkedIn Jobs Belarus DevOps 2026,job_posting,linkedin.com/jobs,2026,"DevOps/SRE postings Minsk and remote; $2,500-6,000/mo range observed",medium,"Remote-enabled postings dominant for Belarus in 2026 due to geopolitical context; cross-border hiring"
+Wargaming Engineering Reference,recruiter_report,wargaming.net/careers,2026,"Platform/Staff DevOps Wargaming premium tier; $5,500-8,500/mo historical data",medium,"Wargaming restructured post-2022 but Belarus operations ongoing; reference for premium gaming sector"
+rabota.by DevOps 2026,job_posting,rabota.by,2026,"Minsk DevOps postings with salary; lower-bound anchor for local_sme segment",medium,"Belarusian local job board; local company postings; USD and BYN rates"

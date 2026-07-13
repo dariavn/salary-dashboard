@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,mid_market,26000,36000,2150,3000,EUR,medium,"PayScale Cyprus DevOps 2026;LinkedIn Jobs Limassol","Limassol-based; AWS/GCP basics + CI/CD expected; limited junior DevOps postings"
+Junior,0-3,premium,34000,48000,2850,4000,EUR,medium,"LinkedIn Jobs Limassol iGaming;TalentUp Cyprus","iGaming employers prefer experienced hires; junior postings mostly at tech consultancies"
+Middle,3-5,mid_market,42000,58000,3500,4850,EUR,high,"PayScale Cyprus early-career €36K;TalentUp Cyprus median;LinkedIn Jobs Limassol","Kubernetes + Terraform + cloud required; mid-market tech companies Limassol"
+Middle,3-5,premium,54000,76000,4500,6350,EUR,high,"LinkedIn Jobs iGaming Limassol 2026;TalentUp premium;Glassdoor Limassol DevOps","iGaming operators (Playtech, Pragmatic Play, EveryMatrix); Docker/K8s/AWS required"
+Senior,5-8,mid_market,58000,78000,4850,6500,EUR,high,"PayScale Cyprus mid-career €56.5K;TalentUp median €69K;LinkedIn Jobs","Strong data: mid-career anchor €56-69K; SRE/Platform roles slightly higher"
+Senior,5-8,premium,74000,105000,6150,8750,EUR,high,"Glassdoor Limassol DevOps 75th;LinkedIn iGaming postings;TalentUp upper","Top iGaming/FinTech employers; SRE with on-call; cloud architecture ownership"
+Lead,7-10,mid_market,76000,100000,6350,8350,EUR,medium,"LinkedIn Jobs Limassol Lead DevOps;TalentUp;estimation from senior +20%","Tech lead DevOps; team of 2-5; common at scaling FinTech/SaaS cos"
+Lead,7-10,premium,95000,135000,7900,11250,EUR,medium,"LinkedIn Jobs iGaming Limassol Lead;Glassdoor upper;estimation","iGaming/FinTech top employers; cloud cost ownership; SLA ownership"
+Head,10+,premium,115000,158000,9600,13150,EUR,low,"LinkedIn Jobs 2026 VP/Head Infrastructure Limassol;estimation","Head of Infrastructure / VP Engineering Infra; very limited market postings Cyprus"

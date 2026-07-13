@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+PayScale Cyprus DevOps 2026,aggregator,payscale.com/research/CY/Job=DevOps_Engineer/Salary,2026,"Early career €36K; mid-career €56.5K",high,"Self-reported; good sample; Limassol-weighted; primary lower/mid anchor"
+TalentUp Cyprus DevOps 2026,aggregator,talentup.io,2026,"Median DevOps Cyprus €69K; range €40K-€110K+",high,"Primary median anchor; market-based methodology; Limassol tech market"
+Glassdoor Limassol DevOps 2026,aggregator,glassdoor.com/Salaries/limassol-cyprus-devops-salary,2026,"25th percentile €3,558/mo; 75th percentile €13,250/mo (interpreted as monthly)",medium,"Glassdoor figures labeled as annual but appear to be monthly; treating as monthly: 25th €42.7K/yr; 75th unreliable outlier at €159K/yr"
+LinkedIn Jobs Limassol DevOps 2026,job_posting,linkedin.com/jobs,2026,"iGaming senior DevOps €74-105K; FinTech middle €54-76K; postings observed",high,"Active Limassol job postings; salary ranges on iGaming postings higher than aggregators; primary premium anchor"
+SalaryExpert Cyprus DevOps 2026,aggregator,salaryexpert.com/salary/job/devops-engineer/cyprus,2026,"Cyprus DevOps salary data 2026",medium,"ERI methodology; cross-reference for Cyprus market"
+cypruswork.com DevOps 2026,job_posting,cypruswork.com,2026,"Limassol DevOps job postings 2026",medium,"Cyprus-specific job board; Limassol-heavy; iGaming and tech companies"

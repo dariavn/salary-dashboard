@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,20000,28000,1650,2350,EUR,medium,"SalaryExpert Portugal entry €32.1K;Glassdoor Lisbon 25th €31.9K extrapolated down","Lisbon/Porto; local companies; CI/CD + Linux + Docker basics"
+Junior,0-3,mid_market,26000,36000,2150,3000,EUR,high,"SalaryExpert Portugal entry €32.1K;Glassdoor Lisbon 25th €31.9K;LinkedIn","Strong data: entry-level mid-market; product companies; AWS/GCP basics valued"
+Junior,0-3,premium,32000,46000,2650,3850,EUR,medium,"LinkedIn Jobs Lisbon;FinTech employers premium","Growing FinTech hub; tech-forward startups; Kubernetes basics"
+Middle,3-5,local_sme,30000,40000,2500,3350,EUR,medium,"SalaryExpert avg €46K extrapolated;Glassdoor Lisbon lower","Traditional tech companies and local IT"
+Middle,3-5,mid_market,38000,52000,3150,4350,EUR,high,"SalaryExpert Portugal avg €46K;Glassdoor Lisbon 25th-75th €31.9-52K;LinkedIn","Multiple sources converge; Terraform + Docker + Kubernetes expected"
+Middle,3-5,premium,48000,66000,4000,5500,EUR,medium,"LinkedIn Jobs Lisbon premium;FinTech employers;Glassdoor upper","FinTech/SaaS scale-ups Lisbon; full cloud stack; DevSecOps premium"
+Senior,5-8,local_sme,42000,54000,3500,4500,EUR,medium,"SalaryExpert senior €51.9K;Glassdoor 75th €52K lower","Traditional companies; on-prem + hybrid"
+Senior,5-8,mid_market,50000,66000,4150,5500,EUR,high,"SalaryExpert Portugal senior €51.9K;Glassdoor Lisbon 75th €52K;LinkedIn","Primary anchors; SalaryExpert senior = €51.9K is mid-market reference; K8s+cloud"
+Senior,5-8,premium,62000,85000,5150,7100,EUR,medium,"LinkedIn Jobs Lisbon senior;FinTech premium;Glassdoor upper outliers","Cloudflare Lisbon, Feedzai, Farfetch tech; platform/SRE ownership"
+Lead,7-10,mid_market,62000,82000,5150,6850,EUR,medium,"LinkedIn Jobs Lisbon Lead;SalaryExpert senior×1.30 extrapolation","Tech lead; small-to-mid teams; Lisbon product companies growing"
+Lead,7-10,premium,78000,108000,6500,9000,EUR,medium,"LinkedIn Jobs premium;estimation from senior +30%","Staff/Principal DevOps; architecture; growing FinTech/SaaS Lisbon"
+Head,10+,premium,95000,130000,7900,10850,EUR,low,"LinkedIn Jobs Head of Infrastructure Lisbon;estimation","VP/Head Infra; limited Portugal market postings at this level; remote roles included"

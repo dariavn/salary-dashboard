@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,28000,38000,2350,3150,EUR,medium,"eitt.pl NoFluffJobs aggregate 2026;Bulldogjob DevOps 2026","1 EUR ≈ 4.25 PLN; UoP gross; smaller local companies"
+Junior,0-3,mid_market,36000,50000,3000,4150,EUR,high,"eitt.pl NoFluffJobs aggregate 2026;Bulldogjob 2026;JustJoin.IT 2026","Median B2B 12K PLN/mo = €33.9K; mid product companies"
+Junior,0-3,premium,46000,62000,3850,5150,EUR,medium,"eitt.pl NoFluffJobs aggregate 2026;LinkedIn Jobs Poland 2026","B2B rates at top product/gaming employers; AWS/GCP cert premium"
+Middle,3-5,local_sme,44000,58000,3650,4850,EUR,medium,"eitt.pl;Bulldogjob 2026;DOU Poland survey 2026","Local companies; UoP contract"
+Middle,3-5,mid_market,56000,75000,4650,6250,EUR,high,"eitt.pl NoFluffJobs 2026;Bulldogjob 2026;JustJoin.IT 2026","Median B2B 20K PLN/mo = €56.5K/year; Kubernetes experience expected"
+Middle,3-5,premium,70000,95000,5850,7900,EUR,high,"eitt.pl NoFluffJobs 2026;LinkedIn Jobs 2026","B2B rates; Terraform+K8s+cloud certs; top gaming/fintech companies"
+Senior,5-8,local_sme,68000,88000,5650,7350,EUR,medium,"eitt.pl;DOU Poland 2026","Lower end of senior market; UoP; regional companies"
+Senior,5-8,mid_market,84000,108000,7000,9000,EUR,high,"eitt.pl NoFluffJobs 2026 median 32K PLN/mo;Bulldogjob 2026;JustJoin.IT senior","Strong data; senior DevOps consistently top-paid role in Poland 2026"
+Senior,5-8,premium,100000,138000,8350,11500,EUR,high,"eitt.pl NoFluffJobs B2B upper;LinkedIn Jobs 2026","B2B 35-49K PLN/mo; SRE/Platform Engineering titles; K8s+cloud required"
+Lead,7-10,mid_market,98000,126000,8150,10500,EUR,medium,"eitt.pl B2B 35-45K PLN/mo;LinkedIn Jobs Poland;Bulldogjob","Tech lead DevOps; team of 3-6 engineers; cloud architecture ownership"
+Lead,7-10,premium,118000,160000,9850,13350,EUR,medium,"eitt.pl B2B upper 42-57K PLN/mo;LinkedIn Jobs 2026","Staff/Principal DevOps; platform ownership; top gaming/fintech"
+Head,10+,premium,140000,188000,11650,15650,EUR,low,"LinkedIn Jobs Poland;estimation from lead +20%","Head of Platform Engineering / VP Infra; very limited data; 3-4 active postings observed"

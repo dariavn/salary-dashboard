@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+SalaryExpert Portugal DevOps 2026,aggregator,salaryexpert.com/salary/job/devops-engineer/portugal,2026,"Average €46,033; entry €32,121; senior €51,899",high,"Primary anchor; ERI methodology; Portugal-wide; reliable mid_market reference"
+Glassdoor Lisbon DevOps 2026,aggregator,glassdoor.com/Salaries/lisbon-portugal-devops-salary,2026,"Lisbon DevOps 25th €31,850; 75th €52,000",high,"Lisbon-specific; primary geographic market; well-sampled; cross-validates SalaryExpert"
+LinkedIn Jobs Lisbon DevOps 2026,job_posting,linkedin.com/jobs,2026,"Senior DevOps Lisbon €50-66K; Lead €62-82K; FinTech premium €62-84K postings observed",high,"Active Lisbon job postings; Feedzai, Cloudflare Lisbon, Farfetch tech salary bands; premium segment anchor"
+Glassdoor Portugal DevOps Senior 2026,aggregator,glassdoor.com/Salaries/portugal-senior-devops-salary,2026,"Portugal senior DevOps data 2026",medium,"Cross-validation for senior range; Portugal-wide"
+itjobs.pt DevOps 2026,job_posting,itjobs.pt,2026,"Portugal IT job board DevOps postings 2026",medium,"Portuguese local IT job board; Lisbon/Porto split; current postings"
+payscale.com Portugal DevOps 2026,aggregator,payscale.com/research/PT/Job=DevOps_Engineer/Salary,2026,"Portugal DevOps PayScale data",medium,"Self-reported; cross-reference; tends to run slightly below SalaryExpert"

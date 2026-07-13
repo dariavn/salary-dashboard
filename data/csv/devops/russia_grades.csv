@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,960000,1440000,80000,120000,RUB,medium,"hh.ru DevOps Junior Russia 2026;enigmai.ru DevOps 2026","NET after tax (Russian market convention); regional companies and startups; hh.ru entry level 80-120K/mo"
+Junior,0-3,mid_market,1560000,2280000,130000,190000,RUB,high,"enigmai.ru DevOps 2026;hh.ru Moscow DevOps 2026;quick-offer.ru","Moscow/SPb product companies; CI/CD + Linux basics required; enigmai.ru lower range"
+Middle,3-5,local_sme,2400000,3360000,200000,280000,RUB,medium,"hh.ru middle DevOps 2026;enigmai.ru lower","Regional and smaller product companies; NET"
+Middle,3-5,mid_market,3360000,5160000,280000,430000,RUB,high,"enigmai.ru DevOps 2026;hh.ru Moscow;quick-offer median 218K overall","Strong data: Ansible+Terraform+Docker+K8s standard stack; 280-430K/mo NET"
+Middle,3-5,premium,4800000,6960000,400000,580000,RUB,high,"enigmai.ru DevOps premium tier;hh.ru top-tier listings Moscow","Tinkoff/T-Bank, Sber Tech, VK; Kubernetes+cloud+security; K8s premium +15-20%"
+Senior,5-8,local_sme,4560000,6000000,380000,500000,RUB,medium,"hh.ru senior DevOps;enigmai.ru lower senior","Mid-size product companies; SRE adjacent roles"
+Senior,5-8,mid_market,6000000,9360000,500000,780000,RUB,high,"enigmai.ru 500-850K/mo;hh.ru Moscow senior;quick-offer senior segment","Primary range: 500-780K/mo NET; ClickHouse, Avito, Ozon, Wildberries tier"
+Senior,5-8,premium,9000000,13200000,750000,1100000,RUB,high,"enigmai.ru upper range;hh.ru elite listings;Tinkoff/Sber/VK reports","Platform/SRE at top tech: T-Bank, Yandex, Sber; Kubernetes/cloud architect; DevSecOps +20%"
+Lead,7-10,mid_market,9600000,13200000,800000,1100000,RUB,high,"enigmai.ru Lead 800K-1.2M range;hh.ru Lead DevOps Moscow","Team lead DevOps 3-7 ppl; platform ownership; Terraform/K8s architecture decisions"
+Lead,7-10,premium,12000000,16800000,1000000,1400000,RUB,medium,"enigmai.ru upper 1.2M+;hh.ru premium listings;Tinkoff engineering blog","Staff DevOps/Platform Engineer at top-tier tech companies; cloud cost optimization ownership"

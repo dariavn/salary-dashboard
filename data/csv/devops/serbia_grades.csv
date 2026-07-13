@@ -1,0 +1,12 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,12000,18000,1000,1500,EUR,medium,"Glassdoor Belgrade DevOps 25th ~€1,533/mo;InfoStud Serbia IT 2026","Serbian market; local companies; Linux + CI/CD basics"
+Junior,0-3,mid_market,16000,24000,1350,2000,EUR,medium,"Glassdoor Belgrade DevOps;helloworld.rs;LinkedIn Jobs Belgrade","Mid product and outsourcing companies Belgrade; Docker + basic cloud"
+Junior,0-3,premium,22000,32000,1850,2650,EUR,low,"LinkedIn Jobs Belgrade;arc.dev Serbia remote adjacent","Remote-enabled employers or foreign-funded tech companies; premium for junior is limited"
+Middle,3-5,local_sme,22000,30000,1850,2500,EUR,medium,"Glassdoor Belgrade median €2,283/mo;InfoStud Serbia","Overall median €27.4K/year; local SME baseline"
+Middle,3-5,mid_market,28000,40000,2350,3350,EUR,high,"Glassdoor Belgrade DevOps median+;LinkedIn Jobs;helloworld.rs","Primary anchor: Glassdoor €2,283/mo average = €27.4K all levels; mid_market middle above average"
+Middle,3-5,premium,36000,52000,3000,4350,EUR,medium,"LinkedIn Jobs Belgrade;arc.dev Serbia $47.6K remote anchor","Product companies with international clients; Kubernetes + cloud expected"
+Senior,5-8,local_sme,36000,48000,3000,4000,EUR,medium,"Glassdoor Belgrade DevOps 75th €3,308/mo;LinkedIn Belgrade","75th percentile €3,308/mo = €39.7K/year; local companies senior"
+Senior,5-8,mid_market,44000,60000,3650,5000,EUR,high,"Glassdoor Belgrade 75th;LinkedIn Jobs senior Belgrade;reponotes.com Serbia","Strong range: tech product companies; SRE/Platform roles Belgrade"
+Senior,5-8,premium,56000,76000,4650,6350,EUR,medium,"LinkedIn Jobs;arc.dev Serbia remote-eligible;estimation","Foreign-funded companies; international remote hybrid; Terraform+K8s+cloud architecture"
+Lead,7-10,mid_market,56000,74000,4650,6150,EUR,medium,"LinkedIn Jobs Belgrade Lead;estimation senior +25%","Team lead DevOps; growing product engineering companies Belgrade"
+Lead,7-10,premium,68000,90000,5650,7500,EUR,low,"LinkedIn Jobs premium;estimation","Top employers or remote-friendly companies; limited posting data"

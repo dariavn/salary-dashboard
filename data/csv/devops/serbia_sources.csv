@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+Glassdoor Belgrade DevOps 2026,aggregator,glassdoor.com/Salaries/belgrade-serbia-devops-salary,2026,"Average €2,283/mo = €27,396/yr; 25th €1,533/mo = €18.4K/yr; 75th €3,308/mo = €39.7K/yr",high,"Primary Serbia anchor; Belgrade-specific; well-sampled; covers all company sizes"
+reponotes.com Serbia DevOps 2026,aggregator,reponotes.com,2026,"Belgrade DevOps estimated average €2,150/mo; 25th-75th percentile range",medium,"Cross-validation with Glassdoor data; consistent with primary source"
+helloworld.rs DevOps 2026,job_posting,helloworld.rs,2026,"Serbia DevOps job postings with salary data 2026",medium,"Serbia-specific IT job board; active postings; cross-reference for market rates"
+LinkedIn Jobs Belgrade DevOps 2026,job_posting,linkedin.com/jobs,2026,"Senior DevOps Belgrade €44-60K; Lead €56-74K active postings observed",medium,"Active postings used for senior and lead level ranges; premium segment anchor"
+arc.dev Serbia DevOps Remote 2026,aggregator,arc.dev/remote-developer-salary/serbia,2026,"Serbia DevOps remote median $47,604/yr = ~€43K",low,"Remote/international pay included; skews above pure local market; used for premium segment upper bound"
+infostud.com Serbia IT 2026,job_posting,infostud.com,2026,"Serbia local IT job market context",low,"Serbian local job board; limited DevOps-specific data; supplementary"

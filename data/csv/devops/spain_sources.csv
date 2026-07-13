@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+SalaryExpert Spain DevOps 2026,aggregator,salaryexpert.com/salary/job/devops-engineer/spain,2026,"Average €58,721; entry €41,086; senior €66,418",high,"Primary anchor; ERI methodology; Spain-wide; reliable for mid_market reference"
+Glassdoor Spain DevOps Senior 2026,aggregator,glassdoor.com/Salaries/spain-senior-devops-salary,2026,"Senior Spain 25th €51,720; 75th €71,000",high,"Well-sampled senior data; cross-validates SalaryExpert; primary senior anchor"
+Glassdoor Madrid DevOps Junior 2026,aggregator,glassdoor.com/Salaries/madrid-spain-devops-junior-salary,2026,"Junior Madrid 25th €26,250; 75th €33,100",high,"Junior-specific Madrid data; used for junior ranges"
+Glassdoor Barcelona DevOps 2026,aggregator,glassdoor.com/Salaries/barcelona-spain-devops-salary,2026,"Barcelona DevOps 25th €38,800; 75th €61,050",high,"Barcelona-specific; tech hub premium vs Spain average; cross-reference"
+LinkedIn Jobs Spain DevOps 2026,job_posting,linkedin.com/jobs,2026,"Senior DevOps Barcelona/Madrid €62-82K; Lead €78-102K postings observed",high,"Active job postings; Revolut Spain, Glovo, Stripe Barcelona salary bands observed"
+Glassdoor Spain DevOps all levels 2026,aggregator,glassdoor.com/Salaries/spain-devops-salary,2026,"Spain DevOps overall range and median",medium,"Cross-reference; broader Spain-wide data"
+infojobs.net Spain DevOps 2026,job_posting,infojobs.net,2026,"Spain local job board DevOps postings 2026",medium,"Spanish local job board; Accenture/Indra dominant; outsourcing segment anchor"

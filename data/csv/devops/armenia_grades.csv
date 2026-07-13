@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,mid_market,10000,16000,850,1350,EUR,low,"Jobicy Armenia DevOps $27.6K avg;Glassdoor Yerevan DevOps (monthly figures)","1 EUR ≈ 415 AMD; 1 USD ≈ 0.91 EUR; Jobicy entry $16.6-22K/yr = €15-20K/yr; small sample"
+Junior,0-3,premium,14000,22000,1150,1850,EUR,low,"LinkedIn Jobs Yerevan;estimation;EPAM/Picsart type employers","Foreign-funded tech companies paying above local market; limited junior DevOps postings"
+Middle,3-5,mid_market,18000,28000,1500,2350,EUR,low,"Jobicy Armenia avg $27.6K = €25.1K;Glassdoor Yerevan median AMD 1.05M/mo = €2,534/mo = €30.4K","Low confidence; small sample; Glassdoor AMD figures treated as monthly (labeled annual)"
+Middle,3-5,premium,24000,36000,2000,3000,EUR,low,"LinkedIn Jobs Yerevan;EPAM Armenia;Picsart;estimation","Product companies (Picsart, EPAM Armenia, ServiceTitan) paying premium vs market"
+Senior,5-8,mid_market,28000,42000,2350,3500,EUR,low,"Jobicy Armenia senior $33-50K = €30-45.5K;Glassdoor upper AMD","Primary anchor: Jobicy $33-50K/yr senior = €30-45.5K/yr; rounded to mid_market"
+Senior,5-8,premium,38000,56000,3150,4650,EUR,low,"LinkedIn Jobs Yerevan senior;estimation;international employers","ServiceTitan, Picsart, EPAM Armenia senior track; cloud platform roles"
+Lead,7-10,mid_market,38000,54000,3150,4500,EUR,low,"LinkedIn Jobs;estimation from senior +25%","Growing product ecosystem in Yerevan; limited lead-level market depth"
+Lead,7-10,premium,50000,72000,4150,6000,EUR,low,"LinkedIn Jobs;estimation;remote-eligible positions","Remote or international employers paying above local market at lead level"

@@ -1,0 +1,7 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+enigmai.ru DevOps Russia 2026,salary_survey,enigmai.ru/blog/devops-salary-russia,2026,"Junior 140-190K RUB/mo; Middle 280-450K RUB/mo; Senior 500-850K RUB/mo; Lead 800K-1.2M+/mo",high,"Primary anchor; current 2026 data; NET after tax per Russian convention; Kubernetes premium +15-20% noted; DevSecOps +20%"
+hh.ru DevOps Russia 2026,job_posting,hh.ru,2026,"Junior from 80-120K RUB/mo (Moscow); Middle 280-420K; Senior 500-780K",high,"Russia's primary job board; active postings with salary bands; hh.ru career section has grade-specific data; Moscow-weighted"
+quick-offer.ru DevOps 2026,aggregator,quick-offer.ru/salaries,2026,"Median DevOps 218K RUB/mo NET (all levels); Junior 70-180K segment",high,"Aggregator of Russian job market; overall median includes all seniorities; useful for cross-check"
+dreamjob.ru DevOps 2026,aggregator,dreamjob.ru,2026,"DevOps salary data Russia 2026",medium,"Cross-validation source; Russian market aggregator"
+habr.com Career DevOps 2026,salary_survey,career.habr.com/salaries,2026,"IT-specific survey; DevOps segment Russia",medium,"Developer community survey; self-reported; NET figures; Habr.com is primary Russian IT community platform"
+Tinkoff Engineering Blog,recruiter_report,tinkoff.ru/engineering,2026,"T-Bank DevOps/SRE compensation: Senior 750K-1.1M RUB/mo NET reported",medium,"Top FinTech employer reference; public engineering blog data points; premium tier anchor"

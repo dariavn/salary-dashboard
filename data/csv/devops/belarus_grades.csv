@@ -1,0 +1,11 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,16000,24000,1350,2000,EUR,medium,"recruiting.by DevOps 2026;dev.by salary survey","USD×0.91 EUR conversion; smaller IT companies and outsourcing shops"
+Junior,0-3,mid_market,22000,32000,1850,2650,EUR,medium,"recruiting.by 2026;LinkedIn Jobs Belarus","Mid product companies; CI/CD + Linux + Docker baseline"
+Middle,3-5,local_sme,28000,40000,2350,3350,EUR,medium,"recruiting.by 2026","Outsourcing and smaller product companies"
+Middle,3-5,mid_market,36000,52000,3000,4350,EUR,high,"recruiting.by $2,800-4,200/mo DevOps;dev.by;LinkedIn Belarus","Primary: $2,800-4,200/mo gross × 0.91; EPAM, IBA Group, Andersen tier"
+Middle,3-5,premium,48000,68000,4000,5650,EUR,high,"recruiting.by premium segment;Wargaming DevOps posts","$5,200-7,500/mo USD at top product companies × 0.91; Wargaming, EPAM Labs"
+Senior,5-8,local_sme,36000,50000,3000,4150,EUR,medium,"recruiting.by lower;LinkedIn","Local IT companies; UoP equivalent"
+Senior,5-8,mid_market,48000,70000,4000,5850,EUR,high,"recruiting.by $3,800-5,800/mo SRE/DevOps;LinkedIn Jobs 2026","Primary anchor: $3,800-5,800/mo × 0.91 = €3,458-5,278/mo = €41.5-63.3K; rounded"
+Senior,5-8,premium,62000,90000,5150,7500,EUR,high,"recruiting.by Platform/Staff $5,500-7,500;Wargaming engineering reports","SRE/Platform at Wargaming, EPAM Labs, top product companies"
+Lead,7-10,mid_market,60000,86000,5000,7150,EUR,medium,"recruiting.by Platform/Staff $5,500-8,500 lower end;LinkedIn","Engineering manager / team lead DevOps; architecture responsibilities"
+Lead,7-10,premium,80000,115000,6650,9600,EUR,medium,"recruiting.by $5,500-8,500/mo upper;Wargaming leadership levels","Staff/Principal DevOps; infrastructure strategy ownership; platform architecture"

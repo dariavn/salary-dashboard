@@ -1,0 +1,8 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+eitt.pl NoFluffJobs DevOps Poland 2026,salary_survey,eitt.pl/artykul/raporty-plac-w-it,2026,"Junior UoP 12-18K PLN/mo; Mid UoP 17-28K PLN/mo; Senior UoP 26-40K PLN/mo; Lead B2B 35-55K PLN/mo",high,"Aggregates NoFluffJobs + Bulldogjob + JustJoin.IT + Antal data; primary Poland source per user requirement; 1 EUR = 4.25 PLN used for conversion"
+Bulldogjob IT Community Report 2026,salary_survey,bulldogjob.pl/raporty,2026,"Junior DevOps median ~12K PLN/mo; Senior ~30K PLN/mo",high,"Annual survey; DevOps consistently top-paid role in Poland; used for cross-validation"
+JustJoin.IT DevOps Poland 2026,job_posting,justjoin.it,2026,"Senior DevOps 25-40K PLN/mo active postings",high,"Live job board aggregating current postings with salary ranges; K8s+Terraform required at senior level"
+NoFluffJobs DevOps Poland 2026,job_posting,nofluffjobs.com,2026,"B2B mid 15-25K PLN/mo net; senior 25-40K PLN/mo net",high,"Primary job board per user instruction; B2B contract rates prominent; accessed via eitt.pl aggregate"
+Glassdoor Warsaw DevOps 2026,aggregator,glassdoor.com/Salaries/warsaw-poland-devops-salary,2026,"Warsaw DevOps data cross-check",medium,"Cross-validation; Warsaw-centric; self-reported"
+DOU Poland DevOps Survey 2026,salary_survey,dou.ua/salary,2026,"Junior median 8,450 PLN/mo; Middle 16,200 PLN/mo; Senior 23,475 PLN/mo",medium,"Ukrainian developer community in Poland; may skew lower than Polish local market; used as lower-bound anchor"
+LinkedIn Jobs Poland DevOps 2026,job_posting,linkedin.com/jobs,2026,"Senior DevOps 24-38K PLN/mo; Lead 35-50K PLN/mo listed postings",medium,"Live job postings with salary bands; Warsaw/Kraków focus"

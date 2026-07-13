@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,24000,32000,2000,2650,EUR,medium,"Glassdoor Madrid DevOps Junior 25th €26.3K;SalaryExpert entry €41K extrapolated down","Barcelona/Madrid local companies; CI/CD + Linux + Docker baseline"
+Junior,0-3,mid_market,30000,42000,2500,3500,EUR,high,"Glassdoor Madrid Junior DevOps 25th-75th €26.3-33.1K;SalaryExpert Spain entry €41K","Multiple data points converge; product companies; AWS/GCP basic cert valued"
+Junior,0-3,premium,38000,54000,3150,4500,EUR,medium,"LinkedIn Jobs Barcelona/Madrid;Glassdoor upper band","Tech-forward companies: Revolut Spain, Stripe Barcelona, Wallapop; K8s basics"
+Middle,3-5,local_sme,38000,50000,3150,4150,EUR,medium,"SalaryExpert Spain avg €58.7K extrapolated down;Glassdoor Spain","Traditional companies; Linux/Docker/Ansible stack"
+Middle,3-5,mid_market,46000,62000,3850,5150,EUR,high,"SalaryExpert Spain avg €58.7K;Glassdoor Spain senior 25th €51.7K;LinkedIn","Strong multiple-source data; Barcelona/Madrid product companies; Terraform+K8s"
+Middle,3-5,premium,58000,78000,4850,6500,EUR,high,"Glassdoor senior 75th €71K;LinkedIn Jobs premium Madrid/Barcelona","FinTech, tech scale-ups; Kubernetes + cloud architecture; DevSecOps premium"
+Senior,5-8,local_sme,52000,68000,4350,5650,EUR,medium,"SalaryExpert senior Spain €66.4K;Glassdoor 25th €51.7K","Traditional tech companies; on-prem + hybrid cloud"
+Senior,5-8,mid_market,62000,82000,5150,6850,EUR,high,"SalaryExpert Spain senior €66.4K;Glassdoor 25th-75th €51.7-71K;LinkedIn","Primary anchors converge at €62-82K; Terraform+K8s+cloud architect"
+Senior,5-8,premium,76000,105000,6350,8750,EUR,high,"Glassdoor 75th+;LinkedIn Jobs senior Madrid/Barcelona;Revolut/Stripe Spain levels","Top FinTech/SaaS: Revolut, Glovo, Wallapop; SRE/Platform with full cloud ownership"
+Lead,7-10,mid_market,78000,102000,6500,8500,EUR,medium,"LinkedIn Jobs Lead DevOps Spain;SalaryExpert senior×1.25 extrapolation","Tech lead 3-6 engineers; architecture ownership; Barcelona startup ecosystem"
+Lead,7-10,premium,96000,132000,8000,11000,EUR,medium,"LinkedIn Jobs premium;Revolut Spain senior+ levels;estimation","Staff DevOps/SRE; multi-team infrastructure ownership; cloud cost optimization"
+Head,10+,premium,115000,158000,9600,13150,EUR,low,"LinkedIn Jobs Head of Infrastructure Spain;estimation","VP/Head Infra at scale-ups; limited postings; equity often included not captured here"

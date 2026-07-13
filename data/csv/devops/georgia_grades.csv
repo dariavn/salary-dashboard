@@ -1,0 +1,9 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,mid_market,10000,16000,850,1350,EUR,low,"Glassdoor Tbilisi DevOps (monthly relabeled as annual);LinkedIn Tbilisi","Very limited data; 1 EUR ≈ 3.55 GEL; Glassdoor figures appear monthly not annual; small sample"
+Junior,0-3,premium,14000,22000,1150,1850,EUR,low,"LinkedIn Jobs Tbilisi;estimation;iGaming-adjacent employers","Foreign-funded tech companies in Tbilisi; above-market vs local standards"
+Middle,3-5,mid_market,18000,28000,1500,2350,EUR,low,"Glassdoor Tbilisi implied mid range;SalaryExpert Georgia context;LinkedIn","Low confidence — limited data; Tbilisi growing tech hub but DevOps market small"
+Middle,3-5,premium,26000,38000,2150,3150,EUR,low,"LinkedIn Jobs Tbilisi;iGaming companies (iGaming hub emerging);estimation","iGaming companies and foreign tech entering Georgia pay above local rates"
+Senior,5-8,mid_market,30000,44000,2500,3650,EUR,low,"Glassdoor Tbilisi DevOps 75th ~€3,712/mo (GEL 10,606/mo);SalaryExpert Georgia","75th Glassdoor GEL 10,606/mo × 0.35 = €3,712/mo = €44.5K/year upper; mid_market lower"
+Senior,5-8,premium,40000,60000,3350,5000,EUR,low,"LinkedIn Jobs Tbilisi;estimation;international employer premium","Top employers or remote-eligible positions; cloud platform ownership"
+Lead,7-10,mid_market,40000,56000,3350,4650,EUR,low,"LinkedIn Jobs Tbilisi;estimation from senior +20%","Very limited lead-level DevOps market in Georgia; growing with digital hub investment"
+Lead,7-10,premium,52000,75000,4350,6250,EUR,low,"LinkedIn Jobs;estimation","International/remote-enabled employers; limited data"
