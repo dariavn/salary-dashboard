@@ -82,10 +82,37 @@ export function loadCandidates(position: string, location: string) {
   return readCandidates(position, location)
 }
 
+const MONTH_NUM: Record<string, string> = {
+  jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',
+  jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12',
+}
+
+// Normalise a raw data_date string to "YYYY" or "YYYY-MM" for comparison.
+// Filters out URL fragments, quarter codes, date ranges, and text-month formats.
+function normalizeDateStr(d: string): string {
+  if (!d) return ''
+  // "MMM YYYY" or "MMM DD YYYY"
+  const textM = d.match(/^([A-Za-z]{3})\s+(?:\d{1,2}\s+)?(\d{4})$/)
+  if (textM) {
+    const m = MONTH_NUM[textM[1].toLowerCase()]
+    return m ? `${textM[2]}-${m}` : textM[2]
+  }
+  // "YYYY-QN" quarter → start month of quarter
+  const qtr = d.match(/^(\d{4})-Q([1-4])$/)
+  if (qtr) return `${qtr[1]}-${{ '1':'01','2':'04','3':'07','4':'10' }[qtr[2]]}`
+  // "YYYY-YYYY" range → take later year
+  const range = d.match(/^(\d{4})-(\d{4})$/)
+  if (range) return range[2]
+  // "YYYY" or "YYYY-MM" — already canonical
+  if (/^\d{4}(-\d{2})?$/.test(d)) return d
+  // anything else (URL fragment, etc.) — discard
+  return ''
+}
+
 // Returns the most recent data_date from sources CSV — used to assess market data freshness
 export function getResearchDate(position: string, location: string): string {
   const sources = readSources(position, location)
-  const dates = sources.map(s => s.data_date).filter(Boolean).sort()
+  const dates = sources.map(s => normalizeDateStr(s.data_date)).filter(Boolean).sort()
   return dates[dates.length - 1] ?? ''
 }
 
