@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,13200,18000,1100,1500,EUR,medium,"InfoPlate.rs;Infostud.com","InfoPlate Junior PM 80% band: €879–€1,619/month NET; converted to gross ÷0.70; Serbia gross ≈ net/0.70 (10% income tax + ~19.9% social contributions)"
+Junior,0-3,mid_market,18000,25200,1500,2100,EUR,medium,"Levels.fyi Serbia;Plane.com Serbia;Infostud.com","Levels.fyi P25 $36k ≈ €33k suggests mid-market floor for experienced junior; IT outsourcing companies (EPAM, Endava) baseline"
+Junior,0-3,premium,25200,33600,2100,2800,EUR,low,"Levels.fyi Serbia","Extrapolated from Levels.fyi distribution and premium company comparables (FinTech startups, product companies); limited direct data"
+Middle,3-5,local_sme,20400,27600,1700,2300,EUR,medium,"InfoPlate.rs;Infostud.com","InfoPlate IT PM after-5yr net €2,562/month → gross ~€3,660/month represents ceiling; Infostud median €1,754/month (gross unclear)"
+Middle,3-5,mid_market,27600,38400,2300,3200,EUR,medium,"Levels.fyi Serbia;Infostud.com;Plane.com Serbia","Levels.fyi median $43,200 ≈ €39,600 — consistent with mid-market upper; EPAM median ~$43,200 corroborates"
+Middle,3-5,premium,38400,50400,3200,4200,EUR,low,"Levels.fyi Serbia;Joberty.com","Extrapolated from Levels.fyi 75th pct and FinTech/product company segment; limited Belgrade-specific data"
+Senior,5+,local_sme,30000,42000,2500,3500,EUR,medium,"InfoPlate.rs Senior PM;Joberty.com","InfoPlate Senior PM 80% net €1,385–€4,333/month; Joberty Senior PM €2,500/month NET → gross ~€3,571/month"
+Senior,5+,mid_market,42000,55200,3500,4600,EUR,high,"InfoPlate.rs;Joberty.com;Levels.fyi Serbia;Plane.com Serbia","Strongest data grade; Joberty €2,500/month net → ~€43,000 gross annual; Levels.fyi 75th pct $64,800 ≈ €59,400 as ceiling"
+Senior,5+,premium,55200,72000,4600,6000,EUR,medium,"Levels.fyi Serbia;Infostud.com","Levels.fyi 75th–90th pct ($64,800–$90,600) covers this range; Yandex Serbia median ~$87,861 ≈ €80,500 (outlier/ceiling)"
+Lead,7+,mid_market,54000,70800,4500,5900,EUR,low,"Levels.fyi Serbia","Levels.fyi 90th pct $90,600 ≈ €83,100; mid-market Lead extrapolated below 90th pct; limited direct Lead-specific Serbia data"
+Lead,7+,premium,70800,90000,5900,7500,EUR,low,"Levels.fyi Serbia;Yandex/Luxoft Serbia comparables","Premium segment driven by top tech employers; Yandex ~$87,861, Luxoft ~$52,356 median — Lead would exceed these"
+Head,10+,premium,84000,108000,7000,9000,EUR,low,"Levels.fyi Serbia;extrapolation","Very limited data; single source; treat as indicative only; no local Head of PMO Serbia postings found"

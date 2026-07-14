@@ -1,0 +1,13 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,currency,confidence,sources,notes
+Junior,0-3,local_sme,16900,22600,1400,1900,EUR,medium,"zerobs.pl 2026;npseo.pl 2026","PLN 6000-8000/mo gross converted at 1 EUR=4.25 PLN; outsourcing/SME segment"
+Junior,0-3,mid_market,22600,32500,1900,2700,EUR,medium,"itentio.com 2024;zerobs.pl 2026;npseo.pl 2026","PLN 8000-11500/mo gross; established IT firms and mid-size tech companies"
+Middle,3-5,local_sme,28200,38100,2350,3200,EUR,medium,"wynagrodzenia.pl Jan2026;zerobs.pl 2026","PLN 10000-13500/mo gross; 333-respondent survey confirms median range"
+Middle,3-5,mid_market,38100,50800,3200,4250,EUR,high,"itentio.com 2024 (1133 listings);wynagrodzenia.pl Jan2026;npseo.pl 2026","PLN 13100-18000/mo gross; wynagrodzenia.pl median 15970 PLN confirms mid-point"
+Middle,3-5,premium,50800,67800,4250,5650,EUR,medium,"freenance.io 2026;npseo.pl 2026;levels.fyi Jul2026","PLN 18000-24000/mo gross; FinTech/SaaS product companies and senior B2B contractors"
+Senior,5+,local_sme,42400,56500,3550,4700,EUR,medium,"zerobs.pl 2026;npseo.pl 2026","PLN 15000-20000/mo gross"
+Senior,5+,mid_market,53600,70600,4450,5900,EUR,high,"itentio.com 2024 (1133 listings);wynagrodzenia.pl Jan2026;zerobs.pl 2026;npseo.pl 2026","PLN 19000-25000/mo gross; itentio confirms 19300-24300; multiple sources agree"
+Senior,5+,premium,64900,84700,5400,7050,EUR,medium,"freenance.io 2026;npseo.pl 2026;levels.fyi Jul2026","PLN 23000-30000/mo gross; B2B rates 160-250 PLN/h net; FinTech/iGaming product orgs"
+Lead,7+,mid_market,70600,94600,5900,7900,EUR,medium,"itentio.com 2024 (1133 listings);freenance.io 2026","PLN 25000-33500/mo gross; itentio Lead range 26500-33500 confirmed"
+Lead,7+,premium,90400,121400,7550,10100,EUR,low,"freenance.io 2026;npseo.pl 2026","PLN 32000-43000/mo gross; B2B rates up to 280-320 PLN/h for FinTech/pharma"
+Head,10+,mid_market,79100,104500,6600,8700,EUR,low,"freenance.io 2026;npseo.pl 2026","PLN 28000-37000/mo gross; PMO Director/Program Manager range; limited data points"
+Head,10+,premium,104500,127100,8700,10600,EUR,low,"freenance.io 2026","PLN 37000-45000/mo gross; max cited in sources is 45000 PLN; only 1-2 data points"
