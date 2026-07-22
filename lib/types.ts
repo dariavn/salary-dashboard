@@ -2,7 +2,7 @@ export type Confidence = 'high' | 'medium' | 'low'
 export type Segment = 'local_sme' | 'mid_market' | 'premium'
 export type Tier = 'top' | 'high' | 'mid' | 'base'
 export type Presence = 'strong' | 'moderate' | 'limited' | 'negligible'
-export type SourceType = 'aggregator' | 'salary_survey' | 'job_posting' | 'recruiter_report'
+export type SourceType = 'aggregator' | 'salary_survey' | 'job_posting' | 'recruiter_report' | 'open_cv' | 'ats_pipeline'
 
 export interface GradeRow {
   grade: string

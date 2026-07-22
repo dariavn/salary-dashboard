@@ -1,0 +1,5 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_turski,declined,7,Senior,4140,4 000–5 000/мес (вероятно USD),USD,unclear,2026-07,no,Senior ~7 лет (опыт под вопросом по фидбеку). Локация не указана. Мидпоинт 4.5K USD × 0.92 = 4140 €
+qa_zoloeva,declined,2,Junior,4500,4 500 €/мес gross,EUR,gross,2026-07,no,Junior (25 лет). Локация не указана
+qa_shanshin,declined,,unknown,,от 2м gross (единица/период не уточнены),,,2026-07,yes,Локация не указана. ЗП не интерпретирована — «2м» без указания валюты и периода (₽/год? € всего?)
+qa_borodaev,declined,,unknown,5500,5 500 €/мес net (предложенный офер),EUR,net,2026-07,no,Локация не указана. Это офер рекрутера кандидату — не ожидания самого кандидата

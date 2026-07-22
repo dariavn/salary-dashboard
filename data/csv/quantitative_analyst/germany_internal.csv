@@ -1,0 +1,5 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_liashko,active,3.5,Middle,4583,55 000 €/год gross (оффер через кипрское юрлицо),EUR,gross,2026-07,no,Hired. Мюнхен. Оффер 55K €/год gross при оформлении через Кипр; меньше при full remote
+qa_sukhomlinov,active,7,Senior,6000,6 000 €/мес net,EUR,net,2026-07,no,Third Interview. Гамбург ~7 лет
+qa_otryakhin,active,12,Senior,5000,5 000 €/мес gross,EUR,gross,2026-07,no,Third Interview. Миттенвальд ~12 лет опыта
+qa_shabanov,declined,7,Senior,8333,100 000 €/год gross,EUR,gross,2026-07,no,Senior 7+ лет. Берлин

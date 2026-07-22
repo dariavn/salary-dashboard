@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_mnevets,declined,6.5,Senior,6500,6 500 €/мес gross желаемая,EUR,gross,2026-07,no,Senior ~6.5 лет. Варшава. Желаемая ЗП 78K €/год — подтверждает нижнюю половину mid_market senior

@@ -1,0 +1,4 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_gimmelfarb,active,8,Senior,3300,3 300 €/мес gross,EUR,gross,2026-07,no,Third Interview. Сербия ~8 лет. В переговорах фигурировали net-цифры 3–3.3k — т.е. gross≈net при сербских налогах
+qa_mutolapov,declined,6,Senior,6000,6 000 €/мес net,EUR,net,2026-07,no,Senior ~6 лет. Белград. Международно-калиброванные ожидания — выше типичного сербского рынка
+qa_kremlev,declined,,Head,4500,4 500 €+/мес,EUR,unclear,2026-07,yes,Head of Anti-Fraud — ролевой мисматч; подавался как Product Manager. Нови-Сад. Исключить из зарплатной аналитики квантов

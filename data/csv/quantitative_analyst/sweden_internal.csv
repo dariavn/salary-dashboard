@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_mushchak,declined,5.3,Senior,3750,45 000 €/год (Швеция remote) / 30 000 €/год (Кипр),EUR,gross,2026-07,no,Senior ~5.3 лет. Стокгольм. Remote Швеция 45K/12=3750 €/мес; при релокации на Кипр 30K/12=2500 €/мес

@@ -16,12 +16,21 @@ const LOCATION_META: Record<string, Omit<LocationMeta, 'slug'>> = {
   belarus:  { name: { en: 'Belarus',     ru: 'Беларусь' },   flag: '🇧🇾', currency: 'EUR' },
   spain:    { name: { en: 'Spain',       ru: 'Испания' },    flag: '🇪🇸', currency: 'EUR' },
   portugal: { name: { en: 'Portugal',    ru: 'Португалия' }, flag: '🇵🇹', currency: 'EUR' },
-  germany:  { name: { en: 'Germany',     ru: 'Германия' },   flag: '🇩🇪', currency: 'EUR' },
-  ukraine:  { name: { en: 'Ukraine',     ru: 'Украина' },    flag: '🇺🇦', currency: 'EUR' },
-  czechia:  { name: { en: 'Czechia',     ru: 'Чехия' },      flag: '🇨🇿', currency: 'EUR' },
-  romania:  { name: { en: 'Romania',     ru: 'Румыния' },    flag: '🇷🇴', currency: 'EUR' },
-  hungary:  { name: { en: 'Hungary',     ru: 'Венгрия' },    flag: '🇭🇺', currency: 'EUR' },
-  netherlands: { name: { en: 'Netherlands', ru: 'Нидерланды' }, flag: '🇳🇱', currency: 'EUR' },
+  germany:     { name: { en: 'Germany',     ru: 'Германия' },    flag: '🇩🇪', currency: 'EUR' },
+  ukraine:     { name: { en: 'Ukraine',     ru: 'Украина' },     flag: '🇺🇦', currency: 'EUR' },
+  czechia:     { name: { en: 'Czechia',     ru: 'Чехия' },       flag: '🇨🇿', currency: 'EUR' },
+  romania:     { name: { en: 'Romania',     ru: 'Румыния' },     flag: '🇷🇴', currency: 'EUR' },
+  hungary:     { name: { en: 'Hungary',     ru: 'Венгрия' },     flag: '🇭🇺', currency: 'EUR' },
+  netherlands: { name: { en: 'Netherlands', ru: 'Нидерланды' },  flag: '🇳🇱', currency: 'EUR' },
+  switzerland: { name: { en: 'Switzerland', ru: 'Швейцария' },   flag: '🇨🇭', currency: 'EUR' },
+  italy:       { name: { en: 'Italy',       ru: 'Италия' },      flag: '🇮🇹', currency: 'EUR' },
+  israel:      { name: { en: 'Israel',      ru: 'Израиль' },     flag: '🇮🇱', currency: 'EUR' },
+  uae:         { name: { en: 'UAE',         ru: 'ОАЭ' },         flag: '🇦🇪', currency: 'EUR' },
+  luxembourg:  { name: { en: 'Luxembourg',  ru: 'Люксембург' },  flag: '🇱🇺', currency: 'EUR' },
+  france:      { name: { en: 'France',      ru: 'Франция' },     flag: '🇫🇷', currency: 'EUR' },
+  sweden:      { name: { en: 'Sweden',      ru: 'Швеция' },      flag: '🇸🇪', currency: 'EUR' },
+  denmark:     { name: { en: 'Denmark',     ru: 'Дания' },       flag: '🇩🇰', currency: 'EUR' },
+  unknown:     { name: { en: 'Not specified', ru: 'Не указана' }, flag: '🌐', currency: 'EUR' },
 }
 
 // Known position metadata — fallback: capitalize + replace underscores
@@ -117,8 +126,16 @@ export function getResearchDate(position: string, location: string): string {
 }
 
 export function loadAllCandidatesForPosition(position: string) {
-  const locs = loadLocations(position)
-  return locs.flatMap(loc =>
-    readCandidates(position, loc.slug).map(c => ({ ...c, location: loc.slug }))
+  const dir = path.join(CSV_BASE, position)
+  if (!fs.existsSync(dir)) return []
+  // Scan for *_internal.csv independently — candidates can exist for countries
+  // that don't yet have grades/domains/sources research files.
+  const slugs: string[] = []
+  fs.readdirSync(dir).forEach(f => {
+    const m = f.match(/^(.+)_internal\.csv$/)
+    if (m) slugs.push(m[1])
+  })
+  return slugs.flatMap(slug =>
+    readCandidates(position, slug).map(c => ({ ...c, location: slug }))
   )
 }

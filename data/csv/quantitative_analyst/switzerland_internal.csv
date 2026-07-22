@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_aevskiy,active,10,Senior,12250,140 000 CHF/год gross (текущий доход),CHF,gross,2026-07,yes,Screening. Лозанна. Академический+PhD трек; 39 лет; текущий доход — не рыночная ставка pure quant junior/middle. Outlier

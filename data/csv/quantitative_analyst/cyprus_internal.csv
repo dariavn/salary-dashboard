@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_beliakov,declined,7.5,Senior,7500,7 000–8 000 €/мес gross,EUR,gross,2026-07,no,Senior ~7-8 лет. Лимассол. Кандидат явно указал gross несмотря на кипрскую локацию

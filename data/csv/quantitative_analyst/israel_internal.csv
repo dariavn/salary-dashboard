@@ -1,0 +1,2 @@
+candidate_id,status,go_exp_years,exp_grade,salary_monthly_eur,salary_original_raw,currency_original,gross_net,data_as_of,outlier,notes
+qa_sysak,declined,2,Junior,2760,3 000 USD/мес gross,USD,gross,2026-07,no,Junior 2+ лет. Кармиэль Израиль. 3000 USD × 0.92 = 2760 €/мес
