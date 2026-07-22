@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { PositionMeta, LocationMeta, CandidateWithLocation, GradeRow } from '@/lib/types'
 import type { SalaryBandsData } from '@/lib/salary-bands-loader'
@@ -58,19 +58,9 @@ export default function HomeClient({
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const [homeTab, setHomeTab] = useState<HomeTab>(() => {
-    const tab = searchParams.get('tab')
-    if (tab === 'ats') return 'ats'
-    if (tab === 'bands') return 'bands'
-    return 'market'
-  })
-
-  // Keep homeTab in sync with URL so router.push() from child components triggers tab switch
-  useEffect(() => {
-    const tab = searchParams.get('tab')
-    const next: HomeTab = tab === 'ats' ? 'ats' : tab === 'bands' ? 'bands' : 'market'
-    setHomeTab(next)
-  }, [searchParams])
+  // Derive homeTab from URL so back/forward and router.replace() always stay in sync
+  const _tab = searchParams.get('tab')
+  const homeTab: HomeTab = _tab === 'ats' ? 'ats' : _tab === 'bands' ? 'bands' : 'market'
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
   const [selected, setSelected] = useState<string[]>([])
   const [marketPeriod, setMarketPeriod] = useState<MarketPeriod>('all')
@@ -83,7 +73,6 @@ export default function HomeClient({
   })
 
   function switchTab(tab: HomeTab) {
-    setHomeTab(tab)
     if (tab === 'ats') {
       const existingPos = searchParams.get('atsPos')
       const defaultPos = positions.find(p => (candidatesByPosition[p.slug]?.length ?? 0) > 0)?.slug
