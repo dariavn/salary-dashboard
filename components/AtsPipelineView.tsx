@@ -161,14 +161,6 @@ export default function AtsPipelineView({ positions, candidatesByPosition, locat
     return salaryBandsData.positions.filter(p => p.position.toLowerCase().includes(q)).slice(0, 10)
   }, [bandQuery, salaryBandsData])
 
-  // Sync position from URL when searchParams change (handles page refresh and browser back).
-  // useState initializer may run before searchParams are populated in some Next.js rendering modes.
-  useEffect(() => {
-    const urlPos = searchParams.get('atsPos')
-    if (urlPos && urlPos !== position) setPositionState(urlPos)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams])
-
   // No didMount syncUrl — each filter change calls syncUrl explicitly.
   // Removing it prevents overwriting the restored URL on browser back navigation.
 
