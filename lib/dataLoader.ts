@@ -43,6 +43,7 @@ const POSITION_META: Record<string, Omit<PositionMeta, 'slug'>> = {
   frontend_developer: { name: { en: 'Frontend Developer', ru: 'Frontend Developer' } },
   devops_engineer:    { name: { en: 'DevOps Engineer',    ru: 'DevOps Engineer' } },
   ux_designer:        { name: { en: 'UX Designer',        ru: 'UX Designer' } },
+  hrbp:               { name: { en: 'HRBP',                ru: 'HRBP' } },
 }
 
 function capitalize(s: string) {
