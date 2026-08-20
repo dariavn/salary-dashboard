@@ -34,6 +34,12 @@ export default function SummaryCards({ allData, period, lang }: Props) {
         const cur = entry.data.currency
         const conf = avgConf(entry.data.grades)
 
+        // Average across every grade/segment row we actually have data for
+        const allRows = entry.data.grades
+        const avgAllGrades = allRows.length
+          ? Math.round(allRows.reduce((s, r) => s + (lo(r) + hi(r)) / 2, 0) / allRows.length)
+          : null
+
         return (
           <div key={entry.meta.slug} className="card" style={{ padding: 18, position: 'relative', overflow: 'hidden' }}>
             {/* Series color bar */}
@@ -54,6 +60,13 @@ export default function SummaryCards({ allData, period, lang }: Props) {
             {min != null && max != null && (
               <div className="mono" style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>
                 {fmtK(min, cur)} – {fmtK(max, cur)} {period === 'annual' ? t(lang, 'perYear') : t(lang, 'perMonth')}
+              </div>
+            )}
+            {/* Average across all grades */}
+            {avgAllGrades != null && (
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 12, paddingTop: 12, borderTop: '1px solid var(--border)' }}>
+                <span style={{ fontSize: 11, color: 'var(--muted)' }}>{t(lang, 'avgAllGrades')}</span>
+                <span className="mono" style={{ fontSize: 14, fontWeight: 600, marginLeft: 'auto' }}>{fmtFull(avgAllGrades, cur)}</span>
               </div>
             )}
             {/* Footer stats */}

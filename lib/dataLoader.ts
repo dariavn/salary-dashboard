@@ -79,12 +79,22 @@ export function loadLocations(position: string): LocationMeta[] {
   return Array.from(slugs).map(getLocationMeta)
 }
 
+// Optional freeform market-context note (e.g. "public HR salary data is scarce in Serbia — here's why").
+// Only shown if the file exists; most position/location pairs won't have one.
+function loadMarketNote(position: string, location: string): string | undefined {
+  const file = path.join(CSV_BASE, position, `${location}_market_note.md`)
+  if (!fs.existsSync(file)) return undefined
+  const content = fs.readFileSync(file, 'utf-8').trim()
+  return content || undefined
+}
+
 export function loadCountryData(position: string, location: string): CountryData {
   const grades = readGrades(position, location)
   const domains = readDomains(position, location)
   const sources = readSources(position, location)
   const currency = grades[0]?.currency ?? getLocationMeta(location).currency
-  return { position, location, grades, domains, sources, currency }
+  const marketNote = loadMarketNote(position, location)
+  return { position, location, grades, domains, sources, currency, marketNote }
 }
 
 export function loadCandidates(position: string, location: string) {

@@ -37,6 +37,28 @@ function Toggle({ options, value, onChange }: { options: { v: string; label: str
   )
 }
 
+function MarketNote({ allData, lang }: { allData: Entry[]; lang: string }) {
+  const withNote = allData.filter(e => e.data.marketNote)
+  if (!withNote.length) return null
+  return (
+    <>
+      {withNote.map(entry => (
+        <div key={entry.meta.slug} className="card" style={{ padding: '16px 18px', marginBottom: 18, background: 'var(--surface-2)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+            <span style={{ fontSize: 14 }}>{entry.meta.flag}</span>
+            <span style={{ fontSize: 13, fontWeight: 600 }}>
+              {entry.data.sources.length} {t(lang as any, 'sourcesAnalyzedNote')}
+            </span>
+          </div>
+          <p style={{ fontSize: 13, lineHeight: 1.55, color: 'var(--text-2)', margin: 0, whiteSpace: 'pre-line' }}>
+            {entry.data.marketNote}
+          </p>
+        </div>
+      ))}
+    </>
+  )
+}
+
 function CurrencyNote({ allData, lang }: { allData: Entry[]; lang: string }) {
   const mixed = new Set(allData.map(e => e.data.currency)).size > 1
   const hasRussia = allData.some(e => e.meta.slug === 'russia')
@@ -243,6 +265,7 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
               <Toggle options={periodOpts} value={period} onChange={v => setPeriod(v as 'annual' | 'monthly')} />
             </div>
             <SummaryCards allData={allData} period={period} lang={lang} />
+            <MarketNote allData={allData} lang={lang} />
             <div className="card" style={{ padding: '20px 22px' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap', rowGap: 6, marginBottom: 18 }}>
                 <h3 style={{ fontSize: 14, fontWeight: 600, margin: 0, whiteSpace: 'nowrap' }}>{t(lang, 'salaryRange')}</h3>
