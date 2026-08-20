@@ -80,12 +80,18 @@ export function loadLocations(position: string): LocationMeta[] {
 }
 
 // Optional freeform market-context note (e.g. "public HR salary data is scarce in Serbia — here's why").
-// Only shown if the file exists; most position/location pairs won't have one.
-function loadMarketNote(position: string, location: string): string | undefined {
-  const file = path.join(CSV_BASE, position, `${location}_market_note.md`)
-  if (!fs.existsSync(file)) return undefined
-  const content = fs.readFileSync(file, 'utf-8').trim()
-  return content || undefined
+// Only shown if a file exists; most position/location pairs won't have one.
+// Looks for {location}_market_note.en.md and {location}_market_note.ru.md; falls back to
+// whichever language exists if only one file was written.
+function loadMarketNote(position: string, location: string): { en: string; ru: string } | undefined {
+  const readIfExists = (suffix: string) => {
+    const file = path.join(CSV_BASE, position, `${location}_market_note.${suffix}.md`)
+    return fs.existsSync(file) ? fs.readFileSync(file, 'utf-8').trim() : ''
+  }
+  const en = readIfExists('en')
+  const ru = readIfExists('ru')
+  if (!en && !ru) return undefined
+  return { en: en || ru, ru: ru || en }
 }
 
 export function loadCountryData(position: string, location: string): CountryData {

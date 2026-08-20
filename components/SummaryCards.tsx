@@ -25,17 +25,15 @@ export default function SummaryCards({ allData, period, lang }: Props) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: allData.length <= 3 ? `repeat(${allData.length}, 1fr)` : 'repeat(auto-fill, minmax(260px, 1fr))', gap: 14, marginBottom: 24 }}>
       {allData.map((entry, i) => {
-        const seniors = entry.data.grades.filter(r => r.grade === 'Senior')
-        const lo = (r: typeof seniors[0]) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min
-        const hi = (r: typeof seniors[0]) => period === 'annual' ? r.annual_gross_max : r.monthly_gross_max
-        const min = seniors.length ? Math.min(...seniors.map(lo)) : null
-        const max = seniors.length ? Math.max(...seniors.map(hi)) : null
-        const mid = min != null && max != null ? Math.round((min + max) / 2) : null
+        const allRows = entry.data.grades
+        const lo = (r: typeof allRows[0]) => period === 'annual' ? r.annual_gross_min : r.monthly_gross_min
+        const hi = (r: typeof allRows[0]) => period === 'annual' ? r.annual_gross_max : r.monthly_gross_max
+        const min = allRows.length ? Math.min(...allRows.map(lo)) : null
+        const max = allRows.length ? Math.max(...allRows.map(hi)) : null
         const cur = entry.data.currency
         const conf = avgConf(entry.data.grades)
 
         // Average across every grade/segment row we actually have data for
-        const allRows = entry.data.grades
         const avgAllGrades = allRows.length
           ? Math.round(allRows.reduce((s, r) => s + (lo(r) + hi(r)) / 2, 0) / allRows.length)
           : null
@@ -50,23 +48,16 @@ export default function SummaryCards({ allData, period, lang }: Props) {
               <span style={{ fontWeight: 600, fontSize: 14 }}>{entry.meta.name[lang]}</span>
               <span style={{ marginLeft: 'auto', fontSize: 11, fontWeight: 600, color: 'var(--muted-2)', letterSpacing: '0.03em' }}>{cur}</span>
             </div>
-            {/* Senior midpoint */}
+            {/* Average across all grades */}
             <div style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 3 }}>
-              Senior · {t(lang, 'midpoint')}
+              {t(lang, 'avgAllGrades')}
             </div>
             <div className="mono" style={{ fontSize: 25, fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-              {mid != null ? fmtFull(mid, cur) : '—'}
+              {avgAllGrades != null ? fmtFull(avgAllGrades, cur) : '—'}
             </div>
             {min != null && max != null && (
               <div className="mono" style={{ fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>
                 {fmtK(min, cur)} – {fmtK(max, cur)} {period === 'annual' ? t(lang, 'perYear') : t(lang, 'perMonth')}
-              </div>
-            )}
-            {/* Average across all grades */}
-            {avgAllGrades != null && (
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 12, paddingTop: 12, borderTop: '1px solid var(--border)' }}>
-                <span style={{ fontSize: 11, color: 'var(--muted)' }}>{t(lang, 'avgAllGrades')}</span>
-                <span className="mono" style={{ fontSize: 14, fontWeight: 600, marginLeft: 'auto' }}>{fmtFull(avgAllGrades, cur)}</span>
               </div>
             )}
             {/* Footer stats */}

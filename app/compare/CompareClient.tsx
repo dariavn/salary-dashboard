@@ -51,7 +51,7 @@ function MarketNote({ allData, lang }: { allData: Entry[]; lang: string }) {
             </span>
           </div>
           <p style={{ fontSize: 13, lineHeight: 1.55, color: 'var(--text-2)', margin: 0, whiteSpace: 'pre-line' }}>
-            {entry.data.marketNote}
+            {entry.data.marketNote?.[lang as 'en' | 'ru']}
           </p>
         </div>
       ))}

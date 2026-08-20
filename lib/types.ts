@@ -64,7 +64,7 @@ export interface CountryData {
   domains: DomainRow[]
   sources: SourceRow[]
   currency: string
-  marketNote?: string
+  marketNote?: { en: string; ru: string }
 }
 
 export interface LocationMeta {
