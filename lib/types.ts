@@ -65,6 +65,37 @@ export interface CountryData {
   sources: SourceRow[]
   currency: string
   marketNote?: { en: string; ru: string }
+  fit?: FitAnalysis
+}
+
+// Optional "best fit" candidate analysis ({location}_fit.json). Content is written in the
+// research language; only UI labels are translated.
+export type BlockScore = 0 | 1 | 2   // 0 = none, 1 = partial, 2 = confirmed by work experience
+
+export interface FitCandidate {
+  group: string
+  title: string
+  summary: string
+  blocks: BlockScore[]
+  experience: string
+  city: string
+  expectations: string
+  url: string
+}
+
+export interface FitAnalysis {
+  updated: string
+  question: string
+  answer: string
+  blocks: { key: string; name: string; where: string }[]
+  funnel: { label: string; value: string; highlight?: boolean }[]
+  funnelNote: string
+  budget: string
+  insights: string[]
+  howToClose: string[]
+  groups: Record<string, string>
+  method: string
+  candidates: FitCandidate[]
 }
 
 export interface LocationMeta {

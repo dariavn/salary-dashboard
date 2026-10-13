@@ -16,6 +16,7 @@ import GradesTable from '@/components/GradesTable'
 import DomainsGrid from '@/components/DomainsGrid'
 import SourcesList from '@/components/SourcesList'
 import InternalSection from '@/components/InternalSection'
+import FitAnalysisView from '@/components/FitAnalysisView'
 
 interface Entry { meta: LocationMeta; data: CountryData; candidates: CandidateRow[] }
 interface Props {
@@ -25,7 +26,7 @@ interface Props {
   initialPeriod?: 'annual' | 'monthly'
   salaryBandsData?: SalaryBandsData
 }
-type Tab = 'overview' | 'grades' | 'domains' | 'sources'
+type Tab = 'overview' | 'grades' | 'domains' | 'sources' | 'fit'
 
 function Toggle({ options, value, onChange }: { options: { v: string; label: string }[]; value: string; onChange: (v: string) => void }) {
   return (
@@ -191,6 +192,9 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
     { key: 'domains',  label: t(lang, 'domains') },
     { key: 'sources',  label: t(lang, 'sources') },
   ]
+  // Best-fit candidate analysis exists only for some roles — show the tab only then
+  const withFit = allData.filter(e => e.data.fit)
+  if (withFit.length) tabs.push({ key: 'fit', label: lang === 'ru' ? '★ Фит-анализ' : '★ Best fit' })
 
   const periodOpts = [
     { v: 'annual',  label: t(lang, 'annual') },
@@ -476,6 +480,15 @@ export default function CompareClient({ positionMeta, allData, initialSource = '
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* BEST FIT */}
+        {tab === 'fit' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+            {withFit.map(en => (
+              <FitAnalysisView key={en.meta.slug} fit={en.data.fit!} countryLabel={`${en.meta.flag} ${en.meta.name[lang]}`} lang={lang} />
+            ))}
           </div>
         )}
 

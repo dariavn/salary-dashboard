@@ -1,0 +1,643 @@
+{
+  "updated": "2026-10-13",
+  "question": "Есть ли кандидат, у которого есть все 5 блоков?",
+  "answer": "Да, но это единицы. По hh прогнаны три Boolean-запроса на сочетание OSINT/TI + LLM/RAG с остальными блоками (вся РФ, резюме за 12 мес), текст каждого из 176 резюме проверен вручную. Все 5 ключевых слов встречаются в 23 резюме, но у большинства часть из них стоит только в навыках или в учебных курсах. По опыту работы все 5 блоков подтверждаются у 1 человека, ещё у 2 — 4 блока полностью и пятый частично, у 4 — 3 полностью и 2 частично. Чаще всего не хватает Secure Development и LLM/RAG.",
+  "blocks": [
+    {
+      "key": "OSINT",
+      "name": "OSINT / OSINT Automation",
+      "where": "киберразведка у ИБ-вендоров (Касперский, BI.ZONE, F6, Angara, PT), TI-команды банков"
+    },
+    {
+      "key": "Backend",
+      "name": "Backend / Microservices",
+      "where": "Python/Go-бэкенд MDR/SIEM/EDR-платформ"
+    },
+    {
+      "key": "LLM/RAG",
+      "name": "AI Engineering / LLM / RAG",
+      "where": "молодой навык, в ИБ-домене у единиц"
+    },
+    {
+      "key": "SecDev",
+      "name": "Secure Development",
+      "where": "AppSec/SSDLC; засчитывается полностью только при явной практике (AppSec, SAST/DAST, SSDLC)"
+    },
+    {
+      "key": "Data",
+      "name": "Data Processing",
+      "where": "Kafka, ClickHouse, Elasticsearch, парсеры/краулеры"
+    }
+  ],
+  "funnel": [
+    {
+      "label": "Резюме с OSINT/TI + LLM/RAG + остальными блоками, 12 мес",
+      "value": "176"
+    },
+    {
+      "label": "Все 5 ключевых слов в тексте",
+      "value": "23"
+    },
+    {
+      "label": "4 из 5 без пятого (группа A)",
+      "value": "≈7"
+    },
+    {
+      "label": "3 из 5 + 2 частично",
+      "value": "4"
+    },
+    {
+      "label": "4 из 5 + пятый частично",
+      "value": "2"
+    },
+    {
+      "label": "Все 5 подтверждены опытом",
+      "value": "1",
+      "highlight": true
+    }
+  ],
+  "funnelNote": "При отклике 25–35% и прохождении техсобеса 30–40% «единорог» с hh — это максимум 1 найм. Реалистично закладывать кандидата с 4 из 5 и доучивать пятый блок. Прежняя оценка 12–15 человек относится к профилю без Secure Development.",
+  "budget": "Senior TI Platform Engineer — 320–400 тыс ₽ на руки (≈372–468 тыс gross). Потолок для кандидата «всё в одном» из Касперского / BI.ZONE — до 450–480 тыс. Middle+ без LLM, которого доучиваем, — 250–300 тыс.",
+  "insights": [
+    "Профиль «все 5 блоков в одном» — 1 человек с подтверждённым опытом и ещё 2 почти таких на всём hh за год. Почти все работают у ИБ-вендоров (Касперский, BI.ZONE, PT) или в TI банков",
+    "Самый редкий блок — LLM/RAG в ИБ-домене. OSINT + backend + data встречаются чаще, LLM добавлен у единиц",
+    "Самый широкий смежный пул — Python/Go-бэкенд с LLM/RAG (≈12 тыс резюме), но без ИБ-домена",
+    "Аналитики TI с Python (Angara, ПСБ, Сбер) дешевле на 20–40%, но это скорее скрипты, а не production-платформа"
+  ],
+  "howToClose": [
+    "Приоритет — «★ Все 5» и группа A: прямой аутрич, вилка на верхней границе",
+    "Если A не выйдет — выбирать между backend-инженером из ИБ-вендора (группа A/B, LLM доучиваем) и backend + LLM (группа C, ИБ-домен доучиваем). Первый вариант надёжнее: домен учится дольше",
+    "Аутрич по компаниям-донорам: Касперский (MDR, TI), BI.ZONE, Солар TI Cloud, F6, Angara, R-Vision, ГосСОПКА-центры",
+    "Добрать LinkedIn и Хабр Карьеру — у части сеньоров нет активного резюме на hh"
+  ],
+  "groups": {
+    "S": "★ Сильнейшее покрытие 5 блоков",
+    "A": "A — ядро профиля",
+    "B": "B — TI / автоматизация",
+    "C": "C — backend + LLM",
+    "D": "D — senior security dev"
+  },
+  "method": "hh.ru, аккаунт работодателя, 13.10.2026: 3 Boolean-запроса, 176 резюме за 12 мес, текст каждого резюме проверен на 5 блоков; всё, что совпало только по ключевым словам, разобрано вручную. ✓ — подтверждено опытом, ◐ — частично (упомянуто в навыках, смежный опыт или ИБ-домен без явной безопасной разработки), ✕ — нет. Ссылки открываются из аккаунта работодателя hh.",
+  "candidates": [
+    {
+      "group": "S",
+      "title": "Go / Python Backend Engineer, Team Lead",
+      "summary": "КРОНОСЛАБ: конвейер «приём данных → LLM-обогащение + OSINT-инструменты → Neo4j, Postgres, Elastic» на Kafka; 17 микросервисов с нуля; SAST-проверки в MR; пайплайны на Prefect",
+      "blocks": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "experience": "7 л. 5 мес.",
+      "city": "Москва",
+      "expectations": "не указаны · резюме от 16.03.2026",
+      "url": "https://hh.ru/resume/43dc44cb000cc9e361002c7446394b30354556"
+    },
+    {
+      "group": "S",
+      "title": "Team Lead / Head of Python Development",
+      "summary": "Сейчас X5 Tech. Ранее: система сбора и асинхронной обработки угроз из открытых источников (OSINT) для DevSecOps-решения; микросервисы на FastAPI, Airflow; DAST (OWASP ZAP) в пайплайнах; LLM в разработке (MCP, AI code review)",
+      "blocks": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "experience": "9 л. 8 мес.",
+      "city": "Москва",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/f45aa78a00098bf9b9002c744658675857516d"
+    },
+    {
+      "group": "S",
+      "title": "MLOps / DevOps Engineer",
+      "summary": "Ранее BI.ZONE, Threat Intelligence: построил автоматизированный OSINT-пайплайн. Сейчас Мамба: платформа LLM-агентов и MCP, threat modeling, защита от prompt injection, ClickHouse. Бэкенд — со стороны инфраструктуры",
+      "blocks": [
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "experience": "6 л. 6 мес.",
+      "city": "Москва",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/5e808b01001139f92d002c7446535273374962"
+    },
+    {
+      "group": "S",
+      "title": "Руководитель отдела ИБ / архитектор, разработчик",
+      "summary": "Собственная TI-платформа на Go + React; Kafka; обогащение событий SIEM из TI; кластер LLM/ML для нужд ИБ; разработка в департаменте кибербезопасности",
+      "blocks": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "experience": "3+ г.",
+      "city": "Москва",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/6f103276000b77a170002c7446784b3050574c"
+    },
+    {
+      "group": "S",
+      "title": "Head of Security (CISO)",
+      "summary": "Разработал на Python и Go системы поиска фишинговых доменов; отвечает за безопасность микросервисной инфраструктуры, RAG и ML-пайплайнов, threat modeling. Сейчас руководитель, мало пишет код",
+      "blocks": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "experience": "7 л. 7 мес.",
+      "city": "Москва",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/157486aa000ba25aa9002c7446675649307758"
+    },
+    {
+      "group": "S",
+      "title": "Backend Developer / Security Engineer",
+      "summary": "Микросервисы анализа приложений, LangChain / OpenAI / Ollama, OWASP Top 10, Kubernetes; OSINT только как этап пентеста",
+      "blocks": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "experience": "3 г.",
+      "city": "Санкт-Петербург",
+      "expectations": "не указаны · резюме от 11.01.2026",
+      "url": "https://hh.ru/resume/0965f018000bc9734f002c7446683961663036"
+    },
+    {
+      "group": "A",
+      "title": "Research Developer",
+      "summary": "Лаборатория Касперского: сканер на LLM + YARA (30 тыс. навыков ИИ-агентов/день), портал аналитики угроз на Go + Kafka",
+      "blocks": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "experience": "3 г.",
+      "city": "Москва",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/4008d211000e19520f002c7446423866737947"
+    },
+    {
+      "group": "A",
+      "title": "Python-разработчик (TI backend)",
+      "summary": "Kaspersky: бэкенд расследования киберугроз, обогащение инцидентов, подключение TI-источников; Kafka, LangChain, LLM/RAG",
+      "blocks": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "experience": "6 л. 3 мес.",
+      "city": "Москва",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/3df737e000112602f9002c744632576c523849"
+    },
+    {
+      "group": "A",
+      "title": "Python Backend Developer (MDR)",
+      "summary": "Лаборатория Касперского, платформа MDR: микросервисы, Kafka, ClickHouse, pgvector, LangChain/LangGraph, RAG",
+      "blocks": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "experience": "5 л. 5 мес.",
+      "city": "Москва",
+      "expectations": "250 000 ₽",
+      "url": "https://hh.ru/resume/40bdf94700110db650002c7446585848414f35"
+    },
+    {
+      "group": "A",
+      "title": "Аналитик/разработчик ИБ (OSINT-ASM)",
+      "summary": "Визум: OSINT/TI-мониторинг внешней поверхности атаки, собственные ASM-инструменты; Python, FastAPI, Kafka, ClickHouse",
+      "blocks": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "experience": "5 л. 3 мес.",
+      "city": "Казань",
+      "expectations": "не указаны",
+      "url": "https://hh.ru/resume/c0313cac000c27ef91002c7446467954663832"
+    },
+    {
+      "group": "A",
+      "title": "Golang Engineer / Security Automation",
+      "summary": "BI.ZONE R&D (EDR, SOC); раньше — Go-системы автоматизации OSINT/TI, парсеры и краулеры по сотням источников",
+      "blocks": [
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "experience": "4 г.",
+      "city": "Москва",
+      "expectations": "150 000 ₽ (ниже рынка — уточнить)",
+      "url": "https://hh.ru/resume/e86ec3eb000b85bc5c002c744630696f784b75"
+    },
+    {
+      "group": "C",
+      "title": "Python Backend Engineer (LLM, RAG, MCP)",
+      "summary": "Банк ДОМ.РФ, старший Python-разработчик: FastAPI, LLM, RAG, data",
+      "blocks": [
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "experience": "4 г.",
+      "city": "Москва",
+      "expectations": "4 200 $ (≈350 тыс ₽)",
+      "url": "https://hh.ru/resume/44bee01e0010e6a5eb002c744657307a324143"
+    },
+    {
+      "group": "C",
+      "title": "Backend / Data Engineer (парсинг, анти-бот)",
+      "summary": "Halliburton Digital & Automation Lead; парсинг, LLM — близко к OSINT automation",
+      "blocks": [
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "experience": "11 л. 3 мес.",
+      "city": "Москва",
+      "expectations": "250 000 ₽",
+      "url": "https://hh.ru/resume/b98cbc4a0010f26fb7002c744655477243444d"
+    },
+    {
+      "group": "C",
+      "title": "Python Backend / AI Backend",
+      "summary": "Совкомбанк: бэкенд + LLM, data",
+      "blocks": [
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "experience": "5 л. 6 мес.",
+      "city": "Москва",
+      "expectations": "350 000 ₽",
+      "url": "https://hh.ru/resume/b052b34500108aab1b002c744670414c586772"
+    },
+    {
+      "group": "C",
+      "title": "AI Backend Developer (Python, LLM, RAG)",
+      "summary": "GeoDB Blockchain: AI backend",
+      "blocks": [
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "experience": "7 л.",
+      "city": "Москва",
+      "expectations": "270 000 ₽",
+      "url": "https://hh.ru/resume/d64d16d500112c53c5002c74464b4534787247"
+    },
+    {
+      "group": "S",
+      "title": "AI Systems / LLM / RAG Engineer",
+      "summary": "Специалист ИБ (СПб МИАЦ): RAG-система на Python, FastAPI, FAISS; пайплайн загрузки OSINT-знаний; локальные LLM; OWASP Top-10 for LLM. Глубину бэкенда проверить",
+      "blocks": [
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "experience": "н/д",
+      "city": "Санкт-Петербург",
+      "expectations": "150 000 ₽",
+      "url": "https://hh.ru/resume/aadfdaf40010133f08002c7446426872764d70"
+    },
+    {
+      "group": "A",
+      "title": "Руководитель группы автоматизации и киберразведки",
+      "summary": "Спроектировал TI-платформу с нуля (фиды CISA KEV, ThreatFox, URLhaus, OTX) в SIEM-продукте; руководил отделом 15 чел.",
+      "blocks": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "experience": "8 л. 9 мес.",
+      "city": "Нижний Новгород",
+      "expectations": "400 000 ₽",
+      "url": "https://hh.ru/resume/8e9bb71d0003f39e1b002c7446677972535366"
+    },
+    {
+      "group": "A",
+      "title": "Security & SIEM Engineer / Python Backend",
+      "summary": "ГосСОПКА-центр: развитие SIEM/SOC и production-бэкенд, автоматизация ИБ, работа с LLM",
+      "blocks": [
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "experience": "2 г.",
+      "city": "Москва",
+      "expectations": "280 000 ₽",
+      "url": "https://hh.ru/resume/3fa6d59e000dca9365002c7446535242466e34"
+    },
+    {
+      "group": "C",
+      "title": "Golang developer",
+      "summary": "Axenix: микросервисы, LLM, data",
+      "blocks": [
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "experience": "6 л. 4 мес.",
+      "city": "Москва",
+      "expectations": "300 000 ₽",
+      "url": "https://hh.ru/resume/2762e70700112d5a29002c7446444137727a67"
+    },
+    {
+      "group": "D",
+      "title": "AppSec / DevSecOps / MLSecOps / AI Security",
+      "summary": "Ростелеком, эксперт безопасной разработки; ML-инженер 4 г.",
+      "blocks": [
+        0,
+        1,
+        2,
+        2,
+        1
+      ],
+      "experience": "18 л. 6 мес.",
+      "city": "Москва",
+      "expectations": "390 000 ₽",
+      "url": "https://hh.ru/resume/b931e37e0004f0c6b1002c7446456747663368"
+    },
+    {
+      "group": "C",
+      "title": "Go/Python Backend, микросервисы",
+      "summary": "Кортекс: API, микросервисы, интеграции, LLM",
+      "blocks": [
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "experience": "5 л. 7 мес.",
+      "city": "Москва",
+      "expectations": "350 000 ₽",
+      "url": "https://hh.ru/resume/9f1666a90008ca8962002c7446656c34444b59"
+    },
+    {
+      "group": "C",
+      "title": "AI / LLM Engineer (RAG, агенты)",
+      "summary": "Ф-Лайн Софтвер: LLM, RAG, backend",
+      "blocks": [
+        0,
+        2,
+        2,
+        0,
+        1
+      ],
+      "experience": "5 л. 4 мес.",
+      "city": "Санкт-Петербург",
+      "expectations": "300 000 ₽",
+      "url": "https://hh.ru/resume/0950d41a0010f6b8c4002c7446525231715249"
+    },
+    {
+      "group": "D",
+      "title": "Offensive Security Developer",
+      "summary": "Positive Technologies, Lead Developer; микросервисы, LLM",
+      "blocks": [
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "experience": "21 г. 10 мес.",
+      "city": "Санкт-Петербург",
+      "expectations": "400 000 ₽",
+      "url": "https://hh.ru/resume/26b1856d0011245dbd002c7446714861676d6b"
+    },
+    {
+      "group": "B",
+      "title": "Эксперт киберразведки (CTI)",
+      "summary": "Angara Security: IOC, honeypots, Python-автоматизация CTI API, OSINT-атрибуция инфраструктуры атакующих",
+      "blocks": [
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      "experience": "3 г.",
+      "city": "Москва",
+      "expectations": "230 000 ₽",
+      "url": "https://hh.ru/resume/10d0a6100011221a94002c7446504370483866"
+    },
+    {
+      "group": "B",
+      "title": "Инженер SIEM / Data Security (Python, SQL)",
+      "summary": "Ведущий разработчик (финансы, аутстафф): SIEM, data pipelines",
+      "blocks": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "experience": "17 л. 8 мес.",
+      "city": "Пермь",
+      "expectations": "350 000 ₽",
+      "url": "https://hh.ru/resume/5f6eeb870006119691002c7446775069725641"
+    },
+    {
+      "group": "B",
+      "title": "Security Automation / Platform Engineer",
+      "summary": "Data engineer → автоматизация ИБ; Python, Go",
+      "blocks": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "experience": "4 г.",
+      "city": "Санкт-Петербург",
+      "expectations": "200 000 ₽",
+      "url": "https://hh.ru/resume/0fbd09940011245f6c002c7446706339687553"
+    },
+    {
+      "group": "C",
+      "title": "Python Backend Developer",
+      "summary": "Лаборатория Касперского до 05.2026; микросервисы",
+      "blocks": [
+        0,
+        2,
+        0,
+        1,
+        1
+      ],
+      "experience": "7 л. 1 мес.",
+      "city": "Москва",
+      "expectations": "4 000 $ (≈335 тыс ₽)",
+      "url": "https://hh.ru/resume/9c2828d5001130c960002c744649496f6e7970"
+    },
+    {
+      "group": "D",
+      "title": "Эксперт по безопасности ИИ",
+      "summary": "Сбер, ведущий эксперт ИБ: безопасность LLM",
+      "blocks": [
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "experience": "14 л. 9 мес.",
+      "city": "Москва",
+      "expectations": "350 000 ₽",
+      "url": "https://hh.ru/resume/6f1ba586000bc97b59002c7446326847703337"
+    },
+    {
+      "group": "B",
+      "title": "Ведущий инженер-программист ИБ",
+      "summary": "Nexign: разработка в ИБ, TI",
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "experience": "4 г.",
+      "city": "Санкт-Петербург",
+      "expectations": "350 000 ₽",
+      "url": "https://hh.ru/resume/2c50b364000e4e5c25002c744649596650795a"
+    },
+    {
+      "group": "B",
+      "title": "SOC L3 / инженер детектов и автоматизации",
+      "summary": "Московская биржа: разработка детектов, автоматизация, TI",
+      "blocks": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "experience": "2 г.",
+      "city": "Москва",
+      "expectations": "300 000 ₽",
+      "url": "https://hh.ru/resume/94626b0b000d3c69a7002c74464b304176716d"
+    },
+    {
+      "group": "B",
+      "title": "Аналитик Threat Intelligence",
+      "summary": "Гринатом: TI, DevOps-бэкграунд",
+      "blocks": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "experience": "2 г.",
+      "city": "Нижний Новгород",
+      "expectations": "120 000 ₽",
+      "url": "https://hh.ru/resume/a8bd53610010eebec2002c744634536f384665"
+    },
+    {
+      "group": "B",
+      "title": "Главный специалист Threat Intelligence",
+      "summary": "Банк ПСБ: TI-платформа, анализ ВПО, реагирование; финансовый домен",
+      "blocks": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "experience": "3 г.",
+      "city": "Москва",
+      "expectations": "250 000 ₽",
+      "url": "https://hh.ru/resume/082bb02c00083b5db2002c7446726a53785956"
+    },
+    {
+      "group": "B",
+      "title": "Эксперт по анализу киберугроз",
+      "summary": "Сбер: APT, IoC, MITRE ATT&CK, обогащение индикаторов; бэкграунд Data Science",
+      "blocks": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "experience": "5 л. 9 мес.",
+      "city": "Москва",
+      "expectations": "140 000 ₽",
+      "url": "https://hh.ru/resume/3366fc560006093bd6002c7446673143595053"
+    },
+    {
+      "group": "B",
+      "title": "Security Automation Engineer",
+      "summary": "БАСТИОН: инженер-разработчик автоматизации ИБ",
+      "blocks": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "experience": "2 г.",
+      "city": "Москва",
+      "expectations": "180 000 ₽",
+      "url": "https://hh.ru/resume/4b86117e000fa4f869002c74465a6f53495676"
+    },
+    {
+      "group": "B",
+      "title": "Threat Intelligence",
+      "summary": "Газпромнефть-Цифровые решения: TI",
+      "blocks": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "experience": "2 г. 5 мес.",
+      "city": "Санкт-Петербург",
+      "expectations": "200 000 ₽",
+      "url": "https://hh.ru/resume/920f6ba50008fd3193002c74463741424c5076"
+    }
+  ]
+}

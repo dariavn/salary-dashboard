@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { readGrades, readDomains, readSources, readCandidates } from './csvParser'
-import type { CountryData, LocationMeta, PositionMeta } from './types'
+import type { CountryData, FitAnalysis, LocationMeta, PositionMeta } from './types'
 
 const CSV_BASE = path.join(process.cwd(), 'data', 'csv')
 
@@ -96,13 +96,21 @@ function loadMarketNote(position: string, location: string): { en: string; ru: s
   return { en: en || ru, ru: ru || en }
 }
 
+// Optional best-fit candidate analysis — {location}_fit.json, only for roles where it was done.
+function loadFitAnalysis(position: string, location: string): FitAnalysis | undefined {
+  const file = path.join(CSV_BASE, position, `${location}_fit.json`)
+  if (!fs.existsSync(file)) return undefined
+  return JSON.parse(fs.readFileSync(file, 'utf-8')) as FitAnalysis
+}
+
 export function loadCountryData(position: string, location: string): CountryData {
   const grades = readGrades(position, location)
   const domains = readDomains(position, location)
   const sources = readSources(position, location)
   const currency = grades[0]?.currency ?? getLocationMeta(location).currency
   const marketNote = loadMarketNote(position, location)
-  return { position, location, grades, domains, sources, currency, marketNote }
+  const fit = loadFitAnalysis(position, location)
+  return { position, location, grades, domains, sources, currency, marketNote, fit }
 }
 
 export function loadCandidates(position: string, location: string) {
