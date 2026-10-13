@@ -1,0 +1,10 @@
+grade,exp_years,segment,annual_gross_min,annual_gross_max,monthly_gross_min,monthly_gross_max,monthly_net_min,monthly_net_max,currency,confidence,sources,notes
+Junior,0-3,mid_market,1788000,2340000,149000,195000,130000,170000,RUB,medium,hh.ru резюме (n≈12);hh.ru вакансии OSINT/TI 160–180k,Security automation / TI-аналитики с Python; на руки
+Junior,0-3,premium,2340000,3048000,195000,254000,170000,220000,RUB,medium,hh.ru резюме ИБ-вендоры/банки;Хабр Карьера H1 2026,"Касперский, BI.ZONE, банки; на руки"
+Middle,3-5,mid_market,2772000,3612000,231000,301000,200000,260000,RUB,high,"hh.ru резюме (n≈20);hh.ru вакансии (АВ Софт, Go middle+);Хабр Карьера backend медиана 254k",на руки
+Middle,3-5,premium,3612000,4608000,301000,384000,260000,330000,RUB,high,hh.ru резюме TI/SIEM/AI backend;METASCAN 300k;AppSec ср. 277k (Хабр),"ИБ-вендоры, финтех; на руки"
+Senior,5+,mid_market,4176000,5316000,348000,443000,300000,380000,RUB,high,hh.ru резюме (n≈15);Тензор от 300k;ТМГТ 300–350k;GO Digital до 350k,на руки
+Senior,5+,premium,5316000,6780000,443000,565000,380000,480000,RUB,medium,SearchInform Senior Go 350–450k;Peaky Hunters AppSec до 400k;резюме 390–430k,редкая комбинация OSINT/TI + LLM; на руки
+Lead,7+,mid_market,5616000,7368000,468000,614000,400000,520000,RUB,medium,резюме лидов TI/ИБ-разработки 400k;Тензор Team Lead от 400k gross,на руки
+Lead,7+,premium,7080000,9276000,590000,773000,500000,650000,RUB,low,Outlines LLM-лид до 595k gross;резюме AI Tech Lead 600k,мало данных; на руки
+Head,10+,premium,7812000,10296000,651000,858000,550000,720000,RUB,low,SuperJob+PT: руководитель отдела ИБ медиана 350k / макс 600k (Мск);резюме 700k,"Head of TI / Security Engineering; оценка, мало точек"

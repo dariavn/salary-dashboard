@@ -1,0 +1,9 @@
+source_name,source_type,url_or_reference,data_date,figures_found,confidence,notes
+hh.ru — поиск резюме (аккаунт работодателя),open_cv,https://hh.ru/search/resume,2026-10-13,"623 уникальных резюме, 186 с ожиданиями; 42 разобраны детально",high,"8 Boolean-запросов, вся РФ"
+hh.ru — поиск вакансий,job_posting,https://hh.ru/search/vacancy,2026-10-13,"≈530 вакансий, ≈290 с вилкой",high,"OSINT, TI, SOAR, AI backend, secure dev"
+Хабр Карьера — зарплаты H1 2026,salary_survey,https://habr.com/p/1068850/,2026 H1,backend медиана 254k; AppSec ср. 277k; SOC 149k; пентест 171k,high,"медианы по направлениям, без грейдов"
+Хабр Карьера — журнал,salary_survey,https://career.habr.com/journal/salaries,2026 H1,"разработчики: Мск 270k, СПб 247k, регионы 200k",high,
+"Inc. Russia (данные hh.ru, SuperJob)",recruiter_report,https://incrussia.ru/news/zarplaty-spetsialistov-po-ib-v-rossii-rastut-na-fone-ohlazhdeniya-rynka-it/,2026-08-20,"ИБ медиана предложений 115.6k (+40%); безопасная разработка ~275k (+20%), до 400k",medium,
+"Anti-Malware (SuperJob + PT, Solar + hh.ru)",salary_survey,https://www.anti-malware.ru/analytics/Technology_Analysis/Salary-in-information-security-2025-2026,2025–2026,"Мск: специалист ИБ 230k (макс 400k), руководитель отдела ИБ 350k (макс 600k)",medium,часть данных 2025
+Coinbase — Threat Intelligence Platform Engineer,job_posting,https://www.coinbase.com/careers/positions/8177619,2026-10,$144.5k–170k base/год (US remote),high,референс роли
+ЦБ РФ курс USD,aggregator,https://ppt.ru/currencies/usd/04-10-2026,2026-10-04,83.48 ₽/$,high,
