@@ -15,6 +15,7 @@ export interface RawPoint {
   date?: string
   match?: 'high' | 'medium' | string
   note?: string
+  evidence?: string
 }
 
 export interface RawLocation {

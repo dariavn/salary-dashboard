@@ -135,7 +135,8 @@ function RawTable({ loc, data, period, lang }: { loc: Loc; data: RawLocation; pe
               <td className="mono" style={{ padding: '6px 10px', textAlign: 'right', fontWeight: 600, whiteSpace: 'nowrap' }}>{fmtMoney(loc, toPeriod(loc, p.value, period))}</td>
               <td style={{ padding: '6px 10px', color: 'var(--muted)', whiteSpace: 'nowrap' }}>{TYPE_LABEL[p.type]?.[lang] ?? p.type}</td>
               <td style={{ padding: '6px 10px' }}>
-                {p.url ? <a href={p.url} target="_blank" rel="noreferrer" style={{ color: 'var(--accent)' }}>{p.title}</a> : p.title}
+                {p.url ? <a href={p.url} target="_blank" rel="noreferrer" style={{ color: 'var(--accent)' }}>{p.title} ↗</a> : p.title}
+                {p.evidence && <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 2 }}>{p.evidence}</div>}
               </td>
               <td style={{ padding: '6px 10px', color: 'var(--text-2)' }}>{p.company ?? '—'}</td>
               <td style={{ padding: '6px 10px', color: 'var(--muted)', whiteSpace: 'nowrap' }}>{IND_LABEL[p.industry ?? ''] ?? p.industry ?? '—'}</td>
@@ -206,12 +207,10 @@ function LocDetail({ loc, pos, period, lang }: { loc: Loc; pos: Position2027; pe
 export default function Bands2027Tab({ positions, updated, notionUrl }: Props) {
   const { lang } = useLang()
   const [period, setPeriod] = useState<Period>('month')
-  const [hrbp, setHrbp] = useState<string>('all')
   const [level, setLevel] = useState<string>('all')
   const [open, setOpen] = useState<string | null>(null)
 
-  const hrbps = useMemo(() => [...new Set(positions.map(p => p.hrbp))], [positions])
-  const rows = positions.filter(p => (hrbp === 'all' || p.hrbp === hrbp) && (level === 'all' || p.level === level))
+  const rows = positions.filter(p => level === 'all' || p.level === level)
   const totals = useMemo(() => {
     let ru = 0, cy = 0
     for (const p of positions) { ru += p.stats.ru?.n ?? 0; cy += p.stats.cy?.n ?? 0 }
@@ -279,10 +278,6 @@ export default function Bands2027Tab({ positions, updated, notionUrl }: Props) {
           <button style={segBtn(level === 'all')} onClick={() => setLevel('all')}>{lang === 'ru' ? 'Все уровни' : 'All levels'}</button>
           {['Lead', 'Head'].map(l => <button key={l} style={segBtn(level === l)} onClick={() => setLevel(l)}>{l}</button>)}
         </div>
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <button style={segBtn(hrbp === 'all')} onClick={() => setHrbp('all')}>{lang === 'ru' ? 'Все HRBP' : 'All HRBPs'}</button>
-          {hrbps.map(h => <button key={h} style={segBtn(hrbp === h)} onClick={() => setHrbp(h)}>{h}</button>)}
-        </div>
       </div>
 
       {/* Main table */}
@@ -313,7 +308,7 @@ export default function Bands2027Tab({ positions, updated, notionUrl }: Props) {
                         <div style={{ fontWeight: 600, fontSize: 15 }}>{p.position}</div>
                         <div style={{ display: 'flex', gap: 6, marginTop: 5, alignItems: 'center', flexWrap: 'wrap' }}>
                           <Pill color={p.level === 'Head' ? 'var(--grade-head)' : 'var(--grade-lead)'} bg={p.level === 'Head' ? 'color-mix(in srgb, var(--grade-head) 14%, transparent)' : 'color-mix(in srgb, var(--grade-lead) 14%, transparent)'}>{p.level}</Pill>
-                          <span style={{ fontSize: 12, color: 'var(--muted)' }}>{p.team} · HRBP {p.hrbp}</span>
+                          <span style={{ fontSize: 12, color: 'var(--muted)' }}>{p.team}</span>
                         </div>
                       </td>
                       <td style={{ padding: '14px 16px', verticalAlign: 'top' }}><P75Cell loc="cy" stats={p.stats.cy} period={period} lang={lang} /></td>
