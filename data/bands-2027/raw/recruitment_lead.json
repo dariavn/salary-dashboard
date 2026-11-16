@@ -394,7 +394,7 @@
    }
   ]
  },
- "caveats": "RU: in-house IT-recruitment leads with salary on hh are scarce; most 'руководитель подбора' CVs are mass/retail/agency and were dropped. 21 clean CV points, 0 vacancies (no tech in-house rec-lead vacancy with salary in 90 days). Two leads' roles ended 2025 (Avito, Иннотех). CY: no CV or posting from a tech/fintech in-house rec lead with salary; all 5 points are aggregates/surveys (small samples, one from Oct-2025, head-level titles marked medium).",
+ "caveats": "РФ: только резюме лидов in-house IT-рекрутмента (массовый подбор, агентства и IC исключены); вакансий с вилкой нет. Кипр: 5 агрегатных точек (Glassdoor база, обзоры) — ни одного резюме или вакансии tech/fintech рекрут-лида.",
  "excluded": [
   {
    "loc": "ru",

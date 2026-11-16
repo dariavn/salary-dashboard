@@ -548,7 +548,7 @@
    }
   ]
  },
- "caveats": "RU: true CLO roles at regulated fintech are rare on hh; after strict screening 20 CVs + 3 vacancies remain; several are heads of legal departments at banks (part of a large legal function → medium). Many good-level legal directors at non-tech employers (FMCG, oil & gas, construction, industrial) were excluded. FX resumes converted at 81 RUB/USD, 94 RUB/EUR. CY: hh CY CVs in EUR treated as gross monthly ×12 (basis ambiguous, likely mixed net/gross). CY vacancies are mostly Head of Legal & Compliance at FX/CFD brokers asking 4–5 yrs head experience — a smaller scope than a group CLO with 4 pillars, so CY P75 likely understates our CLO. Net→gross for CY is an estimate (2026 tax bands, SI 8.8% capped ~€66.6k, GHS 2.65%). Emerald Zebra dreamworkhq posting (€72–96k) is gone (410) and dropped.",
+ "caveats": "РФ: руководители юрфункции целиком; юристы филиалов/отделов банков исключены проверкой. Кипр: в основном Head of Legal & Compliance FX/CFD брокеров (требуют 4–5 лет head-опыта) — скоуп уже группового CLO, поэтому Кипр, вероятно, занижает; резюме в EUR трактуем как gross ×12, net→gross — оценка.",
  "excluded": [
   {
    "loc": "ru",

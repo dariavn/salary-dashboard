@@ -393,7 +393,7 @@
    }
   ]
  },
- "caveats": "RU: tech HR-lead CVs are a minority on hh — most HR-head CVs are retail/industrial HRDs and were dropped; 21 clean points (19 CVs + 2 vacancies), many head/HRD-level marked medium. Several current employers are described generically on the card (e.g. 'IT-компания'). CY: no tech/fintech Head of HR posting with salary found; 2 Glassdoor aggregates (tiny samples), 1 survey (Oct-2025), 1 non-tech posting, 1 hh CV with ambiguous basis.",
+ "caveats": "РФ: tech-HR лидов на hh меньшинство — ритейл/промышленность исключены; часть точек — HRD небольших tech-компаний. Кипр: 4 точки (Glassdoor база с малыми выборками, обзор 10.2025, 1 вакансия не-tech).",
  "excluded": [
   {
    "loc": "ru",

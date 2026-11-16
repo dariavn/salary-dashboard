@@ -329,7 +329,7 @@
    "reason": "hidden employer; relocation candidate"
   }
  ],
- "caveats": "RU: true ProdSec/AppSec LEAD CVs with salary are scarce (~15 clean after strict screen); no lead-level AppSec vacancies with published salary in 90 days. Points are desired net asks; MTS/МТС Финтех appear 3 times (different people). CY: zero clean points — no Cyprus posting, CV or survey row for an AppSec/ProdSec lead with a verifiable salary; nearest proxies (senior AppSec IC, IR lead, DevOps lead) listed in excluded. CY band must be derived from proxies or RU/other roles, flag to HR.",
+ "caveats": "РФ: лидов AppSec/ProdSec с указанной з/п мало — 10 точек после проверки (исключены лиды без команды, ритейл, сервисные компании); вакансий lead-уровня с вилкой нет. Кипр: релевантных точек нет — ни вакансий, ни резюме, ни строк обзоров для AppSec/ProdSec Lead.",
  "review": {
   "drops": 5,
   "applied": 5,

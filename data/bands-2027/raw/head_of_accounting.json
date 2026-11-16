@@ -452,7 +452,7 @@
    }
   ]
  },
- "caveats": "RU: strict filter (current role = chief accountant/head of accounting with IFRS/international/foreign-capital/multi-country signal, or multi-entity/accounting lead at tech/fintech) leaves 20 CVs + 1 vacancy; most hh chief-accountant CVs are domestic SME (ВЭД/УСН/construction) and were excluded. CV card shows only last employer; IFRS scope partly inferred from CV title. Team size rarely visible on card. RU vacancies with salary and international scope are almost absent (Dubai family-office vacancy found but not RU). CY: hh CY CVs in EUR treated as gross monthly ×12 (basis ambiguous); old cypruswork Group Chief Accountant and GRS 11371/11557/11833 links are dead (removed). Payscale point is old (Feb 2025) and small n.",
+ "caveats": "РФ: оставлены только главбухи/руководители учёта с МСФО/международным/мультиюрлицевым скоупом или в tech/fintech; домашние SME и чисто МСФО-отчётность исключены. Кипр: резюме живущих на Кипре (EUR как gross ×12) + 2 вакансии с командой и МСФО + Payscale (данные 02.2025).",
  "excluded": [
   {
    "loc": "ru",

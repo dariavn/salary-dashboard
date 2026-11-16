@@ -779,7 +779,7 @@
    "reason": "IT-only, lower scope"
   }
  ],
- "caveats": "RU: published-salary IS-head vacancies are rare in target industries; RU set is mostly CV asks (desired net). Many good IS-head CVs are at banks (fintech) — few at bigtech. Ended roles counted only if ended 2025–2026. CY: no Cyprus CVs/postings with salary for a CISO/Head of IT&IS except one Head of IT broker posting (net→gross converted); remaining CY points are blog/aggregator figures of uneven quality (Jobs Nicosia, Cyprus Job Finder methodology unverified; Evresio gross/net unstated; Glassdoor tiny sample, IT-only). Monthly figures ×12 (13th salary not assumed).",
+ "caveats": "РФ: в основном желаемая з/п руководителей ИБ (на руки); много банков/платёжек. Проверка исключила замов и руководителей под-подразделений (10 точек). Роль у нас = IT + ИБ, на рынке чаще отдельно ИБ — учитывать. Кипр: 5 точек, в основном обзоры (Jobs Nicosia CISO base, Evresio, Glassdoor) + 1 вакансия Head of IT брокера (net→gross).",
  "review": {
   "drops": 11,
   "applied": 11,

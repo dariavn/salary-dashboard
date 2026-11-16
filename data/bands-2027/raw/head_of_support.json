@@ -1065,7 +1065,7 @@
    "reason": "Kazakhstan listing, small company — not RU market"
   }
  ],
- "caveats": "RU: strict re-screen — ~605 resumes passed keyword pre-filter, 61 kept (most are team/group leads in bigtech/fintech = medium; true heads of 30–50-person fintech support are rare on hh with salary). Values are desired salary (net). Only 6 vacancies with salary in target-ish employers. CY: only 2 clean points (Paylab exact title upper band; one CY resume) — no Cyprus posting with salary for Head of Support found; CY P75 is very low-confidence, real fintech heads likely higher.",
+ "caveats": "Роль Head: после проверки оставлены только руководители функции поддержки/контакт-центра; team lead / руководители групп и проджекты исключены (27 точек). Значения — желаемая з/п (на руки), много регионов. Кипр: 2 точки (Paylab — точное название, верх диапазона; 1 резюме) — очень низкая достоверность, реальные хэды fintech, вероятно, выше.",
  "review": {
   "drops": 27,
   "applied": 27,
