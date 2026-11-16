@@ -1,0 +1,128 @@
+[
+ {
+  "slug": "da_lead",
+  "position": "DA Lead",
+  "team": "Analytics",
+  "level": "Lead",
+  "hrbp": "Вика",
+  "sheet_row": 11,
+  "notion_url": "https://app.notion.com/p/41ae566ff601810b82f5dba0131ec75a"
+ },
+ {
+  "slug": "product_design_lead",
+  "position": "Product Design Lead",
+  "team": "Product Design",
+  "level": "Lead",
+  "hrbp": "Вика",
+  "sheet_row": 28,
+  "notion_url": "https://app.notion.com/p/41ae566ff601818493daffd179853a35"
+ },
+ {
+  "slug": "crm_lead",
+  "position": "CRM Lead",
+  "team": "CRM",
+  "level": "Lead",
+  "hrbp": "Ира Андреева",
+  "sheet_row": 67,
+  "notion_url": "https://app.notion.com/p/41ae566ff6018180be0dff06c2758dec"
+ },
+ {
+  "slug": "affiliate_lead",
+  "position": "Affiliate Lead",
+  "team": "Affiliate Marketing",
+  "level": "Lead",
+  "hrbp": "Ира Андреева",
+  "sheet_row": 117,
+  "notion_url": "https://app.notion.com/p/41ae566ff60181c9a140f17fb946a7c4"
+ },
+ {
+  "slug": "head_of_support",
+  "position": "Head of Support",
+  "team": "Support",
+  "level": "Head",
+  "hrbp": "Настя",
+  "sheet_row": 126,
+  "notion_url": "https://app.notion.com/p/41ae566ff60181c2a10fdfc5f16070c1"
+ },
+ {
+  "slug": "operation_excellence_lead",
+  "position": "Operation Excellence Lead",
+  "team": "Operation Excellence",
+  "level": "Lead",
+  "hrbp": "Настя",
+  "sheet_row": 125,
+  "notion_url": "https://app.notion.com/p/41ae566ff6018165a8fccd0a9f44fcac"
+ },
+ {
+  "slug": "head_of_it_and_infosec",
+  "position": "Head of IT and Information Security",
+  "team": "ITIS",
+  "level": "Head",
+  "hrbp": "Оля",
+  "sheet_row": 144,
+  "notion_url": "https://app.notion.com/p/41ae566ff601818eae34c6b89d81e243"
+ },
+ {
+  "slug": "prodsec_lead",
+  "position": "ProdSec Lead",
+  "team": "ProdSec",
+  "level": "Lead",
+  "hrbp": "Оля",
+  "sheet_row": 131,
+  "notion_url": "https://app.notion.com/p/41ae566ff601811e82fae135fe0235e4"
+ },
+ {
+  "slug": "head_of_qa",
+  "position": "Head of QA",
+  "team": "QA",
+  "level": "Head",
+  "hrbp": "Полина",
+  "sheet_row": 162,
+  "notion_url": "https://app.notion.com/p/41ae566ff6018154acf4e9f8cb9aafbd"
+ },
+ {
+  "slug": "backend_lead",
+  "position": "Backend Lead",
+  "team": "Development",
+  "level": "Lead",
+  "hrbp": "Полина",
+  "sheet_row": 165,
+  "notion_url": "https://app.notion.com/p/41ae566ff60181e989a9f85fd263f0f5"
+ },
+ {
+  "slug": "head_of_accounting",
+  "position": "Head/Lead of Accounting",
+  "team": "Finance CY",
+  "level": "Lead",
+  "hrbp": "Таня Малахова",
+  "sheet_row": 234,
+  "notion_url": "https://app.notion.com/p/41ae566ff601818bb2cde3e383a66219"
+ },
+ {
+  "slug": "chief_legal_officer",
+  "position": "Chief Legal Officer",
+  "team": "Legal",
+  "level": "Head",
+  "hrbp": "Таня Малахова",
+  "sheet_row": 238,
+  "notion_url": "https://app.notion.com/p/41ae566ff60181959836d0d45079793e"
+ },
+ {
+  "slug": "hr_lead",
+  "position": "HR Lead",
+  "team": "HR",
+  "level": "Lead",
+  "hrbp": "Яна Корженевская",
+  "sheet_row": 251,
+  "notion_url": "https://app.notion.com/p/41ae566ff601819aa5aef8d41dc9bffe"
+ },
+ {
+  "slug": "recruitment_lead",
+  "position": "Recruitment Lead",
+  "team": "HR",
+  "level": "Lead",
+  "hrbp": "Яна Корженевская",
+  "sheet_row": 252,
+  "notion_url": "https://app.notion.com/p/41ae566ff60181668531dad8a398d2ce"
+ }
+]

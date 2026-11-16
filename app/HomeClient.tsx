@@ -9,6 +9,8 @@ import LanguageToggle from '@/components/LanguageToggle'
 import { UserButton } from '@clerk/nextjs'
 import AtsPipelineView from '@/components/AtsPipelineView'
 import SalaryBandsTab from '@/components/SalaryBandsTab'
+import Bands2027Tab from '@/components/Bands2027Tab'
+import type { Bands2027Data } from '@/lib/bands2027-loader'
 
 interface Props {
   positions: PositionMeta[]
@@ -18,9 +20,10 @@ interface Props {
   benchmarkGrades: Record<string, Record<string, GradeRow[]>>
   researchDates: Record<string, Record<string, string>>
   salaryBandsData: SalaryBandsData
+  bands2027: Bands2027Data
 }
 
-type HomeTab = 'market' | 'ats' | 'bands'
+type HomeTab = 'market' | 'ats' | 'bands' | 'bands2027'
 type MarketPeriod = 'all' | '12m' | '6m' | '3m'
 
 function Logo() {
@@ -52,7 +55,7 @@ function isWithinPeriod(dateStr: string, period: MarketPeriod): boolean {
 
 export default function HomeClient({
   positions, locationsByPosition, candidatesByPosition,
-  locationMeta, benchmarkGrades, researchDates, salaryBandsData,
+  locationMeta, benchmarkGrades, researchDates, salaryBandsData, bands2027,
 }: Props) {
   const { lang } = useLang()
   const router = useRouter()
@@ -62,13 +65,14 @@ export default function HomeClient({
     const tab = searchParams.get('tab')
     if (tab === 'ats') return 'ats'
     if (tab === 'bands') return 'bands'
+    if (tab === 'bands2027') return 'bands2027'
     return 'market'
   })
 
   // Keep homeTab in sync with URL so router.push() from child components and browser back/forward work
   useEffect(() => {
     const tab = searchParams.get('tab')
-    const next: HomeTab = tab === 'ats' ? 'ats' : tab === 'bands' ? 'bands' : 'market'
+    const next: HomeTab = tab === 'ats' ? 'ats' : tab === 'bands' ? 'bands' : tab === 'bands2027' ? 'bands2027' : 'market'
     setHomeTab(next)
   }, [searchParams])
   const [selectedPosition, setSelectedPosition] = useState<string>(positions[0]?.slug ?? '')
@@ -92,6 +96,8 @@ export default function HomeClient({
       router.replace(`/?tab=ats&atsPos=${pos}`, { scroll: false })
     } else if (tab === 'bands') {
       router.replace('/?tab=bands', { scroll: false })
+    } else if (tab === 'bands2027') {
+      router.replace('/?tab=bands2027', { scroll: false })
     } else {
       router.replace('/', { scroll: false })
     }
@@ -125,6 +131,7 @@ export default function HomeClient({
     { key: 'market', icon: '↗', label: t(lang, 'marketTab') },
     { key: 'ats',    icon: '🏢', label: t(lang, 'atsTab') },
     { key: 'bands',  icon: '💰', label: lang === 'ru' ? 'Salary Bands' : 'Salary Bands' },
+    { key: 'bands2027', icon: '📐', label: 'Salary Bands 2027 Research' },
   ]
 
   return (
@@ -360,6 +367,13 @@ export default function HomeClient({
             bands={salaryBandsData.bands}
             locationMeta={locationMeta}
           />
+        </div>
+      )}
+
+      {/* ——— SALARY BANDS 2027 RESEARCH ——— */}
+      {homeTab === 'bands2027' && (
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 28px 80px' }}>
+          <Bands2027Tab positions={bands2027.positions} updated={bands2027.updated} notionUrl={bands2027.notionUrl} />
         </div>
       )}
     </div>

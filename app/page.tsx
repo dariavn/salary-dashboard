@@ -4,6 +4,7 @@ import {
   loadAllCandidatesForPosition, loadCountryData, getResearchDate,
 } from '@/lib/dataLoader'
 import { loadSalaryBandsData } from '@/lib/salary-bands-loader'
+import { loadBands2027 } from '@/lib/bands2027-loader'
 import type { CandidateWithLocation, GradeRow } from '@/lib/types'
 import HomeClient from './HomeClient'
 
@@ -36,6 +37,7 @@ function HomeContent() {
   }
 
   const salaryBandsData = loadSalaryBandsData()
+  const bands2027 = loadBands2027()
 
   return (
     <HomeClient
@@ -46,6 +48,7 @@ function HomeContent() {
       benchmarkGrades={benchmarkGrades}
       researchDates={researchDates}
       salaryBandsData={salaryBandsData}
+      bands2027={bands2027}
     />
   )
 }
