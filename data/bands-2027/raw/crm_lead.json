@@ -415,6 +415,34 @@
     "match": "medium",
     "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: инфобизнес-сообщество, не tech-работодатель",
     "evidence": "Руководитель CRM-маркетинга и воронок продаж, Аномалия (вакансия)"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель направления CRM",
+    "company": "Wildberries",
+    "industry": "other",
+    "city": "РФ",
+    "value": 500000,
+    "raw": "500000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4116539/filter/all/id/76848200",
+    "date": "2025-12",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "Руководитель направления CRM, Wildberries"
+   },
+   {
+    "type": "resume",
+    "title": "Лид CRM-маркетинга",
+    "company": "Т-Банк",
+    "industry": "other",
+    "city": "РФ",
+    "value": 400000,
+    "raw": "400000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4116539/filter/all/id/76847933",
+    "date": "2025-12",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "Лид CRM-маркетинга, Т-Банк"
    }
   ]
  },
@@ -535,7 +563,7 @@
    "reason": "IC без команды"
   }
  ],
- "caveats": "Кипр: только 4 точки — вакансии Head of CRM/Retention почти всегда без вилки, цифра ориентировочная. Россия: CV и вакансии hh.ru.",
+ "caveats": "Кипр: только 4 точки — вакансии Head of CRM/Retention почти всегда без вилки, цифра ориентировочная. Россия: CV и вакансии hh.ru. Добавлены кандидаты из Хантфлоу (Россия).",
  "review": {
   "drops": 5,
   "applied": 5,
@@ -544,5 +572,5 @@
   "summary": "RU 28->24 (IC, info-business, loyalty/partnerships, CRM data marts); CY 3->2 (IC desired, B2B service provider)."
  },
  "matching_criteria_en": "Lead/head of CRM/retention marketing (email/push/in-app, segmentation, A/B) with a team; priority: iGaming, fintech, IT products. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: only 4 points — Head of CRM/Retention postings almost never show a salary, so the figure is indicative. Russia: hh.ru CVs and vacancies."
+ "caveats_en": "Cyprus: only 4 points — Head of CRM/Retention postings almost never show a salary, so the figure is indicative. Russia: hh.ru CVs and vacancies. Huntflow candidates added (Russia)."
 }

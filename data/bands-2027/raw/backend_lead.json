@@ -933,6 +933,76 @@
     "match": "medium",
     "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: страховая компания — не IT-работодатель",
     "evidence": "Руководитель группы разработки (PHP/Go), Росстрах"
+   },
+   {
+    "type": "resume",
+    "title": "TeamLead Go / руководитель группы",
+    "company": "Wildberries",
+    "industry": "other",
+    "city": "РФ",
+    "value": 750000,
+    "raw": "750000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4271577/filter/all/id/85444859",
+    "date": "2026-06",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "TeamLead Go / руководитель группы, Wildberries"
+   },
+   {
+    "type": "resume",
+    "title": "Teamlead",
+    "company": "Wildberries",
+    "industry": "other",
+    "city": "РФ",
+    "value": 500000,
+    "raw": "500000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4271577/filter/all/id/85382802",
+    "date": "2026-06",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "Teamlead, Wildberries"
+   },
+   {
+    "type": "resume",
+    "title": "Backend Team Lead",
+    "company": "mc2 software",
+    "industry": "other",
+    "city": "РФ",
+    "value": 450000,
+    "raw": "450000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4271577/filter/all/id/85382486",
+    "date": "2026-06",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "Backend Team Lead, mc2 software"
+   },
+   {
+    "type": "resume",
+    "title": "Team Lead / Golang Backend",
+    "company": "Fintech company (NDA)",
+    "industry": "other",
+    "city": "РФ",
+    "value": 450000,
+    "raw": "450000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4271577/filter/all/id/85376407",
+    "date": "2026-06",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "Team Lead / Golang Backend, Fintech company (NDA)"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель группы разработки",
+    "company": "VK (Mail.ru)",
+    "industry": "other",
+    "city": "РФ",
+    "value": 600000,
+    "raw": "600000 RUR",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4271577/filter/all/id/85371430",
+    "date": "2026-06",
+    "match": "high",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Рубли считаются net.",
+    "evidence": "Руководитель группы разработки, VK (Mail.ru)"
    }
   ]
  },
@@ -1146,7 +1216,7 @@
    }
   ]
  },
- "caveats": "Кипр: 14 точек — вакансии BrainRocket/Exness и обзоры зарплат; строки Engineering Manager учтены как очень близкая роль. Россия: 64 точки, желаемые зарплаты в CV и вилки вакансий hh.ru.",
+ "caveats": "Кипр: 14 точек — вакансии BrainRocket/Exness и обзоры зарплат; строки Engineering Manager учтены как очень близкая роль. Россия: 64 точки, желаемые зарплаты в CV и вилки вакансий hh.ru. Добавлены кандидаты из Хантфлоу (Россия).",
  "excluded": [
   {
    "loc": "ru",
@@ -1213,5 +1283,5 @@
   "summary": "RU 65→62 kept (dropped Flussonic CTO-level, outsourcing head of engineering, payments ops vacancy); CY 12→5 (6 Engineering Manager survey rows fail same-title rule, Exness IC tech lead)."
  },
  "matching_criteria_en": "Backend team lead managing engineers at a product IT/fintech/iGaming company. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 14 points — BrainRocket/Exness postings and salary surveys; Engineering Manager rows are counted as a very similar role. Russia: 64 points, desired salaries in hh.ru CVs plus vacancy ranges."
+ "caveats_en": "Cyprus: 14 points — BrainRocket/Exness postings and salary surveys; Engineering Manager rows are counted as a very similar role. Russia: 64 points, desired salaries in hh.ru CVs plus vacancy ranges. Huntflow candidates added (Russia)."
 }

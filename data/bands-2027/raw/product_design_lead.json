@@ -442,6 +442,20 @@
     "match": "medium",
     "note": "Взята колонка Lead; превью платного отчёта, gross/annual явно не указано, дата данных не указана (©2026)",
     "evidence": "Lead-грейд UX/продуктового дизайна по Кипру"
+   },
+   {
+    "type": "resume",
+    "title": "Head of Product Design",
+    "company": "B2BROKER",
+    "industry": "other",
+    "city": "кандидат на вакансию на Кипре",
+    "value": 86700,
+    "raw": "6000 USD (net → gross по налогам Кипра 2026)",
+    "url": "https://huntflow.ru/app/my/space307new/vacancy/4324551/filter/all/id/88153529",
+    "date": "2025-12",
+    "match": "medium",
+    "note": "Хантфлоу Space307: ожидания кандидата из поля «Зарплата»/комментариев рекрутера. Сумма без пометки net/gross считается net.",
+    "evidence": "Head of Product Design, B2BROKER"
    }
   ]
  },
@@ -552,7 +566,7 @@
    "reason": "графический дизайн, не продуктовый"
   }
  ],
- "caveats": "Кипр: 8 точек — Glassdoor (Design Lead, Lead Product Designer, Head of Design), CV лида с командой на Кипре, вакансия UI Lead. Публичные цифры дают €48–72k gross; рынок релокационных финтех-компаний, вероятно, выше, но вилок в открытом доступе нет. Россия: 20 точек.",
+ "caveats": "Кипр: 9 точек — Glassdoor (Design Lead, Lead Product Designer, Head of Design), CV лида с командой на Кипре, вакансия UI Lead и 1 кандидат из Хантфлоу (Head of Product Design, B2BROKER). Публичные цифры дают €48–72k gross; вилки релокационных финтехов не публикуются. Россия: 20 точек.",
  "review": {
   "drops": 2,
   "applied": 2,
@@ -561,5 +575,5 @@
   "summary": "RU 22->20 (brand/esports design director, IC techlead); CY 3->3 (all Glassdoor rows are base pay, thin samples)."
  },
  "matching_criteria_en": "Lead of a product designers team (Product Design Lead / Head of Product Design / Design Team Lead) in fintech, iGaming, IT product. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 8 points — Glassdoor (Design Lead, Lead Product Designer, Head of Design), a Cyprus-based lead CV, a UI Lead posting. Public figures give €48–72k gross; relocation-focused fintechs likely pay more, but their ranges are not public. Russia: 20 points."
+ "caveats_en": "Cyprus: 9 points — Glassdoor (Design Lead, Lead Product Designer, Head of Design), a Cyprus-based lead CV, a UI Lead posting and 1 Huntflow candidate (Head of Product Design, B2BROKER). Public figures give €48–72k gross; relocation fintechs do not publish ranges. Russia: 20 points."
 }
