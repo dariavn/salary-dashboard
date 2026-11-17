@@ -356,7 +356,7 @@
    "reason": "IC specialist (от €4,500 gross/mo)"
   }
  ],
- "caveats": "Кипр: 4 точки — вакансия Application Security Lead, CV техлида DevSecOps и строки Senior AppSec в обзорах (обязанности совпадают); цифра ориентировочная. Россия: 13 точек.",
+ "caveats": "Кипр: 3 точки — CV техлида DevSecOps и строки Senior AppSec в обзорах (обязанности совпадают); цифра ориентировочная. Россия: 13 точек.",
  "review": {
   "drops": 5,
   "applied": 2,
@@ -365,5 +365,5 @@
   "summary": "10 of 15 RU kept, CY has no points; drops are IC leads, retail/oil-captive employers and one outsourcing firm."
  },
  "matching_criteria_en": "Lead of a product/application security team (AppSec, SSDLC, DevSecOps) with reports in tech/fintech. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 4 points — an Application Security Lead posting, a DevSecOps tech lead CV and Senior AppSec survey rows (duties match); the figure is indicative. Russia: 13 points."
+ "caveats_en": "Cyprus: 3 points — a DevSecOps tech lead CV and Senior AppSec survey rows (duties match); the figure is indicative. Russia: 13 points."
 }

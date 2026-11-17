@@ -1001,7 +1001,7 @@
    }
   ]
  },
- "caveats": "Кипр: 45 точек, из них 30 — ожидания кандидатов на нашу вакансию CLO в Хантфлоу (поле «Зарплата» и ответы на вопросы; суммы без пометки net/gross считаются net и переведены в gross по налогам Кипра 2026). Россия: CV и вакансии hh.ru, включая руководителей юрдепартаментов крупных банков.",
+ "caveats": "Кипр: 44 точки, из них 30 — ожидания кандидатов на нашу вакансию CLO в Хантфлоу (поле «Зарплата» и ответы на вопросы; суммы без пометки net/gross считаются net и переведены в gross по налогам Кипра 2026). Россия: CV и вакансии hh.ru, включая руководителей юрдепартаментов крупных банков.",
  "excluded": [
   {
    "loc": "ru",
@@ -1040,5 +1040,5 @@
   "summary": "RU 23→18 kept (5 dropped: 4 bank branch/sub-unit legal heads, 1 undisclosed-employer agency posting); CY 14→13 kept (1 dropped: corporate-services provider). FunCorp team lead kept as borderline."
  },
  "matching_criteria_en": "Head of the in-house legal function (CLO / General Counsel / Head of Legal) leading lawyers; priority: regulated fintech, brokers, iGaming. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 45 points, 30 of them are candidate expectations for our CLO vacancy in Huntflow (salary field and screening answers; amounts without net/gross are treated as net and grossed up with 2026 Cyprus tax). Russia: hh.ru CVs and vacancies, incl. legal heads at large banks."
+ "caveats_en": "Cyprus: 44 points, 30 of them are candidate expectations for our CLO vacancy in Huntflow (salary field and screening answers; amounts without net/gross are treated as net and grossed up with 2026 Cyprus tax). Russia: hh.ru CVs and vacancies, incl. legal heads at large banks."
 }

@@ -706,7 +706,7 @@
    }
   ]
  },
- "caveats": "Кипр: 23 точки — вакансии (Allwyn, iGaming, финтех), CV и гайды Emerald Zebra, Kyprium, Payscale. Рынок Кипра по этой роли действительно ниже ИТ-ролей: большинство предложений €50–75k gross. Россия: CV и вакансии hh.ru, включая главбухов групп компаний вне ИТ.",
+ "caveats": "Кипр: 22 точки — вакансии (Allwyn, iGaming, финтех), CV и гайды Emerald Zebra, Kyprium, Payscale. Рынок Кипра по этой роли действительно ниже ИТ-ролей: большинство предложений €50–75k gross. Россия: CV и вакансии hh.ru, включая главбухов групп компаний вне ИТ.",
  "excluded": [
   {
    "loc": "ru",
@@ -766,5 +766,5 @@
   "summary": "RU 21→15 kept (6 dropped: domestic non-tech RSBU SMEs, freelance, wrong function); CY 9→7 kept (2 dropped: IC bookkeepers). Payscale P90 row kept but is old (Feb 2025) and a top-percentile figure."
  },
  "matching_criteria_en": "Chief accountant / head of accounting leading a team; priority: international groups, IFRS, multi-entity, fintech. Financial Controller = similar role. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 23 points — postings (Allwyn, iGaming, fintech), CVs and Emerald Zebra, Kyprium, Payscale guides. Cyprus pays this role well below tech roles: most offers are €50–75k gross. Russia: hh.ru CVs and vacancies, incl. group chief accountants outside tech."
+ "caveats_en": "Cyprus: 22 points — postings (Allwyn, iGaming, fintech), CVs and Emerald Zebra, Kyprium, Payscale guides. Cyprus pays this role well below tech roles: most offers are €50–75k gross. Russia: hh.ru CVs and vacancies, incl. group chief accountants outside tech."
 }

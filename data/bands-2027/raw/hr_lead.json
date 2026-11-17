@@ -504,7 +504,7 @@
    }
   ]
  },
- "caveats": "Кипр: 11 точек — Glassdoor, гайды Emerald Zebra, Ergazo, Evresio, Kyprium, вакансии. Россия: CV и вакансии hh.ru.",
+ "caveats": "Кипр: 10 точек — Glassdoor, гайды Emerald Zebra, Evresio, Kyprium, вакансии. Россия: CV и вакансии hh.ru.",
  "excluded": [
   {
    "loc": "ru",
@@ -564,5 +564,5 @@
   "summary": "RU 21→19 kept (2 dropped: HR-tech product role, non-tech bank HR admin); CY 5→4 kept (1 dropped: recruitment-only CV). Many RU points are HRD (head-level, slightly above our Lead) — kept as small/mid companies."
  },
  "matching_criteria_en": "Lead of the HR/HRBP function (Lead HRBP, Head of HR; HRD = medium) in tech, fintech, gaming, iGaming. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 11 points — Glassdoor, Emerald Zebra, Ergazo, Evresio, Kyprium guides, postings. Russia: hh.ru CVs and vacancies."
+ "caveats_en": "Cyprus: 10 points — Glassdoor, Emerald Zebra, Evresio, Kyprium guides, postings. Russia: hh.ru CVs and vacancies."
 }
