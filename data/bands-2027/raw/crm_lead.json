@@ -3,7 +3,7 @@
  "position": "CRM Lead",
  "hrbp": "Ира Андреева",
  "level": "Lead",
- "matching_criteria": "Текущая/последняя роль — лид/руководитель CRM/CVM/retention-маркетинга (email/push/in-app, сегментация, A/B, CDP/ESP) с командой; приоритет fintech/iGaming/bigtech/IT-продукты. Исключены CRM-системщики (Битрикс/1С/интеграторы), sales-retention/CS, VIP-менеджеры, офлайн-ритейл/лояльность, агентства, NGO.",
+ "matching_criteria": "Лид/руководитель CRM/retention-маркетинга (email/push/in-app, сегментация, A/B) с командой; приоритет iGaming, финтех, IT-продукты. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -404,6 +404,17 @@
     "match": "high",
     "note": "hh резюме, обновлено за 180 дней",
     "evidence": "Руководитель группы удержания, возврата клиентов и CVM, Okko, янв 2022 – май 2026"
+   },
+   {
+    "type": "vacancy",
+    "title": "Руководитель CRM-маркетинга и воронок продаж, Аномалия (вакансия)",
+    "company": "",
+    "industry": "other",
+    "value": 300000,
+    "url": "https://hh.ru/vacancy/138740497",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: инфобизнес-сообщество, не tech-работодатель",
+    "evidence": "Руководитель CRM-маркетинга и воронок продаж, Аномалия (вакансия)"
    }
   ]
  },
@@ -415,7 +426,7 @@
    "hh.ru area=236 вакансии: CRM, retention, VIP, head of, lead, руководитель",
    "web: Head of CRM Limassol salary; CRM Team Lead Cyprus iGaming; Head of Retention/Retention Lead Limassol; cypruswork CRM; Emerald Zebra iGaming guide; djinni/alphaffiliates/igamingrecruitment"
   ],
-  "screened_total": 65,
+  "screened_total": 67,
   "points": [
    {
     "type": "vacancy",
@@ -458,6 +469,34 @@
     "match": "low",
     "note": "EXCLUDED by review: Desired role CRM specialist (IC) at a B2B CRM-execution service provider. CY CV: EUR treated as gross monthly ×12; basis ambiguous",
     "evidence": "Squad lead CRM execution, Medier, с мар 2025 (живёт на Кипре)"
+   },
+   {
+    "type": "vacancy",
+    "title": "Senior/Lead Lifecycle Marketing Manager (Remote - Cyprus)",
+    "company": "EverAI",
+    "industry": "it_product",
+    "city": "Cyprus (remote)",
+    "value": 95000,
+    "raw": "EUR 85k-105k/yr",
+    "url": "https://contentcreators.com/career/jobs/lifecycle-marketing-manager-everai-af22f2b2",
+    "date": "2026-10",
+    "match": "medium",
+    "note": "середина; Lead IC без явных подчинённых, отчёт CMO; вакансия закрыта 10.11.2026",
+    "evidence": "Владеет всем CRM-циклом: email/push/in-app, сегментация, journeys, эксперименты"
+   },
+   {
+    "type": "survey",
+    "title": "Senior CRM Manager — Glassdoor Limassol (base)",
+    "company": "Glassdoor (Spotware, NT Force и др.)",
+    "industry": "fintech",
+    "city": "Limassol",
+    "value": 54000,
+    "raw": "Total pay €4K–€5K/mo, median €4K; Base pay €4K–€5K/mo",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-senior-crm-manager-salary-SRCH_IL.0,15_IM1340_KO16,34.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "середина base €4.5k/мес ×12; сеньор-IC, не head — нижняя опора",
+    "evidence": "CRM-функция, Лимассол, финтех/трейдинг работодатели"
    }
   ]
  },
@@ -467,21 +506,14 @@
    "value": 275000,
    "title": "Head of VIP / Руководитель VIP-направления (iGaming), KOLDEXI",
    "url": "https://hh.ru/vacancy/138889220",
-   "reason": "VIP account management, не CRM-маркетинг (была в 1-й версии)"
-  },
-  {
-   "loc": "ru",
-   "value": 300000,
-   "title": "Руководитель CRM-маркетинга и воронок продаж, Аномалия (вакансия)",
-   "url": "https://hh.ru/vacancy/138740497",
-   "reason": "инфобизнес-сообщество, не tech-работодатель"
+   "reason": "VIP account management, не CRM-маркетинг"
   },
   {
    "loc": "cy",
    "value": 45600,
    "title": "Emerald Zebra iGaming guide: CRM Executive/Manager €2,500–3,800/мес",
    "url": "https://emeraldzebra.cy/for-employers/gaming-hiring-guide-cyprus/",
-   "reason": "уровень Manager, не Lead (была в 1-й версии)"
+   "reason": "уровень Manager, не Lead"
   },
   {
    "loc": "cy",
@@ -503,12 +535,14 @@
    "reason": "IC без команды"
   }
  ],
- "caveats": "РФ: только желаемая з/п в резюме — вакансий CRM Lead с вилкой в целевых индустриях нет; верх дают fintech/bigtech Москва (Т-Банк, Альфа, Сбер). Проверка исключила IC-треки, лояльность/партнёрства и CRM-данные. Кипр: 2 точки (iGaming Head of Retention, Head of CRM) — статистически не значимо.",
+ "caveats": "Кипр: только 4 точки — вакансии Head of CRM/Retention почти всегда без вилки, цифра ориентировочная. Россия: CV и вакансии hh.ru.",
  "review": {
   "drops": 5,
   "applied": 5,
   "verified": 8,
   "level_note": "Lead: kept CRM/CVM/retention team leads and heads of small CRM functions; dropped IC-track and adjacent CRM-data/loyalty roles.",
   "summary": "RU 28->24 (IC, info-business, loyalty/partnerships, CRM data marts); CY 3->2 (IC desired, B2B service provider)."
- }
+ },
+ "matching_criteria_en": "Lead/head of CRM/retention marketing (email/push/in-app, segmentation, A/B) with a team; priority: iGaming, fintech, IT products. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: only 4 points — Head of CRM/Retention postings almost never show a salary, so the figure is indicative. Russia: hh.ru CVs and vacancies."
 }

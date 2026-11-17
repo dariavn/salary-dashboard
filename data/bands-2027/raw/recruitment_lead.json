@@ -3,7 +3,7 @@
  "position": "Recruitment Lead",
  "hrbp": "Яна Корженевская",
  "level": "Lead",
- "matching_criteria": "Current/most recent role leads an in-house recruitment / TA team hiring IT/product roles at a tech, fintech or gaming employer (IT recruitment team lead, Head of Recruitment/TA = high or medium). Agency recruiters, mass/blue-collar/sales hiring heads, senior ICs without a team excluded.",
+ "matching_criteria": "Руководитель in-house команды рекрутинга/TA, нанимающей IT/продуктовые роли в tech, финтех, gaming. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -308,6 +308,28 @@
     "match": "medium",
     "evidence": "Руководитель департамента привлечения талантов и HR-процессов, BSS (IT), с 01.2025 — шире чистого рекрутинга",
     "note": "desired salary (hh resume, net)"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель команды подбора, МТС (Казань)",
+    "company": "",
+    "industry": "other",
+    "value": 250000,
+    "url": "https://hh.ru/resume/51f3b5930003ce1a8a002c744652515456706e",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: unclear whether IT or retail/mass hiring",
+    "evidence": "Руководитель команды подбора, МТС (Казань)"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of Recruitment, Формула команды (vacancy)",
+    "company": "",
+    "industry": "other",
+    "value": 197500,
+    "url": "https://hh.ru/vacancy/138884702",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: employer industry unclear / likely agency",
+    "evidence": "Head of Recruitment, Формула команды (vacancy)"
    }
   ]
  },
@@ -391,18 +413,36 @@
     "match": "medium",
     "evidence": "Talentup 2026: Head of Talent, Cyprus, median base €88.9k",
     "note": "aggregator, no sample size/method; head level, median not P75"
+   },
+   {
+    "type": "survey",
+    "title": "Recruitment Manager — Glassdoor",
+    "company": "",
+    "industry": "other",
+    "value": 48000,
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-recruitment-manager-salary-SRCH_IL.0,15_IM1340_KO16,35.htm",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: not re-verified; agency-type title",
+    "evidence": "Recruitment Manager — Glassdoor"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of HR & Recruitment (shipping)",
+    "company": "Carierista posting (recruiter for shipping co.)",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 57500,
+    "raw": "€50,000–65,000/yr + 13th salary",
+    "url": "https://www.carierista.com/en/jobs/120605/head-of-hr-recruitment-shipping-9320",
+    "date": "2026",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. non-tech; midpoint; also in HR Lead",
+    "evidence": "Head of HR & Recruitment (shipping)"
    }
   ]
  },
- "caveats": "РФ: только резюме лидов in-house IT-рекрутмента (массовый подбор, агентства и IC исключены); вакансий с вилкой нет. Кипр: 5 агрегатных точек (Glassdoor база, обзоры) — ни одного резюме или вакансии tech/fintech рекрут-лида.",
+ "caveats": "Кипр: 7 точек — Glassdoor, Emerald Zebra, Talentup, вакансия. Россия: CV и вакансии hh.ru.",
  "excluded": [
-  {
-   "loc": "ru",
-   "value": 250000,
-   "title": "Руководитель команды подбора, МТС (Казань)",
-   "url": "https://hh.ru/resume/51f3b5930003ce1a8a002c744652515456706e",
-   "reason": "unclear whether IT or retail/mass hiring"
-  },
   {
    "loc": "ru",
    "value": 350000,
@@ -447,13 +487,6 @@
   },
   {
    "loc": "ru",
-   "value": 197500,
-   "title": "Head of Recruitment, Формула команды (vacancy)",
-   "url": "https://hh.ru/vacancy/138884702",
-   "reason": "employer industry unclear / likely agency"
-  },
-  {
-   "loc": "ru",
    "value": 301500,
    "title": "Руководитель по подбору, Institute of Directors (vacancy)",
    "url": "https://hh.ru/vacancy/139488481",
@@ -479,13 +512,6 @@
    "title": "TA Manager average, Worldsalaries",
    "url": "https://worldsalaries.com/average-human-resources-recruiter-salary-in-cyprus/",
    "reason": "weak all-industry average"
-  },
-  {
-   "loc": "cy",
-   "value": 48000,
-   "title": "Recruitment Manager — Glassdoor",
-   "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-recruitment-manager-salary-SRCH_IL.0,15_IM1340_KO16,35.htm",
-   "reason": "not re-verified; agency-type title"
   }
  ],
  "review": {
@@ -494,5 +520,7 @@
   "verified": 10,
   "level_note": "Lead level: recruitment team leads / heads of recruitment in tech kept; IC \"lead\" recruiters dropped.",
   "summary": "RU 21→19 kept (2 dropped: IC lead recruiter, non-tech bank non-IT hiring); CY 5→5 kept (Glassdoor/Emerald Zebra TA Manager rows are base pay but level ambiguous). Avito and CDEK kept as borderline."
- }
+ },
+ "matching_criteria_en": "Lead of an in-house recruitment/TA team hiring IT/product roles in tech, fintech, gaming. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 7 points — Glassdoor, Emerald Zebra, Talentup, a posting. Russia: hh.ru CVs and vacancies."
 }

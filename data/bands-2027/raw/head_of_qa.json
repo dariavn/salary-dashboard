@@ -3,7 +3,7 @@
  "position": "Head of QA",
  "hrbp": "Полина",
  "level": "Head",
- "matching_criteria": "Текущая/последняя роль — руководитель QA-функции (Head of QA, рук. отдела/направления/службы тестирования, нач. отдела тестирования) в IT/финтех/бигтех; тимлиды QA, руководители узкой части (нагрузка, автоматизация, один продукт) — medium. Исключены: не-IT работодатели (ритейл, производство, страхование, госсектор, фарма), HW-тестирование, IC без команды, текущие IC, неясные 'руководитель центра/направления' без указания QA.",
+ "matching_criteria": "Руководитель QA-функции (Head of QA, руководитель отдела/направления тестирования) в IT/финтех; QA Lead и руководители группы — medium. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -37,8 +37,8 @@
     "raw": "280 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/a606b1840006d7ad28002c7446396647446c73",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Lead QA (ведущий инженер) of 5-person team in Газпромбанк — lead, not head (verified). резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Lead QA (ведущий инженер) of 5-person team in Газпромбанк — lead, not head (verified). резюме hh, желаемая з/п (net)",
     "evidence": "Lead QA, Газпромбанк, 06.2023–10.2026 — лид команды, не head"
    },
    {
@@ -65,8 +65,8 @@
     "raw": "350 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/e3a23804000e9c782f002c74464b6153383361",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: current руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: current руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, ВПГ Айти, с 07.2025; ранее лидер команды тестирования Ростелеком-Солар"
    },
    {
@@ -79,8 +79,8 @@
     "raw": "350 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/60c1b6b3000fe928f6002c744662716346435a",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Head of Backend QA Team (7 engineers), sub-team of function, ended 01.2026 — lead level (verified). резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Head of Backend QA Team (7 engineers), sub-team of function, ended 01.2026 — lead level (verified). резюме hh, желаемая з/п (net)",
     "evidence": "Head of Backend QA Team, Humans (финтех), 05.2020–01.2026 — часть функции"
    },
    {
@@ -135,8 +135,8 @@
     "raw": "500 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/8cd9ff680011342d65002c744662483057776d",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: current руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: current руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, Гарда Технологии, с 11.2017"
    },
    {
@@ -205,8 +205,8 @@
     "raw": "300 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/fba1fa36001036c74d002c7446775a6a456e78",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы функционального тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы функционального тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы функционального тестирования, ЦРТ, с 01.2024"
    },
    {
@@ -261,8 +261,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/553b0ad0000bebd9d4002c74465270727a4968",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "QA Lead, ICL Soft, с 07.2024"
    },
    {
@@ -275,8 +275,8 @@
     "raw": "300 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/4f9a493500113397bd002c74464c6864587231",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Team lead QA — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Team lead QA — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Team lead QA, ФИС, с 11.2024"
    },
    {
@@ -317,8 +317,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/bea5bb7d000b52a97f002c7446674d5066557a",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Lead at outsourcing studio — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead at outsourcing studio — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "QA Lead (руководитель тестирования), Риверстарт, 10.2025–07.2026"
    },
    {
@@ -331,8 +331,8 @@
     "raw": "300 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/81600660000720c35c002c7446394b7966714a",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Team Lead / QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Team Lead / QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Team Lead / QA Lead, Иннотех (группа ВТБ), с 03.2022"
    },
    {
@@ -345,8 +345,8 @@
     "raw": "450 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/f102f9a9000137fc35002c74463251544e674d",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель экспертизы = оперативное руководство группой, title QA-инженер — group lead (verified). резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель экспертизы = оперативное руководство группой, title QA-инженер — group lead (verified). резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель экспертизы по тестированию, Газпромбанк, с 09.2023"
    },
    {
@@ -387,8 +387,8 @@
     "raw": "450 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/bd63a13e0008b3611d002c7446484e4c444a4d",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "QA Lead, Иннотех, с 02.2025; ранее QA TL TerraCash"
    },
    {
@@ -415,8 +415,8 @@
     "raw": "300 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/2ef7dfd60008951472002c7446503652646f74",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "QA Lead, НПП МЕРА, с 01.2025"
    },
    {
@@ -429,8 +429,8 @@
     "raw": "350 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/67686453000c08f4de002c744662486f414646",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель команды тестирования (Lead QA) — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель команды тестирования (Lead QA) — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель команды тестирования (Lead QA), Bnovo, с 08.2023"
    },
    {
@@ -457,8 +457,8 @@
     "raw": "490 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/04eeac300010453279002c7446476651534b79",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, РусБИТех-Астра, 10.2024–01.2026"
    },
    {
@@ -499,8 +499,8 @@
     "raw": "450 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/7cc5c43b00114ca7ef002c74464b7541523348",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования Яндекс — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования Яндекс — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, Яндекс, с 01.2026; ранее рук. группы VK"
    },
    {
@@ -555,8 +555,8 @@
     "raw": "500 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/6193d19a000db52e19002c7446543662553643",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Lead Альфа-Банк — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead Альфа-Банк — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "QA Lead, Альфа-Банк, с 02.2024"
    },
    {
@@ -639,8 +639,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/6da166ea00021edb74002c74464c6759707532",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: current руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: current руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, Effective Technologies, 08.2025–09.2026; ранее нач. отдела тестирования ТЭК-Торг"
    },
    {
@@ -667,8 +667,8 @@
     "raw": "600 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/bfc86849000b62a130002c744657676f777332",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Unit QA lead within HH QA — unit/team lead (verified). резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Unit QA lead within HH QA — unit/team lead (verified). резюме hh, желаемая з/п (net)",
     "evidence": "Unit QA lead, HeadHunter, с 02.2022"
    },
    {
@@ -849,8 +849,8 @@
     "raw": "450 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/03dfcd80000e8d3dc1002c7446666b776d3042",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Unit Lead, 3 QA in unit — team lead (verified). резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Unit Lead, 3 QA in unit — team lead (verified). резюме hh, желаемая з/п (net)",
     "evidence": "QA Unit Lead, Авито, с 06.2025"
    },
    {
@@ -891,8 +891,8 @@
     "raw": "400 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/19fd1c060008c4d232002c7446506a64746d58",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: QA Lead Росбанк — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead Росбанк — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "QA Lead, Росбанк, с 12.2022"
    },
    {
@@ -989,8 +989,8 @@
     "raw": "230 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/9f1e457f000115223b002c7446774f4a6e3352",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, Rambler&Co, 07.2021–09.2026"
    },
    {
@@ -1017,8 +1017,8 @@
     "raw": "500 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/8cbd64310010daf1b7002c7446625a5446445a",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель команды тестирования X5 — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель команды тестирования X5 — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель команды тестирования, X5 Tech, с 06.2021"
    },
    {
@@ -1031,8 +1031,8 @@
     "raw": "330 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/8760f07100106364a0002c744632495562614b",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Lead QA Уралсиб — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Lead QA Уралсиб — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Lead QA, Уралсиб, с 02.2024"
    },
    {
@@ -1045,8 +1045,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/e87563000008cd52a9002c74466b4e48516b65",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, Ростелеком, 02–10.2026; ранее рук. группы Parma 2016–2026"
    },
    {
@@ -1073,8 +1073,8 @@
     "raw": "220 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/9a67d4bc000b247881002c744630464363456a",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, ИБС Инфинисофт, 04.2022–08.2026"
    },
    {
@@ -1087,8 +1087,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/7ac94e28000245d7c8002c74466e4762635651",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, MedPoint24 (телемедицина), с 09.2021"
    },
    {
@@ -1129,8 +1129,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/990cfceb00030a7441002c7446323846676957",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель группы тестирования — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "Руководитель группы тестирования, ICL Soft, с 08.2023"
    },
    {
@@ -1143,8 +1143,8 @@
     "raw": "250 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/28c081270007f8a748002c7446397a58724b41",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: TA manager/lead, automation sub-team only — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: TA manager/lead, automation sub-team only — team/group lead (руководитель группы/команды, QA Lead) — one level below Head. резюме hh, желаемая з/п (net)",
     "evidence": "TA manager / TA lead, Netcracker, с 02.2022 — только автоматизация"
    },
    {
@@ -1269,8 +1269,8 @@
     "raw": "150 000 – 200 000 ₽ на руки",
     "url": "https://hh.ru/vacancy/139354618",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: vacancy: Lead отдела тестирования (QA Lead), 150–200k — lead level, not head (verified). midpoint",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: vacancy: Lead отдела тестирования (QA Lead), 150–200k — lead level, not head (verified). midpoint",
     "evidence": "Вакансия: лид отдела тестирования, АВ Софт — уровень лида, не head"
    }
   ]
@@ -1285,7 +1285,7 @@
    "Glassdoor Limassol: Head of QA (Chrome)",
    "surveys: Emerald Zebra tech/fintech guides 2026, Cyprus Job Finder, Jobs Nicosia, Evresio — строк Head of QA нет"
   ],
-  "screened_total": 60,
+  "screened_total": 65,
   "points": [
    {
     "type": "survey",
@@ -1311,8 +1311,8 @@
     "raw": "€6 000–7 000 net/mo",
     "url": "https://wantapply.cy/qa-team-lead-fintech-at-qtech",
     "date": "2026-06",
-    "match": "low",
-    "note": "EXCLUDED by review: vacancy title QA/QE Lead, \"lead and develop the QA team\" — lead not head; net, basis unclear (verified). vacancy archived; net mid €6.5K ×12 → gross (CY 2026 tax+SI+GHS, no relocation exemption)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: vacancy title QA/QE Lead, \"lead and develop the QA team\" — lead not head; net, basis unclear (verified). vacancy archived; net mid €6.5K ×12 → gross (CY 2026 tax+SI+GHS, no relocation exemption)",
     "evidence": "Вакансия: QA/QE Lead, строит и ведёт QA/QE-команду, Qtech (платежи) — title lead"
    },
    {
@@ -1325,13 +1325,108 @@
     "raw": "€5 000–6 000 NET",
     "url": "https://hirify.me/jobs/651482-qa-team-lead-fintech",
     "date": "2026-06",
-    "match": "low",
-    "note": "EXCLUDED by review: vacancy QA Team Lead — team lead, not head. vacancy ~5 мес назад, archived; net mid ×12 → gross",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: vacancy QA Team Lead — team lead, not head. vacancy ~5 мес назад, archived; net mid ×12 → gross",
     "evidence": "Вакансия: QA Team Lead финтех, ведёт команду QA — team lead, не head"
+   },
+   {
+    "type": "survey",
+    "title": "QA Lead — Glassdoor Limassol",
+    "company": "",
+    "industry": "other",
+    "value": 63000,
+    "url": "https://www.glassdoor.com/Salaries/limassol-limassol-qa-lead-salary-SRCH_IL.0,17_IC3587736_KO18,25.htm",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: QA Lead ≠ Head; по v2 в опросах только та же роль и уровень",
+    "evidence": "QA Lead — Glassdoor Limassol"
+   },
+   {
+    "type": "survey",
+    "title": "QA Manager — Glassdoor Limassol",
+    "company": "Glassdoor (aggregator)",
+    "industry": "it_product",
+    "city": "Limassol",
+    "value": 60000,
+    "raw": "Base €2K–€5K/mo",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-qa-manager-salary-SRCH_IL.0,15_IM1340_KO16,26.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. aggregator; upper ×12; title mixes software & ops QA",
+    "evidence": "QA Manager — Glassdoor Limassol"
+   },
+   {
+    "type": "survey",
+    "title": "QA Manager — Emerald Zebra Cyprus Salaries 2025 (upper band)",
+    "company": "Emerald Zebra (recruitment survey)",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 82500,
+    "raw": "QA Manager: low €65,500 – high €82,500 gross annual",
+    "url": "https://emeraldzebra.cy/cyprus-salaries-2025-engineering-technology/",
+    "date": "2025-11",
+    "match": "high",
+    "note": "Взята верхняя граница (high) как ориентир для head/lead уровня; медиана не указана",
+    "evidence": "Руководитель QA-функции, кипрский рекрутинговый обзор по IT/fintech"
+   },
+   {
+    "type": "survey",
+    "title": "QA Team Lead — Emerald Zebra Cyprus Salaries 2025 (upper band)",
+    "company": "Emerald Zebra (recruitment survey)",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 65500,
+    "raw": "QA Team Lead: low €50,500 – high €65,500 gross annual",
+    "url": "https://emeraldzebra.cy/cyprus-salaries-2025-engineering-technology/",
+    "date": "2025-11",
+    "match": "medium",
+    "note": "Верхняя граница диапазона; уровень Team Lead ниже Head",
+    "evidence": "Лид QA-команды, кипрский рекрутинговый обзор"
+   },
+   {
+    "type": "resume",
+    "title": "QA Tech Lead / System analyst",
+    "company": "IronFX (брокер)",
+    "industry": "fintech",
+    "city": "Cyprus",
+    "value": 60000,
+    "raw": "Желаемая зарплата 4 000 € (hh, CV, обновлено 08.2026)",
+    "url": "https://hh.ru/resume/2fd570dd0010196ed7002c744674717150316c",
+    "date": "2026-08",
+    "match": "medium",
+    "note": "Трактуем как net (норма hh) → gross ~€5.0k ×12. Опыт IronFX 11.2021–11.2025",
+    "evidence": "Руководила командой из 8 QA, release management, QA-стратегия, CRM/KYC/Payments"
+   },
+   {
+    "type": "survey",
+    "title": "Test Manager — Glassdoor Limassol (base)",
+    "company": "Glassdoor (aggregator)",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 60000,
+    "raw": "Base pay €57K–€62K/yr, median €60K, n=1, Nov 2026",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-test-manager-salary-SRCH_IL.0,15_IM1340_KO16,28.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Выборка 1 зарплата",
+    "evidence": "Менеджер тестирования (руководитель QA-функции) в Лимассоле"
+   },
+   {
+    "type": "vacancy",
+    "title": "QA Automation Lead",
+    "company": "JobsOn (рекрутинг, клиент не назван)",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 51000,
+    "raw": "€ 4,000 - 4,500 / month",
+    "url": "https://www.carierista.com/en/jobs/119204/qa-automation-lead",
+    "date": "2026-10",
+    "match": "medium",
+    "note": "Середина €4.25k×12, gross не подтверждён; дата примерная (по ID объявления на carierista); есть ли команда — не проверено (страница отдаёт 403 боту)",
+    "evidence": "Lead-уровень в QA (автоматизация) в Лимассоле — Lead IC, флаг"
    }
   ]
  },
- "caveats": "Роль Head: после проверки оставлены только руководители функции QA; QA Lead / руководители групп исключены (31 точка). РФ — в основном желаемая з/п (на руки), вакансий Head of QA с вилкой почти нет. Кипр: 1 точка (Glassdoor Head of QA, база) — не основа для бэнда.",
+ "caveats": "Кипр: 10 точек — вакансии QA Lead в финтехе, Emerald Zebra (QA Manager/Team Lead) и Glassdoor. Публичных вилок именно Head of QA на Кипре почти нет. Россия: 88 точек, включая QA Lead и руководителей групп тестирования как близкую роль.",
  "excluded": [
   {
    "loc": "ru",
@@ -1398,13 +1493,6 @@
   },
   {
    "loc": "cy",
-   "value": 63000,
-   "title": "QA Lead — Glassdoor Limassol",
-   "url": "https://www.glassdoor.com/Salaries/limassol-limassol-qa-lead-salary-SRCH_IL.0,17_IC3587736_KO18,25.htm",
-   "reason": "QA Lead ≠ Head; по v2 в опросах только та же роль и уровень"
-  },
-  {
-   "loc": "cy",
    "value": 108000,
    "title": "Engineering Manager — Cyprus Job Finder (как прокси head)",
    "url": "https://cyprusjobfinder.net/blog/tech-salaries-cyprus-2026/",
@@ -1413,9 +1501,11 @@
  ],
  "review": {
   "drops": 33,
-  "applied": 33,
+  "applied": 2,
   "verified": 14,
   "level_note": "Head: kept heads/начальники/руководители отдела, направления, службы QA (incl. large perf/automation directions with heads-of-teams under them); dropped all current руководители группы/команды, QA/Team/Unit Leads.",
   "summary": "RU 90→59 kept (31 dropped, all team-lead level or seeking lower level); CY 3→1 (only Glassdoor Head of QA base remains — thin, treat CY as low-confidence)."
- }
+ },
+ "matching_criteria_en": "Head of the QA function (Head of QA, head of testing department) in IT/fintech; QA leads and group leads = medium. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 10 points — fintech QA Lead postings, Emerald Zebra (QA Manager/Team Lead) and Glassdoor. Public Head of QA ranges in Cyprus are almost non-existent. Russia: 88 points, incl. QA leads and testing group leads as a similar role."
 }

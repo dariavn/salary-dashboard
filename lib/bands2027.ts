@@ -33,9 +33,11 @@ export interface RawPosition {
   level: string
   team?: string
   matching_criteria?: string
+  matching_criteria_en?: string
   ru?: RawLocation
   cy?: RawLocation
   caveats?: string
+  caveats_en?: string
   notion_url?: string
 }
 

@@ -3,7 +3,7 @@
  "position": "Head/Lead of Accounting",
  "hrbp": "Таня Малахова",
  "level": "Lead",
- "matching_criteria": "Chief accountant / head of accounting who currently leads the accounting function (or an accounting team) with international scope: IFRS, foreign/multi-country entities, foreign-capital or international group, or multi-entity holdings at tech/fintech employers. Pure IFRS-reporting/consolidation/methodology heads, FP&A, financial controllers/FDs and domestic SME chief accountants without international signal excluded.",
+ "matching_criteria": "Главный бухгалтер / руководитель бухгалтерии с командой; приоритет международные группы, МСФО, несколько юрлиц, финтех. Financial Controller — близкая роль. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -28,8 +28,8 @@
     "raw": "190 000 ₽ (желаемая  на руки)",
     "url": "https://hh.ru/resume/3d7bd300000737bfa5002c7446413756574e30",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Domestic food-trading subsidiary, RSBU only; no international/IFRS scope, non-tech. hh CV card, desired salary",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Domestic food-trading subsidiary, RSBU only; no international/IFRS scope, non-tech. hh CV card, desired salary",
     "evidence": "Главный бухгалтер (МСФО в профиле), СиПи Фудз Трейдинг, до 07.2026"
    },
    {
@@ -42,8 +42,8 @@
     "raw": "250 000 ₽ (желаемая  на руки)",
     "url": "https://hh.ru/resume/1b88fd360000d6cb74002c7446426654726f48",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Domestic SME (ООО Логист) RSBU/OSNO + parallel remote freelance; no intl scope, non-tech. hh CV card, desired salary",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Domestic SME (ООО Логист) RSBU/OSNO + parallel remote freelance; no intl scope, non-tech. hh CV card, desired salary",
     "evidence": "Главный бухгалтер, руководство бухгалтерией, МСФО в профиле, ООО Логист, наст."
    },
    {
@@ -98,8 +98,8 @@
     "raw": "300 000 ₽ (желаемая  на руки)",
     "url": "https://hh.ru/resume/ff628a000010271c0a002c7446355a41735446",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Current role domestic RSBU chief accountant at ООО Вектор; IFRS only in past role; non-tech. hh CV card, desired salary",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Current role domestic RSBU chief accountant at ООО Вектор; IFRS only in past role; non-tech. hh CV card, desired salary",
     "evidence": "Главный бухгалтер, МСФО/ТЦО в профиле, ООО Вектор, наст."
    },
    {
@@ -126,8 +126,8 @@
     "raw": "350 000 ₽ (желаемая  на руки)",
     "url": "https://hh.ru/resume/05c86e130009c638aa002c744639394e6a756e",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Current employer is building-materials trading, 2 domestic entities on OSNO; non-tech, no intl scope. hh CV card, desired salary",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Current employer is building-materials trading, 2 domestic entities on OSNO; non-tech, no intl scope. hh CV card, desired salary",
     "evidence": "Главный бухгалтер с функциями ФД, ГК Тандем (IT, торговля, ВЭД), до 11.2026"
    },
    {
@@ -311,6 +311,45 @@
     "match": "medium",
     "note": "gross→net (NDFL 13/15%)",
     "evidence": "Вакансия: главбух небанковской кредитной орг. (платёжная РНКО), регулируемый финсектор"
+   },
+   {
+    "type": "resume",
+    "title": "Главный бухгалтер группы компаний / руководитель ОЦО (AV Group, промышленность)",
+    "company": "",
+    "industry": "other",
+    "value": 700000,
+    "url": "https://hh.ru/resume/d2dfb9ae00056f86bc002c74465a5364386162",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Domestic multi-entity group at industrial employer, no IFRS/international signal (~25 similar group chief accountants excluded)",
+    "evidence": "Главный бухгалтер группы компаний / руководитель ОЦО (AV Group, промышленность)"
+   },
+   {
+    "type": "vacancy",
+    "title": "Главный бухгалтер группы компаний",
+    "company": "Инкам",
+    "industry": "other",
+    "city": "Санкт-Петербург",
+    "value": 199500,
+    "raw": "от 230 000 ₽ до вычета налогов",
+    "url": "https://hh.ru/vacancy/139072370",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. gross→net",
+    "evidence": "Главный бухгалтер группы компаний"
+   },
+   {
+    "type": "vacancy",
+    "title": "Главный бухгалтер группы компаний",
+    "company": "Кейтеринбург",
+    "industry": "other",
+    "city": "Екатеринбург",
+    "value": 350000,
+    "raw": "от 350 000 ₽ на руки",
+    "url": "https://hh.ru/vacancy/139453042",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. ",
+    "evidence": "Главный бухгалтер группы компаний"
    }
   ]
  },
@@ -322,7 +361,7 @@
    "hh.ru vacancies area 236: бухгалтер, accountant, accounting, финансов",
    "web: Chief Accountant / Head of Accounting Cyprus salary 2026 (GRS, StaffMatters, cypruswork, Payscale, Paylab)"
   ],
-  "screened_total": 144,
+  "screened_total": 155,
   "points": [
    {
     "type": "resume",
@@ -449,10 +488,225 @@
     "match": "medium",
     "note": "aggregator, small n, last updated Feb 2025 (old)",
     "evidence": "Payscale: Chief Accountant Cyprus, base salary, upper (P90) figure"
+   },
+   {
+    "type": "resume",
+    "title": "Chief Accountant / Financial Controller, group of international companies (€5,000/mo)",
+    "company": "",
+    "industry": "other",
+    "value": 60000,
+    "url": "https://hh.ru/resume/45385154000083eab8002c7446736563726574",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Current role is Financial Controller & board member since 2011, not head of accounting",
+    "evidence": "Chief Accountant / Financial Controller, group of international companies (€5,000/mo)"
+   },
+   {
+    "type": "survey",
+    "title": "Financial Controller (Emerald Zebra guide upper)",
+    "company": "",
+    "industry": "other",
+    "value": 84000,
+    "url": "https://emeraldzebra.cy/for-employers/financial-services-hiring-guide-cyprus/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Different role title (FC), dropped per rule 3",
+    "evidence": "Financial Controller (Emerald Zebra guide upper)"
+   },
+   {
+    "type": "vacancy",
+    "title": "Group Chief Accountant, George Tsanos Group (cypruswork 109916)",
+    "company": "",
+    "industry": "other",
+    "value": 58500,
+    "url": "https://www.cypruswork.com/job/109916/group-chief-accountant/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Posting removed — URL no longer opens the job",
+    "evidence": "Group Chief Accountant, George Tsanos Group (cypruswork 109916)"
+   },
+   {
+    "type": "vacancy",
+    "title": "Chief Accountant (ACA/ACCA)",
+    "company": "via GRS Recruitment",
+    "industry": "other",
+    "city": "Лимассол",
+    "value": 50050,
+    "raw": "€45,500–54,600 gross p.a.",
+    "url": "https://jobs.grsrecruitment.com/job/chief-accountant-11833.aspx",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. midpoint; via search snippet",
+    "evidence": "Chief Accountant (ACA/ACCA)"
+   },
+   {
+    "type": "survey",
+    "title": "In-house finance Senior Manager (upper)",
+    "company": "Jobs Nicosia accountant salaries 2026",
+    "industry": "other",
+    "city": "Кипр",
+    "value": 82000,
+    "raw": "€62,000–82,000 gross p.a.",
+    "url": "https://jobsnicosia.com/cyprus-accountant-salaries-2026/",
+    "date": "2026-05",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. blog, methodology unclear",
+    "evidence": "In-house finance Senior Manager (upper)"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of Accounting, Finance and Operations",
+    "company": "Allwyn (via RED HR Solutions)",
+    "industry": "gaming",
+    "city": "Nicosia",
+    "value": 70000,
+    "raw": "Annual Gross Salary based on qualifications and experience: €65K-€75K plus other benefits",
+    "url": "https://ergodotisi.com/en-CY/jobs/head-of-accounting-finance-and-operations-allwyn-nicosia-88283042",
+    "date": "2026-06",
+    "match": "high",
+    "note": "середина €65–75k gross/год; вакансия закрыта",
+    "evidence": "Руководит командой, IFRS, несколько кипрских юрлиц, требования материнской группы"
+   },
+   {
+    "type": "vacancy",
+    "title": "Finance Team Lead",
+    "company": "Giti//c (iGaming software)",
+    "industry": "igaming",
+    "city": "Limassol",
+    "value": 63000,
+    "raw": "€4,000–6,500 (monthly)",
+    "url": "https://ergodotisi.com/en-CY/jobs/finance-team-lead-63571144",
+    "date": "2026-05",
+    "match": "high",
+    "note": "середина €5,250/мес ×12",
+    "evidence": "Ведёт финкоманду, учёт, годовая отчётность по нескольким юрисдикциям/юрлицам"
+   },
+   {
+    "type": "vacancy",
+    "title": "Senior Finance Manager",
+    "company": "Hidden Digital Limited",
+    "industry": "fintech",
+    "city": "Limassol",
+    "value": 60000,
+    "raw": "€4,000–6,000 Monthly salary",
+    "url": "https://ergodotisi.com/en-CY/jobs/senior-finance-manager-70511692",
+    "date": "2026-07",
+    "match": "medium",
+    "note": "середина €5k/мес ×12; тайтл finance manager",
+    "evidence": "Руководит бухгалтерской командой, закрытие месяца, интеркомпани/TP по группе, аудит"
+   },
+   {
+    "type": "vacancy",
+    "title": "Accounting Manager",
+    "company": "SPL Audit (Cyprus) Ltd — для real estate компании",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 55000,
+    "raw": "€4,167–5,000 monthly (annual gross €50,000–€60,000 + 13th)",
+    "url": "https://ergodotisi.com/el-CY/jobs/accounting-manager-29771951",
+    "date": "2026-07",
+    "match": "medium",
+    "note": "середина €50–60k/год",
+    "evidence": "Руководит и ревьюит работу бухгалтерской команды"
+   },
+   {
+    "type": "vacancy",
+    "title": "Group Chief Accountant",
+    "company": "George Tsanos Group",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 54000,
+    "raw": "€4,000–5,000 Monthly salary (+13th salary, bonus)",
+    "url": "https://ergodotisi.com/en-CY/jobs/group-chief-accountant-15236900",
+    "date": "2026-08",
+    "match": "medium",
+    "note": "середина €4.5k/мес ×12, без 13-й; гостиничная группа",
+    "evidence": "Главбух группы, руководит accounts team, IFRS"
+   },
+   {
+    "type": "vacancy",
+    "title": "Financial Controller",
+    "company": "Sallaum Lines",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 54000,
+    "raw": "€4,000–5,000 (monthly)",
+    "url": "https://ergodotisi.com/en-CY/jobs/6982493/Sallaum+Lines/Financial+Controller",
+    "date": "2026-06",
+    "match": "medium",
+    "note": "середина €4.5k/мес ×12; шиппинг, международная группа",
+    "evidence": "Lead and develop the finance team in Cyprus"
+   },
+   {
+    "type": "vacancy",
+    "title": "Finance and Accounting Manager",
+    "company": "via Ultra Recruitment (fintech)",
+    "industry": "fintech",
+    "city": "Limassol",
+    "value": 42000,
+    "raw": "EUR 36,000 to 48,000 annually",
+    "url": "https://builtin.com/job/finance-and-accounting-manager/9370050",
+    "date": "2026-08",
+    "match": "medium",
+    "note": "середина; вакансия снята 02.09.2026; размер команды не указан",
+    "evidence": "Полная ответственность за бухгалтерию компании в финтехе"
+   },
+   {
+    "type": "survey",
+    "title": "Accounting — Senior (7+ yrs), Limassol, upper band",
+    "company": "Kyprium Salary Guide 2026",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 73800,
+    "raw": "Senior (7+ yrs): €3,900 – €6,150 gross/month, median ~€5,025",
+    "url": "https://www.kyprium.com/salary-guide/accounting-limassol",
+    "date": "2026-01",
+    "match": "medium",
+    "note": "взята верхняя граница senior-бэнда (€6,150×12) как прокси для head; гайд без отдельной строки head",
+    "evidence": "Гайд по бухгалтерии Лимассола 2026, gross base без 13-й и бонусов"
+   },
+   {
+    "type": "survey",
+    "title": "Financial Controller — Glassdoor Limassol (base)",
+    "company": "Glassdoor",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 46500,
+    "raw": "Total pay €40K–€66K/yr, median €50K; Base pay €36K–€57K/yr",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-financial-controller-salary-SRCH_IL.0,15_IM1340_KO16,36.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "середина base-диапазона",
+    "evidence": "Близкий тайтл (FC), Лимассол, base"
+   },
+   {
+    "type": "survey",
+    "title": "Head of Accounting — Glassdoor Cyprus (base)",
+    "company": "Glassdoor",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 46000,
+    "raw": "Total pay €33K–€59K/yr, median €46K; Base pay €33K–€59K/yr",
+    "url": "https://www.glassdoor.com/Salaries/cyprus-head-of-accounting-salary-SRCH_IL.0,6_IN62_KO7,25.htm",
+    "date": "2026-11",
+    "match": "high",
+    "note": "середина base; мало сабмитов, смешанные отрасли",
+    "evidence": "Точный тайтл Head of Accounting по Кипру"
+   },
+   {
+    "type": "survey",
+    "title": "Financial Controller — Payscale Cyprus P90 base",
+    "company": "Payscale",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 58000,
+    "raw": "Base salary 10th €30k, median €40k, 90th €58k (33 profiles, upd. Dec 2025)",
+    "url": "https://www.payscale.com/research/CY/Job=Financial_Controller/Salary",
+    "date": "2025-12",
+    "match": "medium",
+    "note": "P90 как прокси для head-уровня",
+    "evidence": "Близкий тайтл FC, Кипр, base"
    }
   ]
  },
- "caveats": "РФ: оставлены только главбухи/руководители учёта с МСФО/международным/мультиюрлицевым скоупом или в tech/fintech; домашние SME и чисто МСФО-отчётность исключены. Кипр: резюме живущих на Кипре (EUR как gross ×12) + 2 вакансии с командой и МСФО + Payscale (данные 02.2025).",
+ "caveats": "Кипр: 23 точки — вакансии (Allwyn, iGaming, финтех), CV и гайды Emerald Zebra, Kyprium, Payscale. Рынок Кипра по этой роли действительно ниже ИТ-ролей: большинство предложений €50–75k gross. Россия: CV и вакансии hh.ru, включая главбухов групп компаний вне ИТ.",
  "excluded": [
   {
    "loc": "ru",
@@ -467,13 +721,6 @@
    "title": "Руководитель отдела консолидированной отчетности по МСФО / методологии (холдинг)",
    "url": "https://hh.ru/resume/f3d1dcbf00007d0aec002c7446736563726574",
    "reason": "IFRS consolidation/methodology — not accounting head"
-  },
-  {
-   "loc": "ru",
-   "value": 700000,
-   "title": "Главный бухгалтер группы компаний / руководитель ОЦО (AV Group, промышленность)",
-   "url": "https://hh.ru/resume/d2dfb9ae00056f86bc002c74465a5364386162",
-   "reason": "Domestic multi-entity group at industrial employer, no IFRS/international signal (~25 similar group chief accountants excluded)"
   },
   {
    "loc": "ru",
@@ -505,27 +752,6 @@
   },
   {
    "loc": "cy",
-   "value": 60000,
-   "title": "Chief Accountant / Financial Controller, group of international companies (€5,000/mo)",
-   "url": "https://hh.ru/resume/45385154000083eab8002c7446736563726574",
-   "reason": "Current role is Financial Controller & board member since 2011, not head of accounting"
-  },
-  {
-   "loc": "cy",
-   "value": 84000,
-   "title": "Financial Controller (Emerald Zebra guide upper)",
-   "url": "https://emeraldzebra.cy/for-employers/financial-services-hiring-guide-cyprus/",
-   "reason": "Different role title (FC), dropped per rule 3"
-  },
-  {
-   "loc": "cy",
-   "value": 58500,
-   "title": "Group Chief Accountant, George Tsanos Group (cypruswork 109916)",
-   "url": "https://www.cypruswork.com/job/109916/group-chief-accountant/",
-   "reason": "Posting removed — URL no longer opens the job"
-  },
-  {
-   "loc": "cy",
    "value": 45500,
    "title": "Accounting Manager / Head of Accounting Dept at audit & accountancy firm (StaffMatters)",
    "url": "https://jobs.smstaffmatters.com/jobs-discipline-accounting.aspx",
@@ -534,9 +760,11 @@
  ],
  "review": {
   "drops": 8,
-  "applied": 8,
+  "applied": 4,
   "verified": 18,
   "level_note": "Lead level: chief accountants / heads of accounting leading the function or a group kept; domestic RSBU-only SMEs, consultants and ICs dropped.",
   "summary": "RU 21→15 kept (6 dropped: domestic non-tech RSBU SMEs, freelance, wrong function); CY 9→7 kept (2 dropped: IC bookkeepers). Payscale P90 row kept but is old (Feb 2025) and a top-percentile figure."
- }
+ },
+ "matching_criteria_en": "Chief accountant / head of accounting leading a team; priority: international groups, IFRS, multi-entity, fintech. Financial Controller = similar role. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 23 points — postings (Allwyn, iGaming, fintech), CVs and Emerald Zebra, Kyprium, Payscale guides. Cyprus pays this role well below tech roles: most offers are €50–75k gross. Russia: hh.ru CVs and vacancies, incl. group chief accountants outside tech."
 }

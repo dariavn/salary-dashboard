@@ -3,7 +3,7 @@
  "position": "DA Lead",
  "hrbp": "Вика",
  "level": "Lead",
- "matching_criteria": "Текущая/последняя роль — руководитель команды продуктовой или маркетинговой аналитики (тимлид/руководитель группы/отдела аналитики) в tech/fintech/bigtech/gaming/iGaming; medium — head-уровень шире (head of data/несколько отделов), BI-уклон или роль закончилась >1 года назад. Исключены системные/бизнес-аналитики, DE/analytics engineering, DS, HR/операционная аналитика, non-tech работодатели, IC-грейды 'Lead'.",
+ "matching_criteria": "Руководитель команды продуктовой/маркетинговой аналитики в tech/финтех/gaming/iGaming; Head of Data/Analytics шире роли — medium. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -359,8 +359,8 @@
     "raw": "350 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/0c8e6c21000f70d4aa002c74463276776b7269",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Synergy education holding (university) — non-tech employer; player-coach of 3 with BI mix. edtech, player-coach",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Synergy education holding (university) — non-tech employer; player-coach of 3 with BI mix. edtech, player-coach",
     "evidence": "Team Lead of Analytics, с 10.2025, Синергия"
    },
    {
@@ -415,8 +415,8 @@
     "raw": "120 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/26060255000fb2a53c002c7446495556684a70",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Union Affiliate is a Facebook Nutra arbitrage company, not iGaming/tech product — non-target employer. iGaming-аффилиат; низкая з/п",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Union Affiliate is a Facebook Nutra arbitrage company, not iGaming/tech product — non-target employer. iGaming-аффилиат; низкая з/п",
     "evidence": "Head of Analytics, 06.2022–04.2026, Union Affiliate"
    },
    {
@@ -458,7 +458,7 @@
    "Glassdoor Limassol: head-of-analytics, head-of-data, lead-data-analyst, analytics-manager, head-of-product-analytics",
    "WebSearch: Limassol head of analytics / analytics team lead salary; Emerald Zebra, Evresio, cypruswork"
   ],
-  "screened_total": 50,
+  "screened_total": 54,
   "points": [
    {
     "type": "survey",
@@ -484,8 +484,8 @@
     "raw": "base pay €8K – €9K/mo, n=1",
     "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-head-of-data-salary-SRCH_IL.0,15_IM1340_KO16,28.htm",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Different title: Head of Data (DE/DS/analytics overall) is not an analytics team lead. midpoint ×12; head of data шире нашей роли; n=1",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Different title: Head of Data (DE/DS/analytics overall) is not an analytics team lead. midpoint ×12; head of data шире нашей роли; n=1",
     "evidence": "Glassdoor Nov 2026: Head of Data, Limassol, base pay"
    },
    {
@@ -501,6 +501,84 @@
     "match": "medium",
     "note": "верх диапазона ×12; gross/net не указан (принят gross)",
     "evidence": "Evresio 13.05.2026: Head of Data / Analytics, monthly range"
+   },
+   {
+    "type": "survey",
+    "title": "Lead Data Analyst — Glassdoor Limassol (base)",
+    "company": "",
+    "industry": "other",
+    "value": 88500,
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-lead-data-analyst-salary-SRCH_IL.0,15_IM1340_KO16,33.htm",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: IC-титул, команда не подтверждена; n=1",
+    "evidence": "Lead Data Analyst — Glassdoor Limassol (base)"
+   },
+   {
+    "type": "resume",
+    "title": "Head of Analytics (резюме, Кипр), Credit Sense",
+    "company": "",
+    "industry": "other",
+    "value": 96000,
+    "url": "https://hh.ru/resume/e1cfa7a9000b6dd214002c7446396656556433",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: заголовок Head, но текущая роль — Lead Data Analyst (IC); желаемая €8 000/мес",
+    "evidence": "Head of Analytics (резюме, Кипр), Credit Sense"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of Data Analytics - Fintech (Limassol)",
+    "company": "Qtech",
+    "industry": "fintech",
+    "city": "Limassol",
+    "value": 112800,
+    "raw": "€6,000–€8,000 NET, relocation package",
+    "url": "https://wantapply.com/head-of-data-analytics-fintech-limassol-at-qtech",
+    "date": "2026-06",
+    "match": "high",
+    "note": "net 6k→~7.9k, 8k→~10.9k gross; середина ~9.4k ×12; вакансия в архиве",
+    "evidence": "Строит и ведёт команду аналитики, роадмап, data strategy"
+   },
+   {
+    "type": "vacancy",
+    "title": "Analytics Team Lead (Lead Product Analyst)",
+    "company": "BrainRocket (via LionHires)",
+    "industry": "igaming",
+    "city": "Limassol",
+    "value": 94800,
+    "raw": "5 000 — 7 000 €/month net",
+    "url": "https://getmatch.ru/vacancies/17548-analytics-team-lead",
+    "date": "2025-12",
+    "match": "high",
+    "note": "net 5k→~6.4k, 7k→~9.4k gross; середина ~7.9k ×12; дата публикации не указана (≈2025), вакансия в архиве",
+    "evidence": "Лид команды 3–5 продуктовых аналитиков"
+   },
+   {
+    "type": "survey",
+    "title": "Team Lead of Analytics — Glassdoor (inDrive, Limassol)",
+    "company": "inDrive",
+    "industry": "it_product",
+    "city": "Limassol",
+    "value": 100000,
+    "raw": "Annual Total Pay €97K–€103K/yr, avg €100K; Additional pay €0",
+    "url": "https://www.glassdoor.com/Salary/inDrive-Team-Lead-of-Analytics-Cyprus-Salaries-EJI_IE2138069.0,7_KO8,30_IL.31,37_IN62.htm",
+    "date": "2025-04",
+    "match": "high",
+    "note": "доп. выплаты 0 → total = base; 1 сабмит (Limassol, Apr 2025)",
+    "evidence": "Тимлид аналитики в продуктовой tech-компании"
+   },
+   {
+    "type": "survey",
+    "title": "Head of Analytics — Glassdoor (Welltech, Limassol)",
+    "company": "Welltech",
+    "industry": "it_product",
+    "city": "Limassol",
+    "value": 81000,
+    "raw": "Annual Total Pay €85K–€92K/yr, avg €89K; Additional pay avg €8K/yr",
+    "url": "https://www.glassdoor.com/Salary/Welltech-Head-of-Analytics-Cyprus-Salaries-EJI_IE7450280.0,8_KO9,26_IL.27,33_IN62.htm",
+    "date": "2025-09",
+    "match": "high",
+    "note": "base ≈ €89k total − €8k доп. = ~€81k; 1 сабмит, 7–9 лет опыта",
+    "evidence": "Head of Analytics в продуктовой компании (wellness apps), Лимассол"
    }
   ]
  },
@@ -605,32 +683,20 @@
   },
   {
    "loc": "cy",
-   "value": 88500,
-   "title": "Lead Data Analyst — Glassdoor Limassol (base)",
-   "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-lead-data-analyst-salary-SRCH_IL.0,15_IM1340_KO16,33.htm",
-   "reason": "IC-титул, команда не подтверждена; n=1"
-  },
-  {
-   "loc": "cy",
-   "value": 96000,
-   "title": "Head of Analytics (резюме, Кипр), Credit Sense",
-   "url": "https://hh.ru/resume/e1cfa7a9000b6dd214002c7446396656556433",
-   "reason": "заголовок Head, но текущая роль — Lead Data Analyst (IC); желаемая €8 000/мес"
-  },
-  {
-   "loc": "cy",
    "value": 98000,
    "title": "Head of Analytics — Glassdoor Limassol, total pay по компаниям (Quadcode, Welltech, ABBYY, Exante)",
    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-head-of-analytics-salary-SRCH_IL.0,15_IM1340_KO16,33.htm",
    "reason": "только total pay, база отдельно не показана"
   }
  ],
- "caveats": "РФ: в основном желаемая з/п в резюме (на руки) — вакансий с вилкой на lead продуктовой аналитики почти нет. Проверка исключила head-уровень шире роли (Head of Analytics & ML на 20+ чел.) и не-tech работодателей. Кипр: только 2 агрегатные точки (Glassdoor база, гайд Evresio) — ориентир, не основа для бэнда.",
+ "caveats": "Кипр: 9 точек — вакансии Qtech/BrainRocket и Glassdoor (base) по Head of Analytics/Team Lead. Россия: CV и вакансии hh.ru; руководители аналитики в ритейле учтены как близкая роль.",
  "review": {
   "drops": 4,
-  "applied": 4,
+  "applied": 1,
   "verified": 13,
   "level_note": "Lead: kept team leads/heads of analytics teams (3-9 reports); dropped one multi-team head (20+ FTE).",
   "summary": "RU 31->28 (3 dropped: oversized head, nutra arbitrage, education holding); CY 3->2 (Head of Data title mismatch)."
- }
+ },
+ "matching_criteria_en": "Lead of a product/marketing analytics team in tech/fintech/gaming/iGaming; broader Head of Data/Analytics = medium. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 9 points — Qtech/BrainRocket postings and Glassdoor base pay for Head of Analytics/Team Lead. Russia: hh.ru CVs and vacancies; analytics heads at retailers are counted as a similar role."
 }

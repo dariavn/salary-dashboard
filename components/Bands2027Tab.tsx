@@ -318,17 +318,17 @@ export default function Bands2027Tab({ positions, updated, notionUrl }: Props) {
                     {isOpen && (
                       <tr>
                         <td colSpan={4} style={{ padding: '4px 16px 18px', background: 'var(--accent-soft)' }}>
-                          {p.matching_criteria && (
+                          {(lang === 'en' ? p.matching_criteria_en : p.matching_criteria) && (
                             <div style={{ fontSize: 12.5, color: 'var(--text-2)', margin: '6px 0 12px' }}>
-                              <b>{lang === 'ru' ? 'Критерий релевантности: ' : 'Matching criteria: '}</b>{p.matching_criteria}
+                              <b>{lang === 'ru' ? 'Критерий релевантности: ' : 'Matching criteria: '}</b>{lang === 'en' ? p.matching_criteria_en : p.matching_criteria}
                             </div>
                           )}
                           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 12 }}>
                             <LocDetail loc="cy" pos={p} period={period} lang={lang} />
                             <LocDetail loc="ru" pos={p} period={period} lang={lang} />
                           </div>
-                          {p.caveats && (
-                            <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 10 }}>⚠︎ {p.caveats}</div>
+                          {(lang === 'en' ? p.caveats_en : p.caveats) && (
+                            <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 10 }}>⚠︎ {lang === 'en' ? p.caveats_en : p.caveats}</div>
                           )}
                           {p.notion_url && (
                             <a href={p.notion_url} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 10, fontSize: 12.5, fontWeight: 600, color: 'var(--accent)' }}>

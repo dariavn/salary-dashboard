@@ -3,7 +3,7 @@
  "position": "Product Design Lead",
  "hrbp": "Вика",
  "level": "Lead",
- "matching_criteria": "Текущая/последняя роль — руководитель команды продуктовых дизайнеров (Head of Product Design / Product Design Lead / руководитель группы/направления продуктового дизайна / Design Team Lead) в fintech/iGaming/bigtech/IT-продукте; приоритет real-money (банки, финтех, букмекеры). medium — дизайн-директор/head шире роли, неясный размер команды, неясно продукт vs маркетинг-дизайн, роль закончилась ~год назад. Исключены IC-грейды Lead/Senior Product Designer, UX-research, бренд/графика/коммуникационный дизайн, агентства, non-tech работодатели, совмещение с PM.",
+ "matching_criteria": "Руководитель команды продуктовых дизайнеров (Product Design Lead / Head of Product Design / Design Team Lead) в финтех, iGaming, IT-продукте. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -332,7 +332,7 @@
    "Glassdoor Limassol: head-of-design, lead-product-designer, design-lead, head-of-product-design, design-manager",
    "WebSearch: Limassol head of product design / design lead salary; Emerald Zebra, Evresio, levels.fyi, uiuxjobsboard, cypruswork"
   ],
-  "screened_total": 80,
+  "screened_total": 84,
   "points": [
    {
     "type": "survey",
@@ -375,6 +375,73 @@
     "match": "medium",
     "note": "P75; n=1, выглядит заниженно",
     "evidence": "Glassdoor Nov 2026: Design Manager, Limassol, base pay"
+   },
+   {
+    "type": "survey",
+    "title": "Lead Product Designer — Glassdoor Limassol (base €6K/mo)",
+    "company": "",
+    "industry": "other",
+    "value": 72000,
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-lead-product-designer-salary-SRCH_IL.0,15_IM1340_KO16,37.htm",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Lead Product Designer — как правило IC без команды; n=1",
+    "evidence": "Lead Product Designer — Glassdoor Limassol (base €6K/mo)"
+   },
+   {
+    "type": "resume",
+    "title": "Lead / Founding Product Designer",
+    "company": "Phygital+ (AI-стартап, работа из Кипра)",
+    "industry": "it_product",
+    "city": "Cyprus",
+    "value": 65000,
+    "raw": "Желаемая зарплата 5 000 $ (hh, CV, обновлено 07.2026)",
+    "url": "https://hh.ru/resume/983c18780010bea6d9002c74466c4d6b495a6f",
+    "date": "2026-07",
+    "match": "medium",
+    "note": "$5000×0.86=€4.3k/мес, трактуем как net (норма hh) → gross ~€5.4k ×12. Работодатель не кипрский, кандидат живёт на Кипре",
+    "evidence": "Руководит командой из 4 продуктовых дизайнеров, процессы дизайна, приоритеты, консистентность дизайна"
+   },
+   {
+    "type": "vacancy",
+    "title": "UI Lead Designer",
+    "company": "People Everywhere (продуктовый стартап 50+ чел., high-load платформа)",
+    "industry": "it_product",
+    "city": "Limassol",
+    "value": 48000,
+    "raw": "from EUR 4,000 gross (per month); header €48,000",
+    "url": "https://uiuxjobsboard.com/job/1237125-ui-lead-designer-limassol-cyprus",
+    "date": "2025-10",
+    "match": "medium",
+    "note": "Нижняя граница 'from', вакансия уже закрыта; UI-lead, а не head of product design",
+    "evidence": "Lead-дизайнер: задаёт визуальное направление, ставит задачи и ревьюит работу джунов"
+   },
+   {
+    "type": "survey",
+    "title": "Lead Designer — Glassdoor Limassol (base)",
+    "company": "Glassdoor (aggregator)",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 54000,
+    "raw": "Base pay €4K–€5K/mo (25–75 pct), n=2, Nov 2026",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-lead-designer-salary-SRCH_IL.0,15_IM1340_KO16,29.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Середина диапазона base €4.5k×12; выборка 2 зарплаты",
+    "evidence": "Тайтл Lead Designer в Лимассоле, уровень лида дизайна"
+   },
+   {
+    "type": "survey",
+    "title": "UX Designer — Lead band (Eurosalary Cyprus report)",
+    "company": "Eurosalary (salary report)",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 72000,
+    "raw": "UX Designer: Junior €28,000 / Mid €42,000 / Senior €58,000 / Lead €72,000",
+    "url": "https://eurosalary.eu/en/premium/reports/cyprus/",
+    "date": "2026-01",
+    "match": "medium",
+    "note": "Взята колонка Lead; превью платного отчёта, gross/annual явно не указано, дата данных не указана (©2026)",
+    "evidence": "Lead-грейд UX/продуктового дизайна по Кипру"
    }
   ]
  },
@@ -472,13 +539,6 @@
   },
   {
    "loc": "cy",
-   "value": 72000,
-   "title": "Lead Product Designer — Glassdoor Limassol (base €6K/mo)",
-   "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-lead-product-designer-salary-SRCH_IL.0,15_IM1340_KO16,37.htm",
-   "reason": "Lead Product Designer — как правило IC без команды; n=1"
-  },
-  {
-   "loc": "cy",
    "value": 78000,
    "title": "Senior product designer (резюме, Кипр), SEMrush, €6 500/мес",
    "url": "https://hh.ru/resume/9316f4e8000599e487002c7446684548633438",
@@ -492,12 +552,14 @@
    "reason": "графический дизайн, не продуктовый"
   }
  ],
- "caveats": "Роль пересобрана по обновлённому описанию: лид команды продуктового дизайна (найм, дизайн-система, руками в продукте, real money). РФ: только резюме (на руки); около половины — fintech/iGaming. Проверка исключила бренд-дизайн и IC без команды. Кипр: 3 точки Glassdoor (база, выборки 1–2) — вероятно занижают рынок fintech/iGaming Лимассола.",
+ "caveats": "Кипр: 8 точек — Glassdoor (Design Lead, Lead Product Designer, Head of Design), CV лида с командой на Кипре, вакансия UI Lead. Публичные цифры дают €48–72k gross; рынок релокационных финтех-компаний, вероятно, выше, но вилок в открытом доступе нет. Россия: 20 точек.",
  "review": {
   "drops": 2,
   "applied": 2,
   "verified": 9,
   "level_note": "Lead: kept product design team leads and heads of product design; dropped a design techlead (IC).",
   "summary": "RU 22->20 (brand/esports design director, IC techlead); CY 3->3 (all Glassdoor rows are base pay, thin samples)."
- }
+ },
+ "matching_criteria_en": "Lead of a product designers team (Product Design Lead / Head of Product Design / Design Team Lead) in fintech, iGaming, IT product. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 8 points — Glassdoor (Design Lead, Lead Product Designer, Head of Design), a Cyprus-based lead CV, a UI Lead posting. Public figures give €48–72k gross; relocation-focused fintechs likely pay more, but their ranges are not public. Russia: 20 points."
 }

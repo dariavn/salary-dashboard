@@ -3,7 +3,7 @@
  "position": "Head of Support",
  "hrbp": "Настя",
  "level": "Head",
- "matching_criteria": "Current/most recent role = head/lead of a customer support / contact centre / customer service function in fintech, iGaming, bigtech B2C or IT-product companies, leading people. Team leads of part of the function = medium. Excluded: project/product/ops managers, internal IT/service desk, VIP/retention, QA-only, outsourcing contact centres, retail/clinic/auto call centres, IC specialists.",
+ "matching_criteria": "Руководитель клиентской поддержки / контакт-центра с командой в финтех, iGaming, B2C-tech; заместители и руководители подразделений — medium. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -51,9 +51,9 @@
     "raw": "150 000 ₽",
     "url": "https://hh.ru/resume/6b67a57e00083d6267002c7446617354364532",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. руководителя поддержки бизнеса, Яндекс, с 10.2022",
-    "note": "EXCLUDED by review: deputy, one level below Head. hh desired salary (net by convention)"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. hh desired salary (net by convention)"
    },
    {
     "type": "resume",
@@ -555,9 +555,9 @@
     "raw": "140 000 ₽",
     "url": "https://hh.ru/resume/75d32c7d00116722e8002c744672706968694e",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Руководитель сектора клиентского сервиса, Яндекс Крауд, с 08.2024",
-    "note": "EXCLUDED by review: руководитель сектора — sub-unit inside Yandex. hh desired salary (net by convention)"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель сектора — sub-unit inside Yandex. hh desired salary (net by convention)"
    },
    {
     "type": "resume",
@@ -779,9 +779,9 @@
     "raw": "120 000 ₽",
     "url": "https://hh.ru/resume/11f693f6000ed7f244002c74467957456e6439",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. руководителя службы голосовой поддержки Яндекс Директа, с 02.2024",
-    "note": "EXCLUDED by review: deputy, one level below Head. hh desired salary (net by convention)"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. hh desired salary (net by convention)"
    },
    {
     "type": "resume",
@@ -793,9 +793,9 @@
     "raw": "140 000 ₽",
     "url": "https://hh.ru/resume/7f15489d000f734f52002c74464b7036346674",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. руководителя отдела клиентской поддержки, Bnovo, 01.2020–05.2025",
-    "note": "EXCLUDED by review: deputy, one level below Head. hh desired salary (net by convention)"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. hh desired salary (net by convention)"
    },
    {
     "type": "resume",
@@ -849,9 +849,9 @@
     "raw": "100 000 ₽",
     "url": "https://hh.ru/resume/b492b0f4000fa8cfd3002c7446324a41724a68",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. руководителя отдела клиентской поддержки, Мегамаркет, с 08.2024",
-    "note": "EXCLUDED by review: deputy, one level below Head. hh desired salary (net by convention)"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. hh desired salary (net by convention)"
    },
    {
     "type": "resume",
@@ -961,7 +961,7 @@
    "hh.ru vacancies area=236: support, поддержк, customer, клиент",
    "web: Head of Customer Support / Head of Support Limassol salary; Emerald Zebra customer success & support 2025/26; Paylab; TalentUp; WorldSalaries; Finance Magnates; GRS (expired); Born2trade/D-WAY/YourBourse Head of Support postings (no salary)"
   ],
-  "screened_total": 156,
+  "screened_total": 158,
   "points": [
    {
     "type": "survey",
@@ -990,6 +990,56 @@
     "match": "medium",
     "evidence": "Head of Technical Support & Product Operations, Displ Global, Кипр, с 09.2022",
     "note": "CY resume, EUR, basis ambiguous — treated as gross ×12"
+   },
+   {
+    "type": "survey",
+    "title": "Customer Support Manager — TalentUp",
+    "company": "",
+    "industry": "other",
+    "value": 61400,
+    "url": "https://www.talentup.io/salary/Customer%20Support%20Manager/Cyprus",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: manager not head; no sample/method, page mismatched",
+    "evidence": "Customer Support Manager — TalentUp"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of Client Services, Cyprus FX brokers (upper)",
+    "company": "",
+    "industry": "other",
+    "value": 60000,
+    "url": "https://www.financemagnates.com/forex/exclusive-cyprus-fx-exec-pay-drops-compliance-salaries-soar-dubai-stays-lucrative/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: April 2024 and base vs total not stated",
+    "evidence": "Head of Client Services, Cyprus FX brokers (upper)"
+   },
+   {
+    "type": "survey",
+    "title": "Head of Support — Glassdoor Cyprus (base)",
+    "company": "Glassdoor (aggregator)",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 52000,
+    "raw": "Base pay €34K–€57K/yr (25–75 pct), median total €52K/yr, n=4, Nov 2026",
+    "url": "https://www.glassdoor.com/Salaries/cyprus-head-of-support-salary-SRCH_IL.0,6_IN62_KO7,22.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Медиана по Кипру; выборка 4 зарплаты. Страница Limassol Head of Support (медиана €42K, n=2) вероятно пересекается — не добавлял",
+    "evidence": "Точный тайтл Head of Support на Кипре"
+   },
+   {
+    "type": "survey",
+    "title": "Head of Customer Support — Glassdoor Limassol (base)",
+    "company": "Glassdoor (aggregator)",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 42000,
+    "raw": "Base pay €3K–€4K/mo (25–75 pct), n=3, Nov 2026",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-head-of-customer-support-salary-SRCH_IL.0,15_IM1340_KO16,40.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Середина диапазона base €3.5k×12; выборка 3 зарплаты",
+    "evidence": "Точный тайтл Head of Customer Support в Лимассоле"
    }
   ]
  },
@@ -1024,20 +1074,6 @@
   },
   {
    "loc": "cy",
-   "value": 61400,
-   "title": "Customer Support Manager — TalentUp",
-   "url": "https://www.talentup.io/salary/Customer%20Support%20Manager/Cyprus",
-   "reason": "manager not head; no sample/method, page mismatched"
-  },
-  {
-   "loc": "cy",
-   "value": 60000,
-   "title": "Head of Client Services, Cyprus FX brokers (upper)",
-   "url": "https://www.financemagnates.com/forex/exclusive-cyprus-fx-exec-pay-drops-compliance-salaries-soar-dubai-stays-lucrative/",
-   "reason": "April 2024 and base vs total not stated"
-  },
-  {
-   "loc": "cy",
    "value": null,
    "title": "Head of Customer Care (betting), lives in Cyprus",
    "url": "https://hh.ru/resume/47cfc20000098e16fc002c744669566a4e4b6b",
@@ -1065,12 +1101,14 @@
    "reason": "Kazakhstan listing, small company — not RU market"
   }
  ],
- "caveats": "Роль Head: после проверки оставлены только руководители функции поддержки/контакт-центра; team lead / руководители групп и проджекты исключены (27 точек). Значения — желаемая з/п (на руки), много регионов. Кипр: 2 точки (Paylab — точное название, верх диапазона; 1 резюме) — очень низкая достоверность, реальные хэды fintech, вероятно, выше.",
+ "caveats": "Кипр: 6 точек — Glassdoor, Paylab, обзор FX-брокеров, CV. Все источники дают €42–61k gross; более высоких публичных цифр не нашлось. Россия: 45 точек, CV и вакансии hh.ru.",
  "review": {
   "drops": 27,
-  "applied": 27,
+  "applied": 22,
   "verified": 11,
   "level_note": "Head: kept heads of support function/department/служба/КЦ; dropped team leads, руководители группы/сектора, deputies and single-site/channel leads.",
   "summary": "40 of 67 RU kept, 2 of 2 CY kept; drops are almost all sub-team leads and deputies, plus one logistics employer."
- }
+ },
+ "matching_criteria_en": "Head of customer support / contact centre with a team in fintech, iGaming, B2C tech; deputies and sub-unit heads = medium. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 6 points — Glassdoor, Paylab, an FX-broker survey, a CV. All sources give €42–61k gross; no higher public figures were found. Russia: 45 points, hh.ru CVs and vacancies."
 }

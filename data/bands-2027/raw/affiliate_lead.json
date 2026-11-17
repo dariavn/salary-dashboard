@@ -3,7 +3,7 @@
  "position": "Affiliate Lead",
  "hrbp": "Ира Андреева",
  "level": "Lead",
- "matching_criteria": "Текущая/последняя роль — тимлид/руководитель affiliate/CPA-направления (работа с партнерами/вебмастерами, CPA/RevShare, переговоры, планы, команда affiliate-менеджеров); приоритет iGaming/fintech/брокеры/МФО. Исключены медиабаеры, B2B/корп. партнерства и ко-маркетинг, агентства, CEO/основатели сетей, IC Senior AM, проживающие вне РФ.",
+ "matching_criteria": "Руководитель affiliate/CPA-направления с командой affiliate-менеджеров: партнёры, CPA/RevShare, переговоры, планы. Приоритет iGaming, финтех, брокеры. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -289,8 +289,8 @@
     "raw": "250 000 ₽ (желаемая, на руки)",
     "url": "https://hh.ru/resume/91ba23650007309712002c74464a7530454562",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Nutra/news ad network — non-target employer. hh резюме, обновлено за 180 дней",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Nutra/news ad network — non-target employer. hh резюме, обновлено за 180 дней",
     "evidence": "Head of Affiliate, рекламная сеть AdProfex, с мая 2021 (nutra/news)"
    },
    {
@@ -345,8 +345,8 @@
     "raw": "290 000 ₽ (желаемая, на руки)",
     "url": "https://hh.ru/resume/e3675dd600032ac929002c7446685833584262",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Non-tech employer (continuing-education group). hh резюме, обновлено за 180 дней",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Non-tech employer (continuing-education group). hh резюме, обновлено за 180 дней",
     "evidence": "Head of Affiliate Marketing, образовательная группа, с мая 2025; ранее рук. CPA Отличные Наличные (МФО)"
    },
    {
@@ -513,8 +513,8 @@
     "raw": "3 000 – 5 000 $ на руки (mid, курс 81)",
     "url": "https://hh.ru/vacancy/139140621",
     "date": "2026-10",
-    "match": "low",
-    "note": "EXCLUDED by review: Nutra direct advertiser — non-target employer. nutra прямой рекламодатель",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Nutra direct advertiser — non-target employer. nutra прямой рекламодатель",
     "evidence": "hh вакансия: Head of Affiliate marketing у прямого рекламодателя nutra, 3000+ партнеров"
    }
   ]
@@ -612,31 +612,43 @@
     "match": "low",
     "note": "EXCLUDED by review: Desired salary is for an Affiliate Manager (IC) role. CY CV; low ask, possibly net; EUR treated as gross ×12",
     "evidence": "Affiliate Team Lead, NDA, с июл 2026 (ищет позицию Affiliate manager), живёт на Кипре"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of Global Affiliates, Beagle Manpower (join.com)",
+    "company": "",
+    "industry": "other",
+    "value": 80000,
+    "url": "https://join.com/companies/beaglemanpowercom/16847828-head-of-global-affiliates",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: страница 410 Gone — не верифицируется",
+    "evidence": "Head of Global Affiliates, Beagle Manpower (join.com)"
+   },
+   {
+    "type": "survey",
+    "title": "Emerald Zebra Forex: Affiliate / IB Manager €42–66k",
+    "company": "",
+    "industry": "other",
+    "value": 66000,
+    "url": "https://emeraldzebra.cy/for-employers/forex-hiring-guide-cyprus/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: уровень Manager, не Lead",
+    "evidence": "Emerald Zebra Forex: Affiliate / IB Manager €42–66k"
+   },
+   {
+    "type": "survey",
+    "title": "Emerald Zebra iGaming: Affiliate Manager €2,500–4,000/мес",
+    "company": "",
+    "industry": "other",
+    "value": 48000,
+    "url": "https://emeraldzebra.cy/for-employers/gaming-hiring-guide-cyprus/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: уровень Manager, не Lead",
+    "evidence": "Emerald Zebra iGaming: Affiliate Manager €2,500–4,000/мес"
    }
   ]
  },
  "excluded": [
-  {
-   "loc": "cy",
-   "value": 80000,
-   "title": "Head of Global Affiliates, Beagle Manpower (join.com)",
-   "url": "https://join.com/companies/beaglemanpowercom/16847828-head-of-global-affiliates",
-   "reason": "страница 410 Gone — не верифицируется (была в 1-й версии)"
-  },
-  {
-   "loc": "cy",
-   "value": 66000,
-   "title": "Emerald Zebra Forex: Affiliate / IB Manager €42–66k",
-   "url": "https://emeraldzebra.cy/for-employers/forex-hiring-guide-cyprus/",
-   "reason": "уровень Manager, не Lead (была в 1-й версии)"
-  },
-  {
-   "loc": "cy",
-   "value": 48000,
-   "title": "Emerald Zebra iGaming: Affiliate Manager €2,500–4,000/мес",
-   "url": "https://emeraldzebra.cy/for-employers/gaming-hiring-guide-cyprus/",
-   "reason": "уровень Manager, не Lead (была в 1-й версии)"
-  },
   {
    "loc": "cy",
    "title": "Startup.info: Head of Affiliates Malta & Cyprus €12–18k/мес net",
@@ -663,12 +675,14 @@
    "reason": "медиабаинг, не affiliate"
   }
  ],
- "caveats": "РФ: резюме + 3 вакансии; рынок аффилиатов долларовый (курс 81 ₽/$), часть работодателей скрыта (NDA). Проверка исключила nutra/инфобиз и одиночные программы без команды. Кипр: 5 резюме живущих на Кипре (EUR трактуем как gross ×12, база неоднозначна).",
+ "caveats": "Кипр: 8 точек — CV, вакансии и верх диапазона Affiliate Manager из гайдов Emerald Zebra (близкая роль). Россия: в основном желаемая зарплата в CV hh.ru; добавлены руководители affiliate из nutra-вертикали (обязанности те же).",
  "review": {
   "drops": 6,
-  "applied": 6,
+  "applied": 3,
   "verified": 9,
   "level_note": "Lead: kept affiliate team leads/heads of affiliates; dropped IC-only and IC-seeking profiles.",
   "summary": "RU 36->31 (nutra/education employers, IC); CY 6->5 (IC desired salary)."
- }
+ },
+ "matching_criteria_en": "Head/team lead of an affiliate/CPA function managing affiliate managers: partners, CPA/RevShare deals, targets. Priority: iGaming, fintech, brokers. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 8 points — CVs, postings and the top of the Affiliate Manager band from Emerald Zebra guides (similar role). Russia: mostly desired salaries from hh.ru CVs; affiliate heads from the nutra vertical are included (same duties)."
 }

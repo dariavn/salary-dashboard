@@ -3,7 +3,7 @@
  "position": "Head of IT and Information Security",
  "hrbp": "Оля",
  "level": "Head",
- "matching_criteria": "Current/most recent role = head of the information-security function (CISO / директор, руководитель/начальник службы, отдела, управления ИБ) or combined IT+IS head, leading a team, in fintech/bigtech/tech employers. Heads of a sub-part of IS or deputies = medium. Pure IT-only heads, IS consultants/integrator practices, non-tech employers (energy, oil, state, manufacturing, retail) and hidden employers without industry excluded.",
+ "matching_criteria": "Руководитель ИБ (CISO) или объединённой функции ИТ+ИБ с командой в финтех/tech; руководители части ИБ и заместители — medium. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -150,9 +150,9 @@
     "raw": "600 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/3de9b5090001448c0d002c7446465375676663",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Руководитель направления в Департаменте кибербезопасности Сбера с 05.2021 (часть функции); 21 год",
-    "note": "EXCLUDED by review: verified: руководитель направления inside Sber cyber dept — sub-unit, compliance scope. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: verified: руководитель направления inside Sber cyber dept — sub-unit, compliance scope. "
    },
    {
     "type": "resume",
@@ -234,9 +234,9 @@
     "raw": "450 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/6641ef5b00003e42a9002c7446736563726574",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Руководитель направления Управления ИБ, ЮниКредит Банк, с 06.2021 (часть функции); 18 лет",
-    "note": "EXCLUDED by review: руководитель направления inside UniCredit IS department — sub-unit. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: руководитель направления inside UniCredit IS department — sub-unit. "
    },
    {
     "type": "resume",
@@ -248,9 +248,9 @@
     "raw": "450 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/ed4de6ac00033f2961002c7446594c71557254",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Начальник отдела кибербезопасности в Управлении ИБ, SBI Bank, с 05.2019; 15 лет",
-    "note": "EXCLUDED by review: head of a cyber отдел inside the bank's IS управление — sub-unit. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: head of a cyber отдел inside the bank's IS управление — sub-unit. "
    },
    {
     "type": "resume",
@@ -318,9 +318,9 @@
     "raw": "400 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/d34b895d000105d58c002c7446354175527765",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. руководителя службы ИБ банка, с 02.2024; 17 лет",
-    "note": "EXCLUDED by review: deputy, one level below Head. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. "
    },
    {
     "type": "resume",
@@ -374,9 +374,9 @@
     "raw": "300 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/b5a0d03c0004702018002c7446306347303430",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. начальника отдела ИБ банка, с 02.2021; 8 лет",
-    "note": "EXCLUDED by review: deputy, one level below Head. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. "
    },
    {
     "type": "resume",
@@ -444,9 +444,9 @@
     "raw": "250 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/c48245e1001130b36a002c7446385a4d6b7377",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. руководителя службы ИБ, ЦМР Банк, с 03.2022; 14 лет",
-    "note": "EXCLUDED by review: deputy, one level below Head. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. "
    },
    {
     "type": "resume",
@@ -500,9 +500,9 @@
     "raw": "180 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/cbf68536000e710f7e002c744644616f39476d",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Зам. директора по ИБ, Рокет Телеком, 09.2025–11.2026; 7 лет",
-    "note": "EXCLUDED by review: deputy, one level below Head. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: deputy, one level below Head. "
    },
    {
     "type": "resume",
@@ -556,9 +556,9 @@
     "raw": "300 000 – 350 000 ₽ на руки",
     "url": "https://hh.ru/vacancy/138853324",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Вакансия: руководитель направления ТЗИ в управляющей компании (часть ИБ-функции)",
-    "note": "EXCLUDED by review: vacancy: head of technical-protection sub-direction, part of IS function. midpoint"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: vacancy: head of technical-protection sub-direction, part of IS function. midpoint"
    },
    {
     "type": "vacancy",
@@ -570,9 +570,9 @@
     "raw": "до 230 000 ₽ на руки (×0.85)",
     "url": "https://hh.ru/vacancy/133291633",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Вакансия: зам. руководителя отдела ИБ, облачный провайдер Cloud4U",
-    "note": "EXCLUDED by review: vacancy: deputy head of IS dept — one level below. deputy; 'до' → ×0.85"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: vacancy: deputy head of IS dept — one level below. deputy; 'до' → ×0.85"
    }
   ]
  },
@@ -624,9 +624,9 @@
     "raw": "€9,000–14,000 gross/month (P25–P75) ×12",
     "url": "https://cyprusjobfinder.net/blog/cybersecurity-jobs-cyprus-2026/",
     "date": "2026-05",
-    "match": "low",
+    "match": "medium",
     "evidence": "Cyprus Job Finder 05.2026: CISO / Head of Security (senior), gross monthly P75 from listings",
-    "note": "EXCLUDED by review: verified: 14,000/month is the top of the senior CISO range and described as 'packages' (total pay), mislabelled as P75 — not a base-salary figure. base/total not stated explicitly (listing salaries); ×12"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: verified: 14,000/month is the top of the senior CISO range and described as 'packages' (total pay), mislabelled as P75 — not a base-salary figure. base/total not stated explicitly (listing salaries); ×12"
    },
    {
     "type": "survey",
@@ -669,6 +669,31 @@
     "match": "medium",
     "evidence": "Glassdoor Limassol: Head of IT, base pay range (employers incl. Scope Markets, TrioMarkets brokers)",
     "note": "tiny sample (~4–6); IT-only title, no infosec scope"
+   },
+   {
+    "type": "survey",
+    "title": "CIO Limassol, Glassdoor",
+    "company": "",
+    "industry": "other",
+    "value": 84000,
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-chief-information-officer-salary-SRCH_IL.0,15_IM1340_KO16,41.htm",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: n=1, total pay, CIO level",
+    "evidence": "CIO Limassol, Glassdoor"
+   },
+   {
+    "type": "survey",
+    "title": "Head of Infrastructure/Cybersecurity — survey (Emerald Zebra Q4 2025/26)",
+    "company": "Emerald Zebra",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 102500,
+    "raw": "€87,500–102,500 (column labels unclear)",
+    "url": "https://emeraldzebra.cy/wp-content/uploads/2025/10/Emerald-Zebra-Cyprus-Salary-Survey-Insights-Q4-2025-2026.pdf",
+    "date": "2025-10",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. seen via search extract only, PDF not parsed; older than window",
+    "evidence": "Head of Infrastructure/Cybersecurity — survey (Emerald Zebra Q4 2025/26)"
    }
   ]
  },
@@ -752,13 +777,6 @@
   },
   {
    "loc": "cy",
-   "value": 84000,
-   "title": "CIO Limassol, Glassdoor",
-   "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-chief-information-officer-salary-SRCH_IL.0,15_IM1340_KO16,41.htm",
-   "reason": "n=1, total pay, CIO level"
-  },
-  {
-   "loc": "cy",
    "value": 48000,
    "title": "CISO, IconGlobal EMI Larnaca (carierista)",
    "url": "https://www.carierista.com/en/jobs/120714/iconglobal-ltd-chief-information-security-officer-ciso",
@@ -779,12 +797,14 @@
    "reason": "IT-only, lower scope"
   }
  ],
- "caveats": "РФ: в основном желаемая з/п руководителей ИБ (на руки); много банков/платёжек. Проверка исключила замов и руководителей под-подразделений (10 точек). Роль у нас = IT + ИБ, на рынке чаще отдельно ИБ — учитывать. Кипр: 5 точек, в основном обзоры (Jobs Nicosia CISO base, Evresio, Glassdoor) + 1 вакансия Head of IT брокера (net→gross).",
+ "caveats": "Кипр: 8 точек — обзоры зарплат CISO/Head of IT и вакансия брокера. Россия: 39 точек, CV и вакансии hh.ru (банки, финтех, tech).",
  "review": {
   "drops": 11,
-  "applied": 11,
+  "applied": 1,
   "verified": 11,
   "level_note": "Head: kept CISO/heads of IS (and IT+IS heads); dropped deputies, руководители направления/группы/отдела inside a larger IS department.",
   "summary": "30 of 40 RU kept, 5 of 6 CY kept; drops are deputies and sub-unit heads inside large IS departments, plus one CY row that is total pay at the top of the range, not base."
- }
+ },
+ "matching_criteria_en": "Head of information security (CISO) or combined IT+IS function with a team in fintech/tech; heads of an IS sub-unit and deputies = medium. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 8 points — CISO/Head of IT salary surveys and a broker posting. Russia: 39 points, hh.ru CVs and vacancies (banks, fintech, tech)."
 }

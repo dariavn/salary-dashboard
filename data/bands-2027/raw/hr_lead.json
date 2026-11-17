@@ -3,7 +3,7 @@
  "position": "HR Lead",
  "hrbp": "Яна Корженевская",
  "level": "Lead",
- "matching_criteria": "Current/most recent role leads the HR / HRBP function (Lead HRBP, Head of HR, HR Lead; HRD = medium) at a tech, fintech, gaming or iGaming employer. HRD/HR heads of retail, manufacturing, construction, hospitality etc. excluded; HRBP ICs excluded.",
+ "matching_criteria": "Руководитель HR/HRBP-функции (Lead HRBP, Head of HR; HRD — medium) в tech, финтех, gaming, iGaming. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -307,6 +307,28 @@
     "match": "medium",
     "evidence": "Вакансия HR-директора в робототехническую tech-компанию, hh",
     "note": "'от' value; head-уровень"
+   },
+   {
+    "type": "resume",
+    "title": "HRD, Buddler",
+    "company": "",
+    "industry": "other",
+    "value": 250000,
+    "url": "https://hh.ru/resume/b75237450003ec1b78002c7446315676363630",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: employer industry unclear",
+    "evidence": "HRD, Buddler"
+   },
+   {
+    "type": "vacancy",
+    "title": "HRD в foodtech, Шеф Маркет",
+    "company": "",
+    "industry": "other",
+    "value": 382500,
+    "url": "https://hh.ru/vacancy/131986058",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: food retail/foodtech, not target industry; >90 days",
+    "evidence": "HRD в foodtech, Шеф Маркет"
    }
   ]
  },
@@ -390,18 +412,100 @@
     "match": "low",
     "evidence": "hh CV living in Cyprus: HRD in affiliate marketing (igaming-adjacent), 10.2023–04.2026",
     "note": "EXCLUDED by review: Role content is recruitment only (full-cycle recruitment, TA, EB) despite HRD title; desired HRBP IC — function mismatch. hh CY CV; basis ambiguous, treated as gross ×12"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of HR & Recruitment (Shipping), CareerFinders",
+    "company": "",
+    "industry": "other",
+    "value": 57500,
+    "url": "https://www.carierista.com/en/jobs/120605/head-of-hr-recruitment-shipping-9320",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: expired; salary not shown on page (only in search snippet); shipping",
+    "evidence": "Head of HR & Recruitment (Shipping), CareerFinders"
+   },
+   {
+    "type": "survey",
+    "title": "HR Director — Evresio guide (€4–7k/mo)",
+    "company": "",
+    "industry": "other",
+    "value": 84000,
+    "url": "https://evresio.com/blog/average-salaries-in-cyprus-by-industry-2026-guide",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: director level, all-industry blog guide",
+    "evidence": "HR Director — Evresio guide (€4–7k/mo)"
+   },
+   {
+    "type": "resume",
+    "title": "HR Manager (CY hh CV, NDA)",
+    "company": "",
+    "industry": "other",
+    "value": 60000,
+    "url": "https://hh.ru/resume/f620fe3b000b90f678002c74466437764b3934",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: no evidence of team/lead scope",
+    "evidence": "HR Manager (CY hh CV, NDA)"
+   },
+   {
+    "type": "survey",
+    "title": "HR Director — Glassdoor base",
+    "company": "Glassdoor (aggregator)",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 84000,
+    "raw": "base €4K–7K/mo (upper ×12)",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-hr-director-salary-SRCH_IL.0,15_IM1340_KO16,27.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. ~5 submissions, partly old data",
+    "evidence": "HR Director — Glassdoor base"
+   },
+   {
+    "type": "survey",
+    "title": "Senior HR (7+ yrs) — upper quartile of range",
+    "company": "Kyprium HR salary guide Limassol 2026",
+    "industry": "other",
+    "city": "Limassol",
+    "value": 63000,
+    "raw": "€3,600–5,800/mo gross → 75% point €5,250 ×12",
+    "url": "https://www.kyprium.com/salary-guide/hr-limassol",
+    "date": "2026",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. guide; methodology loose",
+    "evidence": "Senior HR (7+ yrs) — upper quartile of range"
+   },
+   {
+    "type": "survey",
+    "title": "HR Director / Head of HR — upper quartile of range",
+    "company": "Ergazo Cyprus Salary Guide 2026",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 102500,
+    "raw": "€50,000–120,000/yr → 75% point",
+    "url": "https://ergazo.com/cy/en-gb/blog/cyprus-salary-guide-2026-industry-experience-levels",
+    "date": "2026",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. blog guide, wide range, no methodology",
+    "evidence": "HR Director / Head of HR — upper quartile of range"
+   },
+   {
+    "type": "vacancy",
+    "title": "HR Manager (HRBP/People Partner scope)",
+    "company": "Alber Blanc (HFT trading)",
+    "industry": "fintech",
+    "city": "Limassol",
+    "value": 102823,
+    "raw": "€5,000–7,000/mo на руки",
+    "url": "https://getmatch.ru/vacancies/33598-hr-manager",
+    "date": "2026-03",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. midpoint €6k net ×12 → gross via 2026 CY tax + SI/GHS (est.); no team; archived; posted 03-2026",
+    "evidence": "HR Manager (HRBP/People Partner scope)"
    }
   ]
  },
- "caveats": "РФ: tech-HR лидов на hh меньшинство — ритейл/промышленность исключены; часть точек — HRD небольших tech-компаний. Кипр: 4 точки (Glassdoor база с малыми выборками, обзор 10.2025, 1 вакансия не-tech).",
+ "caveats": "Кипр: 11 точек — Glassdoor, гайды Emerald Zebra, Ergazo, Evresio, Kyprium, вакансии. Россия: CV и вакансии hh.ru.",
  "excluded": [
-  {
-   "loc": "ru",
-   "value": 250000,
-   "title": "HRD, Buddler",
-   "url": "https://hh.ru/resume/b75237450003ec1b78002c7446315676363630",
-   "reason": "employer industry unclear"
-  },
   {
    "loc": "ru",
    "value": 300000,
@@ -438,27 +542,6 @@
    "reason": "HRBP IC role, not lead"
   },
   {
-   "loc": "ru",
-   "value": 382500,
-   "title": "HRD в foodtech, Шеф Маркет",
-   "url": "https://hh.ru/vacancy/131986058",
-   "reason": "food retail/foodtech, not target industry; >90 days"
-  },
-  {
-   "loc": "cy",
-   "value": 57500,
-   "title": "Head of HR & Recruitment (Shipping), CareerFinders",
-   "url": "https://www.carierista.com/en/jobs/120605/head-of-hr-recruitment-shipping-9320",
-   "reason": "expired; salary not shown on page (only in search snippet); shipping"
-  },
-  {
-   "loc": "cy",
-   "value": 84000,
-   "title": "HR Director — Evresio guide (€4–7k/mo)",
-   "url": "https://evresio.com/blog/average-salaries-in-cyprus-by-industry-2026-guide",
-   "reason": "director level, all-industry blog guide"
-  },
-  {
    "loc": "cy",
    "value": 61528,
    "title": "Human Resources — Levels.fyi P75",
@@ -471,13 +554,6 @@
    "title": "HR Business Partner — Emerald Zebra P75",
    "url": "https://emeraldzebra.cy/wp-content/uploads/2025/10/Emerald-Zebra-Cyprus-Salary-Survey-Insights-Q4-2025-2026.pdf",
    "reason": "HRBP IC, not lead"
-  },
-  {
-   "loc": "cy",
-   "value": 60000,
-   "title": "HR Manager (CY hh CV, NDA)",
-   "url": "https://hh.ru/resume/f620fe3b000b90f678002c74466437764b3934",
-   "reason": "no evidence of team/lead scope"
   }
  ],
  "review": {
@@ -486,5 +562,7 @@
   "verified": 8,
   "level_note": "Lead level: Lead HRBP/Head of HR/HRD of small-to-mid tech companies kept; no large-org C-level found.",
   "summary": "RU 21→19 kept (2 dropped: HR-tech product role, non-tech bank HR admin); CY 5→4 kept (1 dropped: recruitment-only CV). Many RU points are HRD (head-level, slightly above our Lead) — kept as small/mid companies."
- }
+ },
+ "matching_criteria_en": "Lead of the HR/HRBP function (Lead HRBP, Head of HR; HRD = medium) in tech, fintech, gaming, iGaming. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 11 points — Glassdoor, Emerald Zebra, Ergazo, Evresio, Kyprium guides, postings. Russia: hh.ru CVs and vacancies."
 }

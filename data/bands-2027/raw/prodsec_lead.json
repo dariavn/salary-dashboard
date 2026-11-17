@@ -3,7 +3,7 @@
  "position": "ProdSec Lead",
  "hrbp": "Оля",
  "level": "Lead",
- "matching_criteria": "Current/most recent role = lead/head of a product/application security team (AppSec, secure development/SSDLC, DevSecOps security practice, offensive/pentest or purple team) with people management, at tech/fintech/bigtech. Senior AppSec/DevSecOps ICs without a team, general IS heads/CISOs, SOC leads, vendors' sales/presale and hidden employers excluded.",
+ "matching_criteria": "Лид команды продуктовой безопасности (AppSec, SSDLC, DevSecOps) с подчинёнными в tech/финтех. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -150,9 +150,9 @@
     "raw": "550 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/5a447179000910d5de002c7446535064526e31",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Head of Purple Team, Лемана ПРО, с 01.2025; 7 лет (red/blue/purple, близко к профилю; ритейл-tech)",
-    "note": "EXCLUDED by review: verified: retail employer (Лемана ПРО, 'Розничная торговля') — non-tech employer for a tech role. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: verified: retail employer (Лемана ПРО, 'Розничная торговля') — non-tech employer for a tech role. "
    },
    {
     "type": "resume",
@@ -164,9 +164,9 @@
     "raw": "480 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/f5996f570003e98c92002c74465573484b3073",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Руководитель отдела DevSecOps, Золотое Яблоко, с 08.2026; 8 лет (ритейл/e-com)",
-    "note": "EXCLUDED by review: verified: retail employer (Золотое Яблоко cosmetics retailer) — non-tech employer for a tech role. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: verified: retail employer (Золотое Яблоко cosmetics retailer) — non-tech employer for a tech role. "
    },
    {
     "type": "resume",
@@ -206,9 +206,9 @@
     "raw": "300 000 ₽ желаемая (на руки)",
     "url": "https://hh.ru/resume/2999427e0007b090eb002c7446627437363367",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "AppSec Team Lead, МАГ Девелопмент, 11.2025–06.2026; 4 года",
-    "note": "EXCLUDED by review: verified: security-assessment team lead at an outsourcing/dev services firm working for customers — agency. "
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: verified: security-assessment team lead at an outsourcing/dev services firm working for customers — agency. "
    },
    {
     "type": "resume",
@@ -234,7 +234,55 @@
    "web: AppSec / Application Security / Product Security / DevSecOps / Security Team Lead Limassol Cyprus salary 2026; justjoin, Andersen, cyprusjobfinder, jobsnicosia, jobslimassol, kyprium, Glassdoor, relocate.me"
   ],
   "screened_total": 85,
-  "points": []
+  "points": [
+   {
+    "type": "survey",
+    "title": "Senior Application Security Engineer P75, Cyprus Job Finder",
+    "company": "",
+    "industry": "other",
+    "value": 102000,
+    "url": "https://cyprusjobfinder.net/blog/cybersecurity-jobs-cyprus-2026/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: senior IC, not lead",
+    "evidence": "Senior Application Security Engineer P75, Cyprus Job Finder"
+   },
+   {
+    "type": "vacancy",
+    "title": "Application Security Lead, Andersen (justjoin.it, $6.9–8.9k/mo B2B)",
+    "company": "",
+    "industry": "other",
+    "value": 115000,
+    "url": "https://justjoin.it/job-offer/andersen-application-security-lead-limassol-security",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: posting removed (404), seen only in search snippet; B2B USD",
+    "evidence": "Application Security Lead, Andersen (justjoin.it, $6.9–8.9k/mo B2B)"
+   },
+   {
+    "type": "resume",
+    "title": "Tech Lead DevSecOps CV, NDA employer, hh area 236 (€8,700/mo)",
+    "company": "",
+    "industry": "other",
+    "value": 104400,
+    "url": "https://hh.ru/resume/d5cf80af000dbdc973002c74466e374753796b",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: hidden employer; relocation candidate",
+    "evidence": "Tech Lead DevSecOps CV, NDA employer, hh area 236 (€8,700/mo)"
+   },
+   {
+    "type": "survey",
+    "title": "Senior Cybersecurity Engineer — survey (Jobs Nicosia, 24 hiring managers)",
+    "company": "Jobs Nicosia",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 96000,
+    "raw": "€8,000/month senior",
+    "url": "https://jobsnicosia.com/cyprus-tech-salaries-2026/",
+    "date": "2026-03",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. 8,000×12; unit inferred monthly gross",
+    "evidence": "Senior Cybersecurity Engineer — survey (Jobs Nicosia, 24 hiring managers)"
+   }
+  ]
  },
  "excluded": [
   {
@@ -288,13 +336,6 @@
   },
   {
    "loc": "cy",
-   "value": 102000,
-   "title": "Senior Application Security Engineer P75, Cyprus Job Finder",
-   "url": "https://cyprusjobfinder.net/blog/cybersecurity-jobs-cyprus-2026/",
-   "reason": "senior IC, not lead"
-  },
-  {
-   "loc": "cy",
    "value": 78000,
    "title": "Incident Response Lead (CSIRT) upper, Jobs Nicosia",
    "url": "https://jobsnicosia.com/dora-cybersecurity-hiring-cyprus/",
@@ -309,32 +350,20 @@
   },
   {
    "loc": "cy",
-   "value": 115000,
-   "title": "Application Security Lead, Andersen (justjoin.it, $6.9–8.9k/mo B2B)",
-   "url": "https://justjoin.it/job-offer/andersen-application-security-lead-limassol-security",
-   "reason": "posting removed (404), seen only in search snippet; B2B USD"
-  },
-  {
-   "loc": "cy",
    "value": 54000,
    "title": "AppSec & Anti-Fraud Specialist, Limassol (hh)",
    "url": "https://hh.ru/vacancy/139411373",
    "reason": "IC specialist (от €4,500 gross/mo)"
-  },
-  {
-   "loc": "cy",
-   "value": 104400,
-   "title": "Tech Lead DevSecOps CV, NDA employer, hh area 236 (€8,700/mo)",
-   "url": "https://hh.ru/resume/d5cf80af000dbdc973002c74466e374753796b",
-   "reason": "hidden employer; relocation candidate"
   }
  ],
- "caveats": "РФ: лидов AppSec/ProdSec с указанной з/п мало — 10 точек после проверки (исключены лиды без команды, ритейл, сервисные компании); вакансий lead-уровня с вилкой нет. Кипр: релевантных точек нет — ни вакансий, ни резюме, ни строк обзоров для AppSec/ProdSec Lead.",
+ "caveats": "Кипр: 4 точки — вакансия Application Security Lead, CV техлида DevSecOps и строки Senior AppSec в обзорах (обязанности совпадают); цифра ориентировочная. Россия: 13 точек.",
  "review": {
   "drops": 5,
-  "applied": 5,
+  "applied": 2,
   "verified": 8,
   "level_note": "Lead: kept AppSec/DevSecOps/pentest team leads and small security-function heads; dropped IC 'Leads' with no team, non-tech (retail/oil) employers and a services firm.",
   "summary": "10 of 15 RU kept, CY has no points; drops are IC leads, retail/oil-captive employers and one outsourcing firm."
- }
+ },
+ "matching_criteria_en": "Lead of a product/application security team (AppSec, SSDLC, DevSecOps) with reports in tech/fintech. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 4 points — an Application Security Lead posting, a DevSecOps tech lead CV and Senior AppSec survey rows (duties match); the figure is indicative. Russia: 13 points."
 }

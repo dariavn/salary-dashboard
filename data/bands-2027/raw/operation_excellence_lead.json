@@ -3,7 +3,7 @@
  "position": "Operation Excellence Lead",
  "hrbp": "Настя",
  "level": "Lead",
- "matching_criteria": "Current/most recent role = lead of a process-management / operational-excellence / process-office / org-development & strategy-execution function in fintech, bigtech or IT-product companies, leading people. PMO/portfolio heads only in target companies and only as medium. Excluded: IC process analysts, project managers, IT automation leads, COO/ops directors, strategy/marketing heads, industrial lean/production efficiency, consultants.",
+ "matching_criteria": "Руководитель функции управления процессами / operational excellence / процессного офиса с командой в финтех и tech. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -246,9 +246,81 @@
     "raw": "4 000 € / month",
     "url": "https://hh.ru/resume/5e3c97cc000c98d8ad002c74466b446d317874",
     "date": "2026-11",
-    "match": "low",
+    "match": "medium",
     "evidence": "Head of PMO, FBS (брокер), с 07.2021, живёт на Кипре",
-    "note": "EXCLUDED by review: verified: IT project manager delivering projects at FBS — project/PMO role, not process excellence. CY resume, EUR, basis ambiguous — treated as gross ×12; PMO head ≈ portfolio/planning part of scope"
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: verified: IT project manager delivering projects at FBS — project/PMO role, not process excellence. CY resume, EUR, basis ambiguous — treated as gross ×12; PMO head ≈ portfolio/planning part of scope"
+   },
+   {
+    "type": "resume",
+    "title": "Chief of Staff (CY resume, current CHRO)",
+    "company": "",
+    "industry": "other",
+    "value": 84000,
+    "url": "https://hh.ru/resume/21c5adfd0009856f6f002c744671546f4c476c",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: HR leader background, not process/OE",
+    "evidence": "Chief of Staff (CY resume, current CHRO)"
+   },
+   {
+    "type": "survey",
+    "title": "Process Manager — Paylab Cyprus",
+    "company": "",
+    "industry": "other",
+    "value": 54732,
+    "url": "https://www.paylab.com/cy/salaryinfo/management/process-manager?lang=en",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: IC process manager level; <20 respondents",
+    "evidence": "Process Manager — Paylab Cyprus"
+   },
+   {
+    "type": "survey",
+    "title": "Operations Manager P75 — Emerald Zebra",
+    "company": "",
+    "industry": "other",
+    "value": 63500,
+    "url": "https://emeraldzebra.cy/cyprus-salaries-2025-customer-success-support/",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: operations manager ≠ OE lead",
+    "evidence": "Operations Manager P75 — Emerald Zebra"
+   },
+   {
+    "type": "vacancy",
+    "title": "Head of Operations & Delivery — EBAS",
+    "company": "",
+    "industry": "other",
+    "value": 36000,
+    "url": "https://ergodotisi.com/en-CY/jobs/head-of-operations-delivery-86585650",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: delivery/operations head, not process excellence",
+    "evidence": "Head of Operations & Delivery — EBAS"
+   },
+   {
+    "type": "survey",
+    "title": "Operations Manager (Paylab Cyprus, top of 80% band)",
+    "company": "Paylab aggregator",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 57636,
+    "raw": "80% earn 1 654 – 4 803 € monthly gross",
+    "url": "https://www.paylab.com/cy/salaryinfo/top-management/operations-manager?lang=en",
+    "date": "2026",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. upper decile ×12; <20 respondents",
+    "evidence": "Operations Manager (Paylab Cyprus, top of 80% band)"
+   },
+   {
+    "type": "survey",
+    "title": "Operations Manager — above average (CareerFinders guide)",
+    "company": "CareerFinders Cyprus Salary Guide",
+    "industry": "other",
+    "city": "Cyprus",
+    "value": 60000,
+    "raw": "€5,000/month (€60,000/yr) above average",
+    "url": "https://careerfinders.com.cy/salary-guide/",
+    "date": "2026",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. vacancies handled last 18 months",
+    "evidence": "Operations Manager — above average (CareerFinders guide)"
    }
   ]
  },
@@ -304,46 +376,20 @@
   },
   {
    "loc": "cy",
-   "value": 84000,
-   "title": "Chief of Staff (CY resume, current CHRO)",
-   "url": "https://hh.ru/resume/21c5adfd0009856f6f002c744671546f4c476c",
-   "reason": "HR leader background, not process/OE"
-  },
-  {
-   "loc": "cy",
-   "value": 54732,
-   "title": "Process Manager — Paylab Cyprus",
-   "url": "https://www.paylab.com/cy/salaryinfo/management/process-manager?lang=en",
-   "reason": "IC process manager level; <20 respondents"
-  },
-  {
-   "loc": "cy",
-   "value": 63500,
-   "title": "Operations Manager P75 — Emerald Zebra",
-   "url": "https://emeraldzebra.cy/cyprus-salaries-2025-customer-success-support/",
-   "reason": "operations manager ≠ OE lead"
-  },
-  {
-   "loc": "cy",
    "value": 60000,
    "title": "IT Project Manager / Operations Manager — CareerFinders guide",
    "url": "https://careerfinders.com.cy/salary-guide/",
    "reason": "different roles"
-  },
-  {
-   "loc": "cy",
-   "value": 36000,
-   "title": "Head of Operations & Delivery — EBAS",
-   "url": "https://ergodotisi.com/en-CY/jobs/head-of-operations-delivery-86585650",
-   "reason": "delivery/operations head, not process excellence"
   }
  ],
- "caveats": "РФ: людей с таким скоупом и указанной з/п мало — 11 точек (офисы процессов / развитие БП в банках и бигтехе). Проверка исключила проектных PMO, аналитиков и IC. Кипр: релевантных точек нет — ни вакансий, ни резюме, ни строк обзоров с этой ролью.",
+ "caveats": "Кипр: 7 точек — близкие роли (Head of PMO, Chief of Staff, Process/Operations Manager) по Paylab, Emerald Zebra, CareerFinders и CV; прямых вилок OpEx Lead на Кипре нет, цифра ориентировочная. Россия: 11 точек — роль редкая.",
  "review": {
   "drops": 5,
-  "applied": 5,
+  "applied": 4,
   "verified": 9,
   "level_note": "Lead: kept process-office / BP-optimisation / org-development leads with teams; dropped ICs, analysts and pure project/PMO delivery roles.",
   "summary": "11 of 15 RU kept, 0 of 1 CY kept (Cyprus now has no data point); drops are project/PMO delivery and analyst/IC roles."
- }
+ },
+ "matching_criteria_en": "Lead of a process management / operational excellence / process office function with a team in fintech and tech. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 7 points — similar roles (Head of PMO, Chief of Staff, Process/Operations Manager) from Paylab, Emerald Zebra, CareerFinders and CVs; there are no direct OpEx Lead ranges in Cyprus, so the figure is indicative. Russia: 11 points — a rare role."
 }

@@ -3,7 +3,7 @@
  "position": "Backend Lead",
  "hrbp": "Полина",
  "level": "Lead",
- "matching_criteria": "Текущая/последняя роль — тимлид/руководитель группы backend-разработки, управляющий инженерами, в продуктовой IT/финтех/бигтех/igaming; Go — high, другие backend-стеки, техлиды с командой, смешанные senior/TL роли и руководители шире TL (отдел/подразделение) — medium. Исключены: фронтенд/фулстек/мобайл, IC без команды (в т.ч. текущие IC после TL), веб-студии/агентства, не-IT работодатели (ритейл, страхование, авто, промышленность), CTO/основатели малых компаний.",
+ "matching_criteria": "Тимлид/руководитель группы backend-разработки, управляющий инженерами, в продуктовой IT/финтех/iGaming-компании. Близкие роли (руководитель группы/зам. для Head, руководитель шире для Lead) учитываются с пометкой medium; специалисты без команды — только если обязанности совпадают.",
  "ru": {
   "currency": "RUB",
   "basis": "net_monthly",
@@ -653,8 +653,8 @@
     "raw": "290 000 ₽ (желаемая)",
     "url": "https://hh.ru/resume/eb05b9220010480505002c744668617535577a",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Head of Engineering at custom-dev/outsourcing company (NDA) — agency employer, head of backend direction above TL. резюме hh, желаемая з/п (net)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Head of Engineering at custom-dev/outsourcing company (NDA) — agency employer, head of backend direction above TL. резюме hh, желаемая з/п (net)",
     "evidence": "Head of Engineering / руководитель backend-направления, заказная разработка, 01.2022–02.2026"
    },
    {
@@ -922,6 +922,17 @@
     "match": "medium",
     "note": "midpoint",
     "evidence": "Вакансия: тимлид PHP backend — не Go"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель группы разработки (PHP/Go), Росстрах",
+    "company": "",
+    "industry": "other",
+    "value": 300000,
+    "url": "https://hh.ru/resume/fab6c2930008829957002c7446797655495035",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: страховая компания — не IT-работодатель",
+    "evidence": "Руководитель группы разработки (PHP/Go), Росстрах"
    }
   ]
  },
@@ -961,8 +972,8 @@
     "raw": "base €91K–107K/yr",
     "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-engineering-manager-salary-SRCH_IL.0,15_IM1340_KO16,35.htm",
     "date": "2026-11",
-    "match": "low",
-    "note": "EXCLUDED by review: Glassdoor Engineering Manager — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. aggregator; base range upper (total pay €101–127K excluded)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Glassdoor Engineering Manager — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. aggregator; base range upper (total pay €101–127K excluded)",
     "evidence": "Glassdoor 2026: Engineering Manager, Limassol, base €91–107K/yr"
    },
    {
@@ -975,8 +986,8 @@
     "raw": "€80 000–120 000 gross annual",
     "url": "https://emeraldzebra.cy/for-employers/fintech-hiring-guide-cyprus/",
     "date": "2026",
-    "match": "low",
-    "note": "EXCLUDED by review: Emerald Zebra Engineering Manager team 6–15, base/total unclear — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. recruiter guide; upper of range; gross annual (bonus/equity noted separately)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Emerald Zebra Engineering Manager team 6–15, base/total unclear — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. recruiter guide; upper of range; gross annual (bonus/equity noted separately)",
     "evidence": "Emerald Zebra FinTech 2026: Engineering Manager, team 6–15, gross annual"
    },
    {
@@ -989,8 +1000,8 @@
     "raw": "€115 000–145 000 gross base",
     "url": "https://jobsnicosia.com/fintech-salaries-limassol-nicosia-2026/",
     "date": "2026-05",
-    "match": "low",
-    "note": "EXCLUDED by review: Jobs Nicosia Engineering manager — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. survey n=41 EMIs/PIs/CASPs; base incl. 13th, excl. bonus; upper",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Jobs Nicosia Engineering manager — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. survey n=41 EMIs/PIs/CASPs; base incl. 13th, excl. bonus; upper",
     "evidence": "Jobs Nicosia 05.2026: Engineering Manager Limassol, gross annual base"
    },
    {
@@ -1003,8 +1014,8 @@
     "raw": "€10 500/mo gross (senior)",
     "url": "https://jobsnicosia.com/cyprus-tech-salaries-2026/",
     "date": "2026-04",
-    "match": "low",
-    "note": "EXCLUDED by review: Jobs Nicosia Engineering Manager senior — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. survey n=24 hiring managers; senior ×12; base/total not split",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Jobs Nicosia Engineering Manager senior — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. survey n=24 hiring managers; senior ×12; base/total not split",
     "evidence": "Jobs Nicosia 04.2026: Engineering Manager senior, monthly gross"
    },
    {
@@ -1017,8 +1028,8 @@
     "raw": "€6 500–9 000/mo gross (senior P25–P75)",
     "url": "https://cyprusjobfinder.net/blog/tech-salaries-cyprus-2026/",
     "date": "2026-05",
-    "match": "low",
-    "note": "EXCLUDED by review: Cyprus Job Finder Engineering Manager P75 — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. survey; senior P75 ×12; gross monthly",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Cyprus Job Finder Engineering Manager P75 — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. survey; senior P75 ×12; gross monthly",
     "evidence": "Cyprus Job Finder 05.2026: Engineering Manager senior P75"
    },
    {
@@ -1031,8 +1042,8 @@
     "raw": "€5 500–8 500/mo",
     "url": "https://evresio.com/blog/cyprus-it-jobs-salaries-companies-and-how-to-get-hired",
     "date": "2026-05",
-    "match": "low",
-    "note": "EXCLUDED by review: Evresio Engineering Manager — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. guide; upper ×12; gross/net not stated (assumed gross)",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Evresio Engineering Manager — survey row is Engineering Manager, not Backend Team Lead title — rule 4 requires same title. guide; upper ×12; gross/net not stated (assumed gross)",
     "evidence": "Evresio 05.2026: Engineering Manager monthly range"
    },
    {
@@ -1101,13 +1112,41 @@
     "raw": "от €4 800 net/mo",
     "url": "https://getmatch.ru/vacancies/28309-technical-lead-golang",
     "date": "2025",
-    "match": "low",
-    "note": "EXCLUDED by review: Exness Technical Lead Go: mentoring only, no direct reports/hiring — IC tech lead (verified). vacancy archived, date not shown; \"from\" net ×12 → gross; tech lead guiding team",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. Ранее исключено: Exness Technical Lead Go: mentoring only, no direct reports/hiring — IC tech lead (verified). vacancy archived, date not shown; \"from\" net ×12 → gross; tech lead guiding team",
     "evidence": "Вакансия: Technical Lead Go, Exness, ведёт кросс-функц. команду и менторит"
+   },
+   {
+    "type": "survey",
+    "title": "Software Team Lead — Glassdoor Limassol",
+    "company": "Glassdoor (aggregator)",
+    "industry": "it_product",
+    "city": "Limassol",
+    "value": 84000,
+    "raw": "Base €7K/mo (n=1)",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-software-team-lead-salary-SRCH_IL.0,15_IM1340_KO16,34.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. aggregator; 1 salary",
+    "evidence": "Software Team Lead — Glassdoor Limassol"
+   },
+   {
+    "type": "vacancy",
+    "title": "Backend Tech Lead (Node.js)",
+    "company": "BrainRocket via LionHires (getmatch)",
+    "industry": "igaming",
+    "city": "Limassol",
+    "value": 141300,
+    "raw": "7 000–9 000 € net/мес",
+    "url": "https://getmatch.ru/vacancies/29224-backend-tech-lead-node-js",
+    "date": "2026",
+    "match": "medium",
+    "note": "Возвращено при перепроверке: очень близкая роль/обязанности. vacancy archived; tech lead; net mid→gross",
+    "evidence": "Backend Tech Lead (Node.js)"
    }
   ]
  },
- "caveats": "РФ: резюме и вакансии тимлидов backend (Go — high, другие стеки — medium); желаемая з/п на руки. Проверка исключила руководителей всей разработки/CTO и аутсорс. Кипр: 5 точек (Glassdoor Backend Team Lead, резюме Head of Backend iGaming, архивные вакансии тимлидов); строки Engineering Manager из обзоров исключены как другая роль.",
+ "caveats": "Кипр: 14 точек — вакансии BrainRocket/Exness и обзоры зарплат; строки Engineering Manager учтены как очень близкая роль. Россия: 64 точки, желаемые зарплаты в CV и вилки вакансий hh.ru.",
  "excluded": [
   {
    "loc": "ru",
@@ -1122,13 +1161,6 @@
    "title": "Руководитель группы разработки (Go), VK",
    "url": "https://hh.ru/resume/7ad1405000115afaa0002c744675326c634f48",
    "reason": "живёт в Таиланде"
-  },
-  {
-   "loc": "ru",
-   "value": 300000,
-   "title": "Руководитель группы разработки (PHP/Go), Росстрах",
-   "url": "https://hh.ru/resume/fab6c2930008829957002c7446797655495035",
-   "reason": "страховая компания — не IT-работодатель"
   },
   {
    "loc": "ru",
@@ -1175,9 +1207,11 @@
  ],
  "review": {
   "drops": 10,
-  "applied": 10,
+  "applied": 2,
   "verified": 11,
   "level_note": "Lead: kept backend team leads/руководители группы (any backend stack) and heads of a small backend unit; dropped whole-dev heads/CTO, agency heads, non-backend and IC tech-lead points.",
   "summary": "RU 65→62 kept (dropped Flussonic CTO-level, outsourcing head of engineering, payments ops vacancy); CY 12→5 (6 Engineering Manager survey rows fail same-title rule, Exness IC tech lead)."
- }
+ },
+ "matching_criteria_en": "Backend team lead managing engineers at a product IT/fintech/iGaming company. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
+ "caveats_en": "Cyprus: 14 points — BrainRocket/Exness postings and salary surveys; Engineering Manager rows are counted as a very similar role. Russia: 64 points, desired salaries in hh.ru CVs plus vacancy ranges."
 }
