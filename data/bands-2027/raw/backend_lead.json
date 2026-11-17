@@ -1216,7 +1216,7 @@
    }
   ]
  },
- "caveats": "Кипр: 14 точек — вакансии BrainRocket/Exness и обзоры зарплат; строки Engineering Manager учтены как очень близкая роль. Россия: 64 точки, желаемые зарплаты в CV и вилки вакансий hh.ru. Добавлены кандидаты из Хантфлоу (Россия).",
+ "caveats": "Кипр: 14 точек — вакансии BrainRocket/Exness и обзоры зарплат; строки Engineering Manager учтены как очень близкая роль. Россия: 69 точек, желаемые зарплаты в CV и вилки вакансий hh.ru. Добавлены кандидаты из Хантфлоу (Россия).",
  "excluded": [
   {
    "loc": "ru",
@@ -1283,5 +1283,5 @@
   "summary": "RU 65→62 kept (dropped Flussonic CTO-level, outsourcing head of engineering, payments ops vacancy); CY 12→5 (6 Engineering Manager survey rows fail same-title rule, Exness IC tech lead)."
  },
  "matching_criteria_en": "Backend team lead managing engineers at a product IT/fintech/iGaming company. Very similar roles (team lead/deputy for Head roles, broader head for Lead roles) are counted as medium; ICs only where duties clearly match.",
- "caveats_en": "Cyprus: 14 points — BrainRocket/Exness postings and salary surveys; Engineering Manager rows are counted as a very similar role. Russia: 64 points, desired salaries in hh.ru CVs plus vacancy ranges. Huntflow candidates added (Russia)."
+ "caveats_en": "Cyprus: 14 points — BrainRocket/Exness postings and salary surveys; Engineering Manager rows are counted as a very similar role. Russia: 69 points, desired salaries in hh.ru CVs plus vacancy ranges. Huntflow candidates added (Russia)."
 }
