@@ -1,0 +1,250 @@
+{
+ "slug": "monitoring_lead",
+ "position": "Monitoring Lead",
+ "hrbp": "Полина",
+ "level": "Lead",
+ "team": "Operations",
+ "matching_criteria": "Руководитель группы круглосуточного мониторинга/NOC/дежурной смены: сменный график, найм, SLA эскалации, координация инцидентов, качество алертинга, расходы.",
+ "matching_criteria_en": "Lead of a 24/7 monitoring/NOC/on-duty team: shift schedule, hiring, escalation SLA, incident coordination, alerting quality, costs.",
+ "ru": {
+  "currency": "RUB",
+  "basis": "net_monthly",
+  "queries": [
+   "резюме hh: руководитель группы мониторинга; руководитель дежурной смены; руководитель noc; monitoring lead; руководитель отдела мониторинга; руководитель группы дежурных инженеров; noc manager (3 стр.) — 99 карточек, CV-проверка не выполнена из-за капчи",
+   "вакансии hh.ru (название, 90 дней, с з/п, проверка текста вакансии): руководитель группы мониторинга; руководитель дежурной смены; руководитель NOC; руководитель отдела мониторинга",
+   "hhD-дополнение 2026-11: hh: должность мониторинг/NOC/дежурная смена/ситуационный центр + текст опыта «(zabbix OR grafana OR prometheus) AND (смен OR 24/7) AND (руководство/найм)», «… AND эскалац»; фильтр: руководитель/lead. CV не открывались (лимит просмотров: hhCV вернул пустой ответ), совпадение обязанностей — по попаданию в поиск по тексту опыта."
+  ],
+  "screened_total": 377,
+  "points": [
+   {
+    "type": "vacancy",
+    "title": "Руководитель группы мониторинга информационных систем",
+    "company": "КГКУ Информационно-технологический центр",
+    "industry": "",
+    "city": "Владивосток",
+    "value": 130000,
+    "raw": "130к ₽",
+    "url": "https://hh.ru/vacancy/139041727",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "вакансия hh.ru (90 дней), середина вилки, net",
+    "evidence": "вакансия: руководство группой мониторинга ИС — инциденты/эскалация, команда; госучреждение"
+   },
+   {
+    "type": "vacancy",
+    "title": "Начальник отдела мониторинга и технической поддержки",
+    "company": "ООО ТЕЛЕКОМ МПК",
+    "industry": "",
+    "city": "Дубна",
+    "value": 195000,
+    "raw": "195к ₽",
+    "url": "https://hh.ru/vacancy/137661727",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "вакансия hh.ru (90 дней), середина вилки, net",
+    "evidence": "вакансия телеком: отдел мониторинга и техподдержки — инциденты, дежурства; стек не указан"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель группы мониторинга",
+    "company": "Ростелеком",
+    "industry": "telecom-tech",
+    "city": "Москва",
+    "value": 200000,
+    "raw": "200 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/f4b958fd0009a47ffd002c7446687441546c4d",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 6 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель группы мониторинга, Ростелеком"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель дежурной смены мониторинга",
+    "company": "Яндекс",
+    "industry": "bigtech",
+    "city": "Москва",
+    "value": 450000,
+    "raw": "450 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/16146e6000090f7333002c74464269307a6b34",
+    "date": "2026-11",
+    "match": "high",
+    "note": "резюме hh, желаемая з/п (net), стаж 13 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель дежурной смены мониторинга, Яндекс"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель дежурной смены",
+    "company": "Иннотех",
+    "industry": "fintech",
+    "city": "Видное",
+    "value": 250000,
+    "raw": "250 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/138851c70008316ee5002c7446336a31723759",
+    "date": "2026-11",
+    "match": "high",
+    "note": "резюме hh, желаемая з/п (net), стаж 7 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель дежурной смены, Иннотех"
+   },
+   {
+    "type": "resume",
+    "title": "Инцидент-менеджер. Руководитель",
+    "company": "ВБ Банк",
+    "industry": "fintech",
+    "city": "Воронеж",
+    "value": 300000,
+    "raw": "300 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/2b399796000233e3af002c7446554d6e35556b",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 14 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Инцидент-менеджер. Руководитель, ВБ Банк"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель Ситуационного центра",
+    "company": "Московская Биржа",
+    "industry": "fintech",
+    "city": "Москва",
+    "value": 340000,
+    "raw": "340 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/dc0010dd000fc1fc71002c74464b55324e466c",
+    "date": "2026-11",
+    "match": "high",
+    "note": "резюме hh, желаемая з/п (net), стаж 20 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель Ситуационного центра, Московская Биржа"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель ситуационного центра",
+    "company": "Wildberries",
+    "industry": "bigtech",
+    "city": "Москва",
+    "value": 750000,
+    "raw": "750 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/b682810600074403ea002c744630416a4e656f",
+    "date": "2026-11",
+    "match": "high",
+    "note": "резюме hh, желаемая з/п (net), стаж 18 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель ситуационного центра, Wildberries"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель отдела мониторинга",
+    "company": "Финтех-Платформа",
+    "industry": "fintech",
+    "city": "Москва",
+    "value": 450000,
+    "raw": "450 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/3c311a1c00114f55ef002c744638616f676f57",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 11 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель отдела мониторинга, Финтех-Платформа"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель отдела мониторинга",
+    "company": "Банк ПСБ",
+    "industry": "bank",
+    "city": "Москва",
+    "value": 500000,
+    "raw": "500 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/b01624f80000dd0945002c7446444356304643",
+    "date": "2026-11",
+    "match": "high",
+    "note": "резюме hh, желаемая з/п (net), стаж 12 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель отдела мониторинга, Банк ПСБ"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель группы технической поддержки/мониторинга",
+    "company": "Самолет Девелопмент",
+    "industry": "non-tech",
+    "city": "Воронеж",
+    "value": 150000,
+    "raw": "150 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/2562c77b000b4fc7f5002c7446336248575679",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 8 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель группы технической поддержки/мониторинга, Самолет Девелопмент; нетех-работодатель"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель отдела мониторинга",
+    "company": "МегаФон",
+    "industry": "telecom-tech",
+    "city": "Санкт-Петербург",
+    "value": 200000,
+    "raw": "200 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/769a796e000c23ae67002c7446473166657746",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 15 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель отдела мониторинга, МегаФон"
+   },
+   {
+    "type": "resume",
+    "title": "Руководитель смены NOC / Incident",
+    "company": "Orange Business Services",
+    "industry": "telecom-tech",
+    "city": "Москва",
+    "value": 150000,
+    "raw": "150 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/521bbfd50001ffd34f002c7446586d4e447a30",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 10 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Руководитель смены NOC / Incident, Orange Business Services"
+   },
+   {
+    "type": "resume",
+    "title": "Team-lead группы сопровождения",
+    "company": "Московская Биржа",
+    "industry": "fintech",
+    "city": "Москва",
+    "value": 280000,
+    "raw": "280 000 ₽ (желаемая, net)",
+    "url": "https://hh.ru/resume/a8707eee0000e857aa002c7446686b34586475",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "резюме hh, желаемая з/п (net), стаж 18 лет; найдено поиском по тексту опыта работы (hhD)",
+    "evidence": "в опыте: Zabbix/Grafana/Prometheus, круглосуточные смены, эскалация инцидентов, руководство дежурной службой/мониторингом; Team-lead группы сопровождения, Московская Биржа"
+   }
+  ]
+ },
+ "cy": {
+  "currency": "EUR",
+  "basis": "gross_annual",
+  "queries": [
+   "Glassdoor Limassol/Cyprus: NOC Team Lead, NOC Manager — нет данных",
+   "Glassdoor Limassol/Cyprus и Paylab Cyprus (доп. ориентиры, ноябрь 2026)"
+  ],
+  "screened_total": 3,
+  "points": [
+   {
+    "type": "survey",
+    "title": "Technical Support Team Lead — Glassdoor Limassol (base)",
+    "company": "Glassdoor (aggregator)",
+    "industry": "it_product",
+    "city": "Limassol",
+    "value": 48000,
+    "raw": "base €4K/мес",
+    "url": "https://www.glassdoor.com/Salaries/limassol-cyprus-technical-support-team-lead-salary-SRCH_IL.0,15_IM1340_KO16,43.htm",
+    "date": "2026-11",
+    "match": "medium",
+    "note": "агрегатор; смежная роль: тимлид техподдержки (смены, эскалации), не мониторинга",
+    "evidence": "Glassdoor 2026: Technical Support Team Lead, Limassol, base €4K/мес"
+   }
+  ]
+ },
+ "caveats": "Итого RU 14, CY 1. RU: 12 резюме hh (поиск по тексту опыта работы по ключевым обязанностям) + 2 вакансий hh (середина вилки, gross→net). CV-проверка открытием резюме не выполнена (лимит просмотров). Профиль редкий: часть — руководители ситуационного центра/NOC/инцидент-менеджмента (medium); ниже цели 15. Кипр — одна смежная строка Glassdoor (Technical Support Team Lead).",
+ "caveats_en": "Total RU 14, CY 1. RU: 12 hh CVs (found by searching the work-experience text for our key duties) + 2 hh vacancies (range midpoint, gross→net). CVs were not opened for a check (view limit). Rare profile: some are situation-centre/NOC/incident-management leads (medium); below the 15 target. Cyprus: one adjacent Glassdoor row (Technical Support Team Lead).",
+ "excluded": [
+  {
+   "url": "https://hh.ru/vacancy/137361270",
+   "reason": "отдел мониторинга в вузе, стек мониторинга в тексте не подтверждён"
+  }
+ ]
+}

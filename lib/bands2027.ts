@@ -122,3 +122,10 @@ export function fmtShort(loc: 'ru' | 'cy', value: number): string {
   }
   return `€${(value / 1000).toFixed(value >= 100_000 ? 0 : 1)}K`
 }
+
+// Leads, heads and C-level are benchmarked at P75; specialist (line) roles at the median (P50)
+export type Metric = 'p75' | 'median'
+export function metricFor(level?: string): Metric {
+  return /lead|head|c level|chief/i.test(level || '') ? 'p75' : 'median'
+}
+export const METRIC_LABEL: Record<Metric, string> = { p75: 'P75', median: 'P50' }

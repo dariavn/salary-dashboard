@@ -36,15 +36,6 @@
   "notion_url": "https://app.notion.com/p/41ae566ff60181c9a140f17fb946a7c4"
  },
  {
-  "slug": "head_of_support",
-  "position": "Head of Support",
-  "team": "Support",
-  "level": "Head",
-  "hrbp": "Настя",
-  "sheet_row": 126,
-  "notion_url": "https://app.notion.com/p/41ae566ff60181c2a10fdfc5f16070c1"
- },
- {
   "slug": "operation_excellence_lead",
   "position": "Operation Excellence Lead",
   "team": "Operation Excellence",
@@ -54,13 +45,37 @@
   "notion_url": "https://app.notion.com/p/41ae566ff6018165a8fccd0a9f44fcac"
  },
  {
-  "slug": "head_of_it_and_infosec",
-  "position": "Head of IT and Information Security",
-  "team": "ITIS",
+  "slug": "head_of_support",
+  "position": "Head of Support",
+  "team": "Support",
   "level": "Head",
-  "hrbp": "Оля",
-  "sheet_row": 144,
-  "notion_url": "https://app.notion.com/p/41ae566ff601818eae34c6b89d81e243"
+  "hrbp": "Настя",
+  "sheet_row": 126,
+  "notion_url": "https://app.notion.com/p/41ae566ff60181c2a10fdfc5f16070c1"
+ },
+ {
+  "slug": "frontend_developer_itis",
+  "position": "Frontend Developer (ITIS)",
+  "team": "ITIS Dev",
+  "level": "",
+  "sheet_row": 128,
+  "hrbp": ""
+ },
+ {
+  "slug": "backend_developer_itis",
+  "position": "Backend Developer (ITIS)",
+  "team": "ITIS Dev",
+  "level": "",
+  "sheet_row": 129,
+  "hrbp": ""
+ },
+ {
+  "slug": "itis_dev_lead",
+  "position": "ITIS Dev Lead",
+  "team": "ITIS Dev",
+  "level": "Lead",
+  "sheet_row": 130,
+  "hrbp": ""
  },
  {
   "slug": "prodsec_lead",
@@ -72,6 +87,47 @@
   "notion_url": "https://app.notion.com/p/41ae566ff601811e82fae135fe0235e4"
  },
  {
+  "slug": "head_of_it_and_infosec",
+  "position": "Head of IT and Information Security",
+  "team": "ITIS",
+  "level": "Head",
+  "hrbp": "Оля",
+  "sheet_row": 144,
+  "notion_url": "https://app.notion.com/p/41ae566ff601818eae34c6b89d81e243"
+ },
+ {
+  "slug": "web_development_lead",
+  "position": "Web Development Lead",
+  "team": "Web Development",
+  "level": "Lead",
+  "sheet_row": 150,
+  "hrbp": ""
+ },
+ {
+  "slug": "frontend_developer_web_dev",
+  "position": "Frontend Developer (Web Dev)",
+  "team": "Web Development",
+  "level": "",
+  "sheet_row": 156,
+  "hrbp": ""
+ },
+ {
+  "slug": "full_stack_developer_web_dev",
+  "position": "Full Stack Developer (Web Dev)",
+  "team": "Web Development",
+  "level": "",
+  "sheet_row": 157,
+  "hrbp": ""
+ },
+ {
+  "slug": "head_of_development",
+  "position": "Head of Development",
+  "team": "Development",
+  "level": "Head",
+  "sheet_row": 161,
+  "hrbp": ""
+ },
+ {
   "slug": "head_of_qa",
   "position": "Head of QA",
   "team": "QA",
@@ -81,6 +137,14 @@
   "notion_url": "https://app.notion.com/p/41ae566ff6018154acf4e9f8cb9aafbd"
  },
  {
+  "slug": "marketing_development_lead",
+  "position": "Marketing Development Lead",
+  "team": "Development",
+  "level": "Lead",
+  "sheet_row": 164,
+  "hrbp": ""
+ },
+ {
   "slug": "backend_lead",
   "position": "Backend Lead",
   "team": "Development",
@@ -88,6 +152,326 @@
   "hrbp": "Полина",
   "sheet_row": 165,
   "notion_url": "https://app.notion.com/p/41ae566ff60181e989a9f85fd263f0f5"
+ },
+ {
+  "slug": "frontend_lead",
+  "position": "Frontend Lead",
+  "team": "Development",
+  "level": "Lead",
+  "sheet_row": 166,
+  "hrbp": ""
+ },
+ {
+  "slug": "ios_lead",
+  "position": "iOS Lead",
+  "team": "Development",
+  "level": "Lead",
+  "sheet_row": 167,
+  "hrbp": ""
+ },
+ {
+  "slug": "android_lead",
+  "position": "Android Lead",
+  "team": "Development",
+  "level": "Lead",
+  "sheet_row": 168,
+  "hrbp": ""
+ },
+ {
+  "slug": "corequity_lead",
+  "position": "Corequity Lead",
+  "team": "Development",
+  "level": "Lead",
+  "sheet_row": 170,
+  "hrbp": ""
+ },
+ {
+  "slug": "project_management_lead",
+  "position": "Project Management Lead",
+  "team": "Development",
+  "level": "Lead",
+  "sheet_row": 171,
+  "hrbp": ""
+ },
+ {
+  "slug": "tech_project_manager",
+  "position": "Tech Project Manager",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 172,
+  "hrbp": ""
+ },
+ {
+  "slug": "system_analyst",
+  "position": "System Analyst",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 173,
+  "hrbp": ""
+ },
+ {
+  "slug": "staff_software_engineer",
+  "position": "Staff Software Engineer",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 174,
+  "hrbp": ""
+ },
+ {
+  "slug": "backend_developer_senior_core",
+  "position": "Backend Developer Senior (Core)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 175,
+  "hrbp": ""
+ },
+ {
+  "slug": "backend_developer_senior_product",
+  "position": "Backend Developer Senior (Product)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 176,
+  "hrbp": ""
+ },
+ {
+  "slug": "backend_developer_middle_product",
+  "position": "Backend Developer Middle (Product)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 178,
+  "hrbp": ""
+ },
+ {
+  "slug": "frontend_engineer",
+  "position": "Frontend Engineer",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 181,
+  "hrbp": ""
+ },
+ {
+  "slug": "ios_developer_senior",
+  "position": "iOS Developer Senior",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 182,
+  "hrbp": ""
+ },
+ {
+  "slug": "ios_developer_middle",
+  "position": "iOS Developer Middle",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 183,
+  "hrbp": ""
+ },
+ {
+  "slug": "android_developer_senior",
+  "position": "Android Developer Senior",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 184,
+  "hrbp": ""
+ },
+ {
+  "slug": "android_developer_middle",
+  "position": "Android Developer Middle",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 185,
+  "hrbp": ""
+ },
+ {
+  "slug": "senior_cpp_developer",
+  "position": "Senior C++ Developer",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 186,
+  "hrbp": ""
+ },
+ {
+  "slug": "qa_automation_lead",
+  "position": "QA Automation Lead",
+  "team": "QA",
+  "level": "Lead",
+  "sheet_row": 188,
+  "hrbp": ""
+ },
+ {
+  "slug": "qa_lead",
+  "position": "QA Lead",
+  "team": "QA",
+  "level": "Lead",
+  "sheet_row": 189,
+  "hrbp": ""
+ },
+ {
+  "slug": "qa_automation_engineer_senior",
+  "position": "QA Automation Engineer Senior",
+  "team": "QA",
+  "level": "",
+  "sheet_row": 190,
+  "hrbp": ""
+ },
+ {
+  "slug": "qa_automation_engineer_middle",
+  "position": "QA Automation Engineer Middle",
+  "team": "QA",
+  "level": "",
+  "sheet_row": 191,
+  "hrbp": ""
+ },
+ {
+  "slug": "qa_engineer_senior",
+  "position": "QA Engineer Senior",
+  "team": "QA",
+  "level": "",
+  "sheet_row": 192,
+  "hrbp": ""
+ },
+ {
+  "slug": "qa_engineer_middle",
+  "position": "QA Engineer Middle",
+  "team": "QA",
+  "level": "",
+  "sheet_row": 193,
+  "hrbp": ""
+ },
+ {
+  "slug": "head_of_operations",
+  "position": "Head of Operations",
+  "team": "Operations",
+  "level": "Head",
+  "sheet_row": 194,
+  "hrbp": ""
+ },
+ {
+  "slug": "devops_lead",
+  "position": "DevOps Lead",
+  "team": "Operations",
+  "level": "Lead",
+  "sheet_row": 195,
+  "hrbp": ""
+ },
+ {
+  "slug": "infrastructure_lead",
+  "position": "Infrastructure Lead",
+  "team": "Operations",
+  "level": "Lead",
+  "sheet_row": 196,
+  "hrbp": ""
+ },
+ {
+  "slug": "monitoring_lead",
+  "position": "Monitoring Lead",
+  "team": "Operations",
+  "level": "Lead",
+  "sheet_row": 197,
+  "hrbp": ""
+ },
+ {
+  "slug": "devops_engineer_senior",
+  "position": "DevOps Engineer Senior",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 198,
+  "hrbp": ""
+ },
+ {
+  "slug": "devops_engineer_middle",
+  "position": "DevOps Engineer Middle",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 199,
+  "hrbp": ""
+ },
+ {
+  "slug": "devops_engineer_junior",
+  "position": "DevOps Engineer Junior",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 200,
+  "hrbp": ""
+ },
+ {
+  "slug": "infrastructure_engineer",
+  "position": "Infrastructure Engineer",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 201,
+  "hrbp": ""
+ },
+ {
+  "slug": "database_engineer",
+  "position": "Database Engineer",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 202,
+  "hrbp": ""
+ },
+ {
+  "slug": "network_engineer",
+  "position": "Network Engineer",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 203,
+  "hrbp": ""
+ },
+ {
+  "slug": "monitoring_engineer_senior",
+  "position": "Monitoring Engineer Senior",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 204,
+  "hrbp": ""
+ },
+ {
+  "slug": "monitoring_engineer_middle",
+  "position": "Monitoring Engineer Middle",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 205,
+  "hrbp": ""
+ },
+ {
+  "slug": "monitoring_engineer_junior",
+  "position": "Monitoring Engineer Junior",
+  "team": "Operations",
+  "level": "",
+  "sheet_row": 206,
+  "hrbp": ""
+ },
+ {
+  "slug": "backend_developer_md",
+  "position": "Backend Developer (MD)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 207,
+  "hrbp": ""
+ },
+ {
+  "slug": "frontend_developer_md",
+  "position": "Frontend Developer (MD)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 208,
+  "hrbp": ""
+ },
+ {
+  "slug": "ui_ux_designer_md",
+  "position": "UI/UX Designer (MD)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 209,
+  "hrbp": ""
+ },
+ {
+  "slug": "project_manager_md",
+  "position": "Project Manager (MD)",
+  "team": "Development",
+  "level": "",
+  "sheet_row": 211,
+  "hrbp": ""
  },
  {
   "slug": "head_of_accounting",
