@@ -212,12 +212,13 @@ export default function Bands2027Tab({ positions, updated, notionUrl }: Props) {
   const [team, setTeam] = useState<string>('all')
   const [open, setOpen] = useState<string | null>(null)
 
+  const levelOf = (p: Position2027) => (p.level || '').trim() || 'Specialist'
   const teams = useMemo(() => {
     const m = new Map<string, number>()
-    for (const p of positions) { const t = (p.team || '').trim(); if (t) m.set(t, (m.get(t) ?? 0) + 1) }
+    for (const p of positions) { const t = (p.team || '').trim(); if (t) m.set(t, m.get(t) ?? 0) }
+    for (const p of positions) { const t = (p.team || '').trim(); if (t && (level === 'all' || ((p.level || '').trim() || 'Specialist') === level)) m.set(t, (m.get(t) ?? 0) + 1) }
     return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0]))
-  }, [positions])
-  const levelOf = (p: Position2027) => (p.level || '').trim() || 'Specialist'
+  }, [positions, level])
   const levels = ['C level', 'Head', 'Lead', 'Specialist'].filter(l => positions.some(p => levelOf(p) === l))
   const rows = positions.filter(p => (level === 'all' || levelOf(p) === level) && (team === 'all' || (p.team || '').trim() === team))
   const totals = useMemo(() => {
@@ -291,7 +292,7 @@ export default function Bands2027Tab({ positions, updated, notionUrl }: Props) {
       {teams.length > 1 && (
         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 14 }}>
           <button style={{ ...segBtn(team === 'all'), fontSize: 12, padding: '4px 10px' }} onClick={() => setTeam('all')}>{lang === 'ru' ? 'Все команды' : 'All teams'}</button>
-          {teams.map(([t, n]) => <button key={t} style={{ ...segBtn(team === t), fontSize: 12, padding: '4px 10px' }} onClick={() => setTeam(t)}>{t} <span style={{ color: 'var(--muted)', fontWeight: 500 }}>{n}</span></button>)}
+          {teams.map(([t, n]) => <button key={t} disabled={n === 0} style={{ ...segBtn(team === t), fontSize: 12, padding: '4px 10px', opacity: n === 0 ? 0.4 : 1, cursor: n === 0 ? 'default' : 'pointer' }} onClick={() => setTeam(t)}>{t} <span style={{ color: 'var(--muted)', fontWeight: 500 }}>{n}</span></button>)}
         </div>
       )}
 
